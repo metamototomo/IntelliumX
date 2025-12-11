@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/blog/create-a-mssql-container/">
+  <meta property="og:site_name" content="Nobuhiro Tokushige - AI & Cloud Solutions">
+  <meta property="og:title" content="Create a MS SQL Server Container">
+  <meta property="og:description" content="# This is the current folder structure sh-5.2$ tree . ├── Dockerfile ├── backups │ ├── APP-6.3.2-lab_Stage_2.bak │ ├── APP-6.3.2-lab_Stage_3.bak │ ├── APP-6.3.2-lab_Stage_4.bak │ ├── v9.1.23_APP_632_lab_Stage_3.bak │ └── v9.1.23_APP_632_lab_Stage_4.bak ├── certs │ ├── server-bundle.crt │ └── server.key ├── containers │ └── sql1 │ ├── data [error opening dir] │ ├── log [error opening dir] │ └── secrets [error opening dir] └── mssql.conf Create Dockerfile file FROM mcr.microsoft.com/mssql/server:2022-latest USER root # Install required dependencies RUN apt-get update &amp;&amp; \ apt-get install -y curl apt-transport-https gnupg2 &amp;&amp; \ mkdir -p /etc/apt/keyrings &amp;&amp; \ curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; /etc/apt/keyrings/microsoft.gpg &amp;&amp; \ chmod 644 /etc/apt/keyrings/microsoft.gpg &amp;&amp; \ echo &#34;deb [signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/22.04/prod jammy main&#34; &gt; /etc/apt/sources.list.d/mssql-release.list &amp;&amp; \ apt-get update &amp;&amp; \ ACCEPT_EULA=Y apt-get install -y mssql-tools unixodbc-dev &amp;&amp; \ ln -s /opt/mssql-tools/bin/sqlcmd /usr/bin/sqlcmd &amp;&amp; \ ln -s /opt/mssql-tools/bin/bcp /usr/bin/bcp &amp;&amp; \ apt-get clean &amp;&amp; \ rm -rf /var/lib/apt/lists/* # Switch back to default user USER mssql Create mssql.conf file [network] tlscert = /var/opt/mssql/secrets/server-bundle.crt tlskey = /var/opt/mssql/secrets/server.key tlsprotocols = 1.2 forceencryption = 1 Build an image # Build new image sudo docker build -t mssql-with-tools . Test locally # Run new container sudo docker run -e &#39;ACCEPT_EULA=Y&#39; -e &#39;MSSQL_SA_PASSWORD=Password123&#39; \ -p 1433:1433 \ -v /data/containers/sql1/data:/var/opt/mssql/data \ -v /data/containers/sql1/log:/var/opt/mssql/log \ -v sql-certs:/var/opt/mssql/secrets:ro \ -v /data/mssql.conf:/var/opt/mssql/mssql.conf:ro \ -v /data/backups:/var/opt/mssql/backups \ --restart always \ --name sql1 \ -d mssql-with-tools Build a custom container and push into ECR in AWS. # The container URI is below ACCOUNTID.dkr.ecr.ap-southeast-2.amazonaws.com/gcs-sql-server:latest Then run the script to deploy a MS SQL Container #============================================================================= # The following approach successfully copy &#34;server.key&#34; #============================================================================= # Create a Docker volume for the certificates sudo docker volume create sql-certs # Copy the necessary certificate files into the volume sudo cp /data/certs/server-bundle.crt /var/lib/docker/volumes/sql-certs/_data/ sudo cp /data/certs/server.key /var/lib/docker/volumes/sql-certs/_data # Change the ownership sudo chown -R 10001:0 /var/lib/docker/volumes/sql-certs/_data/ sudo chmod -R 600 /var/lib/docker/volumes/sql-certs/_data/ # Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS CLI: aws ecr get-login-password --region ap-southeast-2 | sudo docker login --username AWS --password-stdin ACCOUNTID.dkr.ecr.ap-southeast-2.amazonaws.com # Deploy MS SQL Server container sudo docker run -e &#39;ACCEPT_EULA=Y&#39; -e &#39;MSSQL_SA_PASSWORD=Password123&#39; \ -p 1433:1433 \ -v /data/containers/sql1/data:/var/opt/mssql/data \ -v /data/containers/sql1/log:/var/opt/mssql/log \ -v sql-certs:/var/opt/mssql/secrets:ro \ -v /data/mssql.conf:/var/opt/mssql/mssql.conf:ro \ -v /data/backups:/var/opt/mssql/backups \ --restart always \ --name sql1 \ -d ACCOUNTID.dkr.ecr.ap-southeast-2.amazonaws.com/gcs-sql-server:latest After the deployment, check the status of the container # Check the login sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P &#39;Password123&#39; #Check the files sudo docker exec -it sql1 ls -l /var/opt/mssql/backups">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-04-04T20:40:37+11:00">
+    <meta property="article:modified_time" content="2025-04-04T20:40:37+11:00">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Container">
+    <meta property="article:tag" content="AWS">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Nobuhiro Tokushige - AI &amp; Cloud Solutions</title>
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+
+<nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/IntelliumX-v16.png" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+      <div id="navbar-menu" class="navbar-menu is-static">
+        <div class="navbar-start">
+          <a class="navbar-item is-hidden-mobile">
+            <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+              <svg width="1000px" height="1000px">
+                <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                <path class="path2" d="M 300 500 L 700 500"></path>
+                <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+              </svg>
+              <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+            </div>
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a href="/" class="navbar-item is-secondary">
+            Home
+          </a>
+          <a href="/projects/" class="navbar-item is-secondary">
+            Projects
+          </a>
+          <a href="/blog/" class="navbar-item is-secondary">
+            Blog
+          </a>
+          <a href="/about/" class="navbar-item is-secondary">
+            About
+          </a>
+        </div>
+      </div>
+  </div>
+</nav>
+
+
+<nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/IntelliumX-v16.png" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+      <div class="navbar-start">
+        <a class="navbar-item is-hidden-mobile">
+          <div id="cloned-menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+              <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+              <path class="path2" d="M 300 500 L 700 500"></path>
+              <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+            </svg>
+            <button id="cloned-menu-icon-trigger" class="menu-icon-trigger"></button>
+          </div>
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <a href="/" class="navbar-item is-secondary">
+          Home
+        </a>
+        <a href="/projects/" class="navbar-item is-secondary">
+          Projects
+        </a>
+        <a href="/blog/" class="navbar-item is-secondary">
+          Blog
+        </a>
+        <a href="/about/" class="navbar-item is-secondary">
+          About
+        </a>
+      </div>
+    </div>
+</div>
+</nav>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h1 class="title is-2">Create a MS SQL Server Container</h1>
+        <p class="subtitle is-6">April 4, 2025</p>
+        <div class="content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># This is the current folder structure</span>
+</span></span><span style="display:flex;"><span>sh-5.2$ tree
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>├── Dockerfile
+</span></span><span style="display:flex;"><span>├── backups
+</span></span><span style="display:flex;"><span>│   ├── APP-6.3.2-lab_Stage_2.bak
+</span></span><span style="display:flex;"><span>│   ├── APP-6.3.2-lab_Stage_3.bak
+</span></span><span style="display:flex;"><span>│   ├── APP-6.3.2-lab_Stage_4.bak
+</span></span><span style="display:flex;"><span>│   ├── v9.1.23_APP_632_lab_Stage_3.bak
+</span></span><span style="display:flex;"><span>│   └── v9.1.23_APP_632_lab_Stage_4.bak
+</span></span><span style="display:flex;"><span>├── certs
+</span></span><span style="display:flex;"><span>│   ├── server-bundle.crt
+</span></span><span style="display:flex;"><span>│   └── server.key
+</span></span><span style="display:flex;"><span>├── containers
+</span></span><span style="display:flex;"><span>│   └── sql1
+</span></span><span style="display:flex;"><span>│       ├── data <span style="color:#f92672">[</span>error opening dir<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>│       ├── log <span style="color:#f92672">[</span>error opening dir<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>│       └── secrets <span style="color:#f92672">[</span>error opening dir<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└── mssql.conf
+</span></span></code></pre></div><ol>
+<li>Create <code>Dockerfile</code> file</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>FROM mcr.microsoft.com/mssql/server:2022-latest
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>USER root
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install required dependencies</span>
+</span></span><span style="display:flex;"><span>RUN apt-get update <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    apt-get install -y curl apt-transport-https gnupg2 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    mkdir -p /etc/apt/keyrings <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; /etc/apt/keyrings/microsoft.gpg <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    chmod <span style="color:#ae81ff">644</span> /etc/apt/keyrings/microsoft.gpg <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    echo <span style="color:#e6db74">&#34;deb [signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/22.04/prod jammy main&#34;</span> &gt; /etc/apt/sources.list.d/mssql-release.list <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    apt-get update <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    ACCEPT_EULA<span style="color:#f92672">=</span>Y apt-get install -y mssql-tools unixodbc-dev <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    ln -s /opt/mssql-tools/bin/sqlcmd /usr/bin/sqlcmd <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    ln -s /opt/mssql-tools/bin/bcp /usr/bin/bcp <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    apt-get clean <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    rm -rf /var/lib/apt/lists/*
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Switch back to default user</span>
+</span></span><span style="display:flex;"><span>USER mssql
+</span></span></code></pre></div><ol start="2">
+<li>Create <code>mssql.conf</code> file</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>network<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>tlscert <span style="color:#f92672">=</span> /var/opt/mssql/secrets/server-bundle.crt
+</span></span><span style="display:flex;"><span>tlskey <span style="color:#f92672">=</span> /var/opt/mssql/secrets/server.key
+</span></span><span style="display:flex;"><span>tlsprotocols <span style="color:#f92672">=</span> 1.2
+</span></span><span style="display:flex;"><span>forceencryption <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><ol start="3">
+<li>Build an image</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Build new image</span>
+</span></span><span style="display:flex;"><span>sudo docker build -t mssql-with-tools .
+</span></span></code></pre></div><ol start="4">
+<li>Test locally</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Run new container</span>
+</span></span><span style="display:flex;"><span>sudo docker run -e <span style="color:#e6db74">&#39;ACCEPT_EULA=Y&#39;</span> -e <span style="color:#e6db74">&#39;MSSQL_SA_PASSWORD=Password123&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-p 1433:1433 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v /data/containers/sql1/data:/var/opt/mssql/data <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v /data/containers/sql1/log:/var/opt/mssql/log <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v sql-certs:/var/opt/mssql/secrets:ro <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v /data/mssql.conf:/var/opt/mssql/mssql.conf:ro <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v /data/backups:/var/opt/mssql/backups <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--restart always <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--name sql1 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-d mssql-with-tools
+</span></span></code></pre></div><ol start="5">
+<li>Build a custom container and push into ECR in AWS.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># The container URI is below</span>
+</span></span><span style="display:flex;"><span>ACCOUNTID.dkr.ecr.ap-southeast-2.amazonaws.com/gcs-sql-server:latest
+</span></span></code></pre></div><ol start="6">
+<li>Then run the script to deploy a MS SQL Container</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#=============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># The following approach successfully copy &#34;server.key&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#=============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create a Docker volume for the certificates</span>
+</span></span><span style="display:flex;"><span>sudo docker volume create sql-certs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy the necessary certificate files into the volume</span>
+</span></span><span style="display:flex;"><span>sudo cp /data/certs/server-bundle.crt /var/lib/docker/volumes/sql-certs/_data/
+</span></span><span style="display:flex;"><span>sudo cp /data/certs/server.key /var/lib/docker/volumes/sql-certs/_data
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Change the ownership</span>
+</span></span><span style="display:flex;"><span>sudo chown -R 10001:0 /var/lib/docker/volumes/sql-certs/_data/
+</span></span><span style="display:flex;"><span>sudo chmod -R <span style="color:#ae81ff">600</span> /var/lib/docker/volumes/sql-certs/_data/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS CLI:</span>
+</span></span><span style="display:flex;"><span>aws ecr get-login-password --region ap-southeast-2 | sudo docker login --username AWS --password-stdin ACCOUNTID.dkr.ecr.ap-southeast-2.amazonaws.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Deploy MS SQL Server container</span>
+</span></span><span style="display:flex;"><span>sudo docker run -e <span style="color:#e6db74">&#39;ACCEPT_EULA=Y&#39;</span> -e <span style="color:#e6db74">&#39;MSSQL_SA_PASSWORD=Password123&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-p 1433:1433 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v /data/containers/sql1/data:/var/opt/mssql/data <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v /data/containers/sql1/log:/var/opt/mssql/log <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v sql-certs:/var/opt/mssql/secrets:ro <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v /data/mssql.conf:/var/opt/mssql/mssql.conf:ro <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-v /data/backups:/var/opt/mssql/backups <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--restart always <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--name sql1 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-d ACCOUNTID.dkr.ecr.ap-southeast-2.amazonaws.com/gcs-sql-server:latest
+</span></span></code></pre></div><ol start="7">
+<li>After the deployment, check the status of the container</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check the login</span>
+</span></span><span style="display:flex;"><span>sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P <span style="color:#e6db74">&#39;Password123&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Check the files</span>
+</span></span><span style="display:flex;"><span>sudo docker exec -it sql1 ls -l /var/opt/mssql/backups
+</span></span></code></pre></div><hr>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer footer-dark">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="footer-logo">
+          <img src="/images/logos/IntelliumX-v15.png">
+        </div>
+      </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Product</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/">
+                  Discover features
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Why choose our product?
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Compare features
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Our roadmap
+                </a>
+              </li>
+              <li>
+                <a href="/agb">
+                  AGB
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Docs</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/">
+                  Get started
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  User guides
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Admin guide
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Developers
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Blog</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/blog/">
+                  All Posts
+                </a>
+              </li>
+              <li>
+                <a href="/about/">
+                  About
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="column">
+        <div class="footer-column">
+          <div class="footer-header">
+            <h3>Follow Us</h3>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <a class="level-item" href="https://www.linkedin.com/in/nobuhiro-tokushige/">
+                  <span class="icon"><i class="fa fa-linkedin"></i></span>
+                </a>
+                <a class="level-item" href="https://github.com/nobuhiro-tokushige">
+                  <span class="icon"><i class="fa fa-github"></i></span>
+                </a>
+              </div>
+            </nav>
+            <a href="https://bulma.io" target="_blank">
+              <img src="/images/logos/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+
+  </body>
+</html>

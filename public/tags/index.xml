@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Nobuhiro Tokushige - AI &amp; Cloud Solutions</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Nobuhiro Tokushige - AI &amp; Cloud Solutions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Aug 2025 08:26:23 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Amazon Cognito User Pool</title>
+      <link>http://localhost:1313/tags/amazon-cognito-user-pool/</link>
+      <pubDate>Mon, 11 Aug 2025 08:26:23 +1000</pubDate>
+      <guid>http://localhost:1313/tags/amazon-cognito-user-pool/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure AD</title>
+      <link>http://localhost:1313/tags/azure-ad/</link>
+      <pubDate>Mon, 11 Aug 2025 08:26:23 +1000</pubDate>
+      <guid>http://localhost:1313/tags/azure-ad/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Federation Authentication</title>
+      <link>http://localhost:1313/tags/federation-authentication/</link>
+      <pubDate>Mon, 11 Aug 2025 08:26:23 +1000</pubDate>
+      <guid>http://localhost:1313/tags/federation-authentication/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microsoft Entra ID</title>
+      <link>http://localhost:1313/tags/microsoft-entra-id/</link>
+      <pubDate>Mon, 11 Aug 2025 08:26:23 +1000</pubDate>
+      <guid>http://localhost:1313/tags/microsoft-entra-id/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OIDC</title>
+      <link>http://localhost:1313/tags/oidc/</link>
+      <pubDate>Mon, 11 Aug 2025 08:26:23 +1000</pubDate>
+      <guid>http://localhost:1313/tags/oidc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SAML</title>
+      <link>http://localhost:1313/tags/saml/</link>
+      <pubDate>Sun, 10 Aug 2025 11:46:09 +1000</pubDate>
+      <guid>http://localhost:1313/tags/saml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Wed, 25 Jun 2025 20:40:01 +1000</pubDate>
+      <guid>http://localhost:1313/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub</title>
+      <link>http://localhost:1313/tags/github/</link>
+      <pubDate>Wed, 25 Jun 2025 20:40:01 +1000</pubDate>
+      <guid>http://localhost:1313/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag</title>
+      <link>http://localhost:1313/tags/tag/</link>
+      <pubDate>Wed, 25 Jun 2025 20:40:01 +1000</pubDate>
+      <guid>http://localhost:1313/tags/tag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>API Gateway</title>
+      <link>http://localhost:1313/tags/api-gateway/</link>
+      <pubDate>Sun, 15 Jun 2025 17:49:13 +1000</pubDate>
+      <guid>http://localhost:1313/tags/api-gateway/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS</title>
+      <link>http://localhost:1313/tags/aws/</link>
+      <pubDate>Sun, 15 Jun 2025 17:49:13 +1000</pubDate>
+      <guid>http://localhost:1313/tags/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DynamoDB</title>
+      <link>http://localhost:1313/tags/dynamodb/</link>
+      <pubDate>Sun, 15 Jun 2025 17:15:54 +1000</pubDate>
+      <guid>http://localhost:1313/tags/dynamodb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>http://localhost:1313/tags/security/</link>
+      <pubDate>Sun, 15 Jun 2025 17:12:59 +1000</pubDate>
+      <guid>http://localhost:1313/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lambda</title>
+      <link>http://localhost:1313/tags/lambda/</link>
+      <pubDate>Sun, 15 Jun 2025 17:10:13 +1000</pubDate>
+      <guid>http://localhost:1313/tags/lambda/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Sun, 15 Jun 2025 17:10:13 +1000</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IAM</title>
+      <link>http://localhost:1313/tags/iam/</link>
+      <pubDate>Sun, 15 Jun 2025 17:00:19 +1000</pubDate>
+      <guid>http://localhost:1313/tags/iam/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VS Code</title>
+      <link>http://localhost:1313/tags/vs-code/</link>
+      <pubDate>Wed, 11 Jun 2025 11:02:17 +1000</pubDate>
+      <guid>http://localhost:1313/tags/vs-code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Azure DevOps</title>
+      <link>http://localhost:1313/tags/azure-devops/</link>
+      <pubDate>Tue, 20 May 2025 09:30:14 +1000</pubDate>
+      <guid>http://localhost:1313/tags/azure-devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Memory Dump</title>
+      <link>http://localhost:1313/tags/memory-dump/</link>
+      <pubDate>Mon, 19 May 2025 18:37:55 +1000</pubDate>
+      <guid>http://localhost:1313/tags/memory-dump/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>http://localhost:1313/tags/windows/</link>
+      <pubDate>Mon, 19 May 2025 18:37:55 +1000</pubDate>
+      <guid>http://localhost:1313/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GRPC</title>
+      <link>http://localhost:1313/tags/grpc/</link>
+      <pubDate>Thu, 24 Apr 2025 23:01:47 +1000</pubDate>
+      <guid>http://localhost:1313/tags/grpc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Load Balancer</title>
+      <link>http://localhost:1313/tags/load-balancer/</link>
+      <pubDate>Thu, 24 Apr 2025 23:01:47 +1000</pubDate>
+      <guid>http://localhost:1313/tags/load-balancer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NGINX</title>
+      <link>http://localhost:1313/tags/nginx/</link>
+      <pubDate>Thu, 24 Apr 2025 23:01:47 +1000</pubDate>
+      <guid>http://localhost:1313/tags/nginx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSL</title>
+      <link>http://localhost:1313/tags/ssl/</link>
+      <pubDate>Thu, 24 Apr 2025 23:01:47 +1000</pubDate>
+      <guid>http://localhost:1313/tags/ssl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WCF</title>
+      <link>http://localhost:1313/tags/wcf/</link>
+      <pubDate>Thu, 24 Apr 2025 23:01:47 +1000</pubDate>
+      <guid>http://localhost:1313/tags/wcf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenSSL</title>
+      <link>http://localhost:1313/tags/openssl/</link>
+      <pubDate>Thu, 24 Apr 2025 17:41:29 +1000</pubDate>
+      <guid>http://localhost:1313/tags/openssl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSL Certificate</title>
+      <link>http://localhost:1313/tags/ssl-certificate/</link>
+      <pubDate>Thu, 24 Apr 2025 17:41:29 +1000</pubDate>
+      <guid>http://localhost:1313/tags/ssl-certificate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Container</title>
+      <link>http://localhost:1313/tags/container/</link>
+      <pubDate>Sun, 13 Apr 2025 22:30:23 +1000</pubDate>
+      <guid>http://localhost:1313/tags/container/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>http://localhost:1313/tags/docker/</link>
+      <pubDate>Sun, 13 Apr 2025 22:30:23 +1000</pubDate>
+      <guid>http://localhost:1313/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HAProxy</title>
+      <link>http://localhost:1313/tags/haproxy/</link>
+      <pubDate>Sun, 13 Apr 2025 22:30:23 +1000</pubDate>
+      <guid>http://localhost:1313/tags/haproxy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BIG-IP</title>
+      <link>http://localhost:1313/tags/big-ip/</link>
+      <pubDate>Sun, 13 Apr 2025 20:07:14 +1000</pubDate>
+      <guid>http://localhost:1313/tags/big-ip/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>F5</title>
+      <link>http://localhost:1313/tags/f5/</link>
+      <pubDate>Sun, 13 Apr 2025 20:07:14 +1000</pubDate>
+      <guid>http://localhost:1313/tags/f5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Active Directory</title>
+      <link>http://localhost:1313/tags/active-directory/</link>
+      <pubDate>Sun, 13 Apr 2025 07:25:43 +1000</pubDate>
+      <guid>http://localhost:1313/tags/active-directory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hostname</title>
+      <link>http://localhost:1313/tags/hostname/</link>
+      <pubDate>Sun, 13 Apr 2025 07:25:43 +1000</pubDate>
+      <guid>http://localhost:1313/tags/hostname/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Sun, 13 Apr 2025 07:25:43 +1000</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backup</title>
+      <link>http://localhost:1313/tags/backup/</link>
+      <pubDate>Thu, 03 Apr 2025 16:43:34 +1100</pubDate>
+      <guid>http://localhost:1313/tags/backup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSM</title>
+      <link>http://localhost:1313/tags/ssm/</link>
+      <pubDate>Thu, 03 Apr 2025 16:43:34 +1100</pubDate>
+      <guid>http://localhost:1313/tags/ssm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQL Server</title>
+      <link>http://localhost:1313/tags/sql-server/</link>
+      <pubDate>Wed, 02 Apr 2025 19:41:08 +1100</pubDate>
+      <guid>http://localhost:1313/tags/sql-server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQLCMD</title>
+      <link>http://localhost:1313/tags/sqlcmd/</link>
+      <pubDate>Wed, 02 Apr 2025 19:41:08 +1100</pubDate>
+      <guid>http://localhost:1313/tags/sqlcmd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>S3</title>
+      <link>http://localhost:1313/tags/s3/</link>
+      <pubDate>Wed, 02 Apr 2025 19:20:15 +1100</pubDate>
+      <guid>http://localhost:1313/tags/s3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certificate</title>
+      <link>http://localhost:1313/tags/certificate/</link>
+      <pubDate>Sun, 30 Mar 2025 21:40:32 +1100</pubDate>
+      <guid>http://localhost:1313/tags/certificate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RabbitMQ</title>
+      <link>http://localhost:1313/tags/rabbitmq/</link>
+      <pubDate>Sun, 30 Mar 2025 21:40:32 +1100</pubDate>
+      <guid>http://localhost:1313/tags/rabbitmq/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ECR</title>
+      <link>http://localhost:1313/tags/ecr/</link>
+      <pubDate>Sat, 29 Mar 2025 00:10:31 +1100</pubDate>
+      <guid>http://localhost:1313/tags/ecr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Image Builder</title>
+      <link>http://localhost:1313/tags/image-builder/</link>
+      <pubDate>Thu, 27 Mar 2025 14:48:49 +1100</pubDate>
+      <guid>http://localhost:1313/tags/image-builder/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Image</title>
+      <link>http://localhost:1313/tags/machine-image/</link>
+      <pubDate>Thu, 27 Mar 2025 09:34:06 +1000</pubDate>
+      <guid>http://localhost:1313/tags/machine-image/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sysprep</title>
+      <link>http://localhost:1313/tags/sysprep/</link>
+      <pubDate>Thu, 27 Mar 2025 09:34:06 +1000</pubDate>
+      <guid>http://localhost:1313/tags/sysprep/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terminal</title>
+      <link>http://localhost:1313/tags/terminal/</link>
+      <pubDate>Thu, 27 Feb 2025 22:11:39 +1100</pubDate>
+      <guid>http://localhost:1313/tags/terminal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Domain</title>
+      <link>http://localhost:1313/tags/domain/</link>
+      <pubDate>Tue, 25 Feb 2025 23:16:13 +1100</pubDate>
+      <guid>http://localhost:1313/tags/domain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>http://localhost:1313/tags/blog/</link>
+      <pubDate>Tue, 25 Feb 2025 22:21:46 +1100</pubDate>
+      <guid>http://localhost:1313/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/tags/hugo/</link>
+      <pubDate>Tue, 25 Feb 2025 22:21:46 +1100</pubDate>
+      <guid>http://localhost:1313/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Symbolic Link</title>
+      <link>http://localhost:1313/tags/symbolic-link/</link>
+      <pubDate>Tue, 18 Feb 2025 22:31:44 +1100</pubDate>
+      <guid>http://localhost:1313/tags/symbolic-link/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terraform</title>
+      <link>http://localhost:1313/tags/terraform/</link>
+      <pubDate>Tue, 18 Feb 2025 22:31:44 +1100</pubDate>
+      <guid>http://localhost:1313/tags/terraform/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tfvars</title>
+      <link>http://localhost:1313/tags/tfvars/</link>
+      <pubDate>Tue, 18 Feb 2025 22:31:44 +1100</pubDate>
+      <guid>http://localhost:1313/tags/tfvars/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ICO</title>
+      <link>http://localhost:1313/tags/ico/</link>
+      <pubDate>Mon, 10 Feb 2025 22:58:18 +1100</pubDate>
+      <guid>http://localhost:1313/tags/ico/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Image</title>
+      <link>http://localhost:1313/tags/image/</link>
+      <pubDate>Mon, 10 Feb 2025 22:58:18 +1100</pubDate>
+      <guid>http://localhost:1313/tags/image/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SVG</title>
+      <link>http://localhost:1313/tags/svg/</link>
+      <pubDate>Mon, 10 Feb 2025 22:58:18 +1100</pubDate>
+      <guid>http://localhost:1313/tags/svg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Freet Manager</title>
+      <link>http://localhost:1313/tags/freet-manager/</link>
+      <pubDate>Sun, 09 Feb 2025 21:55:18 +1100</pubDate>
+      <guid>http://localhost:1313/tags/freet-manager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>System Manager</title>
+      <link>http://localhost:1313/tags/system-manager/</link>
+      <pubDate>Sun, 09 Feb 2025 21:55:18 +1100</pubDate>
+      <guid>http://localhost:1313/tags/system-manager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CloudShell</title>
+      <link>http://localhost:1313/tags/cloudshell/</link>
+      <pubDate>Sun, 09 Feb 2025 15:49:44 +1100</pubDate>
+      <guid>http://localhost:1313/tags/cloudshell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shell</title>
+      <link>http://localhost:1313/tags/shell/</link>
+      <pubDate>Sun, 09 Feb 2025 15:49:44 +1100</pubDate>
+      <guid>http://localhost:1313/tags/shell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>http://localhost:1313/tags/database/</link>
+      <pubDate>Sun, 09 Feb 2025 12:08:42 +1100</pubDate>
+      <guid>http://localhost:1313/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Maintenace</title>
+      <link>http://localhost:1313/tags/maintenace/</link>
+      <pubDate>Sun, 09 Feb 2025 12:08:42 +1100</pubDate>
+      <guid>http://localhost:1313/tags/maintenace/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQL</title>
+      <link>http://localhost:1313/tags/sql/</link>
+      <pubDate>Sun, 09 Feb 2025 12:08:42 +1100</pubDate>
+      <guid>http://localhost:1313/tags/sql/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

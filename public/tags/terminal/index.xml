@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terminal on Nobuhiro Tokushige - AI &amp; Cloud Solutions</title>
+    <link>http://localhost:1313/tags/terminal/</link>
+    <description>Recent content in Terminal on Nobuhiro Tokushige - AI &amp; Cloud Solutions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Feb 2025 22:11:39 +1100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Managing AWS Accounts in Terminal</title>
+      <link>http://localhost:1313/blog/managing-aws-accounts-in-the-terminal/</link>
+      <pubDate>Thu, 27 Feb 2025 22:11:39 +1100</pubDate>
+      <guid>http://localhost:1313/blog/managing-aws-accounts-in-the-terminal/</guid>
+      <description>&lt;h2 id=&#34;register-aws-accounts-to-the-terminal&#34;&gt;Register AWS Accounts to the Terminal&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Set AWS Credential&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-02-27-23-11-55.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;The command to check the Current AWS Credentials&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;aws sts get-caller-identity&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;The command to clear the AWS Account from the terminal&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;unset AWS_ACCESS_KEY_ID&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;unset AWS_SECRET_ACCESS_KEY&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;unset AWS_SESSION_TOKEN&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>

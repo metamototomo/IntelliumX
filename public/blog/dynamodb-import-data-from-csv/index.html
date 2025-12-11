@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/blog/dynamodb-import-data-from-csv/">
+  <meta property="og:site_name" content="Nobuhiro Tokushige - AI & Cloud Solutions">
+  <meta property="og:title" content="Amazon DynamoDB - Import CSV Data">
+  <meta property="og:description" content="1. Save the CSV file in the same location as the Python code user_id,first_name,last_name,company_name,address,city,state,post,phone1,phone2,email,webU001,Rebbecca,Didio,&#34;Brandt, Jonathan F Esq&#34;,171 E 24th St,Leith,TAS,7315,03-8174-9123,0458-665-290,rebbecca.didio@didio.com.au,http://www.brandtjonathanfesq.com.auU002,Stevie,Hallo,Landrum Temporary Services,22222 Acoma St,Proston,QLD,4613,07-9997-3366,0497-622-620,stevie.hallo@hotmail.com,http://www.landrumtemporaryservices.com.auU003,Mariko,Stayer,&#34;Inabinet, Macre Esq&#34;,534 Schoenborn St #51,Hamel,WA,6215,08-5558-9019,0427-885-282,mariko_stayer@hotmail.com,http://www.inabinetmacreesq.com.auU004,Gerardo,Woodka,Morris Downing &amp; Sherred,69206 Jackson Ave,Talmalmo,NSW,2640,02-6044-4682,0443-795-912,gerardo_woodka@hotmail.com,http://www.morrisdowningsherred.com.auU005,Mayra,Bena,&#34;Buelt, David L Esq&#34;,808 Glen Cove Ave,Lane Cove,NSW,1595,02-1455-6085,0453-666-885,mayra.bena@gmail.com,http://www.bueltdavidlesq.com.auU006,Idella,Scotland,Artesian Ice &amp; Cold Storage Co,373 Lafayette St,Cartmeticup,WA,6316,08-7868-1355,0451-966-921,idella@hotmail.com,http://www.artesianicecoldstorageco.com.auU007,Sherill,Klar,Midway Hotel,87 Sylvan Ave,Nyamup,WA,6258,08-6522-8931,0427-991-688,sklar@hotmail.com,http://www.midwayhotel.com.auU008,Ena,Desjardiws,&#34;Selsor, Robert J Esq&#34;,60562 Ky Rt 321,Bendick Murrell,NSW,2803,02-5226-9402,0415-961-606,ena_desjardiws@desjardiws.com.au,http://www.selsorrobertjesq.com.auU009,Vince,Siena,Vincent J Petti &amp; Co,70 S 18th Pl,Purrawunda,QLD,4356,07-3184-9989,0411-732-965,vince_siena@yahoo.com,http://www.vincentjpettico.com.auU010,Theron,Jarding,&#34;Prentiss, Paul F Esq&#34;,8839 Ventura Blvd,Blanchetown,SA,5357,08-6890-4661,0461-862-457,tjarding@hotmail.com,http://www.prentisspaulfesq.com.au 2. Set a temporary token for VS Code Reference: AWS STS - Temporary Access Tokens">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-06-15T16:20:16+10:00">
+    <meta property="article:modified_time" content="2025-06-15T16:20:16+10:00">
+    <meta property="article:tag" content="AWS">
+    <meta property="article:tag" content="DynamoDB">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Nobuhiro Tokushige - AI &amp; Cloud Solutions</title>
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+
+<nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/IntelliumX-v16.png" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+      <div id="navbar-menu" class="navbar-menu is-static">
+        <div class="navbar-start">
+          <a class="navbar-item is-hidden-mobile">
+            <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+              <svg width="1000px" height="1000px">
+                <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                <path class="path2" d="M 300 500 L 700 500"></path>
+                <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+              </svg>
+              <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+            </div>
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a href="/" class="navbar-item is-secondary">
+            Home
+          </a>
+          <a href="/projects/" class="navbar-item is-secondary">
+            Projects
+          </a>
+          <a href="/blog/" class="navbar-item is-secondary">
+            Blog
+          </a>
+          <a href="/about/" class="navbar-item is-secondary">
+            About
+          </a>
+        </div>
+      </div>
+  </div>
+</nav>
+
+
+<nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/IntelliumX-v16.png" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+      <div class="navbar-start">
+        <a class="navbar-item is-hidden-mobile">
+          <div id="cloned-menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+              <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+              <path class="path2" d="M 300 500 L 700 500"></path>
+              <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+            </svg>
+            <button id="cloned-menu-icon-trigger" class="menu-icon-trigger"></button>
+          </div>
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <a href="/" class="navbar-item is-secondary">
+          Home
+        </a>
+        <a href="/projects/" class="navbar-item is-secondary">
+          Projects
+        </a>
+        <a href="/blog/" class="navbar-item is-secondary">
+          Blog
+        </a>
+        <a href="/about/" class="navbar-item is-secondary">
+          About
+        </a>
+      </div>
+    </div>
+</div>
+</nav>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h1 class="title is-2">Amazon DynamoDB - Import CSV Data</h1>
+        <p class="subtitle is-6">June 15, 2025</p>
+        <div class="content"><p><img src="2025-06-17-11-19-21.png" alt=""></p>
+<h3 id="1-save-the-csv-file-in-the-same-location-as-the-python-code">1. Save the CSV file in the same location as the Python code</h3>
+<pre tabindex="0"><code>user_id,first_name,last_name,company_name,address,city,state,post,phone1,phone2,email,web
+U001,Rebbecca,Didio,&#34;Brandt, Jonathan F Esq&#34;,171 E 24th St,Leith,TAS,7315,03-8174-9123,0458-665-290,rebbecca.didio@didio.com.au,http://www.brandtjonathanfesq.com.au
+U002,Stevie,Hallo,Landrum Temporary Services,22222 Acoma St,Proston,QLD,4613,07-9997-3366,0497-622-620,stevie.hallo@hotmail.com,http://www.landrumtemporaryservices.com.au
+U003,Mariko,Stayer,&#34;Inabinet, Macre Esq&#34;,534 Schoenborn St #51,Hamel,WA,6215,08-5558-9019,0427-885-282,mariko_stayer@hotmail.com,http://www.inabinetmacreesq.com.au
+U004,Gerardo,Woodka,Morris Downing &amp; Sherred,69206 Jackson Ave,Talmalmo,NSW,2640,02-6044-4682,0443-795-912,gerardo_woodka@hotmail.com,http://www.morrisdowningsherred.com.au
+U005,Mayra,Bena,&#34;Buelt, David L Esq&#34;,808 Glen Cove Ave,Lane Cove,NSW,1595,02-1455-6085,0453-666-885,mayra.bena@gmail.com,http://www.bueltdavidlesq.com.au
+U006,Idella,Scotland,Artesian Ice &amp; Cold Storage Co,373 Lafayette St,Cartmeticup,WA,6316,08-7868-1355,0451-966-921,idella@hotmail.com,http://www.artesianicecoldstorageco.com.au
+U007,Sherill,Klar,Midway Hotel,87 Sylvan Ave,Nyamup,WA,6258,08-6522-8931,0427-991-688,sklar@hotmail.com,http://www.midwayhotel.com.au
+U008,Ena,Desjardiws,&#34;Selsor, Robert J Esq&#34;,60562 Ky Rt 321,Bendick Murrell,NSW,2803,02-5226-9402,0415-961-606,ena_desjardiws@desjardiws.com.au,http://www.selsorrobertjesq.com.au
+U009,Vince,Siena,Vincent J Petti &amp; Co,70 S 18th Pl,Purrawunda,QLD,4356,07-3184-9989,0411-732-965,vince_siena@yahoo.com,http://www.vincentjpettico.com.au
+U010,Theron,Jarding,&#34;Prentiss, Paul F Esq&#34;,8839 Ventura Blvd,Blanchetown,SA,5357,08-6890-4661,0461-862-457,tjarding@hotmail.com,http://www.prentisspaulfesq.com.au
+</code></pre><h3 id="2-set-a-temporary-token-for-vs-code">2. Set a temporary token for VS Code</h3>
+<p>Reference: <a href="http://localhost:1313/blog/aws-sts-temporary-access-tokens/">AWS STS - Temporary Access Tokens</a></p>
+<h3 id="3-execute-the-python-code">3. Execute the Python code</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> csv
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dynamodb <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(<span style="color:#e6db74">&#39;dynamodb&#39;</span>)
+</span></span><span style="display:flex;"><span>table <span style="color:#f92672">=</span> dynamodb<span style="color:#f92672">.</span>Table(<span style="color:#e6db74">&#39;user_list&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;data.csv&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> file:
+</span></span><span style="display:flex;"><span>    csv_reader <span style="color:#f92672">=</span> csv<span style="color:#f92672">.</span>DictReader(file)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> csv_reader:
+</span></span><span style="display:flex;"><span>        table<span style="color:#f92672">.</span>put_item(
+</span></span><span style="display:flex;"><span>            Item<span style="color:#f92672">=</span>{
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;user_id&#39;</span>: row[<span style="color:#e6db74">&#39;user_id&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;first_name&#39;</span>: row[<span style="color:#e6db74">&#39;first_name&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;last_name&#39;</span>: row[<span style="color:#e6db74">&#39;last_name&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;company_name&#39;</span>: row[<span style="color:#e6db74">&#39;company_name&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;address&#39;</span>: row[<span style="color:#e6db74">&#39;address&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;city&#39;</span>: row[<span style="color:#e6db74">&#39;city&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;state&#39;</span>: row[<span style="color:#e6db74">&#39;state&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;post&#39;</span>: row[<span style="color:#e6db74">&#39;post&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;phone1&#39;</span>: row[<span style="color:#e6db74">&#39;phone1&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;phone2&#39;</span>: row[<span style="color:#e6db74">&#39;phone2&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;email&#39;</span>: row[<span style="color:#e6db74">&#39;email&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;web&#39;</span>: row[<span style="color:#e6db74">&#39;web&#39;</span>]
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        )
+</span></span></code></pre></div><h3 id="4-check-the-table-contents">4. Check the table contents</h3>
+<p>AWS CLI:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws dynamodb scan --table-name user_list
+</span></span></code></pre></div><p>AWS Console:</p>
+<ol>
+<li>Go to the DynamoDB service</li>
+<li>In the left navigation pane, click on &ldquo;Tables&rdquo;</li>
+<li>Click on the &ldquo;user_list&rdquo; table name</li>
+<li>Click on the &ldquo;Explore table items&rdquo; button or &ldquo;View items&rdquo; tab</li>
+</ol>
+<p><img src="2025-06-15-17-22-41.png" alt=""></p>
+<hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/blog/aws-credentials-for-cli/">AWS Credentials for CLI</a></p>
+<p><a href="http://localhost:1313/blog/aws-sts-temporary-access-tokens/">AWS STS - Temporary Access Tokens</a></p>
+<p><a href="http://localhost:1313/blog/dynamodb-create-a-table/">Amazon DynamoDB - Create a Table</a></p>
+<p><a href="http://localhost:1313/blog/dynamodb-import-data-from-csv/">Amazon DynamoDB - Import CSV Data</a></p>
+<p><a href="http://localhost:1313/blog/lambda-create-a-function/">AWS Lambda - Create a Function</a></p>
+<p><a href="http://localhost:1313/blog/lambda-set-access-to-dynamodb/">AWS Lambda - Grant Access</a></p>
+<p><a href="http://localhost:1313/blog/api-gateway-usage-plan/">API Gateway - Usage Plan</a></p>
+<p><a href="http://localhost:1313/blog/api-gateway-api-key/">API Gateway - API Key</a></p>
+<p><a href="http://localhost:1313/blog/api-gateway-configuration/">API Gateway - Configuration</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer footer-dark">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="footer-logo">
+          <img src="/images/logos/IntelliumX-v15.png">
+        </div>
+      </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Product</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/">
+                  Discover features
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Why choose our product?
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Compare features
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Our roadmap
+                </a>
+              </li>
+              <li>
+                <a href="/agb">
+                  AGB
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Docs</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/">
+                  Get started
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  User guides
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Admin guide
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Developers
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Blog</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/blog/">
+                  All Posts
+                </a>
+              </li>
+              <li>
+                <a href="/about/">
+                  About
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="column">
+        <div class="footer-column">
+          <div class="footer-header">
+            <h3>Follow Us</h3>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <a class="level-item" href="https://www.linkedin.com/in/nobuhiro-tokushige/">
+                  <span class="icon"><i class="fa fa-linkedin"></i></span>
+                </a>
+                <a class="level-item" href="https://github.com/nobuhiro-tokushige">
+                  <span class="icon"><i class="fa fa-github"></i></span>
+                </a>
+              </div>
+            </nav>
+            <a href="https://bulma.io" target="_blank">
+              <img src="/images/logos/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+
+  </body>
+</html>

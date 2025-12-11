@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ECR on Nobuhiro Tokushige - AI &amp; Cloud Solutions</title>
+    <link>http://localhost:1313/tags/ecr/</link>
+    <description>Recent content in ECR on Nobuhiro Tokushige - AI &amp; Cloud Solutions</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Mar 2025 00:10:31 +1100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ecr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upload Docker Image to ECR</title>
+      <link>http://localhost:1313/blog/upload-docker-image-to-ecr/</link>
+      <pubDate>Sat, 29 Mar 2025 00:10:31 +1100</pubDate>
+      <guid>http://localhost:1313/blog/upload-docker-image-to-ecr/</guid>
+      <description>&lt;h2 id=&#34;configure-in-aws-management-console&#34;&gt;Configure in AWS management console&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Stay in the working directory where Dockerfile is located (e.g., ~/gcs-rabbit)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Open Repository page in Amazon ECR&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Create a repository by the code below&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;aws ecr create-repository --repository-name gcs-normal-rabbit --region ap-southeast-2&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;2025-03-29-00-16-24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;4&#34;&gt;&#xA;&lt;li&gt;Click &amp;ldquo;View push command&amp;rdquo; and follow the instruction with &lt;code&gt;sudo&lt;/code&gt; command&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-03-29-00-30-09.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;see-also&#34;&gt;See also:&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/rabbitmq-container-http/&#34;&gt;RabbitMQ Container - HTTP&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/rabbitmq-container-ssl/&#34;&gt;RabbitMQ Container - SSL&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

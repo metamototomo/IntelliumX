@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/blog/rabbitmq-container-ssl/">
+  <meta property="og:site_name" content="Nobuhiro Tokushige - AI & Cloud Solutions">
+  <meta property="og:title" content="RabbitMQ Container - SSL">
+  <meta property="og:description" content="Create a container (SSL) First, create a new working directory and prepare your certificate files: mkdir gcs-rabbit-ssl cd gcs-secure-rabbit mkdir certs # Copy your certificates to gcs-secure-rabbit/certs: # - ca.crt # - mid-ca.crt # - server-001.crt # - server-001.key Set 644 to these certificate chmod 644 certs/* Create a rabbitmq.conf (gcs-secure-rabbit/rabbitmq.conf): # RabbitMQ Configuration File # Disable non-SSL listeners listeners.tcp = none listeners.ssl.default = 5671 # SSL configuration ssl_options.cacertfile = /etc/rabbitmq/ssl/ca-bundle.crt ssl_options.certfile = /etc/rabbitmq/ssl/server.crt ssl_options.keyfile = /etc/rabbitmq/ssl/server.key ssl_options.verify = verify_peer ssl_options.depth = 2 ssl_options.fail_if_no_peer_cert = true # Management SSL configuration management.ssl.port = 15671 management.ssl.cacertfile = /etc/rabbitmq/ssl/ca-bundle.crt management.ssl.certfile = /etc/rabbitmq/ssl/server.crt management.ssl.keyfile = /etc/rabbitmq/ssl/server.key Create a Dockerfile (e.g., gcs-secure-rabbit/DockerFile): FROM rabbitmq:3.11.10-management # Create SSL directory RUN mkdir -p /etc/rabbitmq/ssl # Copy certificates COPY ca.crt mid-ca.crt /etc/rabbitmq/ssl/ COPY server-001.crt /etc/rabbitmq/ssl/server.crt COPY server-001.key /etc/rabbitmq/ssl/server.key # Create bundle certificate RUN cat /etc/rabbitmq/ssl/mid-ca.crt /etc/rabbitmq/ssl/ca.crt &gt; /etc/rabbitmq/ssl/ca-bundle.crt # Copy config file COPY rabbitmq.conf /etc/rabbitmq/rabbitmq.conf # Expose SSL ports EXPOSE 5671 15671 CMD [&#34;rabbitmq-server&#34;] Build and run the container: # Build the image sudo docker build -t gcs-secure-rabbit:latest . # Run the container sudo docker run -d --hostname secure-rabbit --name secure-rabbit \ -p 15671:15671 \ -p 5671:5671 \ --restart always \ gcs-secure-rabbit:latest Check the container logs after running it: sudo docker logs secure-rabbit See also: RabbitMQ Container - HTTP">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-03-30T21:40:32+11:00">
+    <meta property="article:modified_time" content="2025-03-30T21:40:32+11:00">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="RabbitMQ">
+    <meta property="article:tag" content="SSL">
+    <meta property="article:tag" content="Certificate">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Nobuhiro Tokushige - AI &amp; Cloud Solutions</title>
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+
+<nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/IntelliumX-v16.png" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+      <div id="navbar-menu" class="navbar-menu is-static">
+        <div class="navbar-start">
+          <a class="navbar-item is-hidden-mobile">
+            <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+              <svg width="1000px" height="1000px">
+                <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                <path class="path2" d="M 300 500 L 700 500"></path>
+                <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+              </svg>
+              <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+            </div>
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a href="/" class="navbar-item is-secondary">
+            Home
+          </a>
+          <a href="/projects/" class="navbar-item is-secondary">
+            Projects
+          </a>
+          <a href="/blog/" class="navbar-item is-secondary">
+            Blog
+          </a>
+          <a href="/about/" class="navbar-item is-secondary">
+            About
+          </a>
+        </div>
+      </div>
+  </div>
+</nav>
+
+
+<nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/IntelliumX-v16.png" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+      <div class="navbar-start">
+        <a class="navbar-item is-hidden-mobile">
+          <div id="cloned-menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+              <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+              <path class="path2" d="M 300 500 L 700 500"></path>
+              <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+            </svg>
+            <button id="cloned-menu-icon-trigger" class="menu-icon-trigger"></button>
+          </div>
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <a href="/" class="navbar-item is-secondary">
+          Home
+        </a>
+        <a href="/projects/" class="navbar-item is-secondary">
+          Projects
+        </a>
+        <a href="/blog/" class="navbar-item is-secondary">
+          Blog
+        </a>
+        <a href="/about/" class="navbar-item is-secondary">
+          About
+        </a>
+      </div>
+    </div>
+</div>
+</nav>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h1 class="title is-2">RabbitMQ Container - SSL</h1>
+        <p class="subtitle is-6">March 30, 2025</p>
+        <div class="content"><h2 id="create-a-container-ssl">Create a container (SSL)</h2>
+<ol>
+<li>First, create a new working directory and prepare your certificate files:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir gcs-rabbit-ssl
+</span></span><span style="display:flex;"><span>cd gcs-secure-rabbit
+</span></span><span style="display:flex;"><span>mkdir certs
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy your certificates to gcs-secure-rabbit/certs:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - ca.crt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - mid-ca.crt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - server-001.crt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - server-001.key</span>
+</span></span></code></pre></div><ol start="2">
+<li>Set 644 to these certificate</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">644</span> certs/*
+</span></span></code></pre></div><p><img src="2025-03-30-21-52-45.png" alt=""></p>
+<ol start="3">
+<li>Create a <code>rabbitmq.conf</code> (gcs-secure-rabbit/rabbitmq.conf):</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># RabbitMQ Configuration File</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Disable non-SSL listeners</span>
+</span></span><span style="display:flex;"><span>listeners.tcp <span style="color:#f92672">=</span> none
+</span></span><span style="display:flex;"><span>listeners.ssl.default <span style="color:#f92672">=</span> <span style="color:#ae81ff">5671</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SSL configuration</span>
+</span></span><span style="display:flex;"><span>ssl_options.cacertfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/ca-bundle.crt
+</span></span><span style="display:flex;"><span>ssl_options.certfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/server.crt
+</span></span><span style="display:flex;"><span>ssl_options.keyfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/server.key
+</span></span><span style="display:flex;"><span>ssl_options.verify <span style="color:#f92672">=</span> verify_peer
+</span></span><span style="display:flex;"><span>ssl_options.depth <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>ssl_options.fail_if_no_peer_cert <span style="color:#f92672">=</span> true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Management SSL configuration</span>
+</span></span><span style="display:flex;"><span>management.ssl.port <span style="color:#f92672">=</span> <span style="color:#ae81ff">15671</span>
+</span></span><span style="display:flex;"><span>management.ssl.cacertfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/ca-bundle.crt
+</span></span><span style="display:flex;"><span>management.ssl.certfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/server.crt
+</span></span><span style="display:flex;"><span>management.ssl.keyfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/server.key
+</span></span></code></pre></div><ol start="4">
+<li>Create a <code>Dockerfile</code> (e.g., gcs-secure-rabbit/DockerFile):</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>FROM rabbitmq:3.11.10-management
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create SSL directory</span>
+</span></span><span style="display:flex;"><span>RUN mkdir -p /etc/rabbitmq/ssl
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy certificates</span>
+</span></span><span style="display:flex;"><span>COPY ca.crt mid-ca.crt /etc/rabbitmq/ssl/
+</span></span><span style="display:flex;"><span>COPY server-001.crt /etc/rabbitmq/ssl/server.crt
+</span></span><span style="display:flex;"><span>COPY server-001.key /etc/rabbitmq/ssl/server.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create bundle certificate</span>
+</span></span><span style="display:flex;"><span>RUN cat /etc/rabbitmq/ssl/mid-ca.crt /etc/rabbitmq/ssl/ca.crt &gt; /etc/rabbitmq/ssl/ca-bundle.crt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy config file</span>
+</span></span><span style="display:flex;"><span>COPY rabbitmq.conf /etc/rabbitmq/rabbitmq.conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Expose SSL ports</span>
+</span></span><span style="display:flex;"><span>EXPOSE <span style="color:#ae81ff">5671</span> <span style="color:#ae81ff">15671</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CMD <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;rabbitmq-server&#34;</span><span style="color:#f92672">]</span>
+</span></span></code></pre></div><ol start="5">
+<li>Build and run the container:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Build the image</span>
+</span></span><span style="display:flex;"><span>sudo docker build -t gcs-secure-rabbit:latest .
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run the container</span>
+</span></span><span style="display:flex;"><span>sudo docker run -d --hostname secure-rabbit --name secure-rabbit <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-p 15671:15671 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-p 5671:5671 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--restart always <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>gcs-secure-rabbit:latest
+</span></span></code></pre></div><ol start="6">
+<li>Check the container logs after running it:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo docker logs secure-rabbit
+</span></span></code></pre></div><hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/blog/rabbitmq-container-http/">RabbitMQ Container - HTTP</a></p>
+<p><a href="http://localhost:1313/blog/upload-docker-image-to-ecr/">Upload Docker an Image to ECR</a></p>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer footer-dark">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="footer-logo">
+          <img src="/images/logos/IntelliumX-v15.png">
+        </div>
+      </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Product</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/">
+                  Discover features
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Why choose our product?
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Compare features
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Our roadmap
+                </a>
+              </li>
+              <li>
+                <a href="/agb">
+                  AGB
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Docs</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/">
+                  Get started
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  User guides
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Admin guide
+                </a>
+              </li>
+              <li>
+                <a href="/">
+                  Developers
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Blog</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/blog/">
+                  All Posts
+                </a>
+              </li>
+              <li>
+                <a href="/about/">
+                  About
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="column">
+        <div class="footer-column">
+          <div class="footer-header">
+            <h3>Follow Us</h3>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <a class="level-item" href="https://www.linkedin.com/in/nobuhiro-tokushige/">
+                  <span class="icon"><i class="fa fa-linkedin"></i></span>
+                </a>
+                <a class="level-item" href="https://github.com/nobuhiro-tokushige">
+                  <span class="icon"><i class="fa fa-github"></i></span>
+                </a>
+              </div>
+            </nav>
+            <a href="https://bulma.io" target="_blank">
+              <img src="/images/logos/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+
+  </body>
+</html>

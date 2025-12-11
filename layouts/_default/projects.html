@@ -1,0 +1,116 @@
+{{ define "main" }}
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <h1 class="title is-2 has-text-centered" style="margin-bottom: 3rem;">My Projects</h1>
+        
+        <!-- Project 1: Heartbeat -->
+        <a href="https://heartbeat.nobuops.com/" target="_blank" style="text-decoration: none;">
+          <div class="card" style="margin-bottom: 2.5rem; transition: all 0.3s;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)';" onmouseout="this.style.boxShadow='';">
+            <div class="columns is-gapless">
+              <div class="column is-7">
+                <div style="padding: 2rem;">
+                  <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <span style="font-size: 2.5rem; margin-right: 1rem;">💓</span>
+                    <h2 class="title is-3" style="margin: 0; color: #363636;">Heartbeat Monitor</h2>
+                  </div>
+                  <p style="color: #4a4a4a; font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">Serverless web application built on AWS for real-time monitoring and health checks. Provides instant alerts and comprehensive dashboard for system status tracking.</p>
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <span class="tag is-primary is-medium">AWS Lambda</span>
+                    <span class="tag is-primary is-medium">Serverless</span>
+                    <span class="tag is-primary is-medium">Monitoring</span>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-5">
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100%; min-height: 250px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">💓</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 2: Cafe Order System -->
+        <a href="https://cafe.nobuops.com/order.html" target="_blank" style="text-decoration: none;">
+          <div class="card" style="margin-bottom: 2.5rem; transition: all 0.3s;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)';" onmouseout="this.style.boxShadow='';">
+            <div class="columns is-gapless">
+              <div class="column is-7">
+                <div style="padding: 2rem;">
+                  <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <span style="font-size: 2.5rem; margin-right: 1rem;">☕</span>
+                    <h2 class="title is-3" style="margin: 0; color: #363636;">Cafe Order System</h2>
+                  </div>
+                  <p style="color: #4a4a4a; font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">Decoupled ordering system using AWS SQS for reliable message processing and workflow management. Ensures order reliability and scalability during peak hours.</p>
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <span class="tag is-info is-medium">AWS SQS</span>
+                    <span class="tag is-info is-medium">Serverless</span>
+                    <span class="tag is-info is-medium">Microservices</span>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-5">
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); height: 100%; min-height: 250px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">☕</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 3: Study Amplify -->
+        <a href="https://studyamplify.nobuops.com/" target="_blank" style="text-decoration: none;">
+          <div class="card" style="margin-bottom: 2.5rem; transition: all 0.3s;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)';" onmouseout="this.style.boxShadow='';">
+            <div class="columns is-gapless">
+              <div class="column is-7">
+                <div style="padding: 2rem;">
+                  <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <span style="font-size: 2.5rem; margin-right: 1rem;">🤖</span>
+                    <h2 class="title is-3" style="margin: 0; color: #363636;">Study Amplify</h2>
+                  </div>
+                  <p style="color: #4a4a4a; font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">AI-powered content generation platform using AWS Bedrock for intelligent study materials. Leverages advanced AI models to create personalized learning content.</p>
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <span class="tag is-success is-medium">AWS Bedrock</span>
+                    <span class="tag is-success is-medium">AI/ML</span>
+                    <span class="tag is-success is-medium">Serverless</span>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-5">
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); height: 100%; min-height: 250px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">🤖</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 4: RPA Testing Site -->
+        <a href="https://nobuo.netlify.app/" target="_blank" style="text-decoration: none;">
+          <div class="card" style="margin-bottom: 2.5rem; transition: all 0.3s;" onmouseover="this.style.boxShadow='0 8px 16px rgba(0,0,0,0.1)';" onmouseout="this.style.boxShadow='';">
+            <div class="columns is-gapless">
+              <div class="column is-7">
+                <div style="padding: 2rem;">
+                  <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <span style="font-size: 2.5rem; margin-right: 1rem;">🔧</span>
+                    <h2 class="title is-3" style="margin: 0; color: #363636;">RPA Testing Site</h2>
+                  </div>
+                  <p style="color: #4a4a4a; font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">Static website designed for testing and validating RPA automation workflows. Provides various UI elements and scenarios for comprehensive automation testing.</p>
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <span class="tag is-warning is-medium">Static Site</span>
+                    <span class="tag is-warning is-medium">RPA</span>
+                    <span class="tag is-warning is-medium">Testing</span>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-5">
+                <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); height: 100%; min-height: 250px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">🔧</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+{{ end }}

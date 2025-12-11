@@ -1,0 +1,25 @@
+# Generated public folder
+/public/
+
+# Hugo cache
+/resources/_gen/
+
+# Hugo build lock files
+.hugo_build.lock
+
+# Local environment files
+.env
+.env.*
+
+# OS / Editor specific
+.DS_Store
+Thumbs.db
+
+# IDE / editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Backup files
+*~

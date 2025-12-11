@@ -1,0 +1,241 @@
+{{ define "main" }}
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h1 class="title is-2">Blog</h1>
+        <div style="margin-bottom: 2rem;">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" id="search-input" placeholder="Search blog posts...">
+            </div>
+          </div>
+          <div class="field is-grouped" style="margin-top: 1rem;">
+            <div class="control">
+              <div class="select">
+                <select id="category-filter">
+                  <option value="">All Categories</option>
+                  {{ range .Site.Taxonomies.categories }}
+                  <option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>
+                  {{ end }}
+                </select>
+              </div>
+            </div>
+            <div class="control">
+              <div class="select">
+                <select id="tag-filter">
+                  <option value="">All Tags</option>
+                  {{ range .Site.Taxonomies.tags }}
+                  <option value="{{ .Page.Title }}">{{ .Page.Title }} ({{ .Count }})</option>
+                  {{ end }}
+                </select>
+              </div>
+            </div>
+            <div class="control">
+              <button class="button" id="clear-filters">Clear Filters</button>
+            </div>
+          </div>
+        </div>
+        <div class="content" id="blog-list">
+          {{ range .Pages }}
+          <a href="{{ .Permalink }}" style="text-decoration: none; color: inherit;">
+            <article class="blog-post" 
+              data-title="{{ .Title }}" 
+              data-content="{{ if .Summary }}{{ .Summary | plainify }}{{ else }}{{ .Content | plainify | truncate 500 }}{{ end }}" 
+              data-categories="{{ delimit .Params.categories "," }}" 
+              data-tags="{{ delimit .Params.tags "," }}" 
+              style="margin-bottom: 1.5rem; padding: 1.5rem; border: 1px solid #e8e8e8; border-radius: 6px; cursor: pointer; transition: all 0.2s;" 
+              onmouseover="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'; this.style.borderColor='#dbdbdb';" 
+              onmouseout="this.style.boxShadow='none'; this.style.borderColor='#e8e8e8';">
+              <h2 class="title is-4" style="margin-bottom: 1rem; color: #363636;">{{ .Title }}</h2>
+              <p class="subtitle is-6" style="color: #7a7a7a; margin-bottom: 0.75rem; margin-top: 0;">{{ .Date.Format "January 2, 2006" }}</p>
+              <p style="color: #4a4a4a; line-height: 1.6;">
+                {{ if .Summary }}
+                  {{ .Summary | plainify | truncate 200 }}
+                {{ else }}
+                  {{ .Content | plainify | truncate 200 }}
+                {{ end }}
+              </p>
+            </article>
+          </a>
+          {{ end }}
+        </div>
+        <nav class="pagination is-centered" id="pagination" role="navigation" aria-label="pagination" style="margin-top: 2rem;">
+          <a class="pagination-previous button" id="prev-btn" style="display: none;">Previous</a>
+          <a class="pagination-next button" id="next-btn" style="display: none;">Next</a>
+          <ul class="pagination-list" id="page-numbers"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const searchInput = document.getElementById('search-input');
+const categoryFilter = document.getElementById('category-filter');
+const tagFilter = document.getElementById('tag-filter');
+const clearFilters = document.getElementById('clear-filters');
+const blogPosts = Array.from(document.querySelectorAll('.blog-post'));
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const pagination = document.getElementById('pagination');
+const pageNumbers = document.getElementById('page-numbers');
+const postsPerPage = 10;
+let currentPage = 1;
+let filteredPosts = blogPosts;
+
+function showPage(page) {
+  const start = (page - 1) * postsPerPage;
+  const end = start + postsPerPage;
+  
+  // Hide all posts first
+  blogPosts.forEach(post => {
+    post.parentElement.style.display = 'none';
+  });
+  
+  // Show only filtered posts for current page
+  filteredPosts.forEach((post, index) => {
+    if (index >= start && index < end) {
+      post.parentElement.style.display = '';
+    }
+  });
+  
+  updatePagination();
+}
+
+function updatePagination() {
+  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+  
+  if (totalPages <= 1) {
+    pagination.style.display = 'none';
+    return;
+  }
+  
+  pagination.style.display = 'flex';
+  
+  // Show/hide Previous button
+  if (currentPage > 1) {
+    prevBtn.style.display = '';
+  } else {
+    prevBtn.style.display = 'none';
+  }
+  
+  // Show/hide Next button
+  if (currentPage < totalPages) {
+    nextBtn.style.display = '';
+  } else {
+    nextBtn.style.display = 'none';
+  }
+  
+  // Generate page numbers
+  pageNumbers.innerHTML = '';
+  
+  let startPage = Math.max(1, currentPage - 5);
+  let endPage = Math.min(totalPages, currentPage + 5);
+  
+  // Always show first page
+  if (startPage > 1) {
+    addPageNumber(1);
+    if (startPage > 2) {
+      addEllipsis();
+    }
+  }
+  
+  // Show page numbers
+  for (let i = startPage; i <= endPage; i++) {
+    addPageNumber(i);
+  }
+  
+  // Always show last page
+  if (endPage < totalPages) {
+    if (endPage < totalPages - 1) {
+      addEllipsis();
+    }
+    addPageNumber(totalPages);
+  }
+}
+
+function addPageNumber(pageNum) {
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.className = 'pagination-link' + (pageNum === currentPage ? ' is-current' : '');
+  a.textContent = pageNum;
+  a.href = '#';
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    currentPage = pageNum;
+    showPage(currentPage);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  li.appendChild(a);
+  pageNumbers.appendChild(li);
+}
+
+function addEllipsis() {
+  const li = document.createElement('li');
+  const span = document.createElement('span');
+  span.className = 'pagination-ellipsis';
+  span.innerHTML = '&hellip;';
+  li.appendChild(span);
+  pageNumbers.appendChild(li);
+}
+
+prevBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (currentPage > 1) {
+    currentPage--;
+    showPage(currentPage);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});
+
+nextBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (currentPage < Math.ceil(filteredPosts.length / postsPerPage)) {
+    currentPage++;
+    showPage(currentPage);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});
+
+function applyFilters() {
+  const query = searchInput.value.toLowerCase();
+  const selectedCategory = categoryFilter.value.toLowerCase();
+  const selectedTag = tagFilter.value.toLowerCase();
+  
+  filteredPosts = blogPosts.filter(post => {
+    const title = (post.dataset.title || '').toLowerCase();
+    const content = (post.dataset.content || '').toLowerCase();
+    const categories = (post.dataset.categories || '').toLowerCase();
+    const tags = (post.dataset.tags || '').toLowerCase();
+    
+    const matchesSearch = query === '' || title.includes(query) || content.includes(query);
+    const matchesCategory = selectedCategory === '' || categories.includes(selectedCategory);
+    const matchesTag = selectedTag === '' || tags.includes(selectedTag);
+    
+    return matchesSearch && matchesCategory && matchesTag;
+  });
+  
+  currentPage = 1;
+  showPage(currentPage);
+}
+
+searchInput.addEventListener('input', applyFilters);
+categoryFilter.addEventListener('change', applyFilters);
+tagFilter.addEventListener('change', applyFilters);
+
+clearFilters.addEventListener('click', () => {
+  searchInput.value = '';
+  categoryFilter.value = '';
+  tagFilter.value = '';
+  applyFilters();
+});
+
+applyFilters();
+</script>
+
+{{ partial "footer.html" . }}
+{{ end }}
