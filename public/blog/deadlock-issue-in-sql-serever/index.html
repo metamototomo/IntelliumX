@@ -263,7 +263,7 @@ Concurrent Transactions: Multiple transactions access the same resources in a co
 <li><strong>10-30%</strong> → Consider <strong>reorganizing</strong></li>
 <li><strong>30%+</strong> → Consider <strong>rebuilding</strong></li>
 </ul>
-<h3 id="4-optional-disable-auto-update-statistics-causes-poor-query-plans"><strong>4. [OPTIONAL] Disable Auto Update Statistics</strong> (Causes Poor Query Plans)</h3>
+<h3 id="4--causes-poor-query-plans"><strong>4. [OPTIONAL] Disable Auto Update Statistics</strong> (Causes Poor Query Plans)</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">DATABASE</span> ConflictTestDB <span style="color:#66d9ef">SET</span> AUTO_UPDATE_STATISTICS <span style="color:#66d9ef">OFF</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
 </span></span></code></pre></div><p><strong>If disabled</strong>, manually update statistics using:</p>
@@ -334,7 +334,7 @@ Concurrent Transactions: Multiple transactions access the same resources in a co
 </span></span><span style="display:flex;"><span>    avg_page_space_used_in_percent,
 </span></span><span style="display:flex;"><span>    page_count
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> sys.dm_db_index_physical_stats(DB_ID(), OBJECT_ID(<span style="color:#e6db74">&#39;log&#39;</span>), <span style="color:#66d9ef">NULL</span>, <span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#39;LIMITED&#39;</span>);<span style="color:#f92672">||</span>
-</span></span></code></pre></div><h3 id="2-write-down-avg_fragmentation_in_percent-and-page_count">2. <strong>Write Down avg_fragmentation_in_percent and page_count</strong></h3>
+</span></span></code></pre></div><h3 id="2-write-down-avg_">2. <strong>Write Down avg_fragmentation_in_percent and page_count</strong></h3>
 <ul>
 <li>Pay particular attention to the <code>avg_fragmentation_in_percent</code> — fragmentation above <strong>30-40%</strong> could significantly impact performance.</li>
 </ul>

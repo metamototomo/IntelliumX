@@ -164,7 +164,7 @@
       <div class="column is-8">
         <h1 class="title is-2">Backup Restore Database by sqlcmd</h1>
         <p class="subtitle is-6">April 3, 2025</p>
-        <div class="content"><h3 id="1-taking-full-backups-with-sqlcmd"><strong>1. Taking Full Backups with <code>sqlcmd</code></strong></h3>
+        <div class="content"><h3 id="1-taking-full-backups-with"><strong>1. Taking Full Backups with <code>sqlcmd</code></strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Run the commands when you reach an important point in the database configuration</span>
 </span></span><span style="display:flex;"><span>sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P <span style="color:#e6db74">&#39;Password123&#39;</span> -Q <span style="color:#e6db74">&#34;BACKUP DATABASE [v7.3.1_HUB_511_lab] TO DISK = &#39;/var/opt/mssql/backups/v7.3.1_HUB_511_lab_Stage_3.bak&#39; WITH FORMAT, INIT, NAME = &#39;Stage3&#39;;&#34;</span>
 </span></span><span style="display:flex;"><span>sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P <span style="color:#e6db74">&#39;Password123&#39;</span> -Q <span style="color:#e6db74">&#34;BACKUP DATABASE [HUB-5.1.1-lab] TO DISK = &#39;/var/opt/mssql/backups/HUB-5.1.1-lab_Stage_3.bak&#39; WITH FORMAT, INIT, NAME = &#39;Stage3&#39;;&#34;</span>
