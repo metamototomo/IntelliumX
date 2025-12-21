@@ -23,3 +23,6 @@ Thumbs.db
 
 # Backup files
 *~
+
+# NTFS Alternate Data Stream (ADS) created by Windows
+*Zone.Identifier
