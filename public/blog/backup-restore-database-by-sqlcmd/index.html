@@ -178,12 +178,12 @@
 </span></span></code></pre></div><h3 id="3-restoring-a-specific-backup-via-ssm"><strong>3. Restoring a Specific Backup via SSM</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Restore database via SSM</span>
 </span></span><span style="display:flex;"><span>aws ssm send-command <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --instance-ids <span style="color:#e6db74">&#34;i-0e0df3af14a11b3d1&#34;</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --document-name <span style="color:#e6db74">&#34;AWS-RunShellScript&#34;</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --parameters <span style="color:#e6db74">&#39;commands=[
+</span></span></span><span style="display:flex;"><span>    --instance-ids <span style="color:#e6db74">&#34;i-0e0df3af14a11b3d1&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    --document-name <span style="color:#e6db74">&#34;AWS-RunShellScript&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    --parameters <span style="color:#e6db74">&#39;commands=[
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;sudo docker exec sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P &#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39;Password123&#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39; -Q \&#34;RESTORE DATABASE [v7.3.1_HUB_511_lab] FROM DISK = &#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39;/var/opt/mssql/backups/v7.3.1_HUB_511_lab_Stage_3.bak&#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39; WITH REPLACE, RECOVERY;\&#34;&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ]&#39;</span> <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --region <span style="color:#e6db74">&#34;ap-southeast-2&#34;</span>
+</span></span></span><span style="display:flex;"><span>    --region <span style="color:#e6db74">&#34;ap-southeast-2&#34;</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check the Log in case of failure</span>
 </span></span><span style="display:flex;"><span>aws ssm list-command-invocations --command-id abab87ca-7abb-4746-8666-fa6ebbe67b51 --details
 </span></span></code></pre></div><hr>

@@ -6,8 +6,22 @@
     <description>Recent content in Tags on Nobuhiro Tokushige - AI &amp; Cloud Solutions</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Aug 2025 08:26:23 +1000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Dec 2025 16:49:48 +1100</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac</title>
+      <link>http://localhost:1313/tags/mac/</link>
+      <pubDate>Sun, 21 Dec 2025 16:49:48 +1100</pubDate>
+      <guid>http://localhost:1313/tags/mac/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terminal</title>
+      <link>http://localhost:1313/tags/terminal/</link>
+      <pubDate>Sun, 21 Dec 2025 16:49:48 +1100</pubDate>
+      <guid>http://localhost:1313/tags/terminal/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Amazon Cognito User Pool</title>
       <link>http://localhost:1313/tags/amazon-cognito-user-pool/</link>
@@ -328,13 +342,6 @@
       <link>http://localhost:1313/tags/sysprep/</link>
       <pubDate>Thu, 27 Mar 2025 09:34:06 +1000</pubDate>
       <guid>http://localhost:1313/tags/sysprep/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Terminal</title>
-      <link>http://localhost:1313/tags/terminal/</link>
-      <pubDate>Thu, 27 Feb 2025 22:11:39 +1100</pubDate>
-      <guid>http://localhost:1313/tags/terminal/</guid>
       <description></description>
     </item>
     <item>

@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Memory Dump Anaylsis - WinDbg</title>
-      <link>http://localhost:1313/blog/memory-dump-anaylsis/</link>
+      <link>http://localhost:1313/posts/memory-dump-anaylsis/</link>
       <pubDate>Mon, 19 May 2025 18:37:55 +1000</pubDate>
-      <guid>http://localhost:1313/blog/memory-dump-anaylsis/</guid>
+      <guid>http://localhost:1313/posts/memory-dump-anaylsis/</guid>
       <description>&lt;p&gt;WinDbg is the primary tool from Microsoft to analyze memory dump files.&lt;/p&gt;&#xA;&lt;p&gt;This is the Step-by-Step guide to Analyze Memory Dump with WinDbg.&lt;/p&gt;&#xA;&lt;h3 id=&#34;1-install-windbg-preview&#34;&gt;1. Install WinDbg Preview&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Open Microsoft Store and search for WinDbg Preview.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Or download it from &lt;a href=&#34;https://apps.microsoft.com/detail/9pgjgd53tn86?hl=en-US&amp;amp;gl=AU&#34;&gt;WinDbg Preview&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-05-19-18-58-10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-open-your-dump-file&#34;&gt;2. Open Your Dump File&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Launch WinDbg Preview.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Click File &amp;gt; Open dump file.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Select your .dmp file (e.g., C:\Windows\MEMORY.DMP, C:\Windows\Minidump).&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-05-19-18-56-40.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;3-use-basic-commands&#34;&gt;3. Use Basic Commands&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;After opening the file, type the following in the command window:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;!analyze -v&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;2025-05-19-19-00-22.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>

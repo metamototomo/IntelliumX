@@ -46,7 +46,7 @@ params:
       development practices. My goal is to help fellow developers and IT
       professionals solve real-world challenges more efficiently.
     buttontext: Explore Solutions
-    buttonlink: /blog/
+    buttonlink: /posts/
     image: illustrations/pexels-verma-harshil-3103199.jpg # Change this to your preferred image
     # Footer logos (from static/images/logos/clients/*.svg)
     # urls are optional
@@ -68,7 +68,7 @@ params:
     - title: Projects
       url: /projects/
     - title: Blog
-      url: /blog/
+      url: /posts/
     - title: About
       url: /about/
   sidebar:
@@ -113,7 +113,7 @@ params:
         icon: mouse-globe
         text: Generative AI solutions, AWS AI services, and intelligent automation for
           business transformation
-        url: /blog/
+        url: /posts/
         buttonText: Read More
       - title: Cloud Architecture
         icon: laptop-cloud
@@ -125,7 +125,7 @@ params:
         icon: plug-cloud
         text: CI/CD pipelines, infrastructure as code, SSL/TLS, and container
           orchestration
-        url: /blog/
+        url: /posts/
         buttonText: Learn More
   section2:
     title: Why This Platform Exists
@@ -219,6 +219,6 @@ params:
         title: Blog
         links:
           - text: All Posts
-            link: /blog/
+            link: /posts/
           - text: About
             link: /about/

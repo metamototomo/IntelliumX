@@ -2,19 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-12-21T16:49:48+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-12-21T16:49:48+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/customise-terminal/</loc>
+    <lastmod>2025-12-21T16:49:48+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mac/</loc>
+    <lastmod>2025-12-21T16:49:48+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-12-21T16:49:48+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-12-21T16:49:48+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/technology/</loc>
+    <lastmod>2025-12-21T16:49:48+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/terminal/</loc>
+    <lastmod>2025-12-21T16:49:48+11:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/amazon-cognito-user-pool/</loc>
     <lastmod>2025-08-11T08:26:23+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/azure-ad/</loc>
     <lastmod>2025-08-11T08:26:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2025-08-11T08:26:23+10:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-08-11T08:26:23+10:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/entraid-cognito-oidc/</loc>
+    <loc>http://localhost:1313/posts/entraid-cognito-oidc/</loc>
     <lastmod>2025-08-11T08:26:23+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/federation-authentication/</loc>
@@ -23,37 +41,28 @@
     <loc>http://localhost:1313/tags/microsoft-entra-id/</loc>
     <lastmod>2025-08-11T08:26:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-08-11T08:26:23+10:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/oidc/</loc>
     <lastmod>2025-08-11T08:26:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-08-11T08:26:23+10:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/technology/</loc>
-    <lastmod>2025-08-11T08:26:23+10:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/entraid-cognito-itegration-step5/</loc>
+    <loc>http://localhost:1313/posts/entraid-cognito-itegration-step5/</loc>
     <lastmod>2025-08-10T11:46:09+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/saml/</loc>
     <lastmod>2025-08-10T11:46:09+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/entraid-cognito-itegration-step4/</loc>
+    <loc>http://localhost:1313/posts/entraid-cognito-itegration-step4/</loc>
     <lastmod>2025-08-10T11:45:59+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/entraid-cognito-itegration-step3/</loc>
+    <loc>http://localhost:1313/posts/entraid-cognito-itegration-step3/</loc>
     <lastmod>2025-08-10T11:45:55+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/entraid-cognito-itegration-step2/</loc>
+    <loc>http://localhost:1313/posts/entraid-cognito-itegration-step2/</loc>
     <lastmod>2025-08-10T11:45:51+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/entraid-cognito-itegration-overview/</loc>
+    <loc>http://localhost:1313/posts/entraid-cognito-itegration-overview/</loc>
     <lastmod>2025-08-10T11:25:30+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/entraid-cognito-itegration-step1/</loc>
+    <loc>http://localhost:1313/posts/entraid-cognito-itegration-step1/</loc>
     <lastmod>2025-08-10T10:45:47+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/git/</loc>
@@ -62,43 +71,43 @@
     <loc>http://localhost:1313/tags/github/</loc>
     <lastmod>2025-06-25T20:40:01+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/git-hub-reset-and-start-again/</loc>
+    <loc>http://localhost:1313/posts/git-hub-reset-and-start-again/</loc>
     <lastmod>2025-06-25T20:40:01+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/tag/</loc>
     <lastmod>2025-06-25T20:40:01+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/git-hub-best-practive-tagging/</loc>
+    <loc>http://localhost:1313/posts/git-hub-best-practive-tagging/</loc>
     <lastmod>2025-06-25T20:39:37+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/api-gateway/</loc>
     <lastmod>2025-06-15T17:49:13+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/api-gateway-configuration/</loc>
+    <loc>http://localhost:1313/posts/api-gateway-configuration/</loc>
     <lastmod>2025-06-15T17:49:13+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/aws/</loc>
     <lastmod>2025-06-15T17:49:13+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/api-gateway-api-key/</loc>
+    <loc>http://localhost:1313/posts/api-gateway-api-key/</loc>
     <lastmod>2025-06-15T17:46:22+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/api-gateway-usage-plan/</loc>
+    <loc>http://localhost:1313/posts/api-gateway-usage-plan/</loc>
     <lastmod>2025-06-15T17:46:05+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/dynamodb-create-a-table/</loc>
+    <loc>http://localhost:1313/posts/dynamodb-create-a-table/</loc>
     <lastmod>2025-06-15T17:15:54+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/dynamodb/</loc>
     <lastmod>2025-06-15T17:15:54+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/aws-sts-temporary-access-tokens/</loc>
+    <loc>http://localhost:1313/posts/aws-sts-temporary-access-tokens/</loc>
     <lastmod>2025-06-15T17:12:59+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/security/</loc>
     <lastmod>2025-06-15T17:12:59+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/lambda-create-a-function/</loc>
+    <loc>http://localhost:1313/posts/lambda-create-a-function/</loc>
     <lastmod>2025-06-15T17:10:13+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/lambda/</loc>
@@ -107,19 +116,19 @@
     <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2025-06-15T17:10:13+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/aws-credentials-for-cli/</loc>
+    <loc>http://localhost:1313/posts/aws-credentials-for-cli/</loc>
     <lastmod>2025-06-15T17:07:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/lambda-set-access-to-dynamodb/</loc>
+    <loc>http://localhost:1313/posts/lambda-set-access-to-dynamodb/</loc>
     <lastmod>2025-06-15T17:00:19+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/iam/</loc>
     <lastmod>2025-06-15T17:00:19+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/dynamodb-import-data-from-csv/</loc>
+    <loc>http://localhost:1313/posts/dynamodb-import-data-from-csv/</loc>
     <lastmod>2025-06-15T16:20:16+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/setup-python-environment/</loc>
+    <loc>http://localhost:1313/posts/setup-python-environment/</loc>
     <lastmod>2025-06-11T11:02:17+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/vs-code/</loc>
@@ -128,25 +137,25 @@
     <loc>http://localhost:1313/tags/azure-devops/</loc>
     <lastmod>2025-05-20T09:30:14+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/git-move-branch/</loc>
+    <loc>http://localhost:1313/posts/git-move-branch/</loc>
     <lastmod>2025-05-20T09:30:14+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/git-useful-commands/</loc>
+    <loc>http://localhost:1313/posts/git-useful-commands/</loc>
     <lastmod>2025-05-20T09:11:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/azure-devops-complete/</loc>
+    <loc>http://localhost:1313/posts/azure-devops-complete/</loc>
     <lastmod>2025-05-20T09:10:42+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/azure-devops-approve/</loc>
+    <loc>http://localhost:1313/posts/azure-devops-approve/</loc>
     <lastmod>2025-05-20T08:49:12+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/azure-devops-pull-request/</loc>
+    <loc>http://localhost:1313/posts/azure-devops-pull-request/</loc>
     <lastmod>2025-05-20T08:27:35+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/memory-dump/</loc>
     <lastmod>2025-05-19T18:37:55+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/memory-dump-anaylsis/</loc>
+    <loc>http://localhost:1313/posts/memory-dump-anaylsis/</loc>
     <lastmod>2025-05-19T18:37:55+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/windows/</loc>
@@ -161,7 +170,7 @@
     <loc>http://localhost:1313/tags/nginx/</loc>
     <lastmod>2025-04-24T23:01:47+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/nginx-loadbalancer-wcf-grpc-ssl/</loc>
+    <loc>http://localhost:1313/posts/nginx-loadbalancer-wcf-grpc-ssl/</loc>
     <lastmod>2025-04-24T23:01:47+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ssl/</loc>
@@ -173,22 +182,22 @@
     <loc>http://localhost:1313/tags/openssl/</loc>
     <lastmod>2025-04-24T17:41:29+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/openssl-verify-certificate/</loc>
+    <loc>http://localhost:1313/posts/openssl-verify-certificate/</loc>
     <lastmod>2025-04-24T17:41:29+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ssl-certificate/</loc>
     <lastmod>2025-04-24T17:41:29+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/openssl-revoke-certificate/</loc>
+    <loc>http://localhost:1313/posts/openssl-revoke-certificate/</loc>
     <lastmod>2025-04-24T17:19:22+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/openssl-client-certificate/</loc>
+    <loc>http://localhost:1313/posts/openssl-client-certificate/</loc>
     <lastmod>2025-04-24T16:52:01+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/nginx-loadbalancer-wcf-grpc/</loc>
+    <loc>http://localhost:1313/posts/nginx-loadbalancer-wcf-grpc/</loc>
     <lastmod>2025-04-23T16:42:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/nginx-loadbalance-wcf-application/</loc>
+    <loc>http://localhost:1313/posts/nginx-loadbalance-wcf-application/</loc>
     <lastmod>2025-04-21T20:23:55+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/container/</loc>
@@ -200,10 +209,10 @@
     <loc>http://localhost:1313/tags/haproxy/</loc>
     <lastmod>2025-04-13T22:30:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/haproxy-container-loadbalancer/</loc>
+    <loc>http://localhost:1313/posts/haproxy-container-loadbalancer/</loc>
     <lastmod>2025-04-13T22:30:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/nginx-container-loadbalancer/</loc>
+    <loc>http://localhost:1313/posts/nginx-container-loadbalancer/</loc>
     <lastmod>2025-04-13T21:22:22+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/big-ip/</loc>
@@ -212,16 +221,16 @@
     <loc>http://localhost:1313/tags/f5/</loc>
     <lastmod>2025-04-13T20:07:14+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/f5-big-ip-sample-configuration/</loc>
+    <loc>http://localhost:1313/posts/f5-big-ip-sample-configuration/</loc>
     <lastmod>2025-04-13T20:07:14+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/nginx-loadbalancer/</loc>
+    <loc>http://localhost:1313/posts/nginx-loadbalancer/</loc>
     <lastmod>2025-04-13T13:54:12+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/active-directory/</loc>
     <lastmod>2025-04-13T07:25:43+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/change-hostname-linux/</loc>
+    <loc>http://localhost:1313/posts/change-hostname-linux/</loc>
     <lastmod>2025-04-13T07:25:43+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/hostname/</loc>
@@ -230,16 +239,16 @@
     <loc>http://localhost:1313/tags/linux/</loc>
     <lastmod>2025-04-13T07:25:43+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/nginx-container-test-web-page/</loc>
+    <loc>http://localhost:1313/posts/nginx-container-test-web-page/</loc>
     <lastmod>2025-04-10T23:21:17+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/create-a-mssql-container/</loc>
+    <loc>http://localhost:1313/posts/create-a-mssql-container/</loc>
     <lastmod>2025-04-04T20:40:37+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/backup/</loc>
     <lastmod>2025-04-03T16:43:34+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/backup-restore-database-by-sqlcmd/</loc>
+    <loc>http://localhost:1313/posts/backup-restore-database-by-sqlcmd/</loc>
     <lastmod>2025-04-03T16:43:34+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ssm/</loc>
@@ -248,13 +257,13 @@
     <loc>http://localhost:1313/tags/sql-server/</loc>
     <lastmod>2025-04-02T19:41:08+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/sql-server-container-with-tools/</loc>
+    <loc>http://localhost:1313/posts/sql-server-container-with-tools/</loc>
     <lastmod>2025-04-02T19:41:08+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/sqlcmd/</loc>
     <lastmod>2025-04-02T19:41:08+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/copy-files-from-a-docker-container/</loc>
+    <loc>http://localhost:1313/posts/copy-files-from-a-docker-container/</loc>
     <lastmod>2025-04-02T19:20:15+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/s3/</loc>
@@ -266,25 +275,25 @@
     <loc>http://localhost:1313/tags/rabbitmq/</loc>
     <lastmod>2025-03-30T21:40:32+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/rabbitmq-container-ssl/</loc>
+    <loc>http://localhost:1313/posts/rabbitmq-container-ssl/</loc>
     <lastmod>2025-03-30T21:40:32+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ecr/</loc>
     <lastmod>2025-03-29T00:10:31+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/upload-docker-image-to-ecr/</loc>
+    <loc>http://localhost:1313/posts/upload-docker-image-to-ecr/</loc>
     <lastmod>2025-03-29T00:10:31+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/rabbitmq-container-http/</loc>
+    <loc>http://localhost:1313/posts/rabbitmq-container-http/</loc>
     <lastmod>2025-03-28T22:46:51+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/image-builder-in-aws/</loc>
+    <loc>http://localhost:1313/posts/image-builder-in-aws/</loc>
     <lastmod>2025-03-27T14:48:49+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/image-builder/</loc>
     <lastmod>2025-03-27T14:48:49+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/sql-server-check-secure-connnection/</loc>
+    <loc>http://localhost:1313/posts/sql-server-check-secure-connnection/</loc>
     <lastmod>2025-03-27T14:01:38+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/machine-image/</loc>
@@ -293,31 +302,28 @@
     <loc>http://localhost:1313/tags/sysprep/</loc>
     <lastmod>2025-03-27T09:34:06+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/sysprep-in-aws/</loc>
+    <loc>http://localhost:1313/posts/sysprep-in-aws/</loc>
     <lastmod>2025-03-27T09:34:06+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/openssl-intial-setup/</loc>
+    <loc>http://localhost:1313/posts/openssl-intial-setup/</loc>
     <lastmod>2025-03-10T21:36:31+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/managing-aws-accounts-in-the-terminal/</loc>
+    <loc>http://localhost:1313/posts/managing-aws-accounts-in-the-terminal/</loc>
     <lastmod>2025-02-27T22:11:39+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/terminal/</loc>
-    <lastmod>2025-02-27T22:11:39+11:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/deploy-a-amazon-linux-2023/</loc>
+    <loc>http://localhost:1313/posts/deploy-a-amazon-linux-2023/</loc>
     <lastmod>2025-02-25T23:16:13+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/domain/</loc>
     <lastmod>2025-02-25T23:16:13+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/ignore-settings-in-github/</loc>
+    <loc>http://localhost:1313/posts/ignore-settings-in-github/</loc>
     <lastmod>2025-02-25T22:48:12+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/blog/</loc>
     <lastmod>2025-02-25T22:21:46+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/create-a-new-blog-post/</loc>
+    <loc>http://localhost:1313/posts/create-a-new-blog-post/</loc>
     <lastmod>2025-02-25T22:21:46+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/hugo/</loc>
@@ -329,16 +335,16 @@
     <loc>http://localhost:1313/tags/terraform/</loc>
     <lastmod>2025-02-18T22:31:44+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/terraform-link-to-tfvars-file/</loc>
+    <loc>http://localhost:1313/posts/terraform-link-to-tfvars-file/</loc>
     <lastmod>2025-02-18T22:31:44+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/tfvars/</loc>
     <lastmod>2025-02-18T22:31:44+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/how-to-disable-sounds-in-vs-code/</loc>
+    <loc>http://localhost:1313/posts/how-to-disable-sounds-in-vs-code/</loc>
     <lastmod>2025-02-18T21:40:50+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/create-ico-file-from-svg-file/</loc>
+    <loc>http://localhost:1313/posts/create-ico-file-from-svg-file/</loc>
     <lastmod>2025-02-10T22:58:18+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ico/</loc>
@@ -353,7 +359,7 @@
     <loc>http://localhost:1313/tags/freet-manager/</loc>
     <lastmod>2025-02-09T21:55:18+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/setup-fleet-manager/</loc>
+    <loc>http://localhost:1313/posts/setup-fleet-manager/</loc>
     <lastmod>2025-02-09T21:55:18+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/system-manager/</loc>
@@ -362,25 +368,25 @@
     <loc>http://localhost:1313/tags/cloudshell/</loc>
     <lastmod>2025-02-09T15:49:44+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/download-from-cloudshell/</loc>
+    <loc>http://localhost:1313/posts/download-from-cloudshell/</loc>
     <lastmod>2025-02-09T15:49:44+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/shell/</loc>
     <lastmod>2025-02-09T15:49:44+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/openssl-server-certificate/</loc>
+    <loc>http://localhost:1313/posts/openssl-server-certificate/</loc>
     <lastmod>2025-02-09T14:43:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/openssl-intermediate-ca/</loc>
+    <loc>http://localhost:1313/posts/openssl-intermediate-ca/</loc>
     <lastmod>2025-02-09T14:42:31+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/openssl-ca/</loc>
+    <loc>http://localhost:1313/posts/openssl-ca/</loc>
     <lastmod>2025-02-09T14:32:13+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/database/</loc>
     <lastmod>2025-02-09T12:08:42+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/deadlock-issue-in-sql-serever/</loc>
+    <loc>http://localhost:1313/posts/deadlock-issue-in-sql-serever/</loc>
     <lastmod>2025-02-09T12:08:42+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/maintenace/</loc>
@@ -389,7 +395,7 @@
     <loc>http://localhost:1313/tags/sql/</loc>
     <lastmod>2025-02-09T12:08:42+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/how-to-setup-pasteimage/</loc>
+    <loc>http://localhost:1313/posts/how-to-setup-pasteimage/</loc>
     <lastmod>2025-02-09T08:04:22+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/contact/</loc>

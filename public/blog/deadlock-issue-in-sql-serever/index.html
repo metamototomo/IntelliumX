@@ -221,7 +221,7 @@ Concurrent Transactions: Multiple transactions access the same resources in a co
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- Insert ~1 Million Rows
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SET</span> NOCOUNT <span style="color:#66d9ef">ON</span>;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> NOCOUNT <span style="color:#66d9ef">ON</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">DECLARE</span> <span style="color:#f92672">@</span>i INT <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span> TRAN
 </span></span><span style="display:flex;"><span>WHILE <span style="color:#f92672">@</span>i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1000000</span>
@@ -234,11 +234,11 @@ Concurrent Transactions: Multiple transactions access the same resources in a co
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
 </span></span></code></pre></div><h3 id="2-create-index-fragmentation-without-reindexing"><strong>2. Create Index Fragmentation (Without Reindexing)</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- Delete a large number of records randomly to cause index fragmentation
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> Orders <span style="color:#66d9ef">WHERE</span> OrderID <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> Orders <span style="color:#66d9ef">WHERE</span> OrderID <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- Fill gaps with new inserts (in random order)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SET</span> NOCOUNT <span style="color:#66d9ef">ON</span>;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> NOCOUNT <span style="color:#66d9ef">ON</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">DECLARE</span> <span style="color:#f92672">@</span>i INT <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span> TRAN
 </span></span><span style="display:flex;"><span>WHILE <span style="color:#f92672">@</span>i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">100000</span>
@@ -287,14 +287,14 @@ Concurrent Transactions: Multiple transactions access the same resources in a co
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span> <span style="color:#66d9ef">TRANSACTION</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> Orders <span style="color:#66d9ef">SET</span> Status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Processed by Query1&#39;</span> <span style="color:#66d9ef">WHERE</span> OrderID <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span>WAITFOR DELAY <span style="color:#e6db74">&#39;00:00:05&#39;</span>;  <span style="color:#75715e">-- Wait to allow Session 2 to lock another row
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">UPDATE</span> Orders <span style="color:#66d9ef">SET</span> OrderAmount <span style="color:#f92672">=</span> OrderAmount <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">WHERE</span> OrderID <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> Orders <span style="color:#66d9ef">SET</span> OrderAmount <span style="color:#f92672">=</span> OrderAmount <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">WHERE</span> OrderID <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">COMMIT</span> <span style="color:#66d9ef">TRANSACTION</span>;
 </span></span></code></pre></div><h3 id="2-run-session-2-query-window-2"><strong>2. Run Session 2 (Query Window 2)</strong></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span> <span style="color:#66d9ef">TRANSACTION</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> Orders <span style="color:#66d9ef">SET</span> OrderAmount <span style="color:#f92672">=</span> OrderAmount <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">WHERE</span> OrderID <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
 </span></span><span style="display:flex;"><span>WAITFOR DELAY <span style="color:#e6db74">&#39;00:00:05&#39;</span>;  <span style="color:#75715e">-- Wait to allow Session 1 to lock another row
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">UPDATE</span> Orders <span style="color:#66d9ef">SET</span> Status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Processed by Query2&#39;</span> <span style="color:#66d9ef">WHERE</span> OrderID <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> Orders <span style="color:#66d9ef">SET</span> Status <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Processed by Query2&#39;</span> <span style="color:#66d9ef">WHERE</span> OrderID <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">COMMIT</span> <span style="color:#66d9ef">TRANSACTION</span>;
 </span></span></code></pre></div><h3 id="3-run-the-queries-quickly-to-check-the-current-status">3. Run the queries quickly to check the current status</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> sys.dm_tran_locks;
@@ -349,7 +349,7 @@ Concurrent Transactions: Multiple transactions access the same resources in a co
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DECLARE</span> <span style="color:#f92672">@</span>TablesToRebuild <span style="color:#66d9ef">TABLE</span> (TableName NVARCHAR(<span style="color:#ae81ff">255</span>));
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">-- Add only the tables you want to rebuild
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">@</span>TablesToRebuild (TableName)
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">@</span>TablesToRebuild (TableName)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">VALUES</span> 
 </span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;BPASession&#39;</span>),
 </span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#39;BPASessionLog_NonUnicode&#39;</span>),
