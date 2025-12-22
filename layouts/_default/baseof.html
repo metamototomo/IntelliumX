@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "meta.html" . }}
+    <title>{{ block "title" . }}{{ if .Title }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</title>
+    <link rel="icon" type="image/svg+xml" href="{{ "img/logo.svg" | relURL }}">
+    {{ partial "css.html" . }}
+  </head>
+  <body>
+    {{ if ne .Site.Params.preloader false }}
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    {{ end }}
+
+    {{ block "main" . }}
+    {{ end }}
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+
+    {{ partial "javascript.html" . }}
+  </body>
+</html>
