@@ -6,8 +6,15 @@
     <description>Recent content in Git on Nobuhiro Tokushige - AI &amp; Cloud Solutions</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Jun 2025 20:40:01 +1000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Dec 2025 17:13:50 +1100</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is Zone Identifier</title>
+      <link>http://localhost:1313/posts/what-is-zone-identifier/</link>
+      <pubDate>Sun, 21 Dec 2025 17:13:50 +1100</pubDate>
+      <guid>http://localhost:1313/posts/what-is-zone-identifier/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;What it is&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;Zone.Identifier&lt;/code&gt; is &lt;strong&gt;Windows-only metadata&lt;/strong&gt; stored as an &lt;strong&gt;NTFS Alternate Data Stream (ADS)&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Why it exists&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Windows uses it to mark files &lt;strong&gt;downloaded from the Internet&lt;/strong&gt; for security purposes.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Why it appears on macOS/Linux&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;NTFS ADS is hidden on Windows, but when files are copied, zipped, or committed to Git and then opened on non-Windows systems, the metadata becomes a &lt;strong&gt;visible file&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;filename:Zone.Identifier&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Is it dangerous?&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;❌ No.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>GitHub - Reset and Start Again</title>
       <link>http://localhost:1313/posts/git-hub-reset-and-start-again/</link>
