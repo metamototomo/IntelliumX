@@ -2,7 +2,7 @@
 <html lang="{{ .Site.LanguageCode }}">
   <head>
     {{ partial "meta.html" . }}
-    <title>{{ block "title" . }}{{ if .Title }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</title>
+    <title>{{ block "title" . }}{{ if and .Title (ne .Title .Site.Title) }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</title>
     <link rel="icon" type="image/svg+xml" href="{{ "img/logo.svg" | relURL }}">
     {{ partial "css.html" . }}
   </head>
