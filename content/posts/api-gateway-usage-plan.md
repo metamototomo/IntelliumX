@@ -53,6 +53,8 @@ Monitor usage patterns through CloudWatch and adjust these values as needed.
 
 [AWS Credentials for CLI]({{< ref "aws-credentials-for-cli.md" >}})
 
+[AWS Credentials for CLI (Profile)]({{< ref "aws-credentials-for-cli-profile.md" >}})
+
 [AWS STS - Temporary Access Tokens]({{< ref "aws-sts-temporary-access-tokens.md" >}})
 
 [Amazon DynamoDB - Create a Table]({{< ref "dynamodb-create-a-table.md" >}})

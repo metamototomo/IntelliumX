@@ -32,8 +32,8 @@ params:
     image: logos/IntelliumX-v16.png  # Change this to your PNG filename
     link: /
     # Default width/height. Uncomment if you need to change
-    # width: 112
-    # height: 28
+    # width: 40
+    height: 40
   font:
     name: Open Sans
     sizes:
@@ -73,7 +73,7 @@ params:
       url: /about/
   sidebar:
     # Logo (from static/images/logos/___.svg)
-    logo: fresh-square
+    logo: IntelliumX-v16
     sections:
       - title: User
         icon: user

@@ -15,4 +15,7 @@
 </section>
 
 {{ partial "footer.html" . }}
+{{ if .Site.Params.sidebar }}
+{{ partial "sidebar.html" . }}
+{{ end }}
 {{ end }}

@@ -19,7 +19,51 @@ footer.footer .footer-column {
   border-bottom: none !important;
 }
 
-/* Make logo 20% bigger */
+/* Make logo normal size - removed scaling to fix sticky header */
 .navbar-brand .navbar-item img {
-  transform: scale(1.2);
+  /* transform: scale(1.2); */
+}
+
+/* Reduce logo size when navbar is sticky/scrolled */
+.navbar.is-spaced .navbar-brand .navbar-item img,
+.navbar.is-fixed-top .navbar-brand .navbar-item img {
+  transform: scale(1.0);
+}
+
+/* Fix sticky navbar height */
+#navbar-clone {
+  min-height: 4rem !important;
+}
+
+#navbar-clone .navbar-brand {
+  min-height: 4rem !important;
+}
+
+#navbar-clone .navbar-item {
+  min-height: 4rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Hide duplicate hamburger menu in sticky header */
+#navbar-clone .navbar-burger {
+  display: none !important;
+}
+
+/* Hide one of the hamburger menus in sticky header */
+#navbar-clone .navbar-start .navbar-item {
+  display: none !important;
+}
+
+/* Make sidebar logo bigger */
+.sidebar-header img {
+  /* width: 40px !important; */
+  height: 45px !important;
+}
+
+/* Ensure sidebar shows properly when active */
+.sidebar.is-active {
+  transform: translateX(0) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
