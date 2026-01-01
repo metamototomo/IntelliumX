@@ -67,3 +67,9 @@ footer.footer .footer-column {
   visibility: visible !important;
   opacity: 1 !important;
 }
+
+/* Make navbar logo bigger */
+.navbar-brand .navbar-item img {
+  /* width: 60px !important; */
+  /* height: 100px !important; */
+}
