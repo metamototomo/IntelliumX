@@ -72,7 +72,7 @@ params:
     - title: About
       url: /about/
   sidebar:
-    # Logo (from static/images/logos/___.svg)
+    # Logo (from static/images/logos/___.png)
     logo: IntelliumX-v21
     sections:
       - title: User
