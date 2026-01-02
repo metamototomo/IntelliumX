@@ -456,5 +456,26 @@
       <guid>http://localhost:1313/tags/sql/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Cost Optimization</title>
+      <link>http://localhost:1313/tags/cost-optimization/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cost-optimization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dashboard</title>
+      <link>http://localhost:1313/tags/dashboard/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/dashboard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Serverless</title>
+      <link>http://localhost:1313/tags/serverless/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/serverless/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

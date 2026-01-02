@@ -10,6 +10,26 @@ This section showcases my work in AI consulting, cloud architecture, and applica
 
 ## 🚀 Active Development
 
+### CloudLens - AWS Cost Monitoring Dashboard
+**Status**: Production (Active Development)  
+**Timeline**: January 2025  
+**Live Demo**: [cloudlens.intelliumx.com](https://cloudlens.intelliumx.com/)  
+**Tech Stack**: AWS Lambda, API Gateway, DynamoDB, S3, CloudFront, Cognito
+
+**Overview**:  
+Serverless AWS cost monitoring dashboard with real-time visibility, enterprise-grade security, and 97% cost optimization through intelligent caching.
+
+**Key Achievements**:
+- Built 100% serverless architecture on AWS
+- Implemented OAuth 2.0 authentication with Cognito + PKCE
+- Reduced API costs by 97% using DynamoDB caching strategy
+- Achieved ~$7/month operational cost
+- Mobile-responsive design with real-time cost tracking
+
+**[Read Full Case Study →](/projects/cloudlens/)**
+
+---
+
 ### AI-Powered Subscription Applications
 **Status**: Planning & Development  
 **Timeline**: Q1-Q2 2025  
@@ -93,5 +113,5 @@ This section showcases my work in AI consulting, cloud architecture, and applica
 
 This page is updated monthly with new projects, completed milestones, and lessons learned. Follow my [LinkedIn](https://www.linkedin.com/in/nobuhiro-tokushige/) for real-time updates on project progress.
 
-**Last Updated**: December 2024  
-**Next Update**: January 2025
+**Last Updated**: January 2025  
+**Next Update**: February 2025

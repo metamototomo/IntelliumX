@@ -404,10 +404,26 @@
     <loc>http://localhost:1313/posts/how-to-setup-pasteimage/</loc>
     <lastmod>2025-02-09T08:04:22+11:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/cloud-projects/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/cloudlens/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cost-optimization/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/dashboard/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/serverless/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/contact/</loc>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
-  </url><url>
-    <loc>http://localhost:1313/projects/</loc>
   </url>
 </urlset>
