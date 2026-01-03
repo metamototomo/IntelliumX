@@ -15,7 +15,7 @@ description: "A serverless AWS cost monitoring dashboard with real-time visibili
 
 CloudLens is a serverless AWS cost monitoring dashboard that quickly detects unexpected cost increases. Built with AWS-native services, CloudLens delivers real-time cost visibility through simple charts and time-based filtering while maintaining enterprise-grade security and minimal operational overhead.
 
-![Dashboard Image](/images/cloudlens/dashboard-screenshot.png)
+![Dashboard Image](/images/projects/cloudlens/dashboard-screenshot.png)
 
 ## Background
 
@@ -39,7 +39,7 @@ So I developed CloudLens to quickly check costs with enterprise-level security p
 
 CloudLens is built on a 100% serverless AWS architecture:
 
-![CloudLens Architecture](/images/cloudlens/architecture-diagram.png)
+![CloudLens Architecture](/images/projects/cloudlens/architecture-diagram.png)
 
 **Components:**
 - **Frontend:** S3 + CloudFront with Origin Access Control (OAC)
