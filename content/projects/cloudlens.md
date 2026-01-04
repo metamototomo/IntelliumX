@@ -1,5 +1,5 @@
 ---
-title: "CloudLens - Serverless AWS Cost Monitoring"
+title: "Serverless AWS Cost Monitoring"
 date: 2025-01-30
 draft: false
 tags: ["AWS", "Serverless", "Cost Optimization", "Dashboard", "DynamoDB", "Lambda"]
@@ -11,11 +11,11 @@ description: "A serverless AWS cost monitoring dashboard with real-time visibili
 
 **Live Application:** <a href="https://cloudlens.intelliumx.com/" target="_blank" rel="noopener">cloudlens.intelliumx.com</a>
 
+![](2026-01-04-10-58-11.png)
+
 ## Overview
 
 CloudLens is a serverless AWS cost monitoring dashboard that quickly detects unexpected cost increases. Built with AWS-native services, CloudLens delivers real-time cost visibility through simple charts and time-based filtering while maintaining enterprise-grade security and minimal operational overhead.
-
-![Dashboard Image](/images/projects/cloudlens/dashboard-screenshot.png)
 
 ## Background
 
@@ -66,113 +66,7 @@ I implemented a caching layer using DynamoDB with a 6-hour TTL. The results were
 
 I've been actively using the application for testing over the last few days, and I no longer see unexpected cost increases. This is crucial when developing any application or system in a cloud environment. I'm very happy with this application and will keep using it while improving usability and maintaining simple UI operations.
 
-## Benefits
-
-- Real-time AWS cost visibility across all services
-- Service breakdown analysis to identify cost drivers
-- Flexible time-based filtering (7/30/90 days)
-- Secure authentication with Amazon Cognito
-- Low operational cost (~$7/month with 97% API savings)
-- Zero maintenance serverless architecture
-
-## AWS Well-Architected Design
-
-CloudLens follows AWS Well-Architected Framework principles across all six pillars:
-
-### Operational Excellence
-Serverless architecture eliminates infrastructure management. No servers to patch, no scaling to configure—just deploy and run.
-
-### Security
-- Amazon Cognito authentication with Authorization Code + PKCE flow
-- Origin Access Control (OAC) for S3/CloudFront
-- No credentials stored in frontend code
-- IAM least-privilege permissions
-
-### Reliability
-- Multi-AZ AWS managed services
-- DynamoDB auto-scaling
-- CloudFront global edge network
-- Lambda automatic retry and error handling
-
-### Performance
-- DynamoDB caching with 6-hour TTL
-- CloudFront CDN for global low-latency access
-- Optimized Lambda functions (128MB, 10s timeout)
-- Efficient API design with minimal round trips
-
-### Cost Optimization
-- 97% API cost reduction through intelligent caching
-- Serverless pay-per-use model (no idle costs)
-- S3 + CloudFront for cost-effective static hosting
-- DynamoDB on-demand pricing (free tier eligible)
-
-### Sustainability
-- Efficient resource usage with serverless compute
-- Minimal compute footprint (128MB Lambda)
-- Caching reduces redundant API calls
-- CloudFront reduces data transfer distances
-
-## What I Learned
-
-### Technical Skills
-- **Frontend Development:** Simple, intuitive user interface with responsive design for desktop and mobile devices
-- **Authentication:** OAuth 2.0 secure login using Amazon Cognito with PKCE flow
-- **Performance Optimization:** Caching strategy using DynamoDB with TTL
-- **Cost Management:** Real-world experience with AWS pricing and optimization techniques
-
-### Key Insights
-- **Cost awareness is critical** - Even small API costs can add up quickly during development
-- **Caching is powerful** - A simple caching layer can reduce costs by 97%
-- **Serverless scales** - From zero to production without infrastructure changes
-- **Security matters** - Enterprise-grade authentication is achievable with AWS managed services
-
-## Technology Stack
-
-**Frontend:**
-- HTML5, CSS3, JavaScript (Vanilla)
-- Chart.js for data visualization
-- Responsive design (mobile-first)
-
-**Backend:**
-- AWS Lambda (Python 3.x)
-- API Gateway (REST API)
-- AWS Cost Explorer API
-
-**Storage & Caching:**
-- Amazon S3 (static hosting)
-- DynamoDB (cache layer with TTL)
-
-**CDN & Security:**
-- Amazon CloudFront (global CDN)
-- Amazon Cognito (authentication)
-- Origin Access Control (OAC)
-
-**Infrastructure:**
-- 100% serverless
-- Multi-region capable
-- Pay-per-use pricing
-
-## Operational Costs
-
-**Monthly Breakdown:**
-- Cost Explorer API: $7.20 (24 calls/day)
-- DynamoDB: $0.25 (free tier eligible)
-- Lambda: <$0.10 (free tier eligible)
-- S3: <$0.10 (free tier eligible)
-- CloudFront: <$0.50 (free tier eligible)
-- API Gateway: <$0.10 (free tier eligible)
-- Cognito: Free (up to 50,000 MAUs)
-
 **Total: ~$7/month** (after free tier)
-
-## Future Enhancements
-
-- Budget alerts and notifications
-- Cost forecasting using AWS Cost Explorer forecast API
-- Multi-account support for organizations
-- Custom date range selection
-- Export data to CSV/PDF
-- Cost anomaly detection with ML
 
 ## Conclusion
 

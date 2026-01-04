@@ -457,6 +457,20 @@
       <description></description>
     </item>
     <item>
+      <title>Automation</title>
+      <link>http://localhost:1313/tags/automation/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CI/CD</title>
+      <link>http://localhost:1313/tags/ci/cd/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ci/cd/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Cognito</title>
       <link>http://localhost:1313/tags/cognito/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
@@ -499,10 +513,38 @@
       <description></description>
     </item>
     <item>
+      <title>RPA</title>
+      <link>http://localhost:1313/tags/rpa/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rpa/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Serverless</title>
       <link>http://localhost:1313/tags/serverless/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/serverless/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Static Sites</title>
+      <link>http://localhost:1313/tags/static-sites/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/static-sites/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Testing</title>
+      <link>http://localhost:1313/tags/testing/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Applications</title>
+      <link>http://localhost:1313/tags/web-applications/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/web-applications/</guid>
       <description></description>
     </item>
   </channel>
