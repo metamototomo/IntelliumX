@@ -407,6 +407,9 @@
     <loc>http://localhost:1313/tags/automation/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/projects/cafe-order-system/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/ci/cd/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -422,10 +425,22 @@
     <loc>http://localhost:1313/tags/dashboard/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/decoupling/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/health-projects/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/health-tech/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/learning/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/learning-projects/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/message-queues/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/oauth-2.0/</loc>
@@ -447,6 +462,9 @@
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/cloudlens/</loc>
+    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/sqs/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/static-sites/</loc>

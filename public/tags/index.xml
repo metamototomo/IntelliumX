@@ -492,10 +492,31 @@
       <description></description>
     </item>
     <item>
+      <title>Decoupling</title>
+      <link>http://localhost:1313/tags/decoupling/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/decoupling/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Health Tech</title>
       <link>http://localhost:1313/tags/health-tech/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/health-tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Learning</title>
+      <link>http://localhost:1313/tags/learning/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Message Queues</title>
+      <link>http://localhost:1313/tags/message-queues/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/message-queues/</guid>
       <description></description>
     </item>
     <item>
@@ -524,6 +545,13 @@
       <link>http://localhost:1313/tags/serverless/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/serverless/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQS</title>
+      <link>http://localhost:1313/tags/sqs/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sqs/</guid>
       <description></description>
     </item>
     <item>
