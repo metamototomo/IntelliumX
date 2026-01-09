@@ -40,14 +40,14 @@ params:
       - 400
       - 600
   hero:
-    title: Hi there !!
+    title: IntelliumX
     subtitle: Welcome to my tech knowledge hub! I share practical solutions, tips,
       and insights I've discovered while working with AI, AWS, and modern
       development practices. My goal is to help fellow developers and IT
       professionals solve real-world challenges more efficiently.
-    buttontext: Explore Solutions
-    buttonlink: /posts/
-    image: illustrations/pexels-verma-harshil-3103199.jpg # Change this to your preferred image
+    buttontext: Explore My Work
+    buttonlink: /projects/
+    image: hero-background.jpg # Add your hero background image here
     # Footer logos (from static/images/logos/clients/*.svg)
     # urls are optional
     clientlogos:
