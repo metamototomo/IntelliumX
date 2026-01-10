@@ -36,6 +36,121 @@
     
 
     
+
+<nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/IntelliumX-v21.png" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+      <div id="navbar-menu" class="navbar-menu is-static">
+        <div class="navbar-start">
+          <a class="navbar-item is-hidden-mobile">
+            <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+              <svg width="1000px" height="1000px">
+                <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                <path class="path2" d="M 300 500 L 700 500"></path>
+                <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+              </svg>
+              <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+            </div>
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a href="/" class="navbar-item is-secondary">
+            Home
+          </a>
+          <a href="/projects/" class="navbar-item is-secondary">
+            Projects
+          </a>
+          <a href="/posts/" class="navbar-item is-secondary">
+            Blog
+          </a>
+          <a href="/about/" class="navbar-item is-secondary">
+            About
+          </a>
+        </div>
+      </div>
+  </div>
+</nav>
+
+
+<nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/IntelliumX-v21.png" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+      <div class="navbar-start">
+        <a class="navbar-item is-hidden-mobile">
+          <div id="cloned-menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+              <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+              <path class="path2" d="M 300 500 L 700 500"></path>
+              <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+            </svg>
+            <button id="cloned-menu-icon-trigger" class="menu-icon-trigger"></button>
+          </div>
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <a href="/" class="navbar-item is-secondary">
+          Home
+        </a>
+        <a href="/projects/" class="navbar-item is-secondary">
+          Projects
+        </a>
+        <a href="/posts/" class="navbar-item is-secondary">
+          Blog
+        </a>
+        <a href="/about/" class="navbar-item is-secondary">
+          About
+        </a>
+      </div>
+    </div>
+</div>
+</nav>
+
+
 <section class="section">
   <div class="container">
     <div class="columns">
@@ -48,6 +163,33 @@
           
 
           
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/github-ssh-settings/">GitHub - SSH Settings (ed25519)</a></h3>
+                    <p class="subtitle is-6">January 10, 2026</p>
+                    
+                      <p><h2 id="this-workflow-ensures">This workflow ensures:</h2>
+<ul>
+<li><strong>Secure key</strong> (with passphrase)</li>
+<li><strong>Convenient usage</strong> (Keychain remembers passphrase)</li>
+<li><strong>SSH-only workflow</strong> → no HTTPS credentials required</li>
+</ul>
+<p><img src="2026-01-10-23-42-49.png" alt=""></p>
+<h2 id="1-check-for-existing-keys-optional">1) Check for existing keys (optional)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -la ~/.ssh
+</span></span></code></pre></div><ul>
+<li>Look for <code>id_ed25519</code> / <code>id_ed25519.pub</code></li>
+<li>If you already have a key you want to use, skip key generation</li>
+</ul>
+<hr>
+<h2 id="2-generate-a-new-ed25519-key">2) Generate a new ed25519 key</h2>
+<p><code>ed25519</code> refers to the <strong>Ed25519 elliptic-curve algorithm</strong>, which is the <em>modern</em>, <em>faster</em>, and <em>more secure</em> replacement for older RSA SSH keys. Replace the email with your GitHub email:</p></p>
+                    
+                  </div>
+                </div>
+              </article>
             
               <article class="media">
                 <div class="media-content">
@@ -350,6 +492,208 @@ aws_secret_access_key = your_secret_key
     </div>
   </div>
 </section>
+
+
+<footer class="footer footer-dark">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="footer-logo">
+          <img src="/images/logos/IntelliumX-v21.png">
+        </div>
+      </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Navigate</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/projects/">
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a href="/posts/">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="/about/">
+                  About
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Resources</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/posts/">
+                  All Posts
+                </a>
+              </li>
+              <li>
+                <a href="/categories/">
+                  Categories
+                </a>
+              </li>
+              <li>
+                <a href="/tags/">
+                  Tags
+                </a>
+              </li>
+              <li>
+                <a href="/archives/">
+                  Archives
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Connect</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="https://www.linkedin.com/in/nobuhiro-tokushige/" target="_blank">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/metamototomo" target="_blank">
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="column">
+        <div class="footer-column">
+          <div class="footer-header">
+            <h3>Follow Us</h3>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <a class="level-item" href="https://www.linkedin.com/in/nobuhiro-tokushige/" target="_blank">
+                  <span class="icon"><i class="fa fa-linkedin"></i></span>
+                </a>
+                <a class="level-item" href="https://github.com/metamototomo" target="_blank">
+                  <span class="icon"><i class="fa fa-github"></i></span>
+                </a>
+              </div>
+            </nav>
+            <a href="https://bulma.io" target="_blank">
+              <img src="/images/logos/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <img src="/images/logos/IntelliumX-v21.png">
+    <a class="sidebar-close" href="javascript:void(0);">
+      <i data-feather="x"></i>
+    </a>
+  </div>
+  <div class="inner">
+    <ul class="sidebar-menu">
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-user"></span>
+          User
+        </a>
+        <ul>
+          <li>
+            <a href="/">
+              Profile
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Account
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Settings
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-envelope"></span>
+          Messages
+        </a>
+        <ul>
+          <li>
+            <a href="/">
+              Inbox
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Compose
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-image"></span>
+          Images
+        </a>
+        <ul>
+          <li>
+            <a href="/">
+              Library
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Upload
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-cog"></span>
+          Settings
+        </a>
+        <ul>
+          <li>
+            <a href="/">
+              User settings
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              App settings
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
 
 
     
