@@ -1,2 +1,249 @@
-<!-- Layout with no content to avoid WARN message about missing page layout -->
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/tags/azure-ad/">
+  <meta property="og:site_name" content="IntelliumX">
+  <meta property="og:title" content="Azure AD">
+  <meta property="og:description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Azure AD - IntelliumX</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1 class="title">Azure AD</h1>
+          
+          
+            <p class="subtitle">Browse posts by tag</p>
+          
+
+          
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/entraid-cognito-oidc/">Entra ID and Cognito - OIDC</a></h3>
+                    <p class="subtitle is-6">August 11, 2025</p>
+                    
+                      <p><h2 id="overview">Overview</h2>
+<p>This guide walks through setting up Microsoft Entra ID (formerly Azure AD) as an OpenID Connect (OIDC) identity provider for AWS Cognito User Pools. This integration allows users to sign in to your applications using their Microsoft credentials.</p>
+<h2 id="steps"><strong>Steps</strong></h2>
+<h3 id="1-sign-in-to-azure-portal"><strong>1. Sign in to Azure Portal</strong></h3>
+<p>Navigate to <a href="https://portal.azure.com">https://portal.azure.com</a> and access <strong>Microsoft Entra ID</strong> (formerly &ldquo;Azure AD&rdquo;) from the main services menu.</p>
+<h3 id="2-register-a-new-application"><strong>2. Register a New Application</strong></h3>
+<ol>
+<li>In <strong>Microsoft Entra ID</strong>, select <strong>App registrations</strong> → <strong>New registration</strong>.</li>
+</ol>
+<p><img src="2025-08-11-08-30-37.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/entraid-cognito-itegration-step5/">Entra ID and Cognito Itegration - Step5</a></h3>
+                    <p class="subtitle is-6">August 10, 2025</p>
+                    
+                      <p><h3 id="step-5-verify-and-test-the-integration">Step 5: Verify and Test the Integration</h3>
+<p>The hosted UI automatically displays both authentication options.</p>
+<ul>
+<li>Native Cognito User Pool authentication (existing functionality)</li>
+<li>Microsoft Entra ID federation (newly implemented)</li>
+</ul>
+<p>Now, Amazon Cognito seamlessly handles the authentication flow regardless of which identity provider is used, as shown below.</p>
+<p><img src="2025-08-10-15-50-43.png" alt=""></p>
+<p><img src="2025-08-10-15-50-58.png" alt=""></p>
+<p><img src="2025-08-10-15-51-12.png" alt=""></p>
+<hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/entraid-cognito-itegration-overview/">Entra ID and Cognito Itegration - Guide</a></p>
+<p><a href="http://localhost:1313/posts/entraid-cognito-itegration-step1/">Entra ID and Cognito Itegration - Step1</a></p>
+<p><a href="http://localhost:1313/posts/entraid-cognito-itegration-step2/">Entra ID and Cognito Itegration - Step2</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/entraid-cognito-itegration-step4/">Entra ID and Cognito Itegration - Step4</a></h3>
+                    <p class="subtitle is-6">August 10, 2025</p>
+                    
+                      <p><h3 id="step-4-update-cognito-app-client-configuration">Step 4: Update Cognito App Client Configuration</h3>
+<p>Enable the new identity provider in your Cognito App Client settings:</p>
+<ol>
+<li>Within your Cognito User Pool, navigate to <strong>App integration</strong> and select your app client</li>
+<li>Under <strong>Hosted UI</strong>, click <strong>Edit</strong> to modify the settings</li>
+</ol>
+<p><img src="2025-08-10-15-48-15.png" alt=""></p>
+<ol>
+<li>In the <strong>Identity providers</strong> section, select <strong>EntraID</strong> to enable it</li>
+<li>Save your changes to apply the configuration</li>
+</ol>
+<p><img src="2025-08-10-15-49-01.png" alt=""></p>
+<p><img src="2025-08-10-15-49-10.png" alt=""></p>
+<hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/entraid-cognito-itegration-overview/">Entra ID and Cognito Itegration - Guide</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/entraid-cognito-itegration-step3/">Entra ID and Cognito Itegration - Step3</a></h3>
+                    <p class="subtitle is-6">August 10, 2025</p>
+                    
+                      <p><h3 id="step-3-integrate-identity-provider-with-amazon-cognito">Step 3: Integrate Identity Provider with Amazon Cognito</h3>
+<p>Now, configure Amazon Cognito to recognize Microsoft Entra ID as a federated identity provider:</p>
+<ol>
+<li>In the AWS Console, navigate to <strong>Amazon Cognito</strong> and select your User Pool</li>
+<li>Go to <strong>Sign-in experience</strong> and locate the <strong>Federated identity provider sign-in</strong> section</li>
+<li>Select <strong>Add identity provider</strong> and choose <strong>SAML</strong> as the provider type</li>
+</ol>
+<p><img src="2025-08-10-15-24-59.png" alt=""></p>
+<ol start="4">
+<li>Configure the identity provider with these settings:
+<ul>
+<li>
+<p><strong>Provider name</strong>: &ldquo;EntraID&rdquo; (this name will appear on your login screen)</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/entraid-cognito-itegration-step2/">Entra ID and Cognito Itegration - Step2</a></h3>
+                    <p class="subtitle is-6">August 10, 2025</p>
+                    
+                      <p><h3 id="step-2-configure-saml-parameters">Step 2: Configure SAML Parameters</h3>
+<p>You&rsquo;ll need to retrieve key information from your Cognito User Pool to properly configure the SAML parameters:</p>
+<ol>
+<li>In the AWS Console, locate your Cognito User Pool and note the <strong>User Pool ID</strong></li>
+</ol>
+<p><img src="2025-08-10-15-31-53.png" alt=""></p>
+<ol start="2">
+<li>Record the <strong>Cognito Domain</strong> from your User Pool settings</li>
+</ol>
+<p><img src="2025-08-10-15-32-16.png" alt=""></p>
+<ol start="3">
+<li>In Azure Portal, configure the following SAML parameters:
+<ul>
+<li><strong>Identifier (Entity ID)</strong>: Format as <code>urn:amazon:cognito:sp:{User pool ID}</code></li>
+<li><strong>Reply URL (Assertion Consumer Service URL)</strong>: Format as <code>{Cognito domain}/saml2/idpresponse</code></li>
+</ul>
+</li>
+<li>Save your configuration changes</li>
+</ol>
+<p><img src="2025-08-10-15-33-19.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/entraid-cognito-itegration-overview/">Entra ID and Cognito Itegration - Guide</a></h3>
+                    <p class="subtitle is-6">August 10, 2025</p>
+                    
+                      <p><h2 id="overview">Overview</h2>
+<p>This comprehensive guide walks you through the process of integrating Microsoft Entra ID (formerly Azure AD) with Amazon Cognito to enable seamless federation authentication for your web application.</p>
+<h2 id="what-we-do">What we do</h2>
+<p>Our web application currently uses Amazon Cognito User Pool for authentication, limiting access to Cognito-registered users only. This guide demonstrates how to extend authentication capabilities by implementing Microsoft Entra ID federation, allowing your enterprise users to access the application using their existing Microsoft credentials.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/entraid-cognito-itegration-step1/">Entra ID and Cognito Itegration - Step1</a></h3>
+                    <p class="subtitle is-6">August 10, 2025</p>
+                    
+                      <p><h3 id="step-1-configure-saml-in-microsoft-entra-id">Step 1: Configure SAML in Microsoft Entra ID</h3>
+<p>Begin by setting up a SAML application in Microsoft Entra ID to establish the identity provider side of the federation:</p>
+<ol>
+<li>In <strong>Azure Portal</strong>, access <strong>Microsoft Entra ID</strong>, then select <strong>Enterprise applications</strong></li>
+<li>Select <strong>New application</strong> to create a custom application integration</li>
+</ol>
+<p><img src="2025-08-10-11-51-45.png" alt=""></p>
+<ol start="3">
+<li>Click <strong>Create your own application</strong> to configure a custom SAML provider</li>
+</ol>
+<p><img src="2025-08-10-11-52-25.png" alt=""></p>
+<ol start="4">
+<li>
+<p>Configure the application with the following parameters:</p>
+<ul>
+<li><strong>Application name</strong>: (your preferred application name)</li>
+<li>Select <strong>Integrate any other application you don&rsquo;t find in the gallery (Non-gallery)</strong></li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Create</strong> to generate the application
+<img src="2025-08-10-11-53-13.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+<script src="/js/custom.js"></script>
+
+  </body>
+</html>

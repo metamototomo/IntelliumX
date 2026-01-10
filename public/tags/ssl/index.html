@@ -1,2 +1,850 @@
-<!-- Layout with no content to avoid WARN message about missing page layout -->
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/tags/ssl/">
+  <meta property="og:site_name" content="IntelliumX">
+  <meta property="og:title" content="SSL">
+  <meta property="og:description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SSL - IntelliumX</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1 class="title">SSL</h1>
+          
+          
+            <p class="subtitle">Browse posts by tag</p>
+          
+
+          
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/nginx-loadbalancer-wcf-grpc-ssl/">NGINX Load Balancer - Secure gRPC</a></h3>
+                    <p class="subtitle is-6">April 24, 2025</p>
+                    
+                      <p><p><img src="2025-04-24-23-10-53.png" alt=""></p>
+<p>This guide extends our previous blog post on <a href="http://localhost:1313/posts/nginx-loadbalancer-wcf-grpc/">NGINX Load Balancer for WCF &amp; gRPC</a> by adding SSL connections to the gRPC protocol. The steps are similar—just update the config file bpserver-loadbalancer.conf</p>
+<p>Configuration File Location:
+<code>/etc/nginx/conf.d/bpserver-loadbalancer.conf</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># NGINX Load Balancer Configuration for Blue Prism Enterprise</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Defining two upstream blocks for different ports</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>upstream bpserver_backend_8199 <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    ip_hash;
+</span></span><span style="display:flex;"><span>    server d11-app-bpe02.gcs.cloud:8199 max_fails<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> fail_timeout<span style="color:#f92672">=</span>30s;
+</span></span><span style="display:flex;"><span>    server d11-app-bpe03.gcs.cloud:8199 max_fails<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> fail_timeout<span style="color:#f92672">=</span>30s;
+</span></span><span style="display:flex;"><span>    server d11-app-bpe04.gcs.cloud:8199 max_fails<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> fail_timeout<span style="color:#f92672">=</span>30s;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>upstream bpserver_backend_10000 <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    ip_hash;
+</span></span><span style="display:flex;"><span>    server d11-app-bpe02.gcs.cloud:10000 max_fails<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> fail_timeout<span style="color:#f92672">=</span>30s;
+</span></span><span style="display:flex;"><span>    server d11-app-bpe03.gcs.cloud:10000 max_fails<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> fail_timeout<span style="color:#f92672">=</span>30s;
+</span></span><span style="display:flex;"><span>    server d11-app-bpe04.gcs.cloud:10000 max_fails<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> fail_timeout<span style="color:#f92672">=</span>30s;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>server <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    listen <span style="color:#ae81ff">8199</span> ssl;
+</span></span><span style="display:flex;"><span>    server_name d11-lnx-alb01.gcs.cloud;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    ssl_certificate     /etc/nginx/ssl/server_001.crt;
+</span></span><span style="display:flex;"><span>    ssl_certificate_key /etc/nginx/ssl/server.key;
+</span></span><span style="display:flex;"><span>    ssl_client_certificate /etc/nginx/ssl/ca-bundle.crt;
+</span></span><span style="display:flex;"><span>    ssl_verify_client off;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ssl_protocols TLSv1.2 TLSv1.3;
+</span></span><span style="display:flex;"><span>    ssl_ciphers HIGH:!aNULL:!MD5;
+</span></span><span style="display:flex;"><span>    ssl_prefer_server_ciphers on;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    location / <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        proxy_pass https://bpserver_backend_8199;
+</span></span><span style="display:flex;"><span>        proxy_ssl_verify off;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        proxy_set_header Host $host;
+</span></span><span style="display:flex;"><span>        proxy_set_header X-Real-IP $remote_addr;
+</span></span><span style="display:flex;"><span>        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</span></span><span style="display:flex;"><span>        proxy_set_header X-Forwarded-Proto $scheme;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        proxy_connect_timeout 300s;
+</span></span><span style="display:flex;"><span>        proxy_read_timeout 300s;
+</span></span><span style="display:flex;"><span>        proxy_send_timeout 300s;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        proxy_pass_request_headers on;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        proxy_buffer_size 128k;
+</span></span><span style="display:flex;"><span>        proxy_buffers <span style="color:#ae81ff">4</span> 256k;
+</span></span><span style="display:flex;"><span>        proxy_busy_buffers_size 256k;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>server <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    listen <span style="color:#ae81ff">10000</span> ssl;  <span style="color:#75715e"># Add ssl here</span>
+</span></span><span style="display:flex;"><span>    http2 on;
+</span></span><span style="display:flex;"><span>    server_name d11-lnx-alb01.gcs.cloud;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Add SSL certificate configuration</span>
+</span></span><span style="display:flex;"><span>    ssl_certificate     /etc/nginx/ssl/server_001.crt;
+</span></span><span style="display:flex;"><span>    ssl_certificate_key /etc/nginx/ssl/server.key;
+</span></span><span style="display:flex;"><span>    ssl_client_certificate /etc/nginx/ssl/ca-bundle.crt;
+</span></span><span style="display:flex;"><span>    ssl_verify_client off;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ssl_protocols TLSv1.2 TLSv1.3;
+</span></span><span style="display:flex;"><span>    ssl_ciphers HIGH:!aNULL:!MD5;
+</span></span><span style="display:flex;"><span>    ssl_prefer_server_ciphers on;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    location / <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        grpc_pass grpcs://bpserver_backend_10000;  <span style="color:#75715e"># Change to grpcs:// for SSL</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># gRPC specific settings</span>
+</span></span><span style="display:flex;"><span>        grpc_read_timeout 300s;
+</span></span><span style="display:flex;"><span>        grpc_send_timeout 300s;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Headers for gRPC</span>
+</span></span><span style="display:flex;"><span>        grpc_set_header Host $host;
+</span></span><span style="display:flex;"><span>        grpc_set_header X-Real-IP $remote_addr;
+</span></span><span style="display:flex;"><span>        grpc_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/nginx-loadbalancer-wcf-grpc/">NGINX Load Balancer for WCF &amp; gRPC</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/nginx-loadbalancer-wcf-grpc/">NGINX Load Balancer for WCF &amp; gRPC</a></h3>
+                    <p class="subtitle is-6">April 23, 2025</p>
+                    
+                      <p><p><img src="2025-04-23-17-52-45.png" alt=""></p>
+<p>This guide extends our previous blog post on <a href="http://localhost:1313/posts/nginx-loadbalance-wcf-application/">NGINX Load Balancing for WCF Applications</a> by adding gRPC protocol support on port 10000. While the setup process remains similar, we&rsquo;ll focus on the specific configuration changes needed in the bpserver-loadbalancer.conf file.</p>
+<p>Configuration File Location:
+<code>/etc/nginx/conf.d/bpserver-loadbalancer.conf</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># NGINX Load Balancer Configuration for Blue Prism Enterprise</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Defining two upstream blocks for different ports</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>upstream bpserver_backend_8199 <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    ip_hash;
+</span></span><span style="display:flex;"><span>    server d11-app-bpe02.gcs.cloud:8199 max_fails<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> fail_timeout<span style="color:#f92672">=</span>30s;
+</span></span><span style="display:flex;"><span>    server d11-app-bpe03.gcs.cloud:8199 max_fails<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> fail_timeout<span style="color:#f92672">=</span>30s;
+</span></span><span style="display:flex;"><span>    server d11-app-bpe04.gcs.cloud:8199 max_fails<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> fail_timeout<span style="color:#f92672">=</span>30s;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>upstream bpserver_backend_10000 <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    ip_hash;
+</span></span><span style="display:flex;"><span>    server d11-app-bpe02.gcs.cloud:10000 max_fails<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> fail_timeout<span style="color:#f92672">=</span>30s;
+</span></span><span style="display:flex;"><span>    server d11-app-bpe03.gcs.cloud:10000 max_fails<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> fail_timeout<span style="color:#f92672">=</span>30s;
+</span></span><span style="display:flex;"><span>    server d11-app-bpe04.gcs.cloud:10000 max_fails<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> fail_timeout<span style="color:#f92672">=</span>30s;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>server <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    listen <span style="color:#ae81ff">8199</span> ssl;
+</span></span><span style="display:flex;"><span>    server_name d11-lnx-alb01.gcs.cloud;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    ssl_certificate     /etc/nginx/ssl/server_001.crt;
+</span></span><span style="display:flex;"><span>    ssl_certificate_key /etc/nginx/ssl/server.key;
+</span></span><span style="display:flex;"><span>    ssl_client_certificate /etc/nginx/ssl/ca-bundle.crt;
+</span></span><span style="display:flex;"><span>    ssl_verify_client off;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ssl_protocols TLSv1.2 TLSv1.3;
+</span></span><span style="display:flex;"><span>    ssl_ciphers HIGH:!aNULL:!MD5;
+</span></span><span style="display:flex;"><span>    ssl_prefer_server_ciphers on;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    location / <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        proxy_pass https://bpserver_backend_8199;
+</span></span><span style="display:flex;"><span>        proxy_ssl_verify off;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        proxy_set_header Host $host;
+</span></span><span style="display:flex;"><span>        proxy_set_header X-Real-IP $remote_addr;
+</span></span><span style="display:flex;"><span>        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</span></span><span style="display:flex;"><span>        proxy_set_header X-Forwarded-Proto $scheme;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        proxy_connect_timeout 300s;
+</span></span><span style="display:flex;"><span>        proxy_read_timeout 300s;
+</span></span><span style="display:flex;"><span>        proxy_send_timeout 300s;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        proxy_pass_request_headers on;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        proxy_buffer_size 128k;
+</span></span><span style="display:flex;"><span>        proxy_buffers <span style="color:#ae81ff">4</span> 256k;
+</span></span><span style="display:flex;"><span>        proxy_busy_buffers_size 256k;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>server <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    listen 10000; 
+</span></span><span style="display:flex;"><span>    http2 on;      <span style="color:#75715e"># Add this line to enable HTTP/2</span>
+</span></span><span style="display:flex;"><span>    server_name d11-lnx-alb01.gcs.cloud;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    location / <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        grpc_pass grpc://bpserver_backend_10000;  <span style="color:#75715e"># Use grpc_pass instead of proxy_pass</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># gRPC specific settings</span>
+</span></span><span style="display:flex;"><span>        grpc_read_timeout 300s;
+</span></span><span style="display:flex;"><span>        grpc_send_timeout 300s;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Headers for gRPC</span>
+</span></span><span style="display:flex;"><span>        grpc_set_header Host $host;
+</span></span><span style="display:flex;"><span>        grpc_set_header X-Real-IP $remote_addr;
+</span></span><span style="display:flex;"><span>        grpc_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/nginx-loadbalancer-wcf-grpc-ssl/">NGINX Load Balancer - Secure gRPC</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/nginx-loadbalance-wcf-application/">NGINX Load Balancer for WCF App</a></h3>
+                    <p class="subtitle is-6">April 21, 2025</p>
+                    
+                      <p><p><img src="2025-04-21-23-29-03.png" alt=""></p>
+<p>This guide demonstrates how to implement a high-performance NGINX load balancer for WCF applications with the following features:</p>
+<ul>
+<li>Enhanced security through SSL/TLS encryption</li>
+<li>Reliable session management using IP-based persistence</li>
+<li>Custom-tuned configurations for WCF service optimisation</li>
+<li>Advanced timeout and buffer settings to handle complex WCF payloads</li>
+</ul>
+<p>The configuration ensures reliable, secure, and efficient load balancing specifically optimised for WCF service applications, with built-in session persistence and performance tuning.</p>
+<p><strong>1. Install required packages and SSL certificates</strong></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/haproxy-container-loadbalancer/">HAProxy Container - Load Balancer</a></h3>
+                    <p class="subtitle is-6">April 13, 2025</p>
+                    
+                      <p><h2 id="haproxy-load-balancer-with-ssl-termination">HAProxy Load Balancer with SSL Termination</h2>
+<h3 id="1-install-docker">1. Install Docker</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo yum update -y
+</span></span><span style="display:flex;"><span>sudo yum install docker -y
+</span></span><span style="display:flex;"><span>sudo systemctl start docker
+</span></span><span style="display:flex;"><span>sudo systemctl enable docker
+</span></span></code></pre></div><h3 id="2-install-docker-compose">2. Install Docker Compose</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Download Docker Compose binary</span>
+</span></span><span style="display:flex;"><span>sudo curl -L <span style="color:#e6db74">&#34;https://github.com/docker/compose/releases/latest/download/docker-compose-</span><span style="color:#66d9ef">$(</span>uname -s<span style="color:#66d9ef">)</span><span style="color:#e6db74">-</span><span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> -o /usr/local/bin/docker-compose
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Make it executable</span>
+</span></span><span style="display:flex;"><span>sudo chmod +x /usr/local/bin/docker-compose
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Verify the installation</span>
+</span></span><span style="display:flex;"><span>docker-compose --version
+</span></span></code></pre></div><h3 id="3-create-a-docker-compose-file-docker-composeyml">3. Create a Docker Compose file (docker-compose.yml):</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">haproxy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">haproxy:latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;443:443&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./certs:/etc/ssl/certs:ro</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">always</span>
+</span></span></code></pre></div><h3 id="4-create-ssl-certificates-directory-and-copy-certificates">4. Create SSL certificates directory and copy certificates:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir certs
+</span></span><span style="display:flex;"><span>cp ~/certs/server-bundle.crt certs/
+</span></span><span style="display:flex;"><span>cp ~/certs/server.key certs/
+</span></span><span style="display:flex;"><span>cat certs/server.key certs/server-bundle.crt &gt; certs/server.pem
+</span></span></code></pre></div><h3 id="5-create-haproxy-configuration-file-haproxycfg">5. Create HAProxy configuration file (haproxy.cfg):</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>global
+</span></span><span style="display:flex;"><span>    log /dev/log local0
+</span></span><span style="display:flex;"><span>    log /dev/log local1 notice
+</span></span><span style="display:flex;"><span>    daemon
+</span></span><span style="display:flex;"><span>    maxconn <span style="color:#ae81ff">2000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>defaults
+</span></span><span style="display:flex;"><span>    log global
+</span></span><span style="display:flex;"><span>    mode http
+</span></span><span style="display:flex;"><span>    option httplog
+</span></span><span style="display:flex;"><span>    option forwardfor
+</span></span><span style="display:flex;"><span>    timeout connect <span style="color:#ae81ff">5000</span>
+</span></span><span style="display:flex;"><span>    timeout client  <span style="color:#ae81ff">50000</span>
+</span></span><span style="display:flex;"><span>    timeout server  <span style="color:#ae81ff">50000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>frontend https_front
+</span></span><span style="display:flex;"><span>    bind *:443 ssl crt /etc/ssl/certs/server.pem
+</span></span><span style="display:flex;"><span>    mode http
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Add URL path rule for Swagger</span>
+</span></span><span style="display:flex;"><span>    use_backend servers <span style="color:#66d9ef">if</span> <span style="color:#f92672">{</span> path_beg /swagger <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    default_backend servers
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>backend servers
+</span></span><span style="display:flex;"><span>    mode http
+</span></span><span style="display:flex;"><span>    balance roundrobin
+</span></span><span style="display:flex;"><span>    server win1 d11-api-demo1.gcs.cloud:443 ssl verify none check
+</span></span><span style="display:flex;"><span>    server win2 d11-api-demo2.gcs.cloud:443 ssl verify none check
+</span></span></code></pre></div><p>This configuration will route any requests starting with /swagger to your backend servers. The only change needed is adding the path rule in the frontend section.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/nginx-container-loadbalancer/">NGINX Container - Load Balancer</a></h3>
+                    <p class="subtitle is-6">April 13, 2025</p>
+                    
+                      <p><h2 id="lets-build-a-dockerized-nginx-setup-with">Let’s build a <strong>Dockerized NGINX setup</strong> with:</h2>
+<ul>
+<li><strong>SSL termination</strong> using a wildcard cert</li>
+<li><strong>Reverse proxy + Load balancing</strong> to 2 backend servers</li>
+<li>Mounted <strong>volumes</strong> for certs and config</li>
+</ul>
+<h3 id="1-updated-step-for-ca-chain">1. Updated Step for CA Chain</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#Create the CA chain file:</span>
+</span></span><span style="display:flex;"><span>cat mid-ca.crt ca.crt &gt; ca-bundle.crt
+</span></span></code></pre></div><table>
+  <thead>
+      <tr>
+          <th>Cert file</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>server_001.crt</code></td>
+          <td>Wildcard cert for your domain</td>
+      </tr>
+      <tr>
+          <td><code>server.key</code></td>
+          <td>Private key for the wildcard cert</td>
+      </tr>
+      <tr>
+          <td><code>ca-bundle.crt</code></td>
+          <td>Combined <code>mid-ca.crt</code> + <code>ca.crt</code> (in that order)</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="2-directory-structure-suggested">2. Directory Structure (suggested)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sh-5.2$ tree
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>└── nginx-lb
+</span></span><span style="display:flex;"><span>    ├── Dockerfile
+</span></span><span style="display:flex;"><span>    ├── certs
+</span></span><span style="display:flex;"><span>    │   ├── ca-bundle.crt
+</span></span><span style="display:flex;"><span>    │   ├── ca.crt
+</span></span><span style="display:flex;"><span>    │   ├── mid-ca.crt
+</span></span><span style="display:flex;"><span>    │   ├── server-bundle.crt
+</span></span><span style="display:flex;"><span>    │   ├── server.key
+</span></span><span style="display:flex;"><span>    │   ├── server_001.crt
+</span></span><span style="display:flex;"><span>    │   └── server_001.pfx
+</span></span><span style="display:flex;"><span>    ├── docker-compose.yml
+</span></span><span style="display:flex;"><span>    ├── nginx
+</span></span><span style="display:flex;"><span>    │   └── nginx.conf
+</span></span><span style="display:flex;"><span>    └── nginx-log
+</span></span></code></pre></div><h3 id="3-create-dockerfile">3. Create <code>Dockerfile</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>FROM nginx:alpine
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create the log directory inside the container</span>
+</span></span><span style="display:flex;"><span>RUN mkdir -p /var/log/nginx
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy NGINX config and certs into the image (will be overridden by volume)</span>
+</span></span><span style="display:flex;"><span>COPY nginx/nginx.conf /etc/nginx/nginx.conf
+</span></span><span style="display:flex;"><span>COPY certs/ /etc/nginx/certs/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Expose port 443 for HTTPS</span>
+</span></span><span style="display:flex;"><span>EXPOSE <span style="color:#ae81ff">443</span>
+</span></span></code></pre></div><h3 id="4-create-nginxconf">4. Create <code>nginx.conf</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>worker_processes 1;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>events <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    worker_connections 1024;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>http <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    include       mime.types;
+</span></span><span style="display:flex;"><span>    default_type  application/octet-stream;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Log format definition</span>
+</span></span><span style="display:flex;"><span>    log_format detailed <span style="color:#e6db74">&#39;$remote_addr - $remote_user [$time_local] &#34;$request&#34; &#39;</span>
+</span></span><span style="display:flex;"><span>                       <span style="color:#e6db74">&#39;$status $body_bytes_sent &#34;$http_referer&#34; &#39;</span>
+</span></span><span style="display:flex;"><span>                       <span style="color:#e6db74">&#39;&#34;$http_user_agent&#34; &#34;$http_x_forwarded_for&#34; &#39;</span>
+</span></span><span style="display:flex;"><span>                       <span style="color:#e6db74">&#39;&#34;$proxy_host&#34; &#34;$upstream_addr&#34;&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Access and error logs</span>
+</span></span><span style="display:flex;"><span>    access_log /var/log/nginx/access.log detailed;
+</span></span><span style="display:flex;"><span>    error_log /var/log/nginx/error.log debug;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    ssl_certificate     /etc/nginx/certs/server_001.crt;
+</span></span><span style="display:flex;"><span>    ssl_certificate_key /etc/nginx/certs/server.key;
+</span></span><span style="display:flex;"><span>    ssl_client_certificate /etc/nginx/certs/ca-bundle.crt;
+</span></span><span style="display:flex;"><span>    ssl_verify_client off;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    upstream backend_apis <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        server d11-api-demo1.gcs.cloud:443;
+</span></span><span style="display:flex;"><span>        server d11-api-demo2.gcs.cloud:443;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    server <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        listen <span style="color:#ae81ff">443</span> ssl;
+</span></span><span style="display:flex;"><span>        server_name d11-alb-ngx01.gcs.cloud;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        ssl_protocols TLSv1.2 TLSv1.3;
+</span></span><span style="display:flex;"><span>        ssl_trusted_certificate /etc/nginx/certs/ca-bundle.crt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        location / <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            proxy_pass https://backend_apis;
+</span></span><span style="display:flex;"><span>            proxy_ssl_protocols TLSv1.2 TLSv1.3;
+</span></span><span style="display:flex;"><span>            proxy_ssl_verify on;
+</span></span><span style="display:flex;"><span>            proxy_ssl_trusted_certificate /etc/nginx/certs/ca-bundle.crt;
+</span></span><span style="display:flex;"><span>            proxy_ssl_name $host;
+</span></span><span style="display:flex;"><span>            proxy_set_header Host $host;
+</span></span><span style="display:flex;"><span>            proxy_set_header X-Real-IP $remote_addr;
+</span></span><span style="display:flex;"><span>            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</span></span><span style="display:flex;"><span>            proxy_set_header X-Forwarded-Proto https;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p><img src="2025-04-13-21-44-27.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/f5-big-ip-sample-configuration/">F5 BIG-IP - Sample Configuration</a></h3>
+                    <p class="subtitle is-6">April 13, 2025</p>
+                    
+                      <p><ol>
+<li>Certificate Management</li>
+</ol>
+<p><img src="2025-04-13-20-28-25.png" alt=""></p>
+<ol start="2">
+<li>Profile</li>
+</ol>
+<p><img src="2025-04-13-20-28-47.png" alt=""></p>
+<p><img src="2025-04-13-20-29-04.png" alt=""></p>
+<ol start="3">
+<li>Node</li>
+</ol>
+<p><img src="2025-04-13-20-29-26.png" alt=""></p>
+<ol start="4">
+<li>Pool</li>
+</ol>
+<p><img src="2025-04-13-20-29-51.png" alt=""></p>
+<p><img src="2025-04-13-20-30-14.png" alt=""></p>
+<ol start="5">
+<li>Virtual Server</li>
+</ol>
+<p><img src="2025-04-13-20-30-42.png" alt=""></p>
+<p><img src="2025-04-13-20-30-50.png" alt=""></p>
+<p><img src="2025-04-13-20-30-57.png" alt=""></p>
+<p><img src="2025-04-13-20-31-09.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/nginx-loadbalancer/">NGINX Load Balancer - Bare Metal</a></h3>
+                    <p class="subtitle is-6">April 13, 2025</p>
+                    
+                      <p><ol>
+<li>Install NGINX:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install nginx -y
+</span></span></code></pre></div><ol start="2">
+<li>Set SSL Certificates</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sh-5.2$ sudo mkdir -p /etc/nginx/ssl
+</span></span><span style="display:flex;"><span>sh-5.2$ sudo cp certs/* /etc/nginx/ssl/
+</span></span><span style="display:flex;"><span>sh-5.2$ sudo ls -l /etc/nginx/ssl/
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">32</span>
+</span></span><span style="display:flex;"><span>-rw-r--r--. <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">3830</span> Apr <span style="color:#ae81ff">13</span> 15:08 ca-bundle.crt
+</span></span><span style="display:flex;"><span>-r--r--r--. <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">1911</span> Apr <span style="color:#ae81ff">13</span> 15:08 ca.crt
+</span></span><span style="display:flex;"><span>-r--r--r--. <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">1919</span> Apr <span style="color:#ae81ff">13</span> 15:08 mid-ca.crt
+</span></span><span style="display:flex;"><span>-rw-r--r--. <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">6082</span> Apr <span style="color:#ae81ff">13</span> 15:08 server-bundle.crt
+</span></span><span style="display:flex;"><span>-rw-------. <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">1704</span> Apr <span style="color:#ae81ff">13</span> 15:08 server.key
+</span></span><span style="display:flex;"><span>-rw-r--r--. <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">2252</span> Apr <span style="color:#ae81ff">13</span> 15:08 server_001.crt
+</span></span><span style="display:flex;"><span>-rw-------. <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">3363</span> Apr <span style="color:#ae81ff">13</span> 15:08 server_001.pfx
+</span></span><span style="display:flex;"><span>sh-5.2$
+</span></span></code></pre></div><ol start="3">
+<li>Create the NGINX Load Balancing Config</li>
+</ol>
+<p>Edit <code>/etc/nginx/nginx.conf</code> or (preferably) add a new file in <code>/etc/nginx/conf.d/iis-loadbalancer.conf</code>:</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/nginx-container-test-web-page/">NGINX Container - Secure Web Page</a></h3>
+                    <p class="subtitle is-6">April 10, 2025</p>
+                    
+                      <p><p>Why Choose NGINX for Your Web Server?</p>
+<ul>
+<li>It&rsquo;s lightweight and high-performance</li>
+<li>Excellent for serving static content and as a reverse proxy</li>
+<li>Simple configuration syntax</li>
+<li>Very popular in containerized environments</li>
+</ul>
+<p>So, let’s create a Docker container with Nginx and SSL!</p>
+<ol>
+<li>First, create a directory structure:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~
+</span></span><span style="display:flex;"><span>aws s3 cp s3://BUCKET NAME/ . --recursive
+</span></span><span style="display:flex;"><span>sudo yum install unzip tree -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mkdir nginx-ssl
+</span></span><span style="display:flex;"><span>unzip certs.zip
+</span></span><span style="display:flex;"><span>mv certs nginx-ssl/
+</span></span><span style="display:flex;"><span>unzip html.zip
+</span></span><span style="display:flex;"><span>mv html nginx-ssl/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cd nginx-ssl
+</span></span><span style="display:flex;"><span>mkdir conf
+</span></span></code></pre></div><ol start="2">
+<li>Create <code>nginx.conf</code> in the conf directory: <strong>Change server_name.</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>server <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    listen <span style="color:#ae81ff">443</span> ssl;
+</span></span><span style="display:flex;"><span>    server_name d11-vdi-lin04.gcs.cloud;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    root /usr/share/nginx/html;
+</span></span><span style="display:flex;"><span>	    location / <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		    index index.html;
+</span></span><span style="display:flex;"><span>		    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>		    
+</span></span><span style="display:flex;"><span>    ssl_certificate /etc/nginx/certs/server_001.crt;
+</span></span><span style="display:flex;"><span>    ssl_certificate_key /etc/nginx/certs/server.key;
+</span></span><span style="display:flex;"><span>    ssl_trusted_certificate /etc/nginx/certs/ca-bundle.crt;
+</span></span><span style="display:flex;"><span>    ssl_protocols TLSv1.2 TLSv1.3;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ol start="3">
+<li>Create the full certificate chain by concatenating the certificates in the correct order:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd certs
+</span></span><span style="display:flex;"><span>cat mid-ca.crt ca.crt &gt; ca-bundle.crt
+</span></span><span style="display:flex;"><span>cat server_001.crt mid-ca.crt ca.crt &gt; server-bundle.crt
+</span></span></code></pre></div><ol start="4">
+<li>Create <code>Dockerfile</code>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>FROM nginx:alpine
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>RUN mkdir -p /etc/nginx/certs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy SSL certificates</span>
+</span></span><span style="display:flex;"><span>COPY certs/ca-bundle.crt /etc/nginx/certs/
+</span></span><span style="display:flex;"><span>COPY certs/server_001.crt /etc/nginx/certs/
+</span></span><span style="display:flex;"><span>COPY certs/server.key /etc/nginx/certs/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>COPY conf/nginx.conf /etc/nginx/conf.d/default.conf
+</span></span><span style="display:flex;"><span>COPY html /usr/share/nginx/html
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>EXPOSE <span style="color:#ae81ff">443</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CMD <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;nginx&#34;</span>, <span style="color:#e6db74">&#34;-g&#34;</span>, <span style="color:#e6db74">&#34;daemon off;&#34;</span><span style="color:#f92672">]</span>
+</span></span></code></pre></div><ol start="5">
+<li>Make sure your HTML content is organized in a directory structure like this:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> .
+</span></span><span style="display:flex;"><span>└── nginx-ssl
+</span></span><span style="display:flex;"><span>    ├── Dockerfile
+</span></span><span style="display:flex;"><span>    ├── certs
+</span></span><span style="display:flex;"><span>    │   ├── ca-bundle.crt
+</span></span><span style="display:flex;"><span>    │   ├── ca.crt
+</span></span><span style="display:flex;"><span>    │   ├── mid-ca.crt
+</span></span><span style="display:flex;"><span>    │   ├── server-bundle.crt
+</span></span><span style="display:flex;"><span>    │   ├── server.key
+</span></span><span style="display:flex;"><span>    │   ├── server_001.crt
+</span></span><span style="display:flex;"><span>    │   └── server_001.pfx
+</span></span><span style="display:flex;"><span>    ├── conf
+</span></span><span style="display:flex;"><span>    │   └── nginx.conf
+</span></span><span style="display:flex;"><span>    └── html
+</span></span><span style="display:flex;"><span>        ├── colour.conf
+</span></span><span style="display:flex;"><span>        ├── img
+</span></span><span style="display:flex;"><span>        │   └── GCS-AWS-logo_32_v02.png
+</span></span><span style="display:flex;"><span>        ├── index.html
+</span></span><span style="display:flex;"><span>        └── swagger
+</span></span><span style="display:flex;"><span>            └── ui
+</span></span><span style="display:flex;"><span>                └── index
+</span></span><span style="display:flex;"><span>                    ├── img
+</span></span><span style="display:flex;"><span>                    │   └── Tech-Task-v07.png
+</span></span><span style="display:flex;"><span>                    └── index.html
+</span></span><span style="display:flex;"><span>                    
+</span></span></code></pre></div><ol start="6">
+<li>Build and run the container:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Build the image</span>
+</span></span><span style="display:flex;"><span>sudo docker build -t my-secure-nginx:latest .
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run the container</span>
+</span></span><span style="display:flex;"><span>sudo docker run -d --name secure-nginx <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-p 443:443 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>--restart always <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>my-secure-nginx:latest
+</span></span></code></pre></div><ol start="7">
+<li>Check the status using <code>curl</code> command.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># -k flag to allow insecure connections</span>
+</span></span><span style="display:flex;"><span>curl -k https://localhost
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Or specify your domain</span>
+</span></span><span style="display:flex;"><span>curl -k https://your-domain.com
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># To get more detailed with -v (verbose) flag</span>
+</span></span><span style="display:flex;"><span>curl -kv https://localhost
+</span></span></code></pre></div><hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/deploy-a-amazon-linux-2023/">Deploy a Amazon Linux 2023</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/sql-server-container-with-tools/">SQL Server Container with Tools</a></h3>
+                    <p class="subtitle is-6">April 2, 2025</p>
+                    
+                      <p><h2 id="file-and-folder-structure-at-the-end">File and Folder Structure at the end</h2>
+<p><img src="2025-04-02-19-53-47.png" alt=""></p>
+<ol>
+<li>Create <code>mssql.conf</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>network<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>tlscert <span style="color:#f92672">=</span> /var/opt/mssql/secrets/server-bundle.crt
+</span></span><span style="display:flex;"><span>tlskey <span style="color:#f92672">=</span> /var/opt/mssql/secrets/server.key
+</span></span><span style="display:flex;"><span>tlsprotocols <span style="color:#f92672">=</span> 1.2
+</span></span><span style="display:flex;"><span>forceencryption <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><ol start="2">
+<li>Create <code>Dockerfile</code>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Use the official Microsoft SQL Server 2022 image as base</span>
+</span></span><span style="display:flex;"><span>FROM mcr.microsoft.com/mssql/server:2022-latest
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Switch to root to install packages</span>
+</span></span><span style="display:flex;"><span>USER root
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install required dependencies</span>
+</span></span><span style="display:flex;"><span>RUN apt-get update <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    apt-get install -y curl apt-transport-https gnupg2 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    mkdir -p /etc/apt/keyrings <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; /etc/apt/keyrings/microsoft.gpg <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    chmod <span style="color:#ae81ff">644</span> /etc/apt/keyrings/microsoft.gpg <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;deb [signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/22.04/prod jammy main&#34;</span> &gt; /etc/apt/sources.list.d/mssql-release.list <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    apt-get update <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    ACCEPT_EULA<span style="color:#f92672">=</span>Y apt-get install -y mssql-tools unixodbc-dev <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    ln -s /opt/mssql-tools/bin/sqlcmd /usr/bin/sqlcmd <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    ln -s /opt/mssql-tools/bin/bcp /usr/bin/bcp <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    apt-get clean <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    rm -rf /var/lib/apt/lists/*
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Switch back to mssql user</span>
+</span></span><span style="display:flex;"><span>USER mssql
+</span></span></code></pre></div><ol start="3">
+<li>Build an image</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Build new image</span>
+</span></span><span style="display:flex;"><span>sudo docker build -t mssql-with-tools .
+</span></span></code></pre></div><ol start="4">
+<li>Run commands</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Run new container</span>
+</span></span><span style="display:flex;"><span>sudo docker run -e <span style="color:#e6db74">&#39;ACCEPT_EULA=Y&#39;</span> -e <span style="color:#e6db74">&#39;MSSQL_SA_PASSWORD=Password123&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-p 1433:1433 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v /data/containers/sql1/data:/var/opt/mssql/data <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v /data/containers/sql1/log:/var/opt/mssql/log <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v sql-certs:/var/opt/mssql/secrets:ro <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v /data/mssql.conf:/var/opt/mssql/mssql.conf:ro <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>--restart always <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>--name sql1 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-d mssql-with-tools
+</span></span></code></pre></div><ol start="5">
+<li>Verify installation:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Test sqlcmd</span>
+</span></span><span style="display:flex;"><span>sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -?
+</span></span></code></pre></div></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/rabbitmq-container-ssl/">RabbitMQ Container - SSL</a></h3>
+                    <p class="subtitle is-6">March 30, 2025</p>
+                    
+                      <p><h2 id="create-a-container-ssl">Create a container (SSL)</h2>
+<ol>
+<li>First, create a new working directory and prepare your certificate files:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir gcs-rabbit-ssl
+</span></span><span style="display:flex;"><span>cd gcs-secure-rabbit
+</span></span><span style="display:flex;"><span>mkdir certs
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy your certificates to gcs-secure-rabbit/certs:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - ca.crt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - mid-ca.crt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - server-001.crt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - server-001.key</span>
+</span></span></code></pre></div><ol start="2">
+<li>Set 644 to these certificate</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">644</span> certs/*
+</span></span></code></pre></div><p><img src="2025-03-30-21-52-45.png" alt=""></p>
+<ol start="3">
+<li>Create a <code>rabbitmq.conf</code> (gcs-secure-rabbit/rabbitmq.conf):</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># RabbitMQ Configuration File</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Disable non-SSL listeners</span>
+</span></span><span style="display:flex;"><span>listeners.tcp <span style="color:#f92672">=</span> none
+</span></span><span style="display:flex;"><span>listeners.ssl.default <span style="color:#f92672">=</span> <span style="color:#ae81ff">5671</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SSL configuration</span>
+</span></span><span style="display:flex;"><span>ssl_options.cacertfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/ca-bundle.crt
+</span></span><span style="display:flex;"><span>ssl_options.certfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/server.crt
+</span></span><span style="display:flex;"><span>ssl_options.keyfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/server.key
+</span></span><span style="display:flex;"><span>ssl_options.verify <span style="color:#f92672">=</span> verify_peer
+</span></span><span style="display:flex;"><span>ssl_options.depth <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>ssl_options.fail_if_no_peer_cert <span style="color:#f92672">=</span> true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Management SSL configuration</span>
+</span></span><span style="display:flex;"><span>management.ssl.port <span style="color:#f92672">=</span> <span style="color:#ae81ff">15671</span>
+</span></span><span style="display:flex;"><span>management.ssl.cacertfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/ca-bundle.crt
+</span></span><span style="display:flex;"><span>management.ssl.certfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/server.crt
+</span></span><span style="display:flex;"><span>management.ssl.keyfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/server.key
+</span></span></code></pre></div><ol start="4">
+<li>Create a <code>Dockerfile</code> (e.g., gcs-secure-rabbit/DockerFile):</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>FROM rabbitmq:3.11.10-management
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create SSL directory</span>
+</span></span><span style="display:flex;"><span>RUN mkdir -p /etc/rabbitmq/ssl
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy certificates</span>
+</span></span><span style="display:flex;"><span>COPY ca.crt mid-ca.crt /etc/rabbitmq/ssl/
+</span></span><span style="display:flex;"><span>COPY server-001.crt /etc/rabbitmq/ssl/server.crt
+</span></span><span style="display:flex;"><span>COPY server-001.key /etc/rabbitmq/ssl/server.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create bundle certificate</span>
+</span></span><span style="display:flex;"><span>RUN cat /etc/rabbitmq/ssl/mid-ca.crt /etc/rabbitmq/ssl/ca.crt &gt; /etc/rabbitmq/ssl/ca-bundle.crt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy config file</span>
+</span></span><span style="display:flex;"><span>COPY rabbitmq.conf /etc/rabbitmq/rabbitmq.conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Expose SSL ports</span>
+</span></span><span style="display:flex;"><span>EXPOSE <span style="color:#ae81ff">5671</span> <span style="color:#ae81ff">15671</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CMD <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;rabbitmq-server&#34;</span><span style="color:#f92672">]</span>
+</span></span></code></pre></div><ol start="5">
+<li>Build and run the container:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Build the image</span>
+</span></span><span style="display:flex;"><span>sudo docker build -t gcs-secure-rabbit:latest .
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run the container</span>
+</span></span><span style="display:flex;"><span>sudo docker run -d --hostname secure-rabbit --name secure-rabbit <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-p 15671:15671 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-p 5671:5671 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>--restart always <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>gcs-secure-rabbit:latest
+</span></span></code></pre></div><ol start="6">
+<li>Check the container logs after running it:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo docker logs secure-rabbit
+</span></span></code></pre></div><hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/rabbitmq-container-http/">RabbitMQ Container - HTTP</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/sql-server-check-secure-connnection/">SQL Server - Check Secure Connnection</a></h3>
+                    <p class="subtitle is-6">March 27, 2025</p>
+                    
+                      <p><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> sqlcmd -S d11-sql-db001.gcs.cloud -U sa -P Password123
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span> &gt;
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span> &gt;
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span> &lt; exit
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sqlcmd -S d11-sql-db001.gcs.cloud -U sa -P Password123 -Q <span style="color:#e6db74">&#34;SELECT session_id, encrypt_option FROM sys.dm_exec_connections WHERE session_id = @@SPID;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>session_id  encrypt_option
+</span></span><span style="display:flex;"><span>				<span style="color:#ae81ff">53</span>  FALSE
+</span></span></code></pre></div><hr></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+<script src="/js/custom.js"></script>
+
+  </body>
+</html>

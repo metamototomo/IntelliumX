@@ -503,7 +503,14 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;&#xA;&lt;p&gt;Hi! I&amp;rsquo;m Nobu, and I work with AI, cloud technologies, and modern development practices. I created this platform to share the practical solutions and insights I&amp;rsquo;ve gathered along the way.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-i-share-this-knowledge&#34;&gt;Why I Share This Knowledge&lt;/h2&gt;&#xA;&lt;p&gt;Throughout my career, I&amp;rsquo;ve benefited enormously from the generosity of developers and engineers who shared their knowledge online. Now I want to give back to that community. If my experience can save you time, help you solve a problem, or point you in the right direction, then this site has served its purpose.&lt;/p&gt;</description>
+      <description>&lt;p&gt;IntelliumX is a knowledge-sharing platform dedicated to practical solutions in AI, cloud technologies, and modern development practices. This site serves as a comprehensive resource for developers, IT professionals, and technology enthusiasts looking for real-world implementations and proven solutions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;mission&#34;&gt;Mission&lt;/h2&gt;&#xA;&lt;p&gt;We believe in the power of shared knowledge to accelerate innovation and problem-solving. IntelliumX exists to bridge the gap between theoretical concepts and practical implementation, providing actionable insights that you can apply immediately in your projects.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Archives</title>
+      <link>http://localhost:1313/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/archives/</guid>
+      <description>&lt;p&gt;Browse all posts organized by date.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

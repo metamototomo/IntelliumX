@@ -1,2 +1,875 @@
-<!-- Layout with no content to avoid WARN message about missing page layout -->
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/tags/">
+  <meta property="og:site_name" content="IntelliumX">
+  <meta property="og:title" content="Tags">
+  <meta property="og:description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Tags - IntelliumX</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+
+<nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/IntelliumX-v21.png" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+      <div id="navbar-menu" class="navbar-menu is-static">
+        <div class="navbar-start">
+          <a class="navbar-item is-hidden-mobile">
+            <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+              <svg width="1000px" height="1000px">
+                <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                <path class="path2" d="M 300 500 L 700 500"></path>
+                <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+              </svg>
+              <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+            </div>
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a href="/" class="navbar-item is-secondary">
+            Home
+          </a>
+          <a href="/projects/" class="navbar-item is-secondary">
+            Projects
+          </a>
+          <a href="/posts/" class="navbar-item is-secondary">
+            Blog
+          </a>
+          <a href="/about/" class="navbar-item is-secondary">
+            About
+          </a>
+        </div>
+      </div>
+  </div>
+</nav>
+
+
+<nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/IntelliumX-v21.png" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+      <div class="navbar-start">
+        <a class="navbar-item is-hidden-mobile">
+          <div id="cloned-menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+              <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+              <path class="path2" d="M 300 500 L 700 500"></path>
+              <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+            </svg>
+            <button id="cloned-menu-icon-trigger" class="menu-icon-trigger"></button>
+          </div>
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <a href="/" class="navbar-item is-secondary">
+          Home
+        </a>
+        <a href="/projects/" class="navbar-item is-secondary">
+          Projects
+        </a>
+        <a href="/posts/" class="navbar-item is-secondary">
+          Blog
+        </a>
+        <a href="/about/" class="navbar-item is-secondary">
+          About
+        </a>
+      </div>
+    </div>
+</div>
+</nav>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content" style="min-height: 80vh; padding-bottom: 4rem;">
+          <h1 class="title">Tags</h1>
+          
+          
+            <p class="subtitle">Browse posts by tag</p>
+          
+
+          <div class="tags are-medium" style="margin-top: 2rem;">
+            
+              
+                <a href="/posts/?tag=aws" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=aws';">
+                  AWS (23)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=docker" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=docker';">
+                  Docker (11)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=ssl" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=ssl';">
+                  SSL (11)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=security" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=security';">
+                  Security (10)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=container" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=container';">
+                  Container (9)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=git" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=git';">
+                  Git (9)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=amazon-cognito-user-pool" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=amazon-cognito-user-pool';">
+                  Amazon Cognito User Pool (7)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=azure-ad" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=azure-ad';">
+                  Azure AD (7)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=federation-authentication" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=federation-authentication';">
+                  Federation Authentication (7)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=microsoft-entra-id" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=microsoft-entra-id';">
+                  Microsoft Entra ID (7)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=openssl" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=openssl';">
+                  OpenSSL (7)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=ssl-certificate" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=ssl-certificate';">
+                  SSL Certificate (7)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=azure-devops" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=azure-devops';">
+                  Azure DevOps (6)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=load-balancer" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=load-balancer';">
+                  Load Balancer (6)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=nginx" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=nginx';">
+                  NGINX (6)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=saml" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=saml';">
+                  SAML (6)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=github" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=github';">
+                  GitHub (5)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=api-gateway" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=api-gateway';">
+                  API Gateway (3)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=dynamodb" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=dynamodb';">
+                  DynamoDB (3)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=lambda" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=lambda';">
+                  Lambda (3)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=serverless" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=serverless';">
+                  Serverless (3)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=vs-code" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=vs-code';">
+                  VS Code (3)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=wcf" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=wcf';">
+                  WCF (3)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=backup" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=backup';">
+                  Backup (2)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=grpc" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=grpc';">
+                  GRPC (2)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=hugo" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=hugo';">
+                  Hugo (2)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=iam" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=iam';">
+                  IAM (2)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=linux" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=linux';">
+                  Linux (2)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=mac" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=mac';">
+                  Mac (2)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=python" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=python';">
+                  Python (2)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=rabbitmq" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=rabbitmq';">
+                  RabbitMQ (2)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=sql-server" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=sql-server';">
+                  SQL Server (2)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=sqlcmd" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=sqlcmd';">
+                  SQLCMD (2)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=tag" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=tag';">
+                  Tag (2)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=terminal" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=terminal';">
+                  Terminal (2)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=active-directory" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=active-directory';">
+                  Active Directory (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=automation" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=automation';">
+                  Automation (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=big-ip" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=big-ip';">
+                  BIG-IP (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=blog" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=blog';">
+                  Blog (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=certificate" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=certificate';">
+                  Certificate (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=ci%2fcd" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=ci\/cd';">
+                  CI/CD (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=cloudshell" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=cloudshell';">
+                  CloudShell (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=cognito" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=cognito';">
+                  Cognito (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=cost-optimization" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=cost-optimization';">
+                  Cost Optimization (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=dashboard" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=dashboard';">
+                  Dashboard (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=database" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=database';">
+                  Database (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=decoupling" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=decoupling';">
+                  Decoupling (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=domain" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=domain';">
+                  Domain (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=ecr" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=ecr';">
+                  ECR (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=f5" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=f5';">
+                  F5 (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=freet-manager" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=freet-manager';">
+                  Freet Manager (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=haproxy" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=haproxy';">
+                  HAProxy (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=health-tech" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=health-tech';">
+                  Health Tech (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=hostname" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=hostname';">
+                  Hostname (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=ico" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=ico';">
+                  ICO (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=image" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=image';">
+                  Image (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=image-builder" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=image-builder';">
+                  Image Builder (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=learning" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=learning';">
+                  Learning (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=machine-image" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=machine-image';">
+                  Machine Image (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=maintenace" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=maintenace';">
+                  Maintenace (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=memory-dump" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=memory-dump';">
+                  Memory Dump (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=message-queues" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=message-queues';">
+                  Message Queues (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=oauth-2.0" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=oauth-2.0';">
+                  OAuth 2.0 (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=oidc" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=oidc';">
+                  OIDC (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=personal-health" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=personal-health';">
+                  Personal Health (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=rpa" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=rpa';">
+                  RPA (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=s3" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=s3';">
+                  S3 (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=shell" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=shell';">
+                  Shell (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=sql" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=sql';">
+                  SQL (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=sqs" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=sqs';">
+                  SQS (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=ssm" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=ssm';">
+                  SSM (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=static-sites" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=static-sites';">
+                  Static Sites (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=svg" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=svg';">
+                  SVG (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=symbolic-link" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=symbolic-link';">
+                  Symbolic Link (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=sysprep" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=sysprep';">
+                  Sysprep (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=system-manager" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=system-manager';">
+                  System Manager (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=terraform" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=terraform';">
+                  Terraform (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=testing" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=testing';">
+                  Testing (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=tfvars" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=tfvars';">
+                  Tfvars (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=web-applications" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=web-applications';">
+                  Web Applications (1)
+                </a>
+              
+            
+              
+                <a href="/posts/?tag=windows" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag=windows';">
+                  Windows (1)
+                </a>
+              
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer footer-dark">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="footer-logo">
+          <img src="/images/logos/IntelliumX-v21.png">
+        </div>
+      </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Navigate</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/projects/">
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a href="/posts/">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="/about/">
+                  About
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Resources</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/posts/">
+                  All Posts
+                </a>
+              </li>
+              <li>
+                <a href="/categories/">
+                  Categories
+                </a>
+              </li>
+              <li>
+                <a href="/tags/">
+                  Tags
+                </a>
+              </li>
+              <li>
+                <a href="/archives/">
+                  Archives
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Connect</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="https://www.linkedin.com/in/nobuhiro-tokushige/" target="_blank">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/metamototomo" target="_blank">
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="column">
+        <div class="footer-column">
+          <div class="footer-header">
+            <h3>Follow Us</h3>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <a class="level-item" href="https://www.linkedin.com/in/nobuhiro-tokushige/" target="_blank">
+                  <span class="icon"><i class="fa fa-linkedin"></i></span>
+                </a>
+                <a class="level-item" href="https://github.com/metamototomo" target="_blank">
+                  <span class="icon"><i class="fa fa-github"></i></span>
+                </a>
+              </div>
+            </nav>
+            <a href="https://bulma.io" target="_blank">
+              <img src="/images/logos/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <img src="/images/logos/IntelliumX-v21.png">
+    <a class="sidebar-close" href="javascript:void(0);">
+      <i data-feather="x"></i>
+    </a>
+  </div>
+  <div class="inner">
+    <ul class="sidebar-menu">
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-user"></span>
+          User
+        </a>
+        <ul>
+          <li>
+            <a href="/">
+              Profile
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Account
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Settings
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-envelope"></span>
+          Messages
+        </a>
+        <ul>
+          <li>
+            <a href="/">
+              Inbox
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Compose
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-image"></span>
+          Images
+        </a>
+        <ul>
+          <li>
+            <a href="/">
+              Library
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Upload
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-cog"></span>
+          Settings
+        </a>
+        <ul>
+          <li>
+            <a href="/">
+              User settings
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              App settings
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+<script src="/js/custom.js"></script>
+
+  </body>
+</html>

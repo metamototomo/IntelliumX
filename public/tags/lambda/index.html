@@ -1,2 +1,281 @@
-<!-- Layout with no content to avoid WARN message about missing page layout -->
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/tags/lambda/">
+  <meta property="og:site_name" content="IntelliumX">
+  <meta property="og:title" content="Lambda">
+  <meta property="og:description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Lambda - IntelliumX</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1 class="title">Lambda</h1>
+          
+          
+            <p class="subtitle">Browse posts by tag</p>
+          
+
+          
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/lambda-create-a-function/">AWS Lambda - Create a Function</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><ol>
+<li>Navigate to Lambda in AWS Console</li>
+<li>Click &ldquo;Create function&rdquo;
+<ul>
+<li>Choose &ldquo;Author from scratch&rdquo;</li>
+<li>Runtime: Python 3.x</li>
+<li>Name: e.g., &ldquo;get-user-list&rdquo;</li>
+</ul>
+</li>
+</ol>
+<p><img src="2025-06-15-17-31-16.png" alt=""></p>
+<p>Paste the Python code into “Code” page and click “Deploy” button</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> boto3.dynamodb.conditions <span style="color:#f92672">import</span> Key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dynamodb <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(<span style="color:#e6db74">&#39;dynamodb&#39;</span>)
+</span></span><span style="display:flex;"><span>table <span style="color:#f92672">=</span> dynamodb<span style="color:#f92672">.</span>Table(<span style="color:#e6db74">&#39;user_list&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_nested_structure</span>(data, current_level, max_level):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> current_level <span style="color:#f92672">&gt;=</span> max_level:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> data
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;level_</span><span style="color:#e6db74">{</span>current_level<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;data&#34;</span>: data,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;nested&#34;</span>: create_nested_structure(data, current_level <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, max_level),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;metadata&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;level_info&#34;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;This is level </span><span style="color:#e6db74">{</span>current_level<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;timestamp&#34;</span>: datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>isoformat(),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;metrics&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;depth&#34;</span>: current_level,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;remaining_levels&#34;</span>: max_level <span style="color:#f92672">-</span> current_level,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;complexity_score&#34;</span>: max_level <span style="color:#f92672">*</span> current_level
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_complex_response</span>(user_data, nested_level):
+</span></span><span style="display:flex;"><span>    base_data <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;user_</span><span style="color:#e6db74">{</span>user_data[<span style="color:#e6db74">&#39;user_id&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;timestamp&#34;</span>: datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>isoformat(),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Personnel&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;details&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;name&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;first&#34;</span>: user_data[<span style="color:#e6db74">&#39;first_name&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;last&#34;</span>: user_data[<span style="color:#e6db74">&#39;last_name&#39;</span>]
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;company&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;name&#34;</span>: user_data[<span style="color:#e6db74">&#39;company_name&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;web&#34;</span>: user_data[<span style="color:#e6db74">&#39;web&#39;</span>]
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;contact_info&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;address&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;street&#34;</span>: user_data[<span style="color:#e6db74">&#39;address&#39;</span>],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;city&#34;</span>: user_data[<span style="color:#e6db74">&#39;city&#39;</span>],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;state&#34;</span>: user_data[<span style="color:#e6db74">&#39;state&#39;</span>],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;postcode&#34;</span>: user_data[<span style="color:#e6db74">&#39;post&#39;</span>]
+</span></span><span style="display:flex;"><span>                },
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;communication&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;phones&#34;</span>: [
+</span></span><span style="display:flex;"><span>                        {
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;primary&#34;</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;number&#34;</span>: user_data[<span style="color:#e6db74">&#39;phone1&#39;</span>]
+</span></span><span style="display:flex;"><span>                        },
+</span></span><span style="display:flex;"><span>                        {
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;secondary&#34;</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;number&#34;</span>: user_data[<span style="color:#e6db74">&#39;phone2&#39;</span>]
+</span></span><span style="display:flex;"><span>                        }
+</span></span><span style="display:flex;"><span>                    ],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;email&#34;</span>: user_data[<span style="color:#e6db74">&#39;email&#39;</span>]
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> create_nested_structure(base_data, <span style="color:#ae81ff">1</span>, nested_level)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lambda_handler</span>(event, context):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Get parameters from event body</span>
+</span></span><span style="display:flex;"><span>        limit <span style="color:#f92672">=</span> int(event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;limit&#39;</span>, <span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">if</span> event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;limit&#39;</span>) <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>        nested_level <span style="color:#f92672">=</span> int(event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;nested_level&#39;</span>, <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">if</span> event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;nested_level&#39;</span>) <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Validate nested_level</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> nested_level <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>            nested_level <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> nested_level <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">30</span>:  <span style="color:#75715e"># Set a reasonable maximum </span>
+</span></span><span style="display:flex;"><span>            nested_level <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>    <span style="color:#75715e"># 29 nested is the limit on Blue Prism</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Scan DynamoDB table with limit</span>
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> table<span style="color:#f92672">.</span>scan(
+</span></span><span style="display:flex;"><span>            Limit<span style="color:#f92672">=</span>limit
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        items <span style="color:#f92672">=</span> response<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Items&#39;</span>, [])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Transform items into complex nested structure</span>
+</span></span><span style="display:flex;"><span>        transformed_data <span style="color:#f92672">=</span> [create_complex_response(item, nested_level) <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> items]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Create final response</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;statusCode&#34;</span>: <span style="color:#ae81ff">200</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;headers&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Content-Type&#34;</span>: <span style="color:#e6db74">&#34;application/json&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Access-Control-Allow-Origin&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;success&#34;</span>: <span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;timestamp&#34;</span>: datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>isoformat(),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;total_records&#34;</span>: len(transformed_data),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;limit_applied&#34;</span>: limit,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;nesting_level&#34;</span>: nested_level,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;data&#34;</span>: transformed_data,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;metadata&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;api_version&#34;</span>: <span style="color:#e6db74">&#34;1.0&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;service&#34;</span>: <span style="color:#e6db74">&#34;user-data-api&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;complexity_info&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;max_depth&#34;</span>: nested_level,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;structure_type&#34;</span>: <span style="color:#e6db74">&#34;recursive&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;total_nodes&#34;</span>: len(transformed_data) <span style="color:#f92672">*</span> nested_level
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;statusCode&#34;</span>: <span style="color:#ae81ff">500</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;success&#34;</span>: <span style="color:#66d9ef">False</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Error processing request&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;error&#34;</span>: str(e)
+</span></span><span style="display:flex;"><span>        }
+</span></span></code></pre></div><p><img src="2025-06-15-17-30-50.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/lambda-set-access-to-dynamodb/">AWS Lambda - Grant Access</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><ol>
+<li>
+<p>Go to AWS IAM Console</p>
+</li>
+<li>
+<p>Find your Lambda&rsquo;s role</p>
+<ul>
+<li>Click on the role name</li>
+<li>Click &ldquo;Add permissions&rdquo; → &ldquo;Create inline policy&rdquo;</li>
+</ul>
+</li>
+<li>
+<p>In the JSON editor, paste this policy:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;dynamodb:Scan&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;dynamodb:GetItem&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;dynamodb:Query&#34;</span>
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:dynamodb:ap-southeast-2:6850********:table/user_list&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>Click &ldquo;Review policy&rdquo;</p>
+<ul>
+<li>Name it something like &ldquo;DynamoDBScanPolicy&rdquo;</li>
+<li>Click &ldquo;Create policy&rdquo;</li>
+</ul>
+</li>
+</ol>
+<p>After adding this policy, wait a few seconds and try your Lambda function again. The error should be resolved.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/projects/cloudlens/">Serverless AWS Cost Monitoring</a></h3>
+                    <p class="subtitle is-6">January 30, 2025</p>
+                    
+                      <p><h1 id="cloudlens">CloudLens</h1>
+<p><strong>Live Application:</strong> <a href="https://cloudlens.intelliumx.com/" target="_blank" rel="noopener">cloudlens.intelliumx.com</a></p>
+<p><img src="2026-01-04-10-58-11.png" alt=""></p>
+<h2 id="overview">Overview</h2>
+<p>CloudLens is a serverless AWS cost monitoring dashboard that quickly detects unexpected cost increases. Built with AWS-native services, CloudLens delivers real-time cost visibility through simple charts and time-based filtering while maintaining enterprise-grade security and minimal operational overhead.</p>
+<h2 id="background">Background</h2>
+<p>I used to check AWS costs through Cost Explorer in the AWS Management Console. This was tedious—I had to log in, open Cost Explorer, and filter the data each time. I wanted quick access whenever I needed to check costs, ideally from my mobile device.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+<script src="/js/custom.js"></script>
+
+  </body>
+</html>

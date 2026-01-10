@@ -48,19 +48,6 @@ params:
     buttontext: Explore My Work
     buttonlink: /projects/
     image: hero-background.jpg # Add your hero background image here
-    # Footer logos (from static/images/logos/clients/*.svg)
-    # urls are optional
-    clientlogos:
-      - logo: systek
-        url: https://google.com
-      - logo: tribe
-        url: https://stefma.github.io/hugo-fresh/
-      - logo: kromo
-        url: https://github.com/StefMa/hugo-fresh
-      - logo: infinite
-        url: https://hugo-fresh.vercel.app/
-      - logo: gutwork
-        url: https://bulma.io/
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
     - title: Home
@@ -106,77 +93,44 @@ params:
           - text: App settings
             url: /
   section1:
-    title: My Focus Areas
-    subtitle: Expertise in AI, cloud, and modern development practices
+    title: Projects & Solutions
+    subtitle: Innovative technology solutions and practical implementations
+    buttonText: View All Projects
+    buttonLink: /projects/
     tiles:
-      - title: AI Consulting
-        icon: mouse-globe
-        text: Generative AI solutions, AWS AI services, and intelligent automation for
-          business transformation
-        url: /posts/
-        buttonText: Read More
       - title: Cloud Architecture
         icon: laptop-cloud
-        text: AWS infrastructure, serverless solutions, and scalable cloud-native
-          applications
-        url: /projects/
-        buttonText: View Projects
-      - title: DevOps & Security
+        text: Scalable AWS infrastructure, serverless applications, and cloud-native
+          solutions designed for modern businesses.
+      - title: AI Integration
+        icon: mouse-globe
+        text: Intelligent automation and AI-powered applications that transform
+          business processes and decision-making.
+      - title: DevOps Solutions
         icon: plug-cloud
-        text: CI/CD pipelines, infrastructure as code, SSL/TLS, and container
-          orchestration
-        url: /posts/
-        buttonText: Learn More
+        text: Streamlined deployment pipelines, infrastructure as code, and security
+          implementations for reliable operations.
   section2:
-    title: Why This Platform Exists
-    subtitle: Sharing knowledge to help the community grow
+    title: Knowledge Hub & Blog
+    subtitle: Practical insights and technical expertise shared with the community
+    buttonText: Read Blog Posts
+    buttonLink: /posts/
     features:
-      - title: Real-World Solutions
-        text: Practical guides and solutions I've discovered while working with AWS, AI,
-          and DevOps. These aren't theoretical - they're battle-tested
-          approaches that actually work.
+      - title: Technical Tutorials
+        text: Step-by-step guides covering AWS services, AI implementation, and DevOps
+          practices. Real-world solutions with practical examples and
+          configurations.
         icon: laptop-globe
-      - title: Time-Saving Tips
-        text: Quick, focused tutorials that get straight to the point. No fluff - just
-          the essential steps and configurations you need to solve specific
-          problems.
+      - title: Industry Insights
+        text: Analysis of emerging technologies, best practices, and lessons learned
+          from implementing complex technical solutions in production
+          environments.
         icon: doc-sync
-      - title: Community Contribution
-        text: Contributing back to the developer community that has helped me throughout
-          my career. If my experience can save you time or solve your problem,
-          that's a win.
+      - title: Problem-Solving Resources
+        text: Focused content designed to help developers and IT professionals
+          overcome specific challenges and implement effective solutions
+          efficiently.
         icon: mobile-feed
-  section3:
-    title: Building AI-Powered Solutions
-    subtitle: Practical applications with global reach
-    image: illustrations/mockups/app-mockup.png
-    buttonText: Coming Soon
-    buttonLink: /projects/
-  section4:
-    title: What You'll Find Here
-    subtitle: Practical content that solves real problems
-    clients:
-      - name: AWS Solutions
-        quote: Step-by-step guides for API Gateway, DynamoDB, Lambda, and other AWS
-          services. Real configurations that work in production environments.
-        job: Cloud Architecture
-        img: 1
-      - name: AI Integration
-        quote: Practical approaches to implementing AI in business applications, from
-          authentication flows to data processing pipelines.
-        job: AI Implementation
-        img: 2
-      - name: DevOps Practices
-        quote: Container orchestration, CI/CD setups, security configurations, and
-          automation scripts that streamline development workflows.
-        job: Development Operations
-        img: 3
-  section5:
-    title: Let's Connect
-    subtitle: Questions, suggestions, or just want to share your own solutions?
-    buttonText: Get in Touch
-    # action: https://formspree.io/f/<form_id>
-    # method: POST
   footer:
     # Logo (from static/images/logos/___)
     logo: IntelliumX-v21.png
@@ -187,38 +141,40 @@ params:
       - link: https://www.linkedin.com/in/nobuhiro-tokushige/
         # Icons are from Font Awesome
         icon: linkedin
-      - link: https://github.com/nobuhiro-tokushige
+        target: _blank
+      - link: https://github.com/metamototomo
         icon: github
+        target: _blank
     bulmalogo: true
     quicklinks:
       column1:
-        title: Product
+        title: Navigate
         links:
-          - text: Discover features
+          - text: Home
             link: /
-          - text: Why choose our product?
-            link: /
-          - text: Compare features
-            link: /
-          - text: Our roadmap
-            link: /
-          - text: AGB
-            link: /agb
-      column2:
-        title: Docs
-        links:
-          - text: Get started
-            link: /
-          - text: User guides
-            link: /
-          - text: Admin guide
-            link: /
-          - text: Developers
-            link: /
-      column3:
-        title: Blog
-        links:
-          - text: All Posts
+          - text: Projects
+            link: /projects/
+          - text: Blog
             link: /posts/
           - text: About
             link: /about/
+      column2:
+        title: Resources
+        links:
+          - text: All Posts
+            link: /posts/
+          - text: Categories
+            link: /categories/
+          - text: Tags
+            link: /tags/
+          - text: Archives
+            link: /archives/
+      column3:
+        title: Connect
+        links:
+          - text: LinkedIn
+            link: https://www.linkedin.com/in/nobuhiro-tokushige/
+            target: _blank
+          - text: GitHub
+            link: https://github.com/metamototomo
+            target: _blank

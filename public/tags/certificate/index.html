@@ -1,2 +1,163 @@
-<!-- Layout with no content to avoid WARN message about missing page layout -->
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/tags/certificate/">
+  <meta property="og:site_name" content="IntelliumX">
+  <meta property="og:title" content="Certificate">
+  <meta property="og:description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Certificate - IntelliumX</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1 class="title">Certificate</h1>
+          
+          
+            <p class="subtitle">Browse posts by tag</p>
+          
+
+          
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/rabbitmq-container-ssl/">RabbitMQ Container - SSL</a></h3>
+                    <p class="subtitle is-6">March 30, 2025</p>
+                    
+                      <p><h2 id="create-a-container-ssl">Create a container (SSL)</h2>
+<ol>
+<li>First, create a new working directory and prepare your certificate files:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir gcs-rabbit-ssl
+</span></span><span style="display:flex;"><span>cd gcs-secure-rabbit
+</span></span><span style="display:flex;"><span>mkdir certs
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy your certificates to gcs-secure-rabbit/certs:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - ca.crt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - mid-ca.crt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - server-001.crt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - server-001.key</span>
+</span></span></code></pre></div><ol start="2">
+<li>Set 644 to these certificate</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">644</span> certs/*
+</span></span></code></pre></div><p><img src="2025-03-30-21-52-45.png" alt=""></p>
+<ol start="3">
+<li>Create a <code>rabbitmq.conf</code> (gcs-secure-rabbit/rabbitmq.conf):</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># RabbitMQ Configuration File</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Disable non-SSL listeners</span>
+</span></span><span style="display:flex;"><span>listeners.tcp <span style="color:#f92672">=</span> none
+</span></span><span style="display:flex;"><span>listeners.ssl.default <span style="color:#f92672">=</span> <span style="color:#ae81ff">5671</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SSL configuration</span>
+</span></span><span style="display:flex;"><span>ssl_options.cacertfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/ca-bundle.crt
+</span></span><span style="display:flex;"><span>ssl_options.certfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/server.crt
+</span></span><span style="display:flex;"><span>ssl_options.keyfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/server.key
+</span></span><span style="display:flex;"><span>ssl_options.verify <span style="color:#f92672">=</span> verify_peer
+</span></span><span style="display:flex;"><span>ssl_options.depth <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>ssl_options.fail_if_no_peer_cert <span style="color:#f92672">=</span> true
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Management SSL configuration</span>
+</span></span><span style="display:flex;"><span>management.ssl.port <span style="color:#f92672">=</span> <span style="color:#ae81ff">15671</span>
+</span></span><span style="display:flex;"><span>management.ssl.cacertfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/ca-bundle.crt
+</span></span><span style="display:flex;"><span>management.ssl.certfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/server.crt
+</span></span><span style="display:flex;"><span>management.ssl.keyfile <span style="color:#f92672">=</span> /etc/rabbitmq/ssl/server.key
+</span></span></code></pre></div><ol start="4">
+<li>Create a <code>Dockerfile</code> (e.g., gcs-secure-rabbit/DockerFile):</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>FROM rabbitmq:3.11.10-management
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create SSL directory</span>
+</span></span><span style="display:flex;"><span>RUN mkdir -p /etc/rabbitmq/ssl
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy certificates</span>
+</span></span><span style="display:flex;"><span>COPY ca.crt mid-ca.crt /etc/rabbitmq/ssl/
+</span></span><span style="display:flex;"><span>COPY server-001.crt /etc/rabbitmq/ssl/server.crt
+</span></span><span style="display:flex;"><span>COPY server-001.key /etc/rabbitmq/ssl/server.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create bundle certificate</span>
+</span></span><span style="display:flex;"><span>RUN cat /etc/rabbitmq/ssl/mid-ca.crt /etc/rabbitmq/ssl/ca.crt &gt; /etc/rabbitmq/ssl/ca-bundle.crt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy config file</span>
+</span></span><span style="display:flex;"><span>COPY rabbitmq.conf /etc/rabbitmq/rabbitmq.conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Expose SSL ports</span>
+</span></span><span style="display:flex;"><span>EXPOSE <span style="color:#ae81ff">5671</span> <span style="color:#ae81ff">15671</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CMD <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;rabbitmq-server&#34;</span><span style="color:#f92672">]</span>
+</span></span></code></pre></div><ol start="5">
+<li>Build and run the container:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Build the image</span>
+</span></span><span style="display:flex;"><span>sudo docker build -t gcs-secure-rabbit:latest .
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run the container</span>
+</span></span><span style="display:flex;"><span>sudo docker run -d --hostname secure-rabbit --name secure-rabbit <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-p 15671:15671 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-p 5671:5671 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>--restart always <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>gcs-secure-rabbit:latest
+</span></span></code></pre></div><ol start="6">
+<li>Check the container logs after running it:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo docker logs secure-rabbit
+</span></span></code></pre></div><hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/rabbitmq-container-http/">RabbitMQ Container - HTTP</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+<script src="/js/custom.js"></script>
+
+  </body>
+</html>

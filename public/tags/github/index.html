@@ -1,2 +1,220 @@
-<!-- Layout with no content to avoid WARN message about missing page layout -->
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/tags/github/">
+  <meta property="og:site_name" content="IntelliumX">
+  <meta property="og:title" content="GitHub">
+  <meta property="og:description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>GitHub - IntelliumX</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1 class="title">GitHub</h1>
+          
+          
+            <p class="subtitle">Browse posts by tag</p>
+          
+
+          
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-hub-reset-and-start-again/">GitHub - Reset and Start Again</a></h3>
+                    <p class="subtitle is-6">June 25, 2025</p>
+                    
+                      <p><h2 id="-how-to-reset-and-start-again">📥 How to Reset and Start Again</h2>
+<h3 id="method-1-reset-your-current-branch">Method 1: Reset your current branch</h3>
+<p>This will discard all local changes and make the local branch exactly match the remote.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># First, make sure you&#39;re on the right branch</span>
+</span></span><span style="display:flex;"><span>git checkout release/v3.1.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Fetch the latest changes from remote</span>
+</span></span><span style="display:flex;"><span>git fetch origin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Reset your local branch to match the remote version</span>
+</span></span><span style="display:flex;"><span>git reset --hard origin/release/v3.1.0
+</span></span></code></pre></div><h3 id="method-2-fresh-checkout-if-you-want-to-start-completely-fresh">Method 2: Fresh checkout (if you want to start completely fresh)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># First, move to a safe location (if you have unsaved work)</span>
+</span></span><span style="display:flex;"><span>git stash
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Then checkout the release branch, forcing a clean copy</span>
+</span></span><span style="display:flex;"><span>git checkout -f release/v3.1.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Update to the latest version from remote</span>
+</span></span><span style="display:flex;"><span>git pull origin release/v3.1.0
+</span></span></code></pre></div><p>⚠️ <strong>Note:</strong> Both methods will discard any uncommitted changes! If you have work you want to keep, commit it to a temporary branch first:</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-hub-best-practive-tagging/">GitHub - Best Practive Tagging</a></h3>
+                    <p class="subtitle is-6">June 25, 2025</p>
+                    
+                      <p><h2 id="-daily-git-workflow-with-tag-strategy">✅ <strong>Daily Git Workflow with Tag Strategy</strong></h2>
+<h3 id="1-continue-to-work-on-the-feature-branch">1. Continue to work on the feature branch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout feature/v3.2.0
+</span></span><span style="display:flex;"><span>git pull origin feature/v3.2.0
+</span></span></code></pre></div><hr>
+<h3 id="2-commit-stable-changes">2. Commit stable changes</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Fixed export timeout issue&#34;</span>
+</span></span></code></pre></div><hr>
+<h3 id="3-tag-a-stable-version-optional-when-ready">3. Tag a stable version (optional, when ready)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Use semantic versioning: v3.1.3, v3.1.4, etc.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Tags point to the most recent commit.</span>
+</span></span><span style="display:flex;"><span>git tag v3.1.2
+</span></span></code></pre></div><hr>
+<h3 id="4-push-your-changes-and-tag-to-github">4. Push your changes and tag to GitHub</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push origin feature/v3.2.0
+</span></span><span style="display:flex;"><span>git push origin v3.1.2
+</span></span></code></pre></div><hr>
+<h3 id="5-verify-your-tag-if-needed">5. Verify your tag (if needed)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git tag                         <span style="color:#75715e"># List local tags</span>
+</span></span><span style="display:flex;"><span>git show v3.1.2                 <span style="color:#75715e"># Show details of the tag</span>
+</span></span><span style="display:flex;"><span>git branch --contains v3.1.2    <span style="color:#75715e"># See which branch includes it</span>
+</span></span></code></pre></div><hr>
+<h3 id="bonus-optional-advanced-commands">Bonus (Optional Advanced Commands)</h3>
+<ul>
+<li>
+<p><strong>List tags sorted by date (most recent first):</strong></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-move-branch/">Git - Move Branch</a></h3>
+                    <p class="subtitle is-6">May 20, 2025</p>
+                    
+                      <p><h3 id="move-to-master">Move to &ldquo;master&rdquo;</h3>
+<p>Open the terminal (press Ctrl+`) and run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout master
+</span></span></code></pre></div><p>If master isn’t checked out locally yet, do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git fetch origin
+</span></span><span style="display:flex;"><span>git checkout master
+</span></span></code></pre></div><hr>
+<h3 id="if-master-was-not-updated-in-the-local-branch">If &ldquo;master&rdquo; was not updated in the local branch</h3>
+<p>If the branch switched successfully to master, but the files in your working directory didn’t update as expected, it could be one of these cases:</p>
+<ol>
+<li>Confirm You’re on the Correct Branch
+Run this to verify:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git branch
+</span></span></code></pre></div><p>You should see something like this. The asterisk * indicates your current branch.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-useful-commands/">Git - Useful Commands</a></h3>
+                    <p class="subtitle is-6">May 20, 2025</p>
+                    
+                      <p><h3 id="1-check-the-connection">1. Check the connection</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote -v
+</span></span></code></pre></div><p><img src="2025-05-20-09-38-48.png" alt=""></p>
+<hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/git-useful-commands/">Git - Useful Commands</a></p>
+<p><a href="http://localhost:1313/posts/git-move-branch/">Git - Move Branch</a></p>
+<p><a href="http://localhost:1313/posts/ignore-settings-in-github/">Git - Ignore Settings</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/ignore-settings-in-github/">Git - Ignore Settings</a></h3>
+                    <p class="subtitle is-6">February 25, 2025</p>
+                    
+                      <p><h2 id="how-to-ignore-uploading-folders-and-files-to-github">How to Ignore Uploading Folders and Files to GitHub</h2>
+<p>For example <code>.venv</code> folder</p>
+<ol>
+<li>
+<p>Open your project folder in <strong>VS Code</strong>.</p>
+</li>
+<li>
+<p>Open <code>.gitignore</code> file in the root of the project</p>
+</li>
+<li>
+<p>Add the following line to <code>.gitignore</code>:</p>
+<pre tabindex="0"><code>.venv/
+</code></pre></li>
+<li>
+<p>Save the file. then Git will ignore the <code>.venv</code> folder, and it won’t be tracked in your repository.</p>
+</li>
+</ol>
+<p>If <code>.venv</code> was already committed before, you’ll need to remove it from Git history using:</p>
+<pre tabindex="0"><code>git rm -r --cached .venv
+git commit -m &#34;Removed .venv from repository&#34;
+git push origin main  # or your current branch
+</code></pre><p>You can check if <code>.venv</code> is ignored by Git using the following command</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+<script src="/js/custom.js"></script>
+
+  </body>
+</html>

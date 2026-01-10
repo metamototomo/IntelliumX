@@ -1,2 +1,177 @@
-<!-- Layout with no content to avoid WARN message about missing page layout -->
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/tags/sql/">
+  <meta property="og:site_name" content="IntelliumX">
+  <meta property="og:title" content="SQL">
+  <meta property="og:description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SQL - IntelliumX</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1 class="title">SQL</h1>
+          
+          
+            <p class="subtitle">Browse posts by tag</p>
+          
+
+          
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/deadlock-issue-in-sql-serever/">Deadlock Issue in SQL Serever</a></h3>
+                    <p class="subtitle is-6">February 9, 2025</p>
+                    
+                      <p><h2 id="what-is-a-deadlock"><strong>What is a Deadlock?</strong></h2>
+<p>A deadlock in SQL Server occurs when two or more processes hold locks on resources and each process is waiting for the other to release its lock, causing a cycle where none can proceed.</p>
+<h2 id="why-does-it-occur"><strong>Why Does It Occur?</strong></h2>
+<p>Deadlocks typically hapen due to:</p>
+<ol>
+<li><strong>Concurrent Transactions:</strong> Multiple transactions access the same resources in a conflicting order.</li>
+<li><strong>Locking Order:</strong> Processes acquire locks in different sequences, leading to circular wait conditions.</li>
+<li><strong>Long-Running Transactions:</strong> Holding locks for an extended period increases the chance of conflicts.</li>
+<li><strong>Insufficient Indexing:</strong> Poor indexing leads to table scans, increasing lock contention.</li>
+<li><strong>Blocking Issues:</strong> Heavy blocking can escalate to deadlocks if multiple processes wait indefinitely.</li>
+</ol>
+<h2 id="how-poor-maintenance-can-lead-to-deadlocks"><strong>How Poor Maintenance Can Lead to Deadlocks</strong></h2>
+<ol>
+<li><strong>Fragmented Indexes &amp; Performance Degradation</strong>
+<ul>
+<li>If the database has grown significantly and indexes haven’t been maintained (i.e., no reindexing or rebuilding), queries will take longer to execute.</li>
+<li>Longer query execution times mean locks are held for extended periods, increasing the chances of deadlocks.</li>
+</ul>
+</li>
+<li><strong>Full Logging &amp; Large Transaction Logs</strong>
+<ul>
+<li>If transaction logs are continuously growing without proper backups or truncation, SQL Server might struggle with log management, leading to slower transaction processing.</li>
+<li>Slow transactions hold locks for longer, making deadlocks more likely.</li>
+</ul>
+</li>
+<li><strong>Mass Deletes Without Reindexing</strong>
+<ul>
+<li>Deleting a large number of records without reindexing can leave fragmented pages and inefficient query plans.</li>
+<li>The database engine might perform table scans instead of index seeks, leading to increased lock contention.</li>
+</ul>
+</li>
+<li><strong>Query Plan Changes (Due to Increased Data Size)</strong>
+<ul>
+<li>As the database grows, SQL Server might generate different execution plans that were not optimized for the current data size.</li>
+<li>This can lead to more locking and blocking, increasing the chance of deadlocks.</li>
+</ul>
+</li>
+</ol>
+<h2 id="demo---create-a-test-table">Demo - Create a test table</h2>
+<h3 id="1-create-a-large-table--insert-sample-data"><strong>1. Create a Large Table &amp; Insert Sample Data</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>USE master;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> ConflictTestDB;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span><span style="display:flex;"><span>USE ConflictTestDB;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> Orders (
+</span></span><span style="display:flex;"><span>    OrderID INT <span style="color:#66d9ef">IDENTITY</span>(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>    CustomerID INT,
+</span></span><span style="display:flex;"><span>    OrderDate DATETIME <span style="color:#66d9ef">DEFAULT</span> GETDATE(),
+</span></span><span style="display:flex;"><span>    OrderAmount DECIMAL(<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">2</span>),
+</span></span><span style="display:flex;"><span>    Status VARCHAR(<span style="color:#ae81ff">20</span>)
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Insert ~1 Million Rows
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> NOCOUNT <span style="color:#66d9ef">ON</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DECLARE</span> <span style="color:#f92672">@</span>i INT <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span> TRAN
+</span></span><span style="display:flex;"><span>WHILE <span style="color:#f92672">@</span>i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1000000</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> Orders (CustomerID, OrderAmount, Status)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">VALUES</span> (<span style="color:#66d9ef">ABS</span>(CHECKSUM(NEWID())) <span style="color:#f92672">%</span> <span style="color:#ae81ff">1000</span>, RAND() <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>, <span style="color:#e6db74">&#39;Pending&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SET</span> <span style="color:#f92672">@</span>i <span style="color:#f92672">=</span> <span style="color:#f92672">@</span>i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">COMMIT</span> TRAN;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span></code></pre></div><h3 id="2-create-index-fragmentation-without-reindexing"><strong>2. Create Index Fragmentation (Without Reindexing)</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- Delete a large number of records randomly to cause index fragmentation
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> Orders <span style="color:#66d9ef">WHERE</span> OrderID <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Fill gaps with new inserts (in random order)
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> NOCOUNT <span style="color:#66d9ef">ON</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DECLARE</span> <span style="color:#f92672">@</span>i INT <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span> TRAN
+</span></span><span style="display:flex;"><span>WHILE <span style="color:#f92672">@</span>i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">100000</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">BEGIN</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> Orders (CustomerID, OrderAmount, Status)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">VALUES</span> (<span style="color:#66d9ef">ABS</span>(CHECKSUM(NEWID())) <span style="color:#f92672">%</span> <span style="color:#ae81ff">1000</span>, RAND() <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>, <span style="color:#e6db74">&#39;Pending&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SET</span> <span style="color:#f92672">@</span>i <span style="color:#f92672">=</span> <span style="color:#f92672">@</span>i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">END</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">COMMIT</span> TRAN;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GO</span>
+</span></span></code></pre></div><h3 id="3-check-fragmentation-for-all-indexes-on-orders-table"><strong>3.</strong> Check Fragmentation for All Indexes on [Orders] Table</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> 
+</span></span><span style="display:flex;"><span>    index_id,
+</span></span><span style="display:flex;"><span>    index_type_desc,
+</span></span><span style="display:flex;"><span>    avg_fragmentation_in_percent,
+</span></span><span style="display:flex;"><span>    avg_page_space_used_in_percent,
+</span></span><span style="display:flex;"><span>    page_count
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> sys.dm_db_index_physical_stats(DB_ID(), OBJECT_ID(<span style="color:#e6db74">&#39;Orders&#39;</span>), <span style="color:#66d9ef">NULL</span>, <span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#39;LIMITED&#39;</span>);
+</span></span></code></pre></div><p><strong><code>avg_fragmentation_in_percent</code></strong> → Shows fragmentation level:</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+<script src="/js/custom.js"></script>
+
+  </body>
+</html>

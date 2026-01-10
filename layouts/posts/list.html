@@ -38,6 +38,17 @@
               <button class="button" id="clear-filters">Clear Filters</button>
             </div>
           </div>
+          <div class="field is-grouped" style="margin-top: 1rem; margin-bottom: 2rem; justify-content: space-between; align-items: center;">
+            <div class="control">
+              <span style="margin-right: 1rem; color: #7a7a7a;">Browse:</span>
+              <a href="/categories/" style="margin-right: 1rem; color: #3273dc; text-decoration: none;">Categories</a>
+              <a href="/tags/" style="margin-right: 1rem; color: #3273dc; text-decoration: none;">Tags</a>
+              <a href="/archives/" style="color: #3273dc; text-decoration: none;">Archives</a>
+            </div>
+            <div class="control">
+              <span id="results-counter" class="tag is-info is-light" style="font-size: 0.9rem;">Showing {{ len .Pages }} of {{ len .Pages }} posts</span>
+            </div>
+          </div>
         </div>
         <div class="content" id="blog-list">
           {{ range .Pages }}
@@ -79,11 +90,13 @@ const categoryFilter = document.getElementById('category-filter');
 const tagFilter = document.getElementById('tag-filter');
 const clearFilters = document.getElementById('clear-filters');
 const blogPosts = Array.from(document.querySelectorAll('.blog-post'));
+const resultsCounter = document.getElementById('results-counter');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const pagination = document.getElementById('pagination');
 const pageNumbers = document.getElementById('page-numbers');
 const postsPerPage = 10;
+const totalPosts = blogPosts.length;
 let currentPage = 1;
 let filteredPosts = blogPosts;
 
@@ -219,6 +232,9 @@ function applyFilters() {
     return matchesSearch && matchesCategory && matchesTag;
   });
   
+  // Update results counter
+  resultsCounter.textContent = `Showing ${filteredPosts.length} of ${totalPosts} posts`;
+  
   currentPage = 1;
   showPage(currentPage);
 }
@@ -233,6 +249,37 @@ clearFilters.addEventListener('click', () => {
   tagFilter.value = '';
   applyFilters();
 });
+
+// Get URL parameters
+const urlParams = new URLSearchParams(window.location.search);
+const urlTag = urlParams.get('tag');
+const urlCategory = urlParams.get('category');
+
+// Set initial filter values from URL
+if (urlTag) {
+  // Convert URL parameter back to original format (replace hyphens with spaces)
+  const normalizedUrlTag = urlTag.replace(/-/g, ' ');
+  // Find matching option in dropdown (case-insensitive)
+  const tagOptions = Array.from(tagFilter.options);
+  const matchingOption = tagOptions.find(option => 
+    option.value.toLowerCase() === normalizedUrlTag.toLowerCase()
+  );
+  if (matchingOption) {
+    tagFilter.value = matchingOption.value;
+  }
+}
+if (urlCategory) {
+  // Convert URL parameter back to original format (replace hyphens with spaces)
+  const normalizedUrlCategory = urlCategory.replace(/-/g, ' ');
+  // Find matching option in dropdown (case-insensitive)
+  const categoryOptions = Array.from(categoryFilter.options);
+  const matchingOption = categoryOptions.find(option => 
+    option.value.toLowerCase() === normalizedUrlCategory.toLowerCase()
+  );
+  if (matchingOption) {
+    categoryFilter.value = matchingOption.value;
+  }
+}
 
 applyFilters();
 </script>

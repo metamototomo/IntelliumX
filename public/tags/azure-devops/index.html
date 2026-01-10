@@ -1,2 +1,240 @@
-<!-- Layout with no content to avoid WARN message about missing page layout -->
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/tags/azure-devops/">
+  <meta property="og:site_name" content="IntelliumX">
+  <meta property="og:title" content="Azure DevOps">
+  <meta property="og:description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Azure DevOps - IntelliumX</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1 class="title">Azure DevOps</h1>
+          
+          
+            <p class="subtitle">Browse posts by tag</p>
+          
+
+          
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-move-branch/">Git - Move Branch</a></h3>
+                    <p class="subtitle is-6">May 20, 2025</p>
+                    
+                      <p><h3 id="move-to-master">Move to &ldquo;master&rdquo;</h3>
+<p>Open the terminal (press Ctrl+`) and run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout master
+</span></span></code></pre></div><p>If master isn’t checked out locally yet, do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git fetch origin
+</span></span><span style="display:flex;"><span>git checkout master
+</span></span></code></pre></div><hr>
+<h3 id="if-master-was-not-updated-in-the-local-branch">If &ldquo;master&rdquo; was not updated in the local branch</h3>
+<p>If the branch switched successfully to master, but the files in your working directory didn’t update as expected, it could be one of these cases:</p>
+<ol>
+<li>Confirm You’re on the Correct Branch
+Run this to verify:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git branch
+</span></span></code></pre></div><p>You should see something like this. The asterisk * indicates your current branch.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-useful-commands/">Git - Useful Commands</a></h3>
+                    <p class="subtitle is-6">May 20, 2025</p>
+                    
+                      <p><h3 id="1-check-the-connection">1. Check the connection</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote -v
+</span></span></code></pre></div><p><img src="2025-05-20-09-38-48.png" alt=""></p>
+<hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/git-useful-commands/">Git - Useful Commands</a></p>
+<p><a href="http://localhost:1313/posts/git-move-branch/">Git - Move Branch</a></p>
+<p><a href="http://localhost:1313/posts/ignore-settings-in-github/">Git - Ignore Settings</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/azure-devops-complete/">Azure DevOps - Complete (Merge)</a></h3>
+                    <p class="subtitle is-6">May 20, 2025</p>
+                    
+                      <p><h2 id="use-azure-devops-web-ui">Use Azure DevOps Web UI</h2>
+<h3 id="scenario">Scenario:</h3>
+<p>This guide shows how to merge a pull request from the <code>release/v1.0-america</code> branch into the <code>main</code> branch using Azure DevOps or any Git repository.</p>
+<h3 id="final-step-complete-the-pull-request">Final Step (Complete the Pull Request):</h3>
+<ol>
+<li>
+<p>Once it’s approved, click the <strong>&ldquo;Complete&rdquo;</strong> button to merge it into <code>master</code>.</p>
+</li>
+<li>
+<p>You&rsquo;ll get options like:</p>
+<ul>
+<li><strong>Squash</strong> or <strong>merge</strong> (depending on settings)</li>
+<li><strong>Delete source branch after merging</strong> (optional)</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>&ldquo;Complete merge&rdquo;</strong> when ready</p>
+</li>
+</ol>
+<p><img src="2025-05-20-09-05-58.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/azure-devops-approve/">Azure DevOps - Approve</a></h3>
+                    <p class="subtitle is-6">May 20, 2025</p>
+                    
+                      <p><h2 id="use-azure-devops-web-ui">Use Azure DevOps Web UI</h2>
+<h3 id="scenario">Scenario:</h3>
+<p>This guide demonstrates how to approve a pull request from the <code>release/v1.0-america</code> branch into the <code>master</code> branch in Azure DevOps or any Git repository.</p>
+<h3 id="steps-approve-the-pull-request">Steps (Approve the Pull Request):</h3>
+<ol>
+<li>Go to Azure DevOps in your browser</li>
+<li>Navigate to <strong>Repos &gt; Pull Requests</strong></li>
+</ol>
+<p><img src="2025-05-20-08-54-53.png" alt=""></p>
+<ol start="3">
+<li>Find the Pull request (from <code>release/v1.0-america</code> to <code>master</code>)</li>
+<li>Click on the PR to open it.</li>
+<li>On the right-hand side, you’ll see the <strong>&ldquo;Reviewers&rdquo;</strong> section</li>
+</ol>
+<p><img src="2025-05-20-08-58-10.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/azure-devops-pull-request/">Azure DevOps - Pull Request</a></h3>
+                    <p class="subtitle is-6">May 20, 2025</p>
+                    
+                      <p><h2 id="use-azure-devops-web-ui">Use Azure DevOps Web UI</h2>
+<h3 id="scenario">Scenario:</h3>
+<p>This guide shows how to push changes from the <code>release/v1.0-america</code> branch to the <code>master</code> branch in Azure DevOps (or any Git repository).</p>
+<hr>
+<h3 id="steps">Steps:</h3>
+<ol>
+<li>Go to your Azure DevOps project in the browser.</li>
+<li>Navigate to <strong>Repos &gt; Branches</strong>.</li>
+<li>Find your branch <code>release/v1.0-america</code></li>
+<li>Click on the <strong>&quot;&hellip;&quot; (More options)</strong> next to it and select <strong>&ldquo;New pull request&rdquo;</strong></li>
+</ol>
+<p><img src="2025-05-20-08-37-28.png" alt=""></p>
+<ol start="2">
+<li>
+<p>Set:</p>
+<ul>
+<li><strong>Source</strong>: <code>release/v1.0-america</code></li>
+<li><strong>Target</strong>: <code>master</code></li>
+</ul>
+</li>
+<li>
+<p>Add a title, description (optional but helpful), and click <strong>&ldquo;Create&rdquo;</strong></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/ignore-settings-in-github/">Git - Ignore Settings</a></h3>
+                    <p class="subtitle is-6">February 25, 2025</p>
+                    
+                      <p><h2 id="how-to-ignore-uploading-folders-and-files-to-github">How to Ignore Uploading Folders and Files to GitHub</h2>
+<p>For example <code>.venv</code> folder</p>
+<ol>
+<li>
+<p>Open your project folder in <strong>VS Code</strong>.</p>
+</li>
+<li>
+<p>Open <code>.gitignore</code> file in the root of the project</p>
+</li>
+<li>
+<p>Add the following line to <code>.gitignore</code>:</p>
+<pre tabindex="0"><code>.venv/
+</code></pre></li>
+<li>
+<p>Save the file. then Git will ignore the <code>.venv</code> folder, and it won’t be tracked in your repository.</p>
+</li>
+</ol>
+<p>If <code>.venv</code> was already committed before, you’ll need to remove it from Git history using:</p>
+<pre tabindex="0"><code>git rm -r --cached .venv
+git commit -m &#34;Removed .venv from repository&#34;
+git push origin main  # or your current branch
+</code></pre><p>You can check if <code>.venv</code> is ignored by Git using the following command</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+<script src="/js/custom.js"></script>
+
+  </body>
+</html>

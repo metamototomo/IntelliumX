@@ -1,2 +1,198 @@
-<!-- Layout with no content to avoid WARN message about missing page layout -->
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/tags/api-gateway/">
+  <meta property="og:site_name" content="IntelliumX">
+  <meta property="og:title" content="API Gateway">
+  <meta property="og:description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>API Gateway - IntelliumX</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1 class="title">API Gateway</h1>
+          
+          
+            <p class="subtitle">Browse posts by tag</p>
+          
+
+          
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/api-gateway-configuration/">API Gateway - Configuration</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><h3 id="1-create-rest-api">1. Create REST API</h3>
+<ol>
+<li>Go to API Gateway console</li>
+<li>Create new REST API</li>
+</ol>
+<p><img src="2025-06-15-17-54-16.png" alt=""></p>
+<ol start="3">
+<li>Create new resource and method
+<ul>
+<li>Add resource: e.g., &ldquo;/user-list&rdquo;</li>
+<li>Add GET method</li>
+<li>Integration type: Lambda Function</li>
+<li>Select your Lambda function</li>
+</ul>
+</li>
+<li>Enable CORS if needed
+<ul>
+<li>Actions → Enable CORS</li>
+<li>Accept default settings for testing</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-update-method-request">2. Update “Method request”</h3>
+<p><img src="2025-06-15-17-54-36.png" alt=""></p>
+<h3 id="3-update-integration-request">3. Update “Integration request”</h3>
+<p><img src="2025-06-15-17-54-51.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;limit&#34;</span>: <span style="color:#e6db74">&#34;$input.params(&#39;limit&#39;)&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="4-deploy-and-test">4. Deploy and Test</h3>
+<ol>
+<li>Deploy API</li>
+</ol>
+<p><img src="2025-06-15-17-55-17.png" alt=""></p>
+<ol start="2">
+<li>Note the API endpoint URL</li>
+</ol>
+<p><img src="2025-06-15-17-55-34.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/api-gateway-api-key/">API Gateway - API Key</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><ol>
+<li>In API Gateway:
+<ul>
+<li>Click on &ldquo;API Keys&rdquo;</li>
+<li>Generate API key for each team member</li>
+</ul>
+</li>
+<li>Under API&rsquo;s Usage Plans:
+<ul>
+<li>Create new usage plan</li>
+<li>Add API stage to plan</li>
+<li>Associate API keys with plan</li>
+</ul>
+</li>
+</ol>
+<p><img src="2025-06-15-17-53-18.png" alt=""></p>
+<hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/aws-credentials-for-cli/">AWS Credentials for CLI</a></p>
+<p><a href="http://localhost:1313/posts/aws-credentials-for-cli-profile/">AWS Credentials for CLI (Profile)</a></p>
+<p><a href="http://localhost:1313/posts/aws-sts-temporary-access-tokens/">AWS STS - Temporary Access Tokens</a></p>
+<p><a href="http://localhost:1313/posts/dynamodb-create-a-table/">Amazon DynamoDB - Create a Table</a></p>
+<p><a href="http://localhost:1313/posts/dynamodb-import-data-from-csv/">Amazon DynamoDB - Import CSV Data</a></p>
+<p><a href="http://localhost:1313/posts/lambda-create-a-function/">AWS Lambda - Create a Function</a></p>
+<p><a href="http://localhost:1313/posts/lambda-set-access-to-dynamodb/">AWS Lambda - Grant Access</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/api-gateway-usage-plan/">API Gateway - Usage Plan</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><h3 id="1-create-new-usage-plan">1. Create new usage plan</h3>
+<p><img src="2025-06-15-17-51-14.png" alt=""></p>
+<h3 id="rate-and-burst">Rate and Burst</h3>
+<ul>
+<li><strong>Rate:</strong> Set to 10-20 requests per second for development/testing
+<ul>
+<li>Recommended: Start with 10 req/sec for controlled testing</li>
+</ul>
+</li>
+<li><strong>Burst:</strong> Set to 2x your rate (20-40)
+<ul>
+<li>Recommended: Start with 20 to handle short traffic spikes</li>
+</ul>
+</li>
+</ul>
+<h3 id="quota-settings">Quota Settings</h3>
+<ul>
+<li><strong>Quota period:</strong> MONTH (most common)
+<ul>
+<li>Alternative periods: WEEK, DAY</li>
+</ul>
+</li>
+<li><strong>Requests per quota period:</strong> Start with 50,000/month
+<ul>
+<li>This allows approximately 1,600 requests per day</li>
+<li>Can be adjusted based on actual usage patterns</li>
+</ul>
+</li>
+</ul>
+<p>Recommended Initial Configuration:</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+<script src="/js/custom.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content" style="min-height: 80vh; padding-bottom: 4rem;">
+          <h1 class="title">{{ .Title }}</h1>
+          
+          {{ if eq .Type "categories" }}
+            <p class="subtitle">Browse posts by category</p>
+          {{ else if eq .Type "tags" }}
+            <p class="subtitle">Browse posts by tag</p>
+          {{ end }}
+
+          <div class="tags are-medium" style="margin-top: 2rem;">
+            {{ range .Data.Terms.ByCount }}
+              {{ if eq $.Type "tags" }}
+                <a href="/posts/?tag={{ .Page.Title | urlize }}" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?tag={{ .Page.Title | urlize }}';">
+                  {{ .Page.Title }} ({{ .Count }})
+                </a>
+              {{ else }}
+                <a href="/posts/?category={{ .Page.Title | urlize }}" class="tag is-link is-medium" onclick="event.preventDefault(); window.location.href='/posts/?category={{ .Page.Title | urlize }}';">
+                  {{ .Page.Title }} ({{ .Count }})
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+{{ if .Site.Params.sidebar }}
+{{ partial "sidebar.html" . }}
+{{ end }}
+{{ end }}

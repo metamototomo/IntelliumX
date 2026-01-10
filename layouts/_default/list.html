@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1 class="title">{{ .Title }}</h1>
+          
+          {{ if eq .Type "categories" }}
+            <p class="subtitle">Browse posts by category</p>
+          {{ else if eq .Type "tags" }}
+            <p class="subtitle">Browse posts by tag</p>
+          {{ else }}
+            <p class="subtitle">{{ .Description }}</p>
+          {{ end }}
+
+          {{ if .Data.Terms }}
+            <div class="tags are-large">
+              {{ range .Data.Terms.ByCount }}
+                <a href="{{ .Page.Permalink }}" class="tag is-link">
+                  {{ .Page.Title }} ({{ .Count }})
+                </a>
+              {{ end }}
+            </div>
+          {{ else }}
+            {{ range .Pages }}
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                    <p class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</p>
+                    {{ if .Summary }}
+                      <p>{{ .Summary }}</p>
+                    {{ end }}
+                  </div>
+                </div>
+              </article>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+{{ if .Site.Params.sidebar }}
+{{ partial "sidebar.html" . }}
+{{ end }}
+{{ end }}

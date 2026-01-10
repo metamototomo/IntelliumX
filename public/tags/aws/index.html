@@ -1,2 +1,1339 @@
-<!-- Layout with no content to avoid WARN message about missing page layout -->
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/tags/aws/">
+  <meta property="og:site_name" content="IntelliumX">
+  <meta property="og:title" content="AWS">
+  <meta property="og:description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AWS - IntelliumX</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+
+<nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/IntelliumX-v21.png" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+      <div id="navbar-menu" class="navbar-menu is-static">
+        <div class="navbar-start">
+          <a class="navbar-item is-hidden-mobile">
+            <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+              <svg width="1000px" height="1000px">
+                <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                <path class="path2" d="M 300 500 L 700 500"></path>
+                <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+              </svg>
+              <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+            </div>
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a href="/" class="navbar-item is-secondary">
+            Home
+          </a>
+          <a href="/projects/" class="navbar-item is-secondary">
+            Projects
+          </a>
+          <a href="/posts/" class="navbar-item is-secondary">
+            Blog
+          </a>
+          <a href="/about/" class="navbar-item is-secondary">
+            About
+          </a>
+        </div>
+      </div>
+  </div>
+</nav>
+
+
+<nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/IntelliumX-v21.png" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+      <div class="navbar-start">
+        <a class="navbar-item is-hidden-mobile">
+          <div id="cloned-menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+              <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+              <path class="path2" d="M 300 500 L 700 500"></path>
+              <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+            </svg>
+            <button id="cloned-menu-icon-trigger" class="menu-icon-trigger"></button>
+          </div>
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <a href="/" class="navbar-item is-secondary">
+          Home
+        </a>
+        <a href="/projects/" class="navbar-item is-secondary">
+          Projects
+        </a>
+        <a href="/posts/" class="navbar-item is-secondary">
+          Blog
+        </a>
+        <a href="/about/" class="navbar-item is-secondary">
+          About
+        </a>
+      </div>
+    </div>
+</div>
+</nav>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1 class="title">AWS</h1>
+          
+          
+            <p class="subtitle">Browse posts by tag</p>
+          
+
+          
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/aws-credentials-for-cli-profile/">AWS Credentials for CLI (Profile)</a></h3>
+                    <p class="subtitle is-6">December 23, 2025</p>
+                    
+                      <p><p><img src="2025-12-23-23-21-32.png" alt=""></p>
+<h1 id="-quick-start-guide">🚀 <strong>Quick Start Guide</strong></h1>
+<ul>
+<li>Create a named profile using <strong><code>aws configure --profile [name]</code></strong></li>
+<li>Never set a default profile permanently</li>
+<li>This avoids accidental operations on the wrong AWS account</li>
+<li>Activate profiles temporarily per session using <code>$env:AWS_PROFILE</code></li>
+<li>Or activate per command using <code>--profile</code></li>
+<li>Always clear the active profile when done to prevent unintended AWS operations</li>
+</ul>
+<hr>
+<h2 id="-1-create-the-profile-once-only">✅ <strong>1. Create the profile (once only)</strong></h2>
+<p>In PowerShell:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>aws configure --profile nob
+</span></span></code></pre></div><p>This creates:</p>
+<ul>
+<li><code>~\.aws\credentials</code></li>
+<li><code>~\.aws\config</code></li>
+</ul>
+<hr>
+<h2 id="-2-use-the-profile">✅ <strong>2. Use the profile <em>temporarily</em> in PowerShell</strong></h2>
+<p>Option A — <strong>Set environment variable only for the current session</strong></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/api-gateway-configuration/">API Gateway - Configuration</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><h3 id="1-create-rest-api">1. Create REST API</h3>
+<ol>
+<li>Go to API Gateway console</li>
+<li>Create new REST API</li>
+</ol>
+<p><img src="2025-06-15-17-54-16.png" alt=""></p>
+<ol start="3">
+<li>Create new resource and method
+<ul>
+<li>Add resource: e.g., &ldquo;/user-list&rdquo;</li>
+<li>Add GET method</li>
+<li>Integration type: Lambda Function</li>
+<li>Select your Lambda function</li>
+</ul>
+</li>
+<li>Enable CORS if needed
+<ul>
+<li>Actions → Enable CORS</li>
+<li>Accept default settings for testing</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-update-method-request">2. Update “Method request”</h3>
+<p><img src="2025-06-15-17-54-36.png" alt=""></p>
+<h3 id="3-update-integration-request">3. Update “Integration request”</h3>
+<p><img src="2025-06-15-17-54-51.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;limit&#34;</span>: <span style="color:#e6db74">&#34;$input.params(&#39;limit&#39;)&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="4-deploy-and-test">4. Deploy and Test</h3>
+<ol>
+<li>Deploy API</li>
+</ol>
+<p><img src="2025-06-15-17-55-17.png" alt=""></p>
+<ol start="2">
+<li>Note the API endpoint URL</li>
+</ol>
+<p><img src="2025-06-15-17-55-34.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/api-gateway-api-key/">API Gateway - API Key</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><ol>
+<li>In API Gateway:
+<ul>
+<li>Click on &ldquo;API Keys&rdquo;</li>
+<li>Generate API key for each team member</li>
+</ul>
+</li>
+<li>Under API&rsquo;s Usage Plans:
+<ul>
+<li>Create new usage plan</li>
+<li>Add API stage to plan</li>
+<li>Associate API keys with plan</li>
+</ul>
+</li>
+</ol>
+<p><img src="2025-06-15-17-53-18.png" alt=""></p>
+<hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/aws-credentials-for-cli/">AWS Credentials for CLI</a></p>
+<p><a href="http://localhost:1313/posts/aws-credentials-for-cli-profile/">AWS Credentials for CLI (Profile)</a></p>
+<p><a href="http://localhost:1313/posts/aws-sts-temporary-access-tokens/">AWS STS - Temporary Access Tokens</a></p>
+<p><a href="http://localhost:1313/posts/dynamodb-create-a-table/">Amazon DynamoDB - Create a Table</a></p>
+<p><a href="http://localhost:1313/posts/dynamodb-import-data-from-csv/">Amazon DynamoDB - Import CSV Data</a></p>
+<p><a href="http://localhost:1313/posts/lambda-create-a-function/">AWS Lambda - Create a Function</a></p>
+<p><a href="http://localhost:1313/posts/lambda-set-access-to-dynamodb/">AWS Lambda - Grant Access</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/api-gateway-usage-plan/">API Gateway - Usage Plan</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><h3 id="1-create-new-usage-plan">1. Create new usage plan</h3>
+<p><img src="2025-06-15-17-51-14.png" alt=""></p>
+<h3 id="rate-and-burst">Rate and Burst</h3>
+<ul>
+<li><strong>Rate:</strong> Set to 10-20 requests per second for development/testing
+<ul>
+<li>Recommended: Start with 10 req/sec for controlled testing</li>
+</ul>
+</li>
+<li><strong>Burst:</strong> Set to 2x your rate (20-40)
+<ul>
+<li>Recommended: Start with 20 to handle short traffic spikes</li>
+</ul>
+</li>
+</ul>
+<h3 id="quota-settings">Quota Settings</h3>
+<ul>
+<li><strong>Quota period:</strong> MONTH (most common)
+<ul>
+<li>Alternative periods: WEEK, DAY</li>
+</ul>
+</li>
+<li><strong>Requests per quota period:</strong> Start with 50,000/month
+<ul>
+<li>This allows approximately 1,600 requests per day</li>
+<li>Can be adjusted based on actual usage patterns</li>
+</ul>
+</li>
+</ul>
+<p>Recommended Initial Configuration:</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/dynamodb-create-a-table/">Amazon DynamoDB - Create a Table</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><ol>
+<li>Sign in to AWS Console and navigate to DynamoDB</li>
+<li>Click &ldquo;Create table&rdquo;
+<ul>
+<li>Table name: e.g., &ldquo;user_list&rdquo;</li>
+<li>Partition key: &ldquo;user_id (String)</li>
+<li>Sort key (optional): &ldquo;first_name&rdquo; (String)</li>
+</ul>
+</li>
+</ol>
+<p><img src="2025-06-15-17-17-38.png" alt=""></p>
+<hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/aws-credentials-for-cli/">AWS Credentials for CLI</a></p>
+<p><a href="http://localhost:1313/posts/aws-credentials-for-cli-profile/">AWS Credentials for CLI (Profile)</a></p>
+<p><a href="http://localhost:1313/posts/aws-sts-temporary-access-tokens/">AWS STS - Temporary Access Tokens</a></p>
+<p><a href="http://localhost:1313/posts/dynamodb-create-a-table/">Amazon DynamoDB - Create a Table</a></p>
+<p><a href="http://localhost:1313/posts/dynamodb-import-data-from-csv/">Amazon DynamoDB - Import CSV Data</a></p>
+<p><a href="http://localhost:1313/posts/lambda-create-a-function/">AWS Lambda - Create a Function</a></p>
+<p><a href="http://localhost:1313/posts/lambda-set-access-to-dynamodb/">AWS Lambda - Grant Access</a></p>
+<p><a href="http://localhost:1313/posts/api-gateway-usage-plan/">API Gateway - Usage Plan</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/aws-sts-temporary-access-tokens/">AWS STS - Temporary Access Tokens</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><p><img src="2025-06-15-17-14-28.png" alt=""></p>
+<h3 id="1-generate-temporary-credentials">1. Generate Temporary Credentials</h3>
+<p>First, use the AWS STS (Security Token Service) to generate temporary credentials:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 3600 x 5 = 18000 (5 hours)</span>
+</span></span><span style="display:flex;"><span>aws sts get-session-token --duration-seconds <span style="color:#ae81ff">18000</span>
+</span></span></code></pre></div><p>This will return something like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Credentials&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;AccessKeyId&#34;</span>: <span style="color:#e6db74">&#34;ASIA...&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;SecretAccessKey&#34;</span>: <span style="color:#e6db74">&#34;...&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;SessionToken&#34;</span>: <span style="color:#e6db74">&#34;...&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Expiration&#34;</span>: <span style="color:#e6db74">&#34;2025-06-13T...&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="2-set-environment-variables">2. Set Environment Variables</h3>
+<p>Then set these environment variables:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Replace the values with your actual credentials from the previous step.</span>
+</span></span><span style="display:flex;"><span>export AWS_ACCESS_KEY_ID<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;your_access_key&#34;</span>
+</span></span><span style="display:flex;"><span>export AWS_SECRET_ACCESS_KEY<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;your_secret_key&#34;</span>
+</span></span><span style="display:flex;"><span>export AWS_SESSION_TOKEN<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;your_session_token&#34;</span>
+</span></span><span style="display:flex;"><span>export AWS_DEFAULT_REGION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ap-southeast-2&#34;</span>  <span style="color:#75715e"># Sydney region</span>
+</span></span></code></pre></div><h3 id="3-verify-the-environment-variables">3. Verify the environment variables</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>env | grep AWS
+</span></span></code></pre></div><p>After setting these variables, try running your Python script again. The credentials will be automatically picked up by the AWS SDK.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/lambda-create-a-function/">AWS Lambda - Create a Function</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><ol>
+<li>Navigate to Lambda in AWS Console</li>
+<li>Click &ldquo;Create function&rdquo;
+<ul>
+<li>Choose &ldquo;Author from scratch&rdquo;</li>
+<li>Runtime: Python 3.x</li>
+<li>Name: e.g., &ldquo;get-user-list&rdquo;</li>
+</ul>
+</li>
+</ol>
+<p><img src="2025-06-15-17-31-16.png" alt=""></p>
+<p>Paste the Python code into “Code” page and click “Deploy” button</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> boto3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> boto3.dynamodb.conditions <span style="color:#f92672">import</span> Key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dynamodb <span style="color:#f92672">=</span> boto3<span style="color:#f92672">.</span>resource(<span style="color:#e6db74">&#39;dynamodb&#39;</span>)
+</span></span><span style="display:flex;"><span>table <span style="color:#f92672">=</span> dynamodb<span style="color:#f92672">.</span>Table(<span style="color:#e6db74">&#39;user_list&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_nested_structure</span>(data, current_level, max_level):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> current_level <span style="color:#f92672">&gt;=</span> max_level:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> data
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;level_</span><span style="color:#e6db74">{</span>current_level<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;data&#34;</span>: data,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;nested&#34;</span>: create_nested_structure(data, current_level <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, max_level),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;metadata&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;level_info&#34;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;This is level </span><span style="color:#e6db74">{</span>current_level<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;timestamp&#34;</span>: datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>isoformat(),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;metrics&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;depth&#34;</span>: current_level,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;remaining_levels&#34;</span>: max_level <span style="color:#f92672">-</span> current_level,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;complexity_score&#34;</span>: max_level <span style="color:#f92672">*</span> current_level
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_complex_response</span>(user_data, nested_level):
+</span></span><span style="display:flex;"><span>    base_data <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;user_</span><span style="color:#e6db74">{</span>user_data[<span style="color:#e6db74">&#39;user_id&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;timestamp&#34;</span>: datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>isoformat(),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Personnel&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;details&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;name&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;first&#34;</span>: user_data[<span style="color:#e6db74">&#39;first_name&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;last&#34;</span>: user_data[<span style="color:#e6db74">&#39;last_name&#39;</span>]
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;company&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;name&#34;</span>: user_data[<span style="color:#e6db74">&#39;company_name&#39;</span>],
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;web&#34;</span>: user_data[<span style="color:#e6db74">&#39;web&#39;</span>]
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;contact_info&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;address&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;street&#34;</span>: user_data[<span style="color:#e6db74">&#39;address&#39;</span>],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;city&#34;</span>: user_data[<span style="color:#e6db74">&#39;city&#39;</span>],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;state&#34;</span>: user_data[<span style="color:#e6db74">&#39;state&#39;</span>],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;postcode&#34;</span>: user_data[<span style="color:#e6db74">&#39;post&#39;</span>]
+</span></span><span style="display:flex;"><span>                },
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;communication&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;phones&#34;</span>: [
+</span></span><span style="display:flex;"><span>                        {
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;primary&#34;</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;number&#34;</span>: user_data[<span style="color:#e6db74">&#39;phone1&#39;</span>]
+</span></span><span style="display:flex;"><span>                        },
+</span></span><span style="display:flex;"><span>                        {
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;secondary&#34;</span>,
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;number&#34;</span>: user_data[<span style="color:#e6db74">&#39;phone2&#39;</span>]
+</span></span><span style="display:flex;"><span>                        }
+</span></span><span style="display:flex;"><span>                    ],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;email&#34;</span>: user_data[<span style="color:#e6db74">&#39;email&#39;</span>]
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> create_nested_structure(base_data, <span style="color:#ae81ff">1</span>, nested_level)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lambda_handler</span>(event, context):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Get parameters from event body</span>
+</span></span><span style="display:flex;"><span>        limit <span style="color:#f92672">=</span> int(event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;limit&#39;</span>, <span style="color:#ae81ff">10</span>) <span style="color:#66d9ef">if</span> event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;limit&#39;</span>) <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>        nested_level <span style="color:#f92672">=</span> int(event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;nested_level&#39;</span>, <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">if</span> event<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;nested_level&#39;</span>) <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Validate nested_level</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> nested_level <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>            nested_level <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> nested_level <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">30</span>:  <span style="color:#75715e"># Set a reasonable maximum </span>
+</span></span><span style="display:flex;"><span>            nested_level <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>    <span style="color:#75715e"># 29 nested is the limit on Blue Prism</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Scan DynamoDB table with limit</span>
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> table<span style="color:#f92672">.</span>scan(
+</span></span><span style="display:flex;"><span>            Limit<span style="color:#f92672">=</span>limit
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        items <span style="color:#f92672">=</span> response<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;Items&#39;</span>, [])
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Transform items into complex nested structure</span>
+</span></span><span style="display:flex;"><span>        transformed_data <span style="color:#f92672">=</span> [create_complex_response(item, nested_level) <span style="color:#66d9ef">for</span> item <span style="color:#f92672">in</span> items]
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Create final response</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;statusCode&#34;</span>: <span style="color:#ae81ff">200</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;headers&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Content-Type&#34;</span>: <span style="color:#e6db74">&#34;application/json&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;Access-Control-Allow-Origin&#34;</span>: <span style="color:#e6db74">&#34;*&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;success&#34;</span>: <span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;timestamp&#34;</span>: datetime<span style="color:#f92672">.</span>now()<span style="color:#f92672">.</span>isoformat(),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;total_records&#34;</span>: len(transformed_data),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;limit_applied&#34;</span>: limit,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;nesting_level&#34;</span>: nested_level,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;data&#34;</span>: transformed_data,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;metadata&#34;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;api_version&#34;</span>: <span style="color:#e6db74">&#34;1.0&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;service&#34;</span>: <span style="color:#e6db74">&#34;user-data-api&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;complexity_info&#34;</span>: {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;max_depth&#34;</span>: nested_level,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;structure_type&#34;</span>: <span style="color:#e6db74">&#34;recursive&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;total_nodes&#34;</span>: len(transformed_data) <span style="color:#f92672">*</span> nested_level
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;statusCode&#34;</span>: <span style="color:#ae81ff">500</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;success&#34;</span>: <span style="color:#66d9ef">False</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Error processing request&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;error&#34;</span>: str(e)
+</span></span><span style="display:flex;"><span>        }
+</span></span></code></pre></div><p><img src="2025-06-15-17-30-50.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/aws-credentials-for-cli/">AWS Credentials for CLI</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><p><img src="2025-06-15-17-10-26.png" alt=""></p>
+<h3 id="1-using-aws-cli-configuration">1. Using AWS CLI Configuration</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws configure
+</span></span></code></pre></div><p>This will prompt you to enter:</p>
+<ul>
+<li>AWS Access Key ID</li>
+<li>AWS Secret Access Key</li>
+<li>Default region name</li>
+<li>Default output format</li>
+</ul>
+<h3 id="2-environment-variables">2. Environment Variables</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export AWS_ACCESS_KEY_ID<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;your_access_key&#34;</span>
+</span></span><span style="display:flex;"><span>export AWS_SECRET_ACCESS_KEY<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;your_secret_key&#34;</span>
+</span></span><span style="display:flex;"><span>export AWS_DEFAULT_REGION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;your_region&#34;</span>
+</span></span></code></pre></div><h3 id="3-credentials-file">3. Credentials File</h3>
+<p>Create or edit ~/.aws/credentials:</p>
+<pre tabindex="0"><code>[default]
+aws_access_key_id = your_access_key
+aws_secret_access_key = your_secret_key
+</code></pre><h3 id="4-clear-aws-cli-configuration-optional">4. Clear AWS CLI Configuration (OPTIONAL)</h3>
+<p>To clear your AWS CLI credentials, you have several options:</p>
+<ul>
+<li>Delete the credentials file: <code>rm ~/.aws/credentials</code></li>
+<li>Delete the config file: <code>rm ~/.aws/config</code></li>
+<li>Clear specific profile: <code>aws configure --profile your_profile_name</code> and press Enter without entering values</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Remove both credentials and config files</span>
+</span></span><span style="display:flex;"><span>rm ~/.aws/credentials ~/.aws/config
+</span></span></code></pre></div><p>After clearing the credentials, you can reconfigure them using any of the methods described above.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/lambda-set-access-to-dynamodb/">AWS Lambda - Grant Access</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><ol>
+<li>
+<p>Go to AWS IAM Console</p>
+</li>
+<li>
+<p>Find your Lambda&rsquo;s role</p>
+<ul>
+<li>Click on the role name</li>
+<li>Click &ldquo;Add permissions&rdquo; → &ldquo;Create inline policy&rdquo;</li>
+</ul>
+</li>
+<li>
+<p>In the JSON editor, paste this policy:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Version&#34;</span>: <span style="color:#e6db74">&#34;2012-10-17&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Statement&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Effect&#34;</span>: <span style="color:#e6db74">&#34;Allow&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Action&#34;</span>: [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;dynamodb:Scan&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;dynamodb:GetItem&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;dynamodb:Query&#34;</span>
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Resource&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:dynamodb:ap-southeast-2:6850********:table/user_list&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li>
+<p>Click &ldquo;Review policy&rdquo;</p>
+<ul>
+<li>Name it something like &ldquo;DynamoDBScanPolicy&rdquo;</li>
+<li>Click &ldquo;Create policy&rdquo;</li>
+</ul>
+</li>
+</ol>
+<p>After adding this policy, wait a few seconds and try your Lambda function again. The error should be resolved.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/dynamodb-import-data-from-csv/">Amazon DynamoDB - Import CSV Data</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><p><img src="2025-06-17-11-19-21.png" alt=""></p>
+<h3 id="1-save-the-csv-file-in-the-same-location-as-the-python-code">1. Save the CSV file in the same location as the Python code</h3>
+<pre tabindex="0"><code>user_id,first_name,last_name,company_name,address,city,state,post,phone1,phone2,email,web
+U001,Rebbecca,Didio,&#34;Brandt, Jonathan F Esq&#34;,171 E 24th St,Leith,TAS,7315,03-8174-9123,0458-665-290,rebbecca.didio@didio.com.au,http://www.brandtjonathanfesq.com.au
+U002,Stevie,Hallo,Landrum Temporary Services,22222 Acoma St,Proston,QLD,4613,07-9997-3366,0497-622-620,stevie.hallo@hotmail.com,http://www.landrumtemporaryservices.com.au
+U003,Mariko,Stayer,&#34;Inabinet, Macre Esq&#34;,534 Schoenborn St #51,Hamel,WA,6215,08-5558-9019,0427-885-282,mariko_stayer@hotmail.com,http://www.inabinetmacreesq.com.au
+U004,Gerardo,Woodka,Morris Downing &amp; Sherred,69206 Jackson Ave,Talmalmo,NSW,2640,02-6044-4682,0443-795-912,gerardo_woodka@hotmail.com,http://www.morrisdowningsherred.com.au
+U005,Mayra,Bena,&#34;Buelt, David L Esq&#34;,808 Glen Cove Ave,Lane Cove,NSW,1595,02-1455-6085,0453-666-885,mayra.bena@gmail.com,http://www.bueltdavidlesq.com.au
+U006,Idella,Scotland,Artesian Ice &amp; Cold Storage Co,373 Lafayette St,Cartmeticup,WA,6316,08-7868-1355,0451-966-921,idella@hotmail.com,http://www.artesianicecoldstorageco.com.au
+U007,Sherill,Klar,Midway Hotel,87 Sylvan Ave,Nyamup,WA,6258,08-6522-8931,0427-991-688,sklar@hotmail.com,http://www.midwayhotel.com.au
+U008,Ena,Desjardiws,&#34;Selsor, Robert J Esq&#34;,60562 Ky Rt 321,Bendick Murrell,NSW,2803,02-5226-9402,0415-961-606,ena_desjardiws@desjardiws.com.au,http://www.selsorrobertjesq.com.au
+U009,Vince,Siena,Vincent J Petti &amp; Co,70 S 18th Pl,Purrawunda,QLD,4356,07-3184-9989,0411-732-965,vince_siena@yahoo.com,http://www.vincentjpettico.com.au
+U010,Theron,Jarding,&#34;Prentiss, Paul F Esq&#34;,8839 Ventura Blvd,Blanchetown,SA,5357,08-6890-4661,0461-862-457,tjarding@hotmail.com,http://www.prentisspaulfesq.com.au
+</code></pre><h3 id="2-set-a-temporary-token-for-vs-code">2. Set a temporary token for VS Code</h3>
+<p>Reference: <a href="http://localhost:1313/posts/aws-sts-temporary-access-tokens/">AWS STS - Temporary Access Tokens</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/create-a-mssql-container/">Create a MS SQL Server Container</a></h3>
+                    <p class="subtitle is-6">April 4, 2025</p>
+                    
+                      <p><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># This is the current folder structure</span>
+</span></span><span style="display:flex;"><span>sh-5.2$ tree
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>├── Dockerfile
+</span></span><span style="display:flex;"><span>├── backups
+</span></span><span style="display:flex;"><span>│   ├── APP-6.3.2-lab_Stage_2.bak
+</span></span><span style="display:flex;"><span>│   ├── APP-6.3.2-lab_Stage_3.bak
+</span></span><span style="display:flex;"><span>│   ├── APP-6.3.2-lab_Stage_4.bak
+</span></span><span style="display:flex;"><span>│   ├── v9.1.23_APP_632_lab_Stage_3.bak
+</span></span><span style="display:flex;"><span>│   └── v9.1.23_APP_632_lab_Stage_4.bak
+</span></span><span style="display:flex;"><span>├── certs
+</span></span><span style="display:flex;"><span>│   ├── server-bundle.crt
+</span></span><span style="display:flex;"><span>│   └── server.key
+</span></span><span style="display:flex;"><span>├── containers
+</span></span><span style="display:flex;"><span>│   └── sql1
+</span></span><span style="display:flex;"><span>│       ├── data <span style="color:#f92672">[</span>error opening dir<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>│       ├── log <span style="color:#f92672">[</span>error opening dir<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>│       └── secrets <span style="color:#f92672">[</span>error opening dir<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└── mssql.conf
+</span></span></code></pre></div><ol>
+<li>Create <code>Dockerfile</code> file</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>FROM mcr.microsoft.com/mssql/server:2022-latest
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>USER root
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install required dependencies</span>
+</span></span><span style="display:flex;"><span>RUN apt-get update <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    apt-get install -y curl apt-transport-https gnupg2 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    mkdir -p /etc/apt/keyrings <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; /etc/apt/keyrings/microsoft.gpg <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    chmod <span style="color:#ae81ff">644</span> /etc/apt/keyrings/microsoft.gpg <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;deb [signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/22.04/prod jammy main&#34;</span> &gt; /etc/apt/sources.list.d/mssql-release.list <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    apt-get update <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    ACCEPT_EULA<span style="color:#f92672">=</span>Y apt-get install -y mssql-tools unixodbc-dev <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    ln -s /opt/mssql-tools/bin/sqlcmd /usr/bin/sqlcmd <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    ln -s /opt/mssql-tools/bin/bcp /usr/bin/bcp <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    apt-get clean <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    rm -rf /var/lib/apt/lists/*
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Switch back to default user</span>
+</span></span><span style="display:flex;"><span>USER mssql
+</span></span></code></pre></div><ol start="2">
+<li>Create <code>mssql.conf</code> file</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>network<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>tlscert <span style="color:#f92672">=</span> /var/opt/mssql/secrets/server-bundle.crt
+</span></span><span style="display:flex;"><span>tlskey <span style="color:#f92672">=</span> /var/opt/mssql/secrets/server.key
+</span></span><span style="display:flex;"><span>tlsprotocols <span style="color:#f92672">=</span> 1.2
+</span></span><span style="display:flex;"><span>forceencryption <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><ol start="3">
+<li>Build an image</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Build new image</span>
+</span></span><span style="display:flex;"><span>sudo docker build -t mssql-with-tools .
+</span></span></code></pre></div><ol start="4">
+<li>Test locally</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Run new container</span>
+</span></span><span style="display:flex;"><span>sudo docker run -e <span style="color:#e6db74">&#39;ACCEPT_EULA=Y&#39;</span> -e <span style="color:#e6db74">&#39;MSSQL_SA_PASSWORD=Password123&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-p 1433:1433 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v /data/containers/sql1/data:/var/opt/mssql/data <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v /data/containers/sql1/log:/var/opt/mssql/log <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v sql-certs:/var/opt/mssql/secrets:ro <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v /data/mssql.conf:/var/opt/mssql/mssql.conf:ro <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v /data/backups:/var/opt/mssql/backups <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>--restart always <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>--name sql1 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-d mssql-with-tools
+</span></span></code></pre></div><ol start="5">
+<li>Build a custom container and push into ECR in AWS.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># The container URI is below</span>
+</span></span><span style="display:flex;"><span>ACCOUNTID.dkr.ecr.ap-southeast-2.amazonaws.com/gcs-sql-server:latest
+</span></span></code></pre></div><ol start="6">
+<li>Then run the script to deploy a MS SQL Container</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#=============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># The following approach successfully copy &#34;server.key&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#=============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create a Docker volume for the certificates</span>
+</span></span><span style="display:flex;"><span>sudo docker volume create sql-certs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Copy the necessary certificate files into the volume</span>
+</span></span><span style="display:flex;"><span>sudo cp /data/certs/server-bundle.crt /var/lib/docker/volumes/sql-certs/_data/
+</span></span><span style="display:flex;"><span>sudo cp /data/certs/server.key /var/lib/docker/volumes/sql-certs/_data
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Change the ownership</span>
+</span></span><span style="display:flex;"><span>sudo chown -R 10001:0 /var/lib/docker/volumes/sql-certs/_data/
+</span></span><span style="display:flex;"><span>sudo chmod -R <span style="color:#ae81ff">600</span> /var/lib/docker/volumes/sql-certs/_data/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS CLI:</span>
+</span></span><span style="display:flex;"><span>aws ecr get-login-password --region ap-southeast-2 | sudo docker login --username AWS --password-stdin ACCOUNTID.dkr.ecr.ap-southeast-2.amazonaws.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Deploy MS SQL Server container</span>
+</span></span><span style="display:flex;"><span>sudo docker run -e <span style="color:#e6db74">&#39;ACCEPT_EULA=Y&#39;</span> -e <span style="color:#e6db74">&#39;MSSQL_SA_PASSWORD=Password123&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-p 1433:1433 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v /data/containers/sql1/data:/var/opt/mssql/data <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v /data/containers/sql1/log:/var/opt/mssql/log <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v sql-certs:/var/opt/mssql/secrets:ro <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v /data/mssql.conf:/var/opt/mssql/mssql.conf:ro <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-v /data/backups:/var/opt/mssql/backups <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>--restart always <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>--name sql1 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>-d ACCOUNTID.dkr.ecr.ap-southeast-2.amazonaws.com/gcs-sql-server:latest
+</span></span></code></pre></div><ol start="7">
+<li>After the deployment, check the status of the container</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check the login</span>
+</span></span><span style="display:flex;"><span>sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P <span style="color:#e6db74">&#39;Password123&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Check the files</span>
+</span></span><span style="display:flex;"><span>sudo docker exec -it sql1 ls -l /var/opt/mssql/backups
+</span></span></code></pre></div><hr></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/backup-restore-database-by-sqlcmd/">Backup Restore Database by sqlcmd</a></h3>
+                    <p class="subtitle is-6">April 3, 2025</p>
+                    
+                      <p><h3 id="1-taking-full-backups-with"><strong>1. Taking Full Backups with <code>sqlcmd</code></strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Run the commands when you reach an important point in the database configuration</span>
+</span></span><span style="display:flex;"><span>sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P <span style="color:#e6db74">&#39;Password123&#39;</span> -Q <span style="color:#e6db74">&#34;BACKUP DATABASE [v7.3.1_HUB_511_lab] TO DISK = &#39;/var/opt/mssql/backups/v7.3.1_HUB_511_lab_Stage_3.bak&#39; WITH FORMAT, INIT, NAME = &#39;Stage3&#39;;&#34;</span>
+</span></span><span style="display:flex;"><span>sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P <span style="color:#e6db74">&#39;Password123&#39;</span> -Q <span style="color:#e6db74">&#34;BACKUP DATABASE [HUB-5.1.1-lab] TO DISK = &#39;/var/opt/mssql/backups/HUB-5.1.1-lab_Stage_3.bak&#39; WITH FORMAT, INIT, NAME = &#39;Stage3&#39;;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check the result</span>
+</span></span><span style="display:flex;"><span>sudo docker exec -it sql1 ls -l /var/opt/mssql/backups/
+</span></span></code></pre></div><h3 id="2-restoring-a-specific-backup"><strong>2. Restoring a Specific Backup</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Restore databases</span>
+</span></span><span style="display:flex;"><span>sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P <span style="color:#e6db74">&#39;Password123&#39;</span> -Q <span style="color:#e6db74">&#34;RESTORE DATABASE [v7.3.1_HUB_511_lab] FROM DISK = &#39;/var/opt/mssql/backups/v7.3.1_HUB_511_lab_Stage_3.bak&#39; WITH REPLACE, RECOVERY;&#34;</span>
+</span></span><span style="display:flex;"><span>sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P <span style="color:#e6db74">&#39;Password123&#39;</span> -Q <span style="color:#e6db74">&#34;RESTORE DATABASE [HUB-5.1.1-lab] FROM DISK = &#39;/var/opt/mssql/backups/HUB-5.1.1-lab_Stage_3.bak&#39; WITH REPLACE, RECOVERY;&#34;</span>
+</span></span></code></pre></div><h3 id="3-restoring-a-specific-backup-via-ssm"><strong>3. Restoring a Specific Backup via SSM</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Restore database via SSM</span>
+</span></span><span style="display:flex;"><span>aws ssm send-command <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    --instance-ids <span style="color:#e6db74">&#34;i-0e0df3af14a11b3d1&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    --document-name <span style="color:#e6db74">&#34;AWS-RunShellScript&#34;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    --parameters <span style="color:#e6db74">&#39;commands=[
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;sudo docker exec sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P &#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39;Password123&#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39; -Q \&#34;RESTORE DATABASE [v7.3.1_HUB_511_lab] FROM DISK = &#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39;/var/opt/mssql/backups/v7.3.1_HUB_511_lab_Stage_3.bak&#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39; WITH REPLACE, RECOVERY;\&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ]&#39;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    --region <span style="color:#e6db74">&#34;ap-southeast-2&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check the Log in case of failure</span>
+</span></span><span style="display:flex;"><span>aws ssm list-command-invocations --command-id abab87ca-7abb-4746-8666-fa6ebbe67b51 --details
+</span></span></code></pre></div><hr></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/copy-files-from-a-docker-container/">Copy Files from a Docker to S3</a></h3>
+                    <p class="subtitle is-6">April 2, 2025</p>
+                    
+                      <p><h2 id="backup-files-from-docker-container">Backup files from Docker Container</h2>
+<ol>
+<li>Login to the machine running the Docker Container</li>
+<li>Copy back files in Docker container to the current directory</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo docker cp sql1:/var/opt/mssql/backups/HUB-5.1.1-lab_Stage_2.bak ./HUB-5.1.1-lab_Stage_2.bak
+</span></span><span style="display:flex;"><span>sudo docker cp sql1:/var/opt/mssql/backups/HUB-5.1.1-lab_Stage_3.bak ./HUB-5.1.1-lab_Stage_3.bak
+</span></span><span style="display:flex;"><span>sudo docker cp sql1:/var/opt/mssql/backups/HUB-5.1.1-lab_Stage_4.bak ./HUB-5.1.1-lab_Stage_4.bak
+</span></span><span style="display:flex;"><span>sudo docker cp sql1:/var/opt/mssql/backups/v7.3.1_HUB_511_lab_Stage_3.bak ./v7.3.1_HUB_511_lab_Stage_3.bak
+</span></span><span style="display:flex;"><span>sudo docker cp sql1:/var/opt/mssql/backups/v7.3.1_HUB_511_lab_Stage_4.bak ./v7.3.1_HUB_511_lab_Stage_4.bak
+</span></span></code></pre></div><ol start="3">
+<li>Upload them to S3 bucket</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Change the ownership of the files:</span>
+</span></span><span style="display:flex;"><span>sudo chown ssm-user:ssm-user *.bak
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create a timestamp variable</span>
+</span></span><span style="display:flex;"><span>TIMESTAMP<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>date +%Y%m%d-%H%M%S<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Upload both files to the timestamped folder</span>
+</span></span><span style="display:flex;"><span>aws s3 cp HUB-5.1.1-lab_Stage_2.bak s3://gcs-share/db-backup/$TIMESTAMP/
+</span></span><span style="display:flex;"><span>aws s3 cp HUB-5.1.1-lab_Stage_3.bak s3://gcs-share/db-backup/$TIMESTAMP/
+</span></span><span style="display:flex;"><span>aws s3 cp HUB-5.1.1-lab_Stage_4.bak s3://gcs-share/db-backup/$TIMESTAMP/
+</span></span><span style="display:flex;"><span>aws s3 cp v7.3.1_HUB_511_lab_Stage_3.bak s3://gcs-share/db-backup/$TIMESTAMP/
+</span></span><span style="display:flex;"><span>aws s3 cp v7.3.1_HUB_511_lab_Stage_4.bak s3://gcs-share/db-backup/$TIMESTAMP/
+</span></span></code></pre></div></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/upload-docker-image-to-ecr/">Upload Docker Image to ECR</a></h3>
+                    <p class="subtitle is-6">March 29, 2025</p>
+                    
+                      <p><h2 id="configure-in-aws-management-console">Configure in AWS management console</h2>
+<ol>
+<li>
+<p>Stay in the working directory where Dockerfile is located (e.g., ~/gcs-rabbit)</p>
+</li>
+<li>
+<p>Open Repository page in Amazon ECR</p>
+</li>
+<li>
+<p>Create a repository by the code below</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws ecr create-repository --repository-name gcs-normal-rabbit --region ap-southeast-2
+</span></span></code></pre></div><p><img src="2025-03-29-00-16-24.png" alt=""></p>
+<ol start="4">
+<li>Click &ldquo;View push command&rdquo; and follow the instruction with <code>sudo</code> command</li>
+</ol>
+<p><img src="2025-03-29-00-30-09.png" alt=""></p>
+<hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/rabbitmq-container-http/">RabbitMQ Container - HTTP</a></p>
+<p><a href="http://localhost:1313/posts/rabbitmq-container-ssl/">RabbitMQ Container - SSL</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/image-builder-in-aws/">AppSteram 2.0 Image Builder </a></h3>
+                    <p class="subtitle is-6">March 27, 2025</p>
+                    
+                      <p><ol>
+<li>Select the right image to be updated</li>
+</ol>
+<p><img src="2025-03-27-15-49-34.png" alt=""></p>
+<ol start="2">
+<li>Configure Image Builder</li>
+</ol>
+<p><img src="2025-03-27-15-49-55.png" alt="">
+<img src="2025-03-27-15-50-12.png" alt="">
+<img src="2025-03-27-15-50-23.png" alt=""></p>
+<ol start="3">
+<li>Configure Network</li>
+</ol>
+<p><img src="2025-03-27-15-50-56.png" alt=""></p>
+<ol start="4">
+<li>Review</li>
+</ol>
+<p><img src="2025-03-27-15-51-11.png" alt="">
+<img src="2025-03-27-15-51-26.png" alt=""></p>
+<ol start="5">
+<li>Confirmation</li>
+</ol>
+<p><img src="2025-03-27-15-51-41.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/sysprep-in-aws/">sysprep in AWS</a></h3>
+                    <p class="subtitle is-6">March 27, 2025</p>
+                    
+                      <p><ol>
+<li>Delete all the items controlled by Group Policy (e.g., Certificates, Firewall Settings)</li>
+<li>Open “Amazon EC2Launch Settings” and click ”Shutdown with Sysprep”</li>
+</ol>
+<p><img src="2025-03-27-10-45-50.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/managing-aws-accounts-in-the-terminal/">Managing AWS Accounts in Terminal</a></h3>
+                    <p class="subtitle is-6">February 27, 2025</p>
+                    
+                      <p><h2 id="register-aws-accounts-to-the-terminal">Register AWS Accounts to the Terminal</h2>
+<ol>
+<li>Set AWS Credential</li>
+</ol>
+<p><img src="2025-02-27-23-11-55.png" alt=""></p>
+<ol start="2">
+<li>The command to check the Current AWS Credentials</li>
+</ol>
+<pre tabindex="0"><code>aws sts get-caller-identity
+</code></pre><ol start="3">
+<li>The command to clear the AWS Account from the terminal</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>unset AWS_ACCESS_KEY_ID
+</span></span><span style="display:flex;"><span>unset AWS_SECRET_ACCESS_KEY
+</span></span><span style="display:flex;"><span>unset AWS_SESSION_TOKEN
+</span></span></code></pre></div></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/deploy-a-amazon-linux-2023/">Deploy a Amazon Linux 2023</a></h3>
+                    <p class="subtitle is-6">February 25, 2025</p>
+                    
+                      <p><h2 id="deploy-a-linux-machine">Deploy a Linux machine</h2>
+<ol>
+<li>Update OS</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo yum update -y
+</span></span></code></pre></div><ol start="2">
+<li>Update Hostname and check it</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo hostnamectl set-hostname DEV-VAR-OIDC2.apj.cloud
+</span></span><span style="display:flex;"><span>hostnamectl
+</span></span></code></pre></div><ol start="3">
+<li>Update TimeZone and check it</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo timedatectl set-timezone Australia/Sydney
+</span></span><span style="display:flex;"><span>timedatectl
+</span></span></code></pre></div><ol start="4">
+<li>DNS Settings - Make sure all the DNS servers are registered</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo vi /etc/resolv.conf
+</span></span></code></pre></div><p><img src="2025-02-25-23-38-44.png" alt=""></p>
+<ol start="5">
+<li>Install some components for any Linux OS</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo yum install sssd-ad sssd-tools realmd adcli
+</span></span></code></pre></div><ol start="6">
+<li>Install some components for Amazon Linux 2023.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo yum install oddjob oddjob-mkhomedir
+</span></span></code></pre></div><ol start="7">
+<li>Check the status of Active Directory</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>realm discover apj.cloud
+</span></span></code></pre></div><p><img src="2025-02-25-23-39-45.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/setup-fleet-manager/">Setup Fleet Manager</a></h3>
+                    <p class="subtitle is-6">February 9, 2025</p>
+                    
+                      <p><h2 id="how-to-enable-gui-access-via-fleet-manager">How to Enable GUI Access via Fleet Manager</h2>
+<ol>
+<li>Ensure SSM Agent is Installed and Running
+<ul>
+<li>Windows EC2 instances must have the &ldquo;SSM Agent&rdquo; installed and running.</li>
+<li>Check the status by the powershell command</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Service AmazonSSMAgent
+</span></span></code></pre></div><ol start="2">
+<li>Attach a Role with the following  policies
+<ul>
+<li>AmazonSSMManagedInstanceCore</li>
+<li>AmazonSSMFullAccess (This is required for GUI access via Fleet Manager)</li>
+</ul>
+</li>
+</ol>
+<p><img src="2025-02-09-22-09-30.png" alt=""></p>
+<hr>
+<h2 id="how-to-access-to-ec2-via-fleet-manager">How to access to EC2 via Fleet Manager</h2>
+<ol>
+<li>
+<p>Go to &ldquo;Systems Manager&rdquo; → &ldquo;Fleet Manager&rdquo;</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/download-from-cloudshell/">Download From CloudShell</a></h3>
+                    <p class="subtitle is-6">February 9, 2025</p>
+                    
+                      <p><h2 id="copy-certificate-cloudshell">Copy certificate CloudShell</h2>
+<ol>
+<li>Copy directory</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp -r wildcard-v6 wildcard-v7
+</span></span></code></pre></div><ol start="2">
+<li>ZIP the directory</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zip -r wildcard-v7.zip wildcard-v7
+</span></span></code></pre></div><ol start="3">
+<li>Download from CloudShell</li>
+</ol>
+<p><img src="2025-02-09-15-51-02.png" alt=""></p>
+<hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/openssl-server-certificate/">OpenSSL (3) - Server Certificate</a></p>
+<p><a href="http://localhost:1313/posts/openssl-client-certificate/">OpenSSL (4) - Client Certificate</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/projects/cafe-order-system/">AWS SQS Learning Platform</a></h3>
+                    <p class="subtitle is-6">January 30, 2025</p>
+                    
+                      <p><h1 id="serverless-cafe">Serverless Cafe</h1>
+<p><strong>Live Application:</strong> <a href="https://cafe.nobuops.com/index.html" target="_blank" rel="noopener">cafe.nobuops.com</a></p>
+<p><img src="2026-01-04-18-43-42.png" alt=""></p>
+<h2 id="overview">Overview</h2>
+<p>The Cafe Order System is a serverless application specifically designed as a learning platform for understanding AWS SQS (Simple Queue Service) and system decoupling patterns. Built with simplicity and educational value in mind, it demonstrates how to effectively decouple system components using message queues while maintaining reliability and scalability.</p>
+<h2 id="background">Background</h2>
+<p>When learning about distributed systems and AWS services, I wanted to understand how to properly decouple system components using message queues. While there are many theoretical resources available, I needed a practical, hands-on example that would help me grasp the concepts through real implementation.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/projects/heartbeat-central/">Personal Health Monitoring Platform</a></h3>
+                    <p class="subtitle is-6">January 30, 2025</p>
+                    
+                      <p><h1 id="heartbeat-central">Heartbeat Central</h1>
+<p><strong>Live Application:</strong> <a href="https://heartbeat.intelliumx.com/" target="_blank" rel="noopener">heartbeat.intelliumx.com</a></p>
+<p><img src="2026-01-03-12-08-11.png" alt=""></p>
+<h2 id="overview">Overview</h2>
+<p>Heartbeat Central is a personal health monitoring platform that simplifies blood pressure and body temperature tracking for elderly users and non-technical individuals. Built with AWS serverless architecture, it combines an intuitive user interface with enterprise-grade security, making health monitoring accessible to everyone.</p>
+<h2 id="background">Background</h2>
+<p>The inspiration came from a simple family moment—receiving a blood pressure monitor from my parents. Based on my age, I started thinking about monitoring my health more systematically.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/projects/cloudlens/">Serverless AWS Cost Monitoring</a></h3>
+                    <p class="subtitle is-6">January 30, 2025</p>
+                    
+                      <p><h1 id="cloudlens">CloudLens</h1>
+<p><strong>Live Application:</strong> <a href="https://cloudlens.intelliumx.com/" target="_blank" rel="noopener">cloudlens.intelliumx.com</a></p>
+<p><img src="2026-01-04-10-58-11.png" alt=""></p>
+<h2 id="overview">Overview</h2>
+<p>CloudLens is a serverless AWS cost monitoring dashboard that quickly detects unexpected cost increases. Built with AWS-native services, CloudLens delivers real-time cost visibility through simple charts and time-based filtering while maintaining enterprise-grade security and minimal operational overhead.</p>
+<h2 id="background">Background</h2>
+<p>I used to check AWS costs through Cost Explorer in the AWS Management Console. This was tedious—I had to log in, open Cost Explorer, and filter the data each time. I wanted quick access whenever I needed to check costs, ideally from my mobile device.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer footer-dark">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="footer-logo">
+          <img src="/images/logos/IntelliumX-v21.png">
+        </div>
+      </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Navigate</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/projects/">
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a href="/posts/">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="/about/">
+                  About
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Resources</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="/posts/">
+                  All Posts
+                </a>
+              </li>
+              <li>
+                <a href="/categories/">
+                  Categories
+                </a>
+              </li>
+              <li>
+                <a href="/tags/">
+                  Tags
+                </a>
+              </li>
+              <li>
+                <a href="/archives/">
+                  Archives
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="footer-column">
+            <div class="footer-header">
+                <h3>Connect</h3>
+            </div>
+            <ul class="link-list">
+              <li>
+                <a href="https://www.linkedin.com/in/nobuhiro-tokushige/" target="_blank">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/metamototomo" target="_blank">
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <div class="column">
+        <div class="footer-column">
+          <div class="footer-header">
+            <h3>Follow Us</h3>
+            <nav class="level is-mobile">
+              <div class="level-left">
+                <a class="level-item" href="https://www.linkedin.com/in/nobuhiro-tokushige/" target="_blank">
+                  <span class="icon"><i class="fa fa-linkedin"></i></span>
+                </a>
+                <a class="level-item" href="https://github.com/metamototomo" target="_blank">
+                  <span class="icon"><i class="fa fa-github"></i></span>
+                </a>
+              </div>
+            </nav>
+            <a href="https://bulma.io" target="_blank">
+              <img src="/images/logos/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <img src="/images/logos/IntelliumX-v21.png">
+    <a class="sidebar-close" href="javascript:void(0);">
+      <i data-feather="x"></i>
+    </a>
+  </div>
+  <div class="inner">
+    <ul class="sidebar-menu">
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-user"></span>
+          User
+        </a>
+        <ul>
+          <li>
+            <a href="/">
+              Profile
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Account
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Settings
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-envelope"></span>
+          Messages
+        </a>
+        <ul>
+          <li>
+            <a href="/">
+              Inbox
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Compose
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-image"></span>
+          Images
+        </a>
+        <ul>
+          <li>
+            <a href="/">
+              Library
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Upload
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="have-children">
+        <a href="#">
+          <span class="fa fa-cog"></span>
+          Settings
+        </a>
+        <ul>
+          <li>
+            <a href="/">
+              User settings
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              App settings
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+<script src="/js/custom.js"></script>
+
+  </body>
+</html>

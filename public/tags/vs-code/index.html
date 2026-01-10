@@ -1,2 +1,154 @@
-<!-- Layout with no content to avoid WARN message about missing page layout -->
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/tags/vs-code/">
+  <meta property="og:site_name" content="IntelliumX">
+  <meta property="og:title" content="VS Code">
+  <meta property="og:description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>VS Code - IntelliumX</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1 class="title">VS Code</h1>
+          
+          
+            <p class="subtitle">Browse posts by tag</p>
+          
+
+          
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/setup-python-environment/">Setup Python Environment</a></h3>
+                    <p class="subtitle is-6">June 11, 2025</p>
+                    
+                      <p><h2 id="step-by-step-python-environment-on-macos">Step-by-Step Python Environment on MacOS</h2>
+<p>This guide walks through setting up a Python development environment on MacOS using Visual Studio Code, including package management, virtual environments, and recommended configurations.</p>
+<h3 id="1-installverify-homebrew">1. Install/Verify Homebrew</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check if Homebrew is installed</span>
+</span></span><span style="display:flex;"><span>brew --version
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># If not installed, install Homebrew</span>
+</span></span><span style="display:flex;"><span>/bin/bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><h3 id="2-installupdate-python-using-homebrew">2. Install/Update Python using Homebrew</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Install Python</span>
+</span></span><span style="display:flex;"><span>brew install python
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Verify Python installation</span>
+</span></span><span style="display:flex;"><span>python3 --version
+</span></span></code></pre></div><h3 id="3-verify-pip-installation">3. Verify pip Installation</h3>
+<p>pip (Python package installer) comes with Python installed via Homebrew. Verify it:</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/how-to-disable-sounds-in-vs-code/">How to Disable Sounds in vs Code</a></h3>
+                    <p class="subtitle is-6">February 18, 2025</p>
+                    
+                      <p><h2 id="how-to-disable-sounds-in-vs-code">How to disable sounds in VS Code.</h2>
+<ol>
+<li>
+<p>Open the <strong>Command Palette</strong> (<code>Ctrl + Shift + P</code>).</p>
+</li>
+<li>
+<p>Search for <strong>&ldquo;Preferences: Open Settings (JSON)&rdquo;</strong> and select it.</p>
+</li>
+</ol>
+<p><img src="2025-02-18-23-41-41.png" alt=""></p>
+<ol start="3">
+<li>Add the following line inside the JSON file:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;editor.accessibilitySupport&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;off&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span></code></pre></div><p><img src="2025-02-18-23-42-44.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/how-to-setup-pasteimage/">How to Setup PasteImage</a></h3>
+                    <p class="subtitle is-6">February 9, 2025</p>
+                    
+                      <p><h2 id="how-to-paste-images-into-your-hugo-blog-in-vs-code-on-mac"><strong>How to Paste Images into Your Hugo Blog in VS Code on Mac</strong></h2>
+<h3 id="1-install-the"><strong>1. Install the &ldquo;Paste Image&rdquo; Extension in VS Code</strong></h3>
+<ul>
+<li>Open <strong>VS Code</strong></li>
+<li>Press <strong><code>Cmd + Shift + X</code></strong> to open Extensions</li>
+<li>Search for <strong>&ldquo;Paste Image&rdquo;</strong> by <em>mushanh</em></li>
+<li>Click <strong>Install</strong></li>
+</ul>
+<h3 id="2-configure-the-extension-to-save-images-in-your-blog-folder"><strong>2. Configure the Extension to Save Images in Your Blog Folder</strong></h3>
+<ul>
+<li>
+<p>Open <strong>Settings</strong> (<code>Cmd + ,</code>)</p>
+</li>
+<li>
+<p>Search for <strong>&ldquo;pasteImage.path&rdquo;</strong></p>
+</li>
+<li>
+<p>Set it to:This ensures images are saved inside the <strong>same folder</strong> as the Markdown file.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+<script src="/js/custom.js"></script>
+
+  </body>
+</html>

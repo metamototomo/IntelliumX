@@ -1,2 +1,148 @@
-<!-- Layout with no content to avoid WARN message about missing page layout -->
-<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+<meta property="og:url" content="http://localhost:1313/tags/dynamodb/">
+  <meta property="og:site_name" content="IntelliumX">
+  <meta property="og:title" content="DynamoDB">
+  <meta property="og:description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+<meta name="description" content="AI consultant and cloud solutions architect sharing practical insights on AWS, generative AI, and modern DevOps practices. Building the future of AI-powered applications." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DynamoDB - IntelliumX</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    
+  
+<link rel="icon" type="image/png" href="/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+
+<link rel="stylesheet" href="http://localhost:1313/custom.css">
+
+  </head>
+  <body>
+    
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    
+
+    
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1 class="title">DynamoDB</h1>
+          
+          
+            <p class="subtitle">Browse posts by tag</p>
+          
+
+          
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/dynamodb-create-a-table/">Amazon DynamoDB - Create a Table</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><ol>
+<li>Sign in to AWS Console and navigate to DynamoDB</li>
+<li>Click &ldquo;Create table&rdquo;
+<ul>
+<li>Table name: e.g., &ldquo;user_list&rdquo;</li>
+<li>Partition key: &ldquo;user_id (String)</li>
+<li>Sort key (optional): &ldquo;first_name&rdquo; (String)</li>
+</ul>
+</li>
+</ol>
+<p><img src="2025-06-15-17-17-38.png" alt=""></p>
+<hr>
+<h2 id="see-also">See also:</h2>
+<p><a href="http://localhost:1313/posts/aws-credentials-for-cli/">AWS Credentials for CLI</a></p>
+<p><a href="http://localhost:1313/posts/aws-credentials-for-cli-profile/">AWS Credentials for CLI (Profile)</a></p>
+<p><a href="http://localhost:1313/posts/aws-sts-temporary-access-tokens/">AWS STS - Temporary Access Tokens</a></p>
+<p><a href="http://localhost:1313/posts/dynamodb-create-a-table/">Amazon DynamoDB - Create a Table</a></p>
+<p><a href="http://localhost:1313/posts/dynamodb-import-data-from-csv/">Amazon DynamoDB - Import CSV Data</a></p>
+<p><a href="http://localhost:1313/posts/lambda-create-a-function/">AWS Lambda - Create a Function</a></p>
+<p><a href="http://localhost:1313/posts/lambda-set-access-to-dynamodb/">AWS Lambda - Grant Access</a></p>
+<p><a href="http://localhost:1313/posts/api-gateway-usage-plan/">API Gateway - Usage Plan</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/dynamodb-import-data-from-csv/">Amazon DynamoDB - Import CSV Data</a></h3>
+                    <p class="subtitle is-6">June 15, 2025</p>
+                    
+                      <p><p><img src="2025-06-17-11-19-21.png" alt=""></p>
+<h3 id="1-save-the-csv-file-in-the-same-location-as-the-python-code">1. Save the CSV file in the same location as the Python code</h3>
+<pre tabindex="0"><code>user_id,first_name,last_name,company_name,address,city,state,post,phone1,phone2,email,web
+U001,Rebbecca,Didio,&#34;Brandt, Jonathan F Esq&#34;,171 E 24th St,Leith,TAS,7315,03-8174-9123,0458-665-290,rebbecca.didio@didio.com.au,http://www.brandtjonathanfesq.com.au
+U002,Stevie,Hallo,Landrum Temporary Services,22222 Acoma St,Proston,QLD,4613,07-9997-3366,0497-622-620,stevie.hallo@hotmail.com,http://www.landrumtemporaryservices.com.au
+U003,Mariko,Stayer,&#34;Inabinet, Macre Esq&#34;,534 Schoenborn St #51,Hamel,WA,6215,08-5558-9019,0427-885-282,mariko_stayer@hotmail.com,http://www.inabinetmacreesq.com.au
+U004,Gerardo,Woodka,Morris Downing &amp; Sherred,69206 Jackson Ave,Talmalmo,NSW,2640,02-6044-4682,0443-795-912,gerardo_woodka@hotmail.com,http://www.morrisdowningsherred.com.au
+U005,Mayra,Bena,&#34;Buelt, David L Esq&#34;,808 Glen Cove Ave,Lane Cove,NSW,1595,02-1455-6085,0453-666-885,mayra.bena@gmail.com,http://www.bueltdavidlesq.com.au
+U006,Idella,Scotland,Artesian Ice &amp; Cold Storage Co,373 Lafayette St,Cartmeticup,WA,6316,08-7868-1355,0451-966-921,idella@hotmail.com,http://www.artesianicecoldstorageco.com.au
+U007,Sherill,Klar,Midway Hotel,87 Sylvan Ave,Nyamup,WA,6258,08-6522-8931,0427-991-688,sklar@hotmail.com,http://www.midwayhotel.com.au
+U008,Ena,Desjardiws,&#34;Selsor, Robert J Esq&#34;,60562 Ky Rt 321,Bendick Murrell,NSW,2803,02-5226-9402,0415-961-606,ena_desjardiws@desjardiws.com.au,http://www.selsorrobertjesq.com.au
+U009,Vince,Siena,Vincent J Petti &amp; Co,70 S 18th Pl,Purrawunda,QLD,4356,07-3184-9989,0411-732-965,vince_siena@yahoo.com,http://www.vincentjpettico.com.au
+U010,Theron,Jarding,&#34;Prentiss, Paul F Esq&#34;,8839 Ventura Blvd,Blanchetown,SA,5357,08-6890-4661,0461-862-457,tjarding@hotmail.com,http://www.prentisspaulfesq.com.au
+</code></pre><h3 id="2-set-a-temporary-token-for-vs-code">2. Set a temporary token for VS Code</h3>
+<p>Reference: <a href="http://localhost:1313/posts/aws-sts-temporary-access-tokens/">AWS STS - Temporary Access Tokens</a></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/projects/cloudlens/">Serverless AWS Cost Monitoring</a></h3>
+                    <p class="subtitle is-6">January 30, 2025</p>
+                    
+                      <p><h1 id="cloudlens">CloudLens</h1>
+<p><strong>Live Application:</strong> <a href="https://cloudlens.intelliumx.com/" target="_blank" rel="noopener">cloudlens.intelliumx.com</a></p>
+<p><img src="2026-01-04-10-58-11.png" alt=""></p>
+<h2 id="overview">Overview</h2>
+<p>CloudLens is a serverless AWS cost monitoring dashboard that quickly detects unexpected cost increases. Built with AWS-native services, CloudLens delivers real-time cost visibility through simple charts and time-based filtering while maintaining enterprise-grade security and minimal operational overhead.</p>
+<h2 id="background">Background</h2>
+<p>I used to check AWS costs through Cost Explorer in the AWS Management Console. This was tedious—I had to log in, open Cost Explorer, and filter the data each time. I wanted quick access whenever I needed to check costs, ideally from my mobile device.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="/js/fresh.js"></script>
+<script src="/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="/js/active-menu.js"></script>
+<script src="/js/custom.js"></script>
+
+  </body>
+</html>
