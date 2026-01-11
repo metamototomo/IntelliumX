@@ -26,3 +26,9 @@ Thumbs.db
 
 # Windows-only security metadata
 *Zone.Identifier
+
+# Best Practice
+*.pem
+*.key
+*.crt
+config.local.*
