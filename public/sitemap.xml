@@ -3,18 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-01-11T11:48:35+11:00</lastmod>
+    <lastmod>2026-01-11T12:10:31+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-01-11T11:48:35+11:00</lastmod>
+    <lastmod>2026-01-11T12:10:31+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-01-11T11:48:35+11:00</lastmod>
+    <lastmod>2026-01-11T12:10:31+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/nginx-client-certificate/</loc>
+    <lastmod>2026-01-11T12:10:31+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/technology/</loc>
+    <lastmod>2026-01-11T12:10:31+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/proxy/</loc>
     <lastmod>2026-01-11T11:48:35+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/winhttp/</loc>
+    <lastmod>2026-01-11T11:48:35+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-01-11T11:48:35+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/winhttp/</loc>
     <lastmod>2026-01-11T11:48:35+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/linux/</loc>
@@ -25,12 +37,6 @@
   </url><url>
     <loc>http://localhost:1313/posts/ssh-connection-linux/</loc>
     <lastmod>2026-01-11T10:42:59+11:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-01-11T10:42:59+11:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/proxy/</loc>
-    <lastmod>2026-01-11T10:24:49+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/proxy-squid-install/</loc>
     <lastmod>2026-01-11T10:24:49+11:00</lastmod>
