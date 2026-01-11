@@ -14,7 +14,7 @@ categories: ["Technology"]
 
 ![](2026-01-10-23-42-49.png)
 
-## 1) Check for existing keys (optional)
+### 1) Check for existing keys (optional)
 
 ```bash
 ls -la ~/.ssh
@@ -25,7 +25,7 @@ ls -la ~/.ssh
 
 ---
 
-## 2) Generate a new ed25519 key
+### 2) Generate a new ed25519 key
 
 `ed25519` refers to the **Ed25519 elliptic-curve algorithm**, which is the *modern*, *faster*, and *more secure* replacement for older RSA SSH keys. Replace the email with your GitHub email:
 
@@ -38,7 +38,7 @@ ssh-keygen -t ed25519 -C "nob@example.com"
 
 ---
 
-## 3) Ensure correct permissions
+### 3) Ensure correct permissions
 
 ```bash
 # Private key: ~/.ssh/id_ed25519
@@ -50,7 +50,7 @@ chmod 644 ~/.ssh/id_ed25519.pub
 
 ---
 
-## 4) Start `ssh-agent` and add the key
+### 4) Start `ssh-agent` and add the key
 
 ```bash
 eval "$(ssh-agent -s)"       # start agent in this session
@@ -59,7 +59,7 @@ ssh-add -K ~/.ssh/id_ed25519 # -K ensures macOS Keychain remembers the passphras
 
 ---
 
-## 5) Copy your public key to clipboard
+### 5) Copy your public key to clipboard
 
 Show the key and copy it manually:
 
@@ -74,7 +74,7 @@ Then select & copy the whole line (starts with `ssh-ed25519 ...`).
 
 ---
 
-## 6) Add key to GitHub
+### 6) Add key to GitHub
 
 1. Open GitHub in your browser → **Settings** → **SSH and GPG keys** → **New SSH key**.
 2. Give it a title (e.g., “MacBook”) and paste the public key you copied.
@@ -82,7 +82,7 @@ Then select & copy the whole line (starts with `ssh-ed25519 ...`).
 
 ---
 
-## 7) Test the connection
+### 7) Test the connection
 
 Run the command below. First time it may ask to confirm the host fingerprint → type `yes`.
 
@@ -92,7 +92,7 @@ ssh -T git@github.com
 
 ---
 
-## 8) Clone the repo with SSH
+### 8) Clone the repo with SSH
 
 Now clone with the SSH URL. No username or token needed.
 

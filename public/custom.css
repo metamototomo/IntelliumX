@@ -73,3 +73,39 @@ footer.footer .footer-column {
   /* width: 60px !important; */
   /* height: 100px !important; */
 }
+
+/* Increase spacing between code blocks and following text */
+.highlight + p,
+.highlight + h1,
+.highlight + h2,
+.highlight + h3,
+.highlight + h4,
+.highlight + h5,
+.highlight + h6,
+pre + p,
+pre + h1,
+pre + h2,
+pre + h3,
+pre + h4,
+pre + h5,
+pre + h6 {
+  margin-top: 2rem !important;
+}
+
+/* Reduce spacing between text and following code blocks */
+p + .highlight,
+h1 + .highlight,
+h2 + .highlight,
+h3 + .highlight,
+h4 + .highlight,
+h5 + .highlight,
+h6 + .highlight,
+p + pre,
+h1 + pre,
+h2 + pre,
+h3 + pre,
+h4 + pre,
+h5 + pre,
+h6 + pre {
+  margin-top: 0.5rem !important;
+}

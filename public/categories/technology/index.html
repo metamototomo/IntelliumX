@@ -167,6 +167,73 @@
               <article class="media">
                 <div class="media-content">
                   <div class="content">
+                    <h3><a href="http://localhost:1313/posts/winhttp/">Winhttp</a></h3>
+                    <p class="subtitle is-6">January 11, 2026</p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/ssh-connection-linux/">SSH Connection in Linux</a></h3>
+                    <p class="subtitle is-6">January 11, 2026</p>
+                    
+                      <p><h2 id="1-setup-ssh-service">1️⃣ Setup SSH service</h2>
+<p>Install OpenSSH server</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install -y openssh-server
+</span></span></code></pre></div><p>Enable and start the SSH service</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable ssh
+</span></span><span style="display:flex;"><span>sudo systemctl start ssh
+</span></span></code></pre></div><p>Check status:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl status ssh
+</span></span></code></pre></div><hr>
+<h2 id="2-allow-ssh-through-the-firewall-if-enabled">2️⃣ Allow SSH through the firewall (if enabled)</h2>
+<p>Ubuntu Server often has <strong>ufw disabled by default</strong>, but check:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo ufw status
+</span></span></code></pre></div><p>If it’s active:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo ufw allow ssh
+</span></span><span style="display:flex;"><span>sudo ufw reload
+</span></span></code></pre></div><hr>
+<h2 id="3-connect-from-windows">3️⃣ Connect from Windows</h2>
+<p>From <strong>PowerShell</strong> on Windows:</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/proxy-squid-install/">Proxy Squid Install</a></h3>
+                    <p class="subtitle is-6">January 11, 2026</p>
+                    
+                      <p><p><img src="2026-01-11-11-40-50.png" alt=""></p>
+<h2 id="-summary">📋 Summary</h2>
+<p>This guide provides a baseline setup for Squid proxy server. It covers system updates, installing Squid with essential networking tools, configuring a minimal proxy setup that allows local network access.</p>
+<h2 id="1-first-steps-after-installation-baseline">1️⃣ First steps after installation (baseline)</h2>
+<p>After installing Linux Server and logging in:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dnf update
+</span></span><span style="display:flex;"><span>sudo dnf upgrade -y
+</span></span></code></pre></div><p>Install basic tools (very helpful later):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dnf install -y <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  squid <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  tcpdump <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  net-tools <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  iproute <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  curl <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>  ca-certificates
+</span></span></code></pre></div><p>Enable and start Squid:</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
                     <h3><a href="http://localhost:1313/posts/github-ssh-settings/">GitHub - SSH Settings (ed25519)</a></h3>
                     <p class="subtitle is-6">January 10, 2026</p>
                     
@@ -177,14 +244,14 @@
 <li><strong>SSH-only workflow</strong> → no HTTPS credentials required</li>
 </ul>
 <p><img src="2026-01-10-23-42-49.png" alt=""></p>
-<h2 id="1-check-for-existing-keys-optional">1) Check for existing keys (optional)</h2>
+<h3 id="1-check-for-existing-keys-optional">1) Check for existing keys (optional)</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -la ~/.ssh
 </span></span></code></pre></div><ul>
 <li>Look for <code>id_ed25519</code> / <code>id_ed25519.pub</code></li>
 <li>If you already have a key you want to use, skip key generation</li>
 </ul>
 <hr>
-<h2 id="2-generate-a-new-ed25519-key">2) Generate a new ed25519 key</h2>
+<h3 id="2-generate-a-new-ed25519-key">2) Generate a new ed25519 key</h3>
 <p><code>ed25519</code> refers to the <strong>Ed25519 elliptic-curve algorithm</strong>, which is the <em>modern</em>, <em>faster</em>, and <em>more secure</em> replacement for older RSA SSH keys. Replace the email with your GitHub email:</p></p>
                     
                   </div>
