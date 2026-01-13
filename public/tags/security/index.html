@@ -167,6 +167,141 @@
               <article class="media">
                 <div class="media-content">
                   <div class="content">
+                    <h3><a href="http://localhost:1313/posts/nginx-client-certificate/">NGINX - Client Certificate Authentication</a></h3>
+                    <p class="subtitle is-6">January 11, 2026</p>
+                    
+                      <p><h2 id="summary"><strong>Summary</strong></h2>
+<p>This guide sets up Nginx with client certificate authentication on Amazon Linux 2023, requiring clients to present a valid certificate signed by your CA to access the web server. Key steps include installing Nginx with TLS configuration, uploading server and CA certificates, configuring <code>ssl_verify_client on</code> for authentication, and installing client certificates on Windows machines. Common troubleshooting involves temporarily disabling SELinux if it blocks HTTPS traffic.</p>
+<h2 id="1-launch-ec2-instance-example-operations"><strong>1. Launch EC2 Instance (Example operations)</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Amazon Linux 2023, t3.micro, in your VPC</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Security Group: Allow 443 from your network</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sh-5.2$ cd ~
+</span></span><span style="display:flex;"><span>sh-5.2$ pwd
+</span></span><span style="display:flex;"><span>/home/ssm-user
+</span></span><span style="display:flex;"><span>sh-5.2$ aws s3 cp s3://gcs-share/certs/certs_v06.zip .
+</span></span><span style="display:flex;"><span>download: s3://gcs-share/certs/certs_v06.zip to ./certs_v06.zip
+</span></span><span style="display:flex;"><span>sh-5.2$ ls
+</span></span><span style="display:flex;"><span>certs_v06.zip
+</span></span><span style="display:flex;"><span>sh-5.2$ pwd
+</span></span><span style="display:flex;"><span>/home/ssm-user
+</span></span><span style="display:flex;"><span>sh-5.2$ sudo dnf install -y unzip tree
+</span></span><span style="display:flex;"><span>sh-5.2$ unzip certs_v06.zip
+</span></span><span style="display:flex;"><span>Archive:  certs_v06.zip
+</span></span><span style="display:flex;"><span>   creating: certs/
+</span></span><span style="display:flex;"><span>  inflating: certs/ca-bundle.crt
+</span></span><span style="display:flex;"><span>  inflating: certs/ca.crt
+</span></span><span style="display:flex;"><span>  inflating: certs/client-006.crt
+</span></span><span style="display:flex;"><span>  inflating: certs/client-006.pfx
+</span></span><span style="display:flex;"><span>  inflating: certs/client.key
+</span></span><span style="display:flex;"><span>  inflating: certs/dual-006.crt
+</span></span><span style="display:flex;"><span>  inflating: certs/dual-006.pfx
+</span></span><span style="display:flex;"><span>  inflating: certs/dual.key
+</span></span><span style="display:flex;"><span>  inflating: certs/mid-ca.crt
+</span></span><span style="display:flex;"><span>  inflating: certs/server-006.crt
+</span></span><span style="display:flex;"><span>  inflating: certs/server-006.pfx
+</span></span><span style="display:flex;"><span>  inflating: certs/server.key
+</span></span><span style="display:flex;"><span>sh-5.2$ tree certs
+</span></span><span style="display:flex;"><span>certs
+</span></span><span style="display:flex;"><span>├── ca-bundle.crt
+</span></span><span style="display:flex;"><span>├── ca.crt
+</span></span><span style="display:flex;"><span>├── client-006.crt
+</span></span><span style="display:flex;"><span>├── client-006.pfx
+</span></span><span style="display:flex;"><span>├── client.key
+</span></span><span style="display:flex;"><span>├── dual-006.crt
+</span></span><span style="display:flex;"><span>├── dual-006.pfx
+</span></span><span style="display:flex;"><span>├── dual.key
+</span></span><span style="display:flex;"><span>├── mid-ca.crt
+</span></span><span style="display:flex;"><span>├── server-006.crt
+</span></span><span style="display:flex;"><span>├── server-006.pfx
+</span></span><span style="display:flex;"><span>└── server.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> directories, <span style="color:#ae81ff">12</span> files
+</span></span><span style="display:flex;"><span>sh-5.2$ ^C
+</span></span></code></pre></div><h2 id="2-install-and-configure-nginx"><strong>2. Install and Configure Nginx</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dnf update -y
+</span></span><span style="display:flex;"><span>sudo dnf install -y nginx
+</span></span><span style="display:flex;"><span>sudo systemctl enable nginx
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create SSL directory</span>
+</span></span><span style="display:flex;"><span>sudo mkdir -p /etc/nginx/ssl
+</span></span><span style="display:flex;"><span>sudo chmod <span style="color:#ae81ff">700</span> /etc/nginx/ssl
+</span></span></code></pre></div><h2 id="3-upload-your-certificates"><strong>3. Upload Your Certificates</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Copy these files to /etc/nginx/ssl/:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - server-006.crt (your server certificate)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - server.key (your server private key)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - ca-bundle.crt (mid-ca.crt + ca.crt concatenated)</span>
+</span></span><span style="display:flex;"><span>sudo cp certs/* /etc/nginx/ssl/
+</span></span><span style="display:flex;"><span>sudo chmod <span style="color:#ae81ff">600</span> /etc/nginx/ssl/server.key
+</span></span><span style="display:flex;"><span>sudo chmod <span style="color:#ae81ff">644</span> /etc/nginx/ssl/ca-bundle.crt
+</span></span><span style="display:flex;"><span>sudo chmod <span style="color:#ae81ff">644</span> /etc/nginx/ssl/server-006.crt
+</span></span><span style="display:flex;"><span>sudo ls -l /etc/nginx/ssl/
+</span></span></code></pre></div><h2 id="4-configure-nginx-etcnginxnginxconf"><strong>4. Configure Nginx (/etc/nginx/nginx.conf)</strong></h2>
+<pre tabindex="0"><code>events {
+    worker_connections 1024;
+}
+
+http {
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+
+    server {
+        listen 443 ssl;
+        server_name d11-lnx-web01.gcs.cloud;  # &lt;-- SET THE FQDN OF THE SERVER
+
+        # Server certificates
+        ssl_certificate /etc/nginx/ssl/server-006.crt;
+        ssl_certificate_key /etc/nginx/ssl/server.key;
+
+        # Client certificate authentication
+        ssl_client_certificate /etc/nginx/ssl/ca-bundle.crt;
+        ssl_verify_client on;
+
+        # SSL settings
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_ciphers ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256;
+        ssl_prefer_server_ciphers off;
+
+        location / {
+            root /usr/share/nginx/html;
+            index index.html;
+
+            # Add client cert info to response
+            add_header X-Client-Cert-Subject $ssl_client_s_dn;
+            add_header X-Client-Cert-Issuer $ssl_client_i_dn;
+        }
+    }
+}
+</code></pre><h2 id="6-create-sample-html-page-optional"><strong>6. Create Sample HTML Page (Optional)</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo tee /usr/share/nginx/html/index.html &gt; /dev/null <span style="color:#e6db74">&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;!DOCTYPE html&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;html&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;head&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;title&gt;Client Certificate Authentication Test&lt;/title&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/head&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;body&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;h1&gt;Welcome! Client Certificate Authentication Successful&lt;/h1&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;p&gt;Your client certificate was verified successfully.&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &lt;p&gt;This page requires a valid client certificate to access.&lt;/p&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/body&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&lt;/html&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span></code></pre></div><h2 id="7-start-nginx"><strong>7. Start Nginx</strong></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nginx -t
+</span></span><span style="display:flex;"><span>sudo systemctl start nginx
+</span></span><span style="display:flex;"><span>sudo systemctl status nginx
+</span></span></code></pre></div><h2 id="9-client-setup-windows-machines"><strong>9. Client Setup (Windows machines)</strong></h2>
+<ul>
+<li>
+<p>Install  in &ldquo;Current User\Personal\Certificates&rdquo;</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
                     <h3><a href="http://localhost:1313/posts/github-ssh-settings/">GitHub - SSH Settings (ed25519)</a></h3>
                     <p class="subtitle is-6">January 10, 2026</p>
                     

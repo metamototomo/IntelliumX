@@ -167,6 +167,249 @@
               <article class="media">
                 <div class="media-content">
                   <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-delete-tag/">GitHub - Delete Tag</a></h3>
+                    <p class="subtitle is-6">January 13, 2026</p>
+                    
+                      <p><h3 id="to-delete-a-tag-from-the-local">To delete a tag from the LOCAL:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>.venv<span style="color:#f92672">)</span> coo:~/Documents/DevOps/GCS-Cloud$ git tag -d v1.0
+</span></span><span style="display:flex;"><span>Deleted tag <span style="color:#e6db74">&#39;v1.0&#39;</span> <span style="color:#f92672">(</span>was 6655ed0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>.venv<span style="color:#f92672">)</span> coo:~/Documents/DevOps/GCS-Cloud$ git tag -d v1.0.0 
+</span></span><span style="display:flex;"><span>Deleted tag <span style="color:#e6db74">&#39;v1.0.0&#39;</span> <span style="color:#f92672">(</span>was ab35d04<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>.venv<span style="color:#f92672">)</span> coo:~/Documents/DevOps/GCS-Cloud$ git tag      
+</span></span><span style="display:flex;"><span>2.0
+</span></span><span style="display:flex;"><span>show
+</span></span></code></pre></div><h3 id="to-delete-a-tag-from-the-remote">To delete a tag from the REMOTE:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># For example, to delete the v1.0 and v1.0.0 tags from remote:</span>
+</span></span><span style="display:flex;"><span>git push origin --delete v1.0
+</span></span><span style="display:flex;"><span>git push origin --delete v1.0.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check the remote tags again</span>
+</span></span><span style="display:flex;"><span>git ls-remote --tags origin
+</span></span></code></pre></div><p>Note that while the tags were deleted locally, they still appear in the remote repository when using &ldquo;git ls-remote &ndash;tags origin&rdquo;. The &ldquo;git tag&rdquo; command only displays tags that exist in your local repository.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-create-tag/">GitHub - Create Tag</a></h3>
+                    <p class="subtitle is-6">January 13, 2026</p>
+                    
+                      <p><p><img src="2026-01-13-23-46-57.png" alt=""></p>
+<h3 id="1-displaying-git-tags">1. Displaying Git Tags</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>.venv<span style="color:#f92672">)</span> coo:~/Documents/DevOps/GCS-Cloud$ git tag
+</span></span><span style="display:flex;"><span>2.0
+</span></span><span style="display:flex;"><span>show
+</span></span><span style="display:flex;"><span>v1.0
+</span></span><span style="display:flex;"><span>v1.0.0
+</span></span></code></pre></div><hr>
+<h3 id="2-check-out-the-main-branch">2. Check out the <code>main</code> branch</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout main
+</span></span></code></pre></div><hr>
+<h3 id="3-check-the-commit-hash-of-main-branch-last-update">3. Check the commit hash of main branch (last update)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Show the latest commit on main (from remote)</span>
+</span></span><span style="display:flex;"><span>git fetch origin
+</span></span><span style="display:flex;"><span>git log origin/main <span style="color:#ae81ff">-1</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># For example</span>
+</span></span><span style="display:flex;"><span>PS C:\code\Quick-Installer&gt; git log origin/main <span style="color:#ae81ff">-1</span>
+</span></span><span style="display:flex;"><span>commit 87b1cfd5fae54d85f9c1a77b134092fb9ed624a3 (origin/main, origin/HEAD)
+</span></span><span style="display:flex;"><span>Merge<span style="color:#960050;background-color:#1e0010">:</span> ea44cbc <span style="color:#ae81ff">4195693</span>
+</span></span><span style="display:flex;"><span>Author<span style="color:#960050;background-color:#1e0010">:</span> gituser &lt;gituser@users.noreply.github.com&gt;
+</span></span><span style="display:flex;"><span>Date<span style="color:#960050;background-color:#1e0010">:</span>   Mon Sep <span style="color:#ae81ff">15</span> <span style="color:#ae81ff">15</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">59</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">32</span> <span style="color:#ae81ff">2025</span> <span style="color:#ae81ff">+1000</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Merge pull request <span style="color:#75715e">#7 from gituser/patch/backward-compatibility</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fixed confi file downlaod issue
+</span></span></code></pre></div><h3 id="4-create-the-tag">4. Create the tag</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git tag v.3.3.2 87b1cfd5fae54d85f9c1a77b134092fb9ed624a3
+</span></span></code></pre></div><hr>
+<h3 id="5-push-the-tag-to-remote">5. Push the tag to remote</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push origin v3.3.2
+</span></span></code></pre></div><h3 id="6-verify">6. Verify</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>git show v3.3.2
+</span></span></code></pre></div><h3 id="display-tags-with-detailed-information">Display tags with detailed information</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>.venv<span style="color:#f92672">)</span> coo:~/Documents/DevOps/GCS-Cloud$ git ls-remote --tags origin
+</span></span><span style="display:flex;"><span>90e2de33d27de3116195bfe26dde6d750191889d        refs/tags/2.0
+</span></span><span style="display:flex;"><span>6655ed0a66e4b9fa141d5aa87ffd9c10fdfdc603        refs/tags/v1.0
+</span></span><span style="display:flex;"><span>ab35d0488d9e8b0a66502a0e900538449dc7190d        refs/tags/v1.0.0
+</span></span><span style="display:flex;"><span>47ecf4f18119d628cc3f61932c9d81d25690630c        refs/tags/v1.0.0^<span style="color:#f92672">{}</span>
+</span></span></code></pre></div></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-delete-branches/">GitHub - Delete Branches</a></h3>
+                    <p class="subtitle is-6">January 13, 2026</p>
+                    
+                      <p><ol>
+<li>Delete the feature branch locally</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git branch -D feature/multi-users
+</span></span></code></pre></div><hr>
+<ol start="2">
+<li>Delete the feature branch from remote</li>
+</ol>
+<p>If you already pushed the branch to remote and want to remove it there too:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push origin --delete feature/multi-users
+</span></span></code></pre></div><hr></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-clean-branches/">GitHub - Clean Branches</a></h3>
+                    <p class="subtitle is-6">January 13, 2026</p>
+                    
+                      <p><p>After merging, we may still see the release branch like this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>.venv<span style="color:#f92672">)</span> coo:~/Documents/DevOps/GCS-Cloud$ git branch -a
+</span></span><span style="display:flex;"><span>  develop
+</span></span><span style="display:flex;"><span>* main
+</span></span><span style="display:flex;"><span>  release/2.0
+</span></span><span style="display:flex;"><span>  remotes/origin/HEAD -&gt; origin/main
+</span></span><span style="display:flex;"><span>  remotes/origin/develop
+</span></span><span style="display:flex;"><span>  remotes/origin/feature/witt_test
+</span></span><span style="display:flex;"><span>  remotes/origin/main
+</span></span><span style="display:flex;"><span>  remotes/origin/release/2.0
+</span></span></code></pre></div><p>After running &ldquo;git fetch &ndash;prune&rdquo;, the remote branch was updated but the local branch remained unchanged.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>.venv<span style="color:#f92672">)</span> coo:~/Documents/DevOps/GCS-Cloud$ git fetch --prune
+</span></span><span style="display:flex;"><span>From https://dev.azure.com/nobuops/GCS-Cloud/_git/GCS-Cloud
+</span></span><span style="display:flex;"><span> - <span style="color:#f92672">[</span>deleted<span style="color:#f92672">]</span>         <span style="color:#f92672">(</span>none<span style="color:#f92672">)</span>     -&gt; origin/release/2.0
+</span></span><span style="display:flex;"><span>remote: Azure Repos
+</span></span><span style="display:flex;"><span>remote: Found <span style="color:#ae81ff">1</span> objects to send. <span style="color:#f92672">(</span><span style="color:#ae81ff">0</span> ms<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Unpacking objects: 100% <span style="color:#f92672">(</span>1/1<span style="color:#f92672">)</span>, <span style="color:#ae81ff">328</span> bytes | 82.00 KiB/s, <span style="color:#66d9ef">done</span>.
+</span></span><span style="display:flex;"><span>   47ecf4f..90e2de3  main       -&gt; origin/main
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>.venv<span style="color:#f92672">)</span> coo:~/Documents/DevOps/GCS-Cloud$ git branch -a
+</span></span><span style="display:flex;"><span>  develop
+</span></span><span style="display:flex;"><span>* main
+</span></span><span style="display:flex;"><span>  release/2.0
+</span></span><span style="display:flex;"><span>  remotes/origin/HEAD -&gt; origin/main
+</span></span><span style="display:flex;"><span>  remotes/origin/develop
+</span></span><span style="display:flex;"><span>  remotes/origin/feature/witt_test
+</span></span><span style="display:flex;"><span>  remotes/origin/main
+</span></span></code></pre></div><p>To clean up the repository completely, manually delete the local branch</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-pull-request/">GitHub Pull Request (Azure DevOps)</a></h3>
+                    <p class="subtitle is-6">January 13, 2026</p>
+                    
+                      <p><p>This guide shows how to push changes from the <code>feature/script-update-for-multi-regsions</code> branch to the <code>develop</code> branch in Azure DevOps</p>
+<hr>
+<h3 id="step-1-ensure-all-the-changes-are-committed-to-the-feature-branch">Step 1: Ensure all the changes are committed to the feature branch.</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check the current branch</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>.venv<span style="color:#f92672">)</span> coo:~/Documents/DevOps/GCS-Cloud/base$ git branch
+</span></span><span style="display:flex;"><span>  develop
+</span></span><span style="display:flex;"><span>* feature/script-update-for-multi-regsions
+</span></span><span style="display:flex;"><span>  main
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check the status of the local repository</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>.venv<span style="color:#f92672">)</span> coo:~/Documents/DevOps/GCS-Cloud/base$ git status
+</span></span><span style="display:flex;"><span>On branch feature/script-update-for-multi-regsions
+</span></span><span style="display:flex;"><span>nothing to commit, working tree clean
+</span></span></code></pre></div><h3 id="step-2-use-azure-devops-web-ui">Step 2: Use Azure DevOps Web UI</h3>
+<ol>
+<li>
+<p>Go to your Azure DevOps project in the browser.</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-pull-latest-change/">GitHub - Pull Latest Change</a></h3>
+                    <p class="subtitle is-6">January 13, 2026</p>
+                    
+                      <p><h3 id="-option-1-stash-your-changes-temporarily-save">✅ <strong>Option 1: Stash your changes (temporarily save)</strong></h3>
+<p>If you&rsquo;re not ready to commit, but want to pull the latest code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>git stash
+</span></span><span style="display:flex;"><span>git pull
+</span></span><span style="display:flex;"><span>git stash pop
+</span></span></code></pre></div><ul>
+<li><code>git stash</code> temporarily saves your changes</li>
+<li><code>git pull</code> fetches and merges the latest version</li>
+<li><code>git stash pop</code> restores your changes</li>
+</ul>
+<hr>
+<h3 id="-option-2-discard-your-changes">❌ <strong>Option 2: Discard your changes</strong></h3>
+<p>⚠️ Only do this if you&rsquo;re okay with <strong>losing your local changes</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>git reset --hard origin/develop
+</span></span><span style="display:flex;"><span>git pull
+</span></span></code></pre></div><hr></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-create-new-branch/">GitHuh - Create New Branch</a></h3>
+                    <p class="subtitle is-6">January 13, 2026</p>
+                    
+                      <p><p>This is an example to create “develop” branch from copying from “main” branch. We can apply the same steps for creating “feature” branch and “release” branch</p>
+<p><img src="2026-01-13-23-33-44.png" alt=""></p>
+<hr>
+<h3 id="1-ensure-your-repository-is-clean"><strong>1. Ensure your repository is clean</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git status
+</span></span><span style="display:flex;"><span>git branch -a
+</span></span></code></pre></div><hr>
+<h3 id="2-preparation-before-creating-a-new-branch"><strong>2. Preparation before creating a new branch</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout <span style="color:#f92672">{</span>ORIGINAL BRANCH<span style="color:#f92672">}</span> <span style="color:#f92672">(</span>e.g, main<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>git pull origin <span style="color:#f92672">{</span>ORIGINAL BRANCH<span style="color:#f92672">}</span> <span style="color:#f92672">(</span>e.g, main<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h3 id="3-create-the-new-branch-locally"><strong>3. Create the new branch locally</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout -b <span style="color:#f92672">{</span>NEW BRANCH<span style="color:#f92672">}</span> <span style="color:#f92672">(</span>e.g, develop<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Sample of feature branch</span>
+</span></span><span style="display:flex;"><span>git checkout -b feature/new_feature_branch_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Sample of release branch</span>
+</span></span><span style="display:flex;"><span>git checkout -b release/new_release_branch_name
+</span></span></code></pre></div><hr>
+<h3 id="4-push-the-new-branch-to-github"><strong>4. Push the new branch to GitHub</strong></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push -u origin <span style="color:#f92672">{</span>NEW BRANCH<span style="color:#f92672">}</span> <span style="color:#f92672">(</span>e.g, develop<span style="color:#f92672">)</span>
+</span></span></code></pre></div><hr>
+<h3 id="5-verify-both-branches-exist"><strong>5. Verify both branches exist</strong></h3>
+<p>Run:</p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <h3><a href="http://localhost:1313/posts/git-create-new-repo/">GitHub - Create New Repo</a></h3>
+                    <p class="subtitle is-6">January 13, 2026</p>
+                    
+                      <p><h3 id="1-log-in-to-github-httpsgithubcom">1. Log in to GitHub <a href="https://github.com/"><strong>https://github.com</strong></a></h3>
+<h3 id="2-click-new-repository">2. Click <strong>”New repository”</strong></h3>
+<h3 id="3-fill-out-the-form">3. Fill out the form</h3>
+<p><img src="2026-01-13-23-32-16.png" alt=""></p>
+<h3 id="4-create-the-repository">4. Create the Repository</h3></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
                     <h3><a href="http://localhost:1313/posts/git-hub-reset-and-start-again/">GitHub - Reset and Start Again</a></h3>
                     <p class="subtitle is-6">June 25, 2025</p>
                     

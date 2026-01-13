@@ -6,8 +6,50 @@
     <description>Recent content in Tags on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Jan 2026 11:48:35 +1100</lastBuildDate>
+    <lastBuildDate>Tue, 13 Jan 2026 23:28:39 +1100</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Tue, 13 Jan 2026 23:28:39 +1100</pubDate>
+      <guid>http://localhost:1313/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub</title>
+      <link>http://localhost:1313/tags/github/</link>
+      <pubDate>Tue, 13 Jan 2026 23:28:39 +1100</pubDate>
+      <guid>http://localhost:1313/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Client Certificate</title>
+      <link>http://localhost:1313/tags/client-certificate/</link>
+      <pubDate>Sun, 11 Jan 2026 12:10:31 +1100</pubDate>
+      <guid>http://localhost:1313/tags/client-certificate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NGINX</title>
+      <link>http://localhost:1313/tags/nginx/</link>
+      <pubDate>Sun, 11 Jan 2026 12:10:31 +1100</pubDate>
+      <guid>http://localhost:1313/tags/nginx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>http://localhost:1313/tags/security/</link>
+      <pubDate>Sun, 11 Jan 2026 12:10:31 +1100</pubDate>
+      <guid>http://localhost:1313/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSL Certificate</title>
+      <link>http://localhost:1313/tags/ssl-certificate/</link>
+      <pubDate>Sun, 11 Jan 2026 12:10:31 +1100</pubDate>
+      <guid>http://localhost:1313/tags/ssl-certificate/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Proxy</title>
       <link>http://localhost:1313/tags/proxy/</link>
@@ -34,20 +76,6 @@
       <link>http://localhost:1313/tags/ssh/</link>
       <pubDate>Sun, 11 Jan 2026 10:42:59 +1100</pubDate>
       <guid>http://localhost:1313/tags/ssh/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Git</title>
-      <link>http://localhost:1313/tags/git/</link>
-      <pubDate>Sat, 10 Jan 2026 23:40:52 +1100</pubDate>
-      <guid>http://localhost:1313/tags/git/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Security</title>
-      <link>http://localhost:1313/tags/security/</link>
-      <pubDate>Sat, 10 Jan 2026 23:40:52 +1100</pubDate>
-      <guid>http://localhost:1313/tags/security/</guid>
       <description></description>
     </item>
     <item>
@@ -118,13 +146,6 @@
       <link>http://localhost:1313/tags/saml/</link>
       <pubDate>Sun, 10 Aug 2025 11:46:09 +1000</pubDate>
       <guid>http://localhost:1313/tags/saml/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GitHub</title>
-      <link>http://localhost:1313/tags/github/</link>
-      <pubDate>Wed, 25 Jun 2025 20:40:01 +1000</pubDate>
-      <guid>http://localhost:1313/tags/github/</guid>
       <description></description>
     </item>
     <item>
@@ -212,13 +233,6 @@
       <description></description>
     </item>
     <item>
-      <title>NGINX</title>
-      <link>http://localhost:1313/tags/nginx/</link>
-      <pubDate>Thu, 24 Apr 2025 23:01:47 +1000</pubDate>
-      <guid>http://localhost:1313/tags/nginx/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>SSL</title>
       <link>http://localhost:1313/tags/ssl/</link>
       <pubDate>Thu, 24 Apr 2025 23:01:47 +1000</pubDate>
@@ -237,13 +251,6 @@
       <link>http://localhost:1313/tags/openssl/</link>
       <pubDate>Thu, 24 Apr 2025 17:41:29 +1000</pubDate>
       <guid>http://localhost:1313/tags/openssl/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SSL Certificate</title>
-      <link>http://localhost:1313/tags/ssl-certificate/</link>
-      <pubDate>Thu, 24 Apr 2025 17:41:29 +1000</pubDate>
-      <guid>http://localhost:1313/tags/ssl-certificate/</guid>
       <description></description>
     </item>
     <item>
