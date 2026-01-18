@@ -13,7 +13,9 @@ categories: ["Technology"]
 
 ![](2026-01-13-23-32-16.png)
 
-### 4. Create the Repository
+### 4. Initialise the repo
+
+![](2026-01-18-20-55-56.png)
 
 
 ***

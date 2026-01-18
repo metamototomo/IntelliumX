@@ -6,8 +6,15 @@
     <description>Recent content in SSL on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Apr 2025 23:01:47 +1000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Jan 2026 21:58:22 +1100</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom Domain Cloudfront Cloudflare</title>
+      <link>http://localhost:1313/posts/custom-domain-cloudfront-cloudflare/</link>
+      <pubDate>Sun, 18 Jan 2026 21:58:22 +1100</pubDate>
+      <guid>http://localhost:1313/posts/custom-domain-cloudfront-cloudflare/</guid>
+      <description>&lt;h3 id=&#34;cloudflare--aws-cloudfront--s3&#34;&gt;CloudFlare + AWS CloudFront + S3&lt;/h3&gt;&#xA;&lt;p&gt;A step-by-step guide to connecting your CloudFlare domain to CloudFront with SSL.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;step-1-request-acm-certificate-aws&#34;&gt;Step 1: Request ACM Certificate (AWS)&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Go to &lt;strong&gt;AWS Certificate Manager&lt;/strong&gt; in &lt;strong&gt;us-east-1&lt;/strong&gt; region&lt;/li&gt;&#xA;&lt;li&gt;Click &lt;strong&gt;Request a public certificate&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Add domain names: e.g., &lt;code&gt;heartbeat.intelliumx.com&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Select &lt;strong&gt;DNS validation&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Click &lt;strong&gt;Request&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-01-18-21-59-43.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-01-18-22-00-00.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;step-2-add-validation-records-to-cloudflare&#34;&gt;Step 2: Add Validation Records to CloudFlare&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;In ACM, copy the CNAME &lt;strong&gt;name&lt;/strong&gt; and &lt;strong&gt;value&lt;/strong&gt; shown for validation&lt;/li&gt;&#xA;&lt;li&gt;Go to &lt;strong&gt;CloudFlare DNS&lt;/strong&gt; settings&lt;/li&gt;&#xA;&lt;li&gt;Add a new &lt;strong&gt;CNAME record&lt;/strong&gt; with the name and value from ACM&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Important:&lt;/strong&gt; Set proxy status to &lt;strong&gt;DNS only&lt;/strong&gt; (grey cloud) for validation&lt;/li&gt;&#xA;&lt;li&gt;Save the record&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-01-18-22-00-23.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>NGINX Load Balancer - Secure gRPC</title>
       <link>http://localhost:1313/posts/nginx-loadbalancer-wcf-grpc-ssl/</link>

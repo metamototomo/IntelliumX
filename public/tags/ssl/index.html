@@ -167,6 +167,40 @@
               <article class="media">
                 <div class="media-content">
                   <div class="content">
+                    <h3><a href="http://localhost:1313/posts/custom-domain-cloudfront-cloudflare/">Custom Domain Cloudfront Cloudflare</a></h3>
+                    <p class="subtitle is-6">January 18, 2026</p>
+                    
+                      <p><h3 id="cloudflare--aws-cloudfront--s3">CloudFlare + AWS CloudFront + S3</h3>
+<p>A step-by-step guide to connecting your CloudFlare domain to CloudFront with SSL.</p>
+<hr>
+<h2 id="step-1-request-acm-certificate-aws">Step 1: Request ACM Certificate (AWS)</h2>
+<ol>
+<li>Go to <strong>AWS Certificate Manager</strong> in <strong>us-east-1</strong> region</li>
+<li>Click <strong>Request a public certificate</strong></li>
+<li>Add domain names: e.g., <code>heartbeat.intelliumx.com</code></li>
+<li>Select <strong>DNS validation</strong></li>
+<li>Click <strong>Request</strong></li>
+</ol>
+<p><img src="2026-01-18-21-59-43.png" alt=""></p>
+<p><img src="2026-01-18-22-00-00.png" alt=""></p>
+<hr>
+<h2 id="step-2-add-validation-records-to-cloudflare">Step 2: Add Validation Records to CloudFlare</h2>
+<ol>
+<li>In ACM, copy the CNAME <strong>name</strong> and <strong>value</strong> shown for validation</li>
+<li>Go to <strong>CloudFlare DNS</strong> settings</li>
+<li>Add a new <strong>CNAME record</strong> with the name and value from ACM</li>
+<li><strong>Important:</strong> Set proxy status to <strong>DNS only</strong> (grey cloud) for validation</li>
+<li>Save the record</li>
+</ol>
+<p><img src="2026-01-18-22-00-23.png" alt=""></p></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
                     <h3><a href="http://localhost:1313/posts/nginx-loadbalancer-wcf-grpc-ssl/">NGINX Load Balancer - Secure gRPC</a></h3>
                     <p class="subtitle is-6">April 24, 2025</p>
                     
