@@ -3,10 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-01-18T21:58:22+11:00</lastmod>
+    <lastmod>2026-01-19T19:01:12+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-01-18T21:58:22+11:00</lastmod>
+    <lastmod>2026-01-19T19:01:12+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-01-19T19:01:12+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/python-enable-virtual-environment/</loc>
+    <lastmod>2026-01-19T19:01:12+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/technology/</loc>
+    <lastmod>2026-01-19T19:01:12+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2026-01-19T18:57:17+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/python-check-version/</loc>
+    <lastmod>2026-01-19T18:57:17+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-01-19T18:57:17+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cloudflare/</loc>
     <lastmod>2026-01-18T21:58:22+11:00</lastmod>
@@ -20,16 +38,7 @@
     <loc>http://localhost:1313/posts/custom-domain-cloudfront-cloudflare/</loc>
     <lastmod>2026-01-18T21:58:22+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-01-18T21:58:22+11:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/ssl/</loc>
-    <lastmod>2026-01-18T21:58:22+11:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-01-18T21:58:22+11:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/technology/</loc>
     <lastmod>2026-01-18T21:58:22+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/git/</loc>
@@ -201,9 +210,6 @@
     <lastmod>2025-06-15T17:10:13+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/lambda/</loc>
-    <lastmod>2025-06-15T17:10:13+10:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2025-06-15T17:10:13+10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/aws-credentials-for-cli/</loc>

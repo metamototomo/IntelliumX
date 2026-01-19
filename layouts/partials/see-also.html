@@ -1,0 +1,11 @@
+{{ with .Params.related }}
+<hr>
+<h2>See also:</h2>
+
+{{ range . }}
+{{ $page := printf "%s.md" . }}
+{{ with $.Site.GetPage $page }}
+<p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+{{ end }}
+{{ end }}
+{{ end }}
