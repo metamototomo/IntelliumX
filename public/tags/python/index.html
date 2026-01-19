@@ -167,6 +167,39 @@
               <article class="media">
                 <div class="media-content">
                   <div class="content">
+                    <h3><a href="http://localhost:1313/posts/python-enable-virtual-environment/">Python - Enable Virtual Environment</a></h3>
+                    <p class="subtitle is-6">January 19, 2026</p>
+                    
+                      <p><h3 id="open-your-repo-in-vs-code">Open your repo in VS Code</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd your-new-repo
+</span></span><span style="display:flex;"><span>code .
+</span></span></code></pre></div><h3 id="create-a-virtual-environment">Create a virtual environment</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># MacOS / Linux</span>
+</span></span><span style="display:flex;"><span>python3 -m venv .venv
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Windows</span>
+</span></span><span style="display:flex;"><span>python-m venv .venv
+</span></span></code></pre></div><h3 id="activate-the-virtual-environment">Activate the virtual environment</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># MacOS / Linux</span>
+</span></span><span style="display:flex;"><span>source .venv/bin/activate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Windows</span>
+</span></span><span style="display:flex;"><span>.venv\Scripts\Activate.ps1
+</span></span></code></pre></div><h3 id="install-packages">Install packages</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install requests boto3
+</span></span></code></pre></div><h3 id="freeze-dependencies">Freeze dependencies</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip freeze &gt; requirements.txt
+</span></span></code></pre></div><p>Later, anyone can recreate the env with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install -r requirements.txt
+</span></span></code></pre></div></p>
+                    
+                  </div>
+                </div>
+              </article>
+            
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
                     <h3><a href="http://localhost:1313/posts/python-check-version/">Python - Check Version</a></h3>
                     <p class="subtitle is-6">January 19, 2026</p>
                     
