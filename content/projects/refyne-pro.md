@@ -11,7 +11,7 @@ description: "An advanced AI-powered document creation platform featuring multi-
 
 **Live Application:** <a href="https://refynepro.intelliumx.com/" target="_blank" rel="noopener">refynepro.intelliumx.com</a>
 
-![Refyne Pro Interface](2026-02-07-17-02-55.png)
+![Refyne Pro Interface](2026-02-07-15-28-35.jpg)
 
 ## Overview
 
