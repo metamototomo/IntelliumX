@@ -6,8 +6,57 @@
     <description>Recent content in Tags on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Jan 2026 19:01:12 +1100</lastBuildDate>
+    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Amazon Bedrock</title>
+      <link>http://localhost:1313/tags/amazon-bedrock/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/amazon-bedrock/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AWS</title>
+      <link>http://localhost:1313/tags/aws/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/aws/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DynamoDB</title>
+      <link>http://localhost:1313/tags/dynamodb/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/dynamodb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OAuth 2.0</title>
+      <link>http://localhost:1313/tags/oauth-2.0/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/oauth-2.0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>http://localhost:1313/tags/react/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Serverless</title>
+      <link>http://localhost:1313/tags/serverless/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/serverless/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Python</title>
       <link>http://localhost:1313/tags/python/</link>
@@ -121,13 +170,6 @@
       <description></description>
     </item>
     <item>
-      <title>AWS</title>
-      <link>http://localhost:1313/tags/aws/</link>
-      <pubDate>Tue, 23 Dec 2025 23:19:52 +1100</pubDate>
-      <guid>http://localhost:1313/tags/aws/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Mac</title>
       <link>http://localhost:1313/tags/mac/</link>
       <pubDate>Sun, 21 Dec 2025 17:13:50 +1100</pubDate>
@@ -195,13 +237,6 @@
       <link>http://localhost:1313/tags/api-gateway/</link>
       <pubDate>Sun, 15 Jun 2025 17:49:13 +1000</pubDate>
       <guid>http://localhost:1313/tags/api-gateway/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DynamoDB</title>
-      <link>http://localhost:1313/tags/dynamodb/</link>
-      <pubDate>Sun, 15 Jun 2025 17:15:54 +1000</pubDate>
-      <guid>http://localhost:1313/tags/dynamodb/</guid>
       <description></description>
     </item>
     <item>
@@ -576,13 +611,6 @@
       <description></description>
     </item>
     <item>
-      <title>OAuth 2.0</title>
-      <link>http://localhost:1313/tags/oauth-2.0/</link>
-      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/oauth-2.0/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Personal Health</title>
       <link>http://localhost:1313/tags/personal-health/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
@@ -594,13 +622,6 @@
       <link>http://localhost:1313/tags/rpa/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/rpa/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Serverless</title>
-      <link>http://localhost:1313/tags/serverless/</link>
-      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/serverless/</guid>
       <description></description>
     </item>
     <item>

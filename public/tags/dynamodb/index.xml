@@ -6,8 +6,15 @@
     <description>Recent content in DynamoDB on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Jun 2025 17:15:54 +1000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/dynamodb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI-Powered Document Enhancement Platform</title>
+      <link>http://localhost:1313/projects/refyne-pro/</link>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/refyne-pro/</guid>
+      <description>&lt;h1 id=&#34;refyne-pro&#34;&gt;Refyne Pro&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Live Application:&lt;/strong&gt; &lt;a href=&#34;https://refynepro.intelliumx.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;refynepro.intelliumx.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-02-07-15-28-35.png&#34; alt=&#34;Refyne Pro Interface&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Refyne Pro is an advanced AI-powered document enhancement platform that transforms how professionals create and refine content. Built on AWS serverless architecture with Amazon Bedrock integration, it combines sophisticated AI capabilities with intuitive document management, offering unprecedented control over AI-generated content while maintaining enterprise-grade security and cost efficiency.&lt;/p&gt;&#xA;&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;The journey began with &amp;ldquo;Refyne,&amp;rdquo; a simple note-taking application designed to explore AI operations. It featured two text areas where users could input text and receive AI-enhanced versions through Amazon Bedrock. While functional, this foundational project revealed the potential for something far more powerful.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Amazon DynamoDB - Create a Table</title>
       <link>http://localhost:1313/posts/dynamodb-create-a-table/</link>

@@ -6,6 +6,8 @@ tags: ["NGINX", "Client Certificate", "SSL Certificate", "Security"]
 categories: ["Technology"]
 ---
 
+![](2026-02-01-20-30-34.png)
+
 ## **Summary**
 
 This guide sets up Nginx with client certificate authentication on Amazon Linux 2023, requiring clients to present a valid certificate signed by your CA to access the web server. Key steps include installing Nginx with TLS configuration, uploading server and CA certificates, configuring `ssl_verify_client on` for authentication, and installing client certificates on Windows machines. Common troubleshooting involves temporarily disabling SELinux if it blocks HTTPS traffic.
@@ -177,3 +179,4 @@ sudo systemctl status nginx
 
 This setup will show the certificate selection popup on Windows browsers when accessing the site.
 
+![](2026-02-01-20-29-44.png)
