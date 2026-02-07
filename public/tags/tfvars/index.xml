@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tfvars on IntelliumX</title>
-    <link>http://localhost:1313/tags/tfvars/</link>
+    <link>http://localhost:63561/tags/tfvars/</link>
     <description>Recent content in Tfvars on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 18 Feb 2025 22:31:44 +1100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tfvars/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:63561/tags/tfvars/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Terraform Link to &#34;tfvars&#34; File</title>
-      <link>http://localhost:1313/posts/terraform-link-to-tfvars-file/</link>
+      <link>http://localhost:63561/posts/terraform-link-to-tfvars-file/</link>
       <pubDate>Tue, 18 Feb 2025 22:31:44 +1100</pubDate>
-      <guid>http://localhost:1313/posts/terraform-link-to-tfvars-file/</guid>
+      <guid>http://localhost:63561/posts/terraform-link-to-tfvars-file/</guid>
       <description>&lt;h2 id=&#34;terraform-tfvars-file&#34;&gt;Terraform tfvars file&lt;/h2&gt;&#xA;&lt;p&gt;When a tfvars file is in a different location, you must specify it using the &amp;ldquo;-var-file&amp;rdquo; option. However, creating a symbolic link can simplify the command operation.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Create a symbolic link&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ln -s ../common.tfvars terraform.tfvars&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;Run a simple terraform command without option&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;terraform plan&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;Screenshot of the process&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-02-18-23-35-39.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>

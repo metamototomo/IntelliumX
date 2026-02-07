@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Image Builder on IntelliumX</title>
-    <link>http://localhost:1313/tags/image-builder/</link>
+    <link>http://localhost:63561/tags/image-builder/</link>
     <description>Recent content in Image Builder on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Mar 2025 14:48:49 +1100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/image-builder/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:63561/tags/image-builder/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AppSteram 2.0 Image Builder </title>
-      <link>http://localhost:1313/posts/image-builder-in-aws/</link>
+      <link>http://localhost:63561/posts/image-builder-in-aws/</link>
       <pubDate>Thu, 27 Mar 2025 14:48:49 +1100</pubDate>
-      <guid>http://localhost:1313/posts/image-builder-in-aws/</guid>
+      <guid>http://localhost:63561/posts/image-builder-in-aws/</guid>
       <description>&lt;ol&gt;&#xA;&lt;li&gt;Select the right image to be updated&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-03-27-15-49-34.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;Configure Image Builder&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-03-27-15-49-55.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;2025-03-27-15-50-12.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;2025-03-27-15-50-23.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;Configure Network&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-03-27-15-50-56.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;4&#34;&gt;&#xA;&lt;li&gt;Review&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-03-27-15-51-11.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;2025-03-27-15-51-26.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;5&#34;&gt;&#xA;&lt;li&gt;Confirmation&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-03-27-15-51-41.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>

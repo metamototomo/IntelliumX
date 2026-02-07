@@ -29,7 +29,7 @@ params:
   # preloader: false
   navbarlogo:
     # Logo (from static/images/logos/___)
-    image: logos/IntelliumX-v22.png  # Change this to your PNG filename
+    image: logos/IntelliumX-v23.png  # Change this to your PNG filename
     link: /
     # Default width/height. Uncomment if you need to change
     # width: 50
@@ -60,7 +60,7 @@ params:
       url: /about/
   sidebar:
     # Logo (from static/images/logos/___.png)
-    logo: IntelliumX-v22
+    logo: IntelliumX-v23
     sections:
       - title: User
         icon: user
@@ -99,15 +99,15 @@ params:
     buttonLink: /projects/
     tiles:
       - title: Cloud Architecture
-        icon: laptop-cloud
+        icon: your-icon-name
         text: Scalable AWS infrastructure, serverless applications, and cloud-native
           solutions designed for modern businesses.
       - title: AI Integration
-        icon: mouse-globe
+        icon: your-icon-name
         text: Intelligent automation and AI-powered applications that transform
           business processes and decision-making.
       - title: DevOps Solutions
-        icon: plug-cloud
+        icon: your-icon-name
         text: Streamlined deployment pipelines, infrastructure as code, and security
           implementations for reliable operations.
   section2:

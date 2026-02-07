@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Image on IntelliumX</title>
-    <link>http://localhost:1313/tags/image/</link>
+    <link>http://localhost:63561/tags/image/</link>
     <description>Recent content in Image on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 10 Feb 2025 22:58:18 +1100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:63561/tags/image/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create ICO File From SVG File</title>
-      <link>http://localhost:1313/posts/create-ico-file-from-svg-file/</link>
+      <link>http://localhost:63561/posts/create-ico-file-from-svg-file/</link>
       <pubDate>Mon, 10 Feb 2025 22:58:18 +1100</pubDate>
-      <guid>http://localhost:1313/posts/create-ico-file-from-svg-file/</guid>
+      <guid>http://localhost:63561/posts/create-ico-file-from-svg-file/</guid>
       <description>&lt;h2 id=&#34;using-gimp&#34;&gt;Using GIMP&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Open your SVG file in &amp;ldquo;GIMP&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;Resize to &amp;ldquo;256x256&amp;rdquo; pixels&lt;/li&gt;&#xA;&lt;li&gt;Click &amp;ldquo;File&amp;rdquo; → &amp;ldquo;Export As&amp;rdquo;, choose &amp;ldquo;.ico&amp;rdquo; format&lt;/li&gt;&#xA;&lt;li&gt;Save the file&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-02-10-23-00-29.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
