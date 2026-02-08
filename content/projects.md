@@ -30,6 +30,26 @@ Serverless AWS cost monitoring dashboard with real-time visibility, enterprise-g
 
 ---
 
+### Study Amplify - AI-Powered Exam Preparation Platform
+**Status**: Production (Active Development)  
+**Timeline**: January 2025  
+**Live Demo**: [studyamplify.nobuops.com](https://studyamplify.nobuops.com/)  
+**Tech Stack**: AWS Lambda, Amazon Bedrock, DynamoDB, Cognito, S3, Static Website
+
+**Overview**:  
+AI-powered exam preparation platform for AWS, Azure, and GCP certifications featuring personalized question generation, intelligent mock tests, and comprehensive review tracking.
+
+**Key Achievements**:
+- Built serverless architecture with Amazon Bedrock integration
+- Implemented AI-powered question generation with multiple models
+- Created intelligent mock testing with two modes (Exam/Practice)
+- Developed personal question bank with smart filtering
+- Apple-inspired responsive design with smooth animations
+
+**[Read Full Case Study →](/projects/study-amplify/)**
+
+---
+
 ### AI-Powered Subscription Applications
 **Status**: Planning & Development  
 **Timeline**: Q1-Q2 2025  

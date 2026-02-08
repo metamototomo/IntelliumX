@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Freet Manager on IntelliumX</title>
-    <link>http://localhost:63561/tags/freet-manager/</link>
+    <link>http://localhost:1313/tags/freet-manager/</link>
     <description>Recent content in Freet Manager on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Feb 2025 21:55:18 +1100</lastBuildDate>
-    <atom:link href="http://localhost:63561/tags/freet-manager/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/freet-manager/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup Fleet Manager</title>
-      <link>http://localhost:63561/posts/setup-fleet-manager/</link>
+      <link>http://localhost:1313/posts/setup-fleet-manager/</link>
       <pubDate>Sun, 09 Feb 2025 21:55:18 +1100</pubDate>
-      <guid>http://localhost:63561/posts/setup-fleet-manager/</guid>
+      <guid>http://localhost:1313/posts/setup-fleet-manager/</guid>
       <description>&lt;h2 id=&#34;how-to-enable-gui-access-via-fleet-manager&#34;&gt;How to Enable GUI Access via Fleet Manager&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Ensure SSM Agent is Installed and Running&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Windows EC2 instances must have the &amp;ldquo;SSM Agent&amp;rdquo; installed and running.&lt;/li&gt;&#xA;&lt;li&gt;Check the status by the powershell command&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Get-Service AmazonSSMAgent&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;Attach a Role with the following  policies&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AmazonSSMManagedInstanceCore&lt;/li&gt;&#xA;&lt;li&gt;AmazonSSMFullAccess (This is required for GUI access via Fleet Manager)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-02-09-22-09-30.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;how-to-access-to-ec2-via-fleet-manager&#34;&gt;How to access to EC2 via Fleet Manager&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Go to &amp;ldquo;Systems Manager&amp;rdquo; → &amp;ldquo;Fleet Manager&amp;rdquo;&lt;/p&gt;</description>
     </item>
   </channel>

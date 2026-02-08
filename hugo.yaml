@@ -29,7 +29,7 @@ params:
   # preloader: false
   navbarlogo:
     # Logo (from static/images/logos/___)
-    image: logos/IntelliumX-v23.png  # Change this to your PNG filename
+    image: logos/IntelliumX-v25.png  # Change this to your PNG filename
     link: /
     # Default width/height. Uncomment if you need to change
     # width: 50
@@ -60,7 +60,7 @@ params:
       url: /about/
   sidebar:
     # Logo (from static/images/logos/___.png)
-    logo: IntelliumX-v23
+    logo: IntelliumX-v25
     sections:
       - title: User
         icon: user
@@ -133,7 +133,7 @@ params:
         icon: mobile-feed
   footer:
     # Logo (from static/images/logos/___)
-    logo: IntelliumX-v22.png
+    logo: IntelliumX-v25.png
     # Social Media Title
     socialmediatitle: Follow Us
     # Social media links (GitHub, Twitter, etc.). All are optional.

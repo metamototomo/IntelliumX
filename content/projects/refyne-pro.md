@@ -23,6 +23,12 @@ The journey began with "Refyne," a simple note-taking application designed to ex
 
 The limitations became clear during daily use: no model selection, no parameter control, no usage tracking, and no document persistence. These constraints sparked the vision for Refyne Pro, a professional-grade platform that would address real-world document creation needs while providing deep insights into AI behavior, cost optimization, and security considerations.
 
+## Architecture
+
+Refyne Pro leverages a fully serverless AWS architecture for scalability, reliability, and cost efficiency:
+
+![Architecture](2026-02-08-16-14-26.png)
+
 ## Key Features
 
 ### Multi-Model AI Engine
@@ -57,31 +63,6 @@ The limitations became clear during daily use: no model selection, no parameter 
 - **Image Support** - Upload and manage images within documents
 - **Context Menu** - Right-click actions for efficient workflow
 - **Preview System** - Review AI suggestions before applying
-
-## Architecture
-
-![Architecture](2026-02-07-18-28-21.png)
-
-Refyne Pro leverages a fully serverless AWS architecture for scalability, reliability, and cost efficiency:
-
-**Frontend:**
-- React + Vite for blazing-fast development and production builds
-- Tiptap editor for rich text editing capabilities
-- Tailwind CSS for responsive, modern UI design
-- CloudFront + S3 for global content delivery
-
-**Backend:**
-- **API Gateway (REST)** - Secure API endpoints with CORS configuration
-- **AWS Lambda (Python 3.12)** - Serverless compute for all operations
-- **Amazon Bedrock** - AI model access and invocation
-- **DynamoDB** - Document storage with automatic scaling
-- **Amazon Cognito** - OAuth 2.0 authentication and user management
-
-**Security:**
-- Authorization Code + PKCE flow for secure authentication
-- API Gateway authorization with Cognito integration
-- User-isolated data access at database level
-- HTTPS everywhere with CloudFront SSL
 
 ## Cost Optimization Strategy
 
