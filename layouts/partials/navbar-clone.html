@@ -1,0 +1,41 @@
+{{- $navbar := .Site.Params.navbar }}
+<nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/" style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 1.5rem; color: #1d1d1f !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;">
+        <img src="{{ "images/logos/logo-black.svg" | relURL }}" alt="IntelliumX Logo" style="height: 30px;">
+      </a>
+    </div>
+
+    <div id="navbar-menu" class="navbar-menu is-static">
+      <div class="navbar-end">
+        {{- range $navbar }}
+        {{- if .sublinks }}
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            {{ .title }}
+          </a>
+          <div class="navbar-dropdown">
+            {{- range .sublinks }}
+            <a href="{{ .url }}" class="navbar-item">
+              {{ .title }}
+            </a>
+            {{- end }}
+          </div>
+        </div>
+        {{- else if .button }}
+        <a href="{{ .url }}" class="navbar-item">
+          <span class="button signup-button rounded secondary-btn raised">
+            {{ .title }}
+          </span>
+        </a>
+        {{- else }}
+        <a href="{{ .url }}" class="navbar-item is-secondary">
+          {{ .title }}
+        </a>
+        {{- end }}
+        {{- end }}
+      </div>
+    </div>
+  </div>
+</nav>

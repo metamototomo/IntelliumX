@@ -1,3 +1,18 @@
+/* Logo text color */
+.navbar-brand .navbar-item span {
+  color: #1d1d1f !important;
+}
+
+/* Hide hamburger menu button */
+.navbar-burger {
+  display: none !important;
+}
+
+/* Hide sidebar */
+.sidebar {
+  display: none !important;
+}
+
 /* Reduce footer height */
 footer.footer {
   padding: 1rem 1.5rem !important;
@@ -9,9 +24,14 @@ footer.footer .footer-column {
 
 /* Highlight active menu item */
 .navbar-item.is-active {
-  color: #00d1b2 !important;
+  color: #FF9500 !important;
   font-weight: 600 !important;
-  border-bottom: 2px solid #00d1b2 !important;
+  border-bottom: 2px solid #FF9500 !important;
+}
+
+/* Hover effect for menu items */
+.navbar-item:hover:not(.is-active) {
+  color: #E67E00 !important;
 }
 
 /* Remove active styling from logo */
