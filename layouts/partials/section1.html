@@ -4,35 +4,40 @@
 {{- $buttonText := index $section1 "buttonText" }}
 {{- $buttonLink := index $section1 "buttonLink" }}
 {{- $tiles    := index $section1 "tiles" }}
-<section class="section section-feature-grey is-medium" id="section1">
+<style>
+  .section-title { color: #1d1d1f; font-weight: 700; margin-bottom: 1rem; font-size: 2.5rem; }
+  .section-subtitle { color: #6e6e73; font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+  
+  @media (max-width: 768px) {
+    .section-title { font-size: 1.75rem; }
+    .section-subtitle { font-size: 1rem; }
+  }
+</style>
+<section class="section" id="section1" style="background: #ffffff; padding: 5rem 1.5rem;">
   <div class="container">
-    <div class="title-wrapper has-text-centered">
-      <h2 class="title is-2">{{ $title }}</h2>
-      <h3 class="subtitle is-5 is-muted">{{ $subtitle }}</h3>
-      <div class="divider is-centered"></div>
+    <div class="has-text-centered" style="margin-bottom: 4rem;">
+      <h2 class="section-title">{{ $title }}</h2>
+      <p class="section-subtitle">{{ $subtitle }}</p>
     </div>
 
-    <div class="content-wrapper">
-      <div class="columns">
-        {{- range $tiles }}
-        <div class="column is-one-third">
-          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
-            <div class="card-title">
-              <h4>{{ .title }}</h4>
+    <div class="columns is-multiline" style="margin-bottom: 3rem;">
+      {{- range $tiles }}
+      <div class="column is-one-third">
+        <div style="background: #f5f5f7; border-radius: 18px; padding: 2.5rem 2rem; height: 100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.background='#e8e8ed';" onmouseout="this.style.transform='translateY(0)'; this.style.background='#f5f5f7';">
+          <div style="text-align: center;">
+            <div style="width: 70px; height: 70px; margin: 0 auto 1.5rem; background: #FF9500; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="font-size: 2.2rem;">{{ .icon }}</span>
             </div>
-            <div class="card-icon">
-                <img src="{{ printf "images/illustrations/icons/%s.svg" .icon | relURL }}">
-            </div>
-            <div class="card-text">
-                <p>{{ .text }}</p>
-            </div>
+            <h3 style="font-size: 1.4rem; font-weight: 600; color: #1d1d1f; margin-bottom: 1rem;">{{ .title }}</h3>
+            <p style="color: #6e6e73; line-height: 1.6; font-size: 0.95rem;">{{ .text }}</p>
           </div>
         </div>
-        {{- end }}
       </div>
-      <div class="has-text-centered" style="margin-top: 2rem;">
-        <a href="{{ $buttonLink }}" class="button btn-align-md accent-btn raised">{{ $buttonText }}</a>
-      </div>
+      {{- end }}
+    </div>
+    
+    <div class="has-text-centered">
+      <a href="{{ $buttonLink }}" class="button is-large" style="background: #FF9500; color: white; border: none; border-radius: 50px; padding: 1rem 2.5rem; font-weight: 500; font-size: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='#FF9F0A';" onmouseout="this.style.background='#FF9500';">{{ $buttonText }}</a>
     </div>
   </div>
 </section>

@@ -155,6 +155,17 @@
 </nav>
 
   
+<style>
+  .hero-logo { height: 300px; width: auto; }
+  .hero-main-title { color: white; font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-weight: 700; }
+  .hero-subtitle { color: #f5f5f5; font-size: 1.2rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); line-height: 1.6; }
+  
+  @media (max-width: 768px) {
+    .hero-logo { height: 180px; }
+    .hero-main-title { font-size: 2rem; }
+    .hero-subtitle { font-size: 1rem; }
+  }
+</style>
 <div class="hero-body" style="
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero-background.jpg');
   background-size: cover;
@@ -169,17 +180,17 @@
     <div class="hero-content" style="color: white;">
       
       <div style="margin-bottom: 2rem;">
-        <img src="/images/logos/IntelliumX-v25.svg" alt="IntelliumX Logo" style="height: 300px; width: auto;">
+        <img src="/images/logos/IntelliumX-v25.svg" alt="IntelliumX Logo" class="hero-logo">
       </div>
       
       
-      <h1 class="title is-1 is-bold" style="color: white; font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
+      <h1 class="hero-main-title">
         AI & Cloud Solutions Architecture
       </h1>
       
       
       
-      <h2 class="subtitle is-4" style="color: #f5f5f5; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">
+      <h2 class="hero-subtitle">
         Welcome to my tech knowledge hub! I share practical solutions, tips, and insights I&#39;ve discovered while working with AI, AWS, and modern development practices. My goal is to help fellow developers and IT professionals solve real-world challenges more efficiently.
       </h2>
       
@@ -187,17 +198,15 @@
       
       <div style="margin-top: 2rem;">
         <a class="button is-large is-primary" href="/projects/" style="
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background: #FF9500;
           border: none;
           border-radius: 50px;
           padding: 1rem 2.5rem;
-          font-weight: 600;
-          font-size: 1.2rem;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+          font-weight: 500;
+          font-size: 1rem;
+          color: white;
           transition: all 0.3s ease;
-        " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.3)';">
+        " onmouseover="this.style.background='#FF9F0A';" onmouseout="this.style.background='#FF9500';">
           Explore My Work
         </a>
       </div>
@@ -218,59 +227,60 @@
 
     
     
-<section class="section section-feature-grey is-medium" id="section1">
+<style>
+  .section-title { color: #1d1d1f; font-weight: 700; margin-bottom: 1rem; font-size: 2.5rem; }
+  .section-subtitle { color: #6e6e73; font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+  
+  @media (max-width: 768px) {
+    .section-title { font-size: 1.75rem; }
+    .section-subtitle { font-size: 1rem; }
+  }
+</style>
+<section class="section" id="section1" style="background: #ffffff; padding: 5rem 1.5rem;">
   <div class="container">
-    <div class="title-wrapper has-text-centered">
-      <h2 class="title is-2">Projects &amp; Solutions</h2>
-      <h3 class="subtitle is-5 is-muted">Innovative technology solutions and practical implementations</h3>
-      <div class="divider is-centered"></div>
+    <div class="has-text-centered" style="margin-bottom: 4rem;">
+      <h2 class="section-title">Projects &amp; Solutions</h2>
+      <p class="section-subtitle">Innovative technology solutions and practical implementations</p>
     </div>
 
-    <div class="content-wrapper">
-      <div class="columns">
-        <div class="column is-one-third">
-          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
-            <div class="card-title">
-              <h4>Cloud Architecture</h4>
+    <div class="columns is-multiline" style="margin-bottom: 3rem;">
+      <div class="column is-one-third">
+        <div style="background: #f5f5f7; border-radius: 18px; padding: 2.5rem 2rem; height: 100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.background='#e8e8ed';" onmouseout="this.style.transform='translateY(0)'; this.style.background='#f5f5f7';">
+          <div style="text-align: center;">
+            <div style="width: 70px; height: 70px; margin: 0 auto 1.5rem; background: #FF9500; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="font-size: 2.2rem;">☁️</span>
             </div>
-            <div class="card-icon">
-                <img src="/images/illustrations/icons/your-icon-name.svg">
-            </div>
-            <div class="card-text">
-                <p>Scalable AWS infrastructure, serverless applications, and cloud-native solutions designed for modern businesses.</p>
-            </div>
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
-            <div class="card-title">
-              <h4>AI Integration</h4>
-            </div>
-            <div class="card-icon">
-                <img src="/images/illustrations/icons/your-icon-name.svg">
-            </div>
-            <div class="card-text">
-                <p>Intelligent automation and AI-powered applications that transform business processes and decision-making.</p>
-            </div>
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <div class="feature-card is-bordered has-text-centered revealOnScroll delay-1" data-animation="fadeInLeft">
-            <div class="card-title">
-              <h4>DevOps Solutions</h4>
-            </div>
-            <div class="card-icon">
-                <img src="/images/illustrations/icons/your-icon-name.svg">
-            </div>
-            <div class="card-text">
-                <p>Streamlined deployment pipelines, infrastructure as code, and security implementations for reliable operations.</p>
-            </div>
+            <h3 style="font-size: 1.4rem; font-weight: 600; color: #1d1d1f; margin-bottom: 1rem;">Cloud Architecture</h3>
+            <p style="color: #6e6e73; line-height: 1.6; font-size: 0.95rem;">Scalable AWS infrastructure, serverless applications, and cloud-native solutions designed for modern businesses.</p>
           </div>
         </div>
       </div>
-      <div class="has-text-centered" style="margin-top: 2rem;">
-        <a href="/projects/" class="button btn-align-md accent-btn raised">View All Projects</a>
+      <div class="column is-one-third">
+        <div style="background: #f5f5f7; border-radius: 18px; padding: 2.5rem 2rem; height: 100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.background='#e8e8ed';" onmouseout="this.style.transform='translateY(0)'; this.style.background='#f5f5f7';">
+          <div style="text-align: center;">
+            <div style="width: 70px; height: 70px; margin: 0 auto 1.5rem; background: #FF9500; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="font-size: 2.2rem;">🤖</span>
+            </div>
+            <h3 style="font-size: 1.4rem; font-weight: 600; color: #1d1d1f; margin-bottom: 1rem;">AI Integration</h3>
+            <p style="color: #6e6e73; line-height: 1.6; font-size: 0.95rem;">Intelligent automation and AI-powered applications that transform business processes and decision-making.</p>
+          </div>
+        </div>
       </div>
+      <div class="column is-one-third">
+        <div style="background: #f5f5f7; border-radius: 18px; padding: 2.5rem 2rem; height: 100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.background='#e8e8ed';" onmouseout="this.style.transform='translateY(0)'; this.style.background='#f5f5f7';">
+          <div style="text-align: center;">
+            <div style="width: 70px; height: 70px; margin: 0 auto 1.5rem; background: #FF9500; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <span style="font-size: 2.2rem;">⚙️</span>
+            </div>
+            <h3 style="font-size: 1.4rem; font-weight: 600; color: #1d1d1f; margin-bottom: 1rem;">DevOps Solutions</h3>
+            <p style="color: #6e6e73; line-height: 1.6; font-size: 0.95rem;">Streamlined deployment pipelines, infrastructure as code, and security implementations for reliable operations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="has-text-centered">
+      <a href="/projects/" class="button is-large" style="background: #FF9500; color: white; border: none; border-radius: 50px; padding: 1rem 2.5rem; font-weight: 500; font-size: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='#FF9F0A';" onmouseout="this.style.background='#FF9500';">View All Projects</a>
     </div>
   </div>
 </section>
@@ -278,67 +288,54 @@
 
     
     
-<section class="section is-small" id="section2">
+<style>
+  .section2-title { color: #1d1d1f; font-weight: 700; margin-bottom: 1rem; font-size: 2.5rem; }
+  .section2-subtitle { color: #6e6e73; font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+  
+  @media (max-width: 768px) {
+    .section2-title { font-size: 1.75rem; }
+    .section2-subtitle { font-size: 1rem; }
+  }
+</style>
+<section class="section" id="section2" style="background: #f5f5f7; padding: 5rem 1.5rem;">
   <div class="container">
-    <div class="columns">
-      <div class="column is-4 is-centered-tablet-portrait">
-        <h1 class="title section-title">Knowledge Hub &amp; Blog</h1>
-        <h3 class="subtitle is-5 is-muted">Practical insights and technical expertise shared with the community</h3>
-        <div class="divider"></div>
+    <div class="has-text-centered" style="margin-bottom: 4rem;">
+      <h2 class="section2-title">Knowledge Hub &amp; Blog</h2>
+      <p class="section2-subtitle">Practical insights and technical expertise shared with the community</p>
+    </div>
+
+    <div style="max-width: 900px; margin: 0 auto 3rem;">
+      <div style="background: white; border-radius: 18px; padding: 2rem; margin-bottom: 1.5rem; display: flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(8px)'; this.style.background='#fafafa';" onmouseout="this.style.transform='translateX(0)'; this.style.background='white';">
+        <div style="flex-shrink: 0; width: 70px; height: 70px; background: #FF9500; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 2rem;">
+          <span style="font-size: 2.2rem;">📚</span>
+        </div>
+        <div>
+          <h3 style="font-size: 1.3rem; font-weight: 600; color: #1d1d1f; margin-bottom: 0.5rem;">Technical Tutorials</h3>
+          <p style="color: #6e6e73; line-height: 1.6; margin: 0; font-size: 0.95rem;">Step-by-step guides covering AWS services, AI implementation, and DevOps practices. Real-world solutions with practical examples and configurations.</p>
+        </div>
       </div>
-      <div class="column is-8 mt-20">
-        <article class="media icon-box" style="margin-bottom: 1.5rem;">
-          <figure class="media-left">
-            <p class="image" style="width: 120px; height: 120px;">
-              <img src="/images/illustrations/icons/laptop-globe.svg" style="width: 120px; height: 120px;">
-            </p>
-          </figure>
-          <div class="media-content mt-20">
-            <div class="content">
-              <p>
-                <span class="icon-box-title">Technical Tutorials</span>
-
-                <span class="icon-box-text">Step-by-step guides covering AWS services, AI implementation, and DevOps practices. Real-world solutions with practical examples and configurations.</span>
-              </p>
-            </div>
-          </div>
-        </article>
-        <article class="media icon-box" style="margin-bottom: 1.5rem;">
-          <figure class="media-left">
-            <p class="image" style="width: 120px; height: 120px;">
-              <img src="/images/illustrations/icons/doc-sync.svg" style="width: 120px; height: 120px;">
-            </p>
-          </figure>
-          <div class="media-content mt-20">
-            <div class="content">
-              <p>
-                <span class="icon-box-title">Industry Insights</span>
-
-                <span class="icon-box-text">Analysis of emerging technologies, best practices, and lessons learned from implementing complex technical solutions in production environments.</span>
-              </p>
-            </div>
-          </div>
-        </article>
-        <article class="media icon-box" style="margin-bottom: 1.5rem;">
-          <figure class="media-left">
-            <p class="image" style="width: 120px; height: 120px;">
-              <img src="/images/illustrations/icons/mobile-feed.svg" style="width: 120px; height: 120px;">
-            </p>
-          </figure>
-          <div class="media-content mt-20">
-            <div class="content">
-              <p>
-                <span class="icon-box-title">Problem-Solving Resources</span>
-
-                <span class="icon-box-text">Focused content designed to help developers and IT professionals overcome specific challenges and implement effective solutions efficiently.</span>
-              </p>
-            </div>
-          </div>
-        </article>
+      <div style="background: white; border-radius: 18px; padding: 2rem; margin-bottom: 1.5rem; display: flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(8px)'; this.style.background='#fafafa';" onmouseout="this.style.transform='translateX(0)'; this.style.background='white';">
+        <div style="flex-shrink: 0; width: 70px; height: 70px; background: #FF9500; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 2rem;">
+          <span style="font-size: 2.2rem;">💡</span>
+        </div>
+        <div>
+          <h3 style="font-size: 1.3rem; font-weight: 600; color: #1d1d1f; margin-bottom: 0.5rem;">Industry Insights</h3>
+          <p style="color: #6e6e73; line-height: 1.6; margin: 0; font-size: 0.95rem;">Analysis of emerging technologies, best practices, and lessons learned from implementing complex technical solutions in production environments.</p>
+        </div>
+      </div>
+      <div style="background: white; border-radius: 18px; padding: 2rem; margin-bottom: 1.5rem; display: flex; align-items: center; transition: all 0.3s ease;" onmouseover="this.style.transform='translateX(8px)'; this.style.background='#fafafa';" onmouseout="this.style.transform='translateX(0)'; this.style.background='white';">
+        <div style="flex-shrink: 0; width: 70px; height: 70px; background: #FF9500; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 2rem;">
+          <span style="font-size: 2.2rem;">🎯</span>
+        </div>
+        <div>
+          <h3 style="font-size: 1.3rem; font-weight: 600; color: #1d1d1f; margin-bottom: 0.5rem;">Problem-Solving Resources</h3>
+          <p style="color: #6e6e73; line-height: 1.6; margin: 0; font-size: 0.95rem;">Focused content designed to help developers and IT professionals overcome specific challenges and implement effective solutions efficiently.</p>
+        </div>
       </div>
     </div>
-    <div class="has-text-centered" style="margin-top: 2rem;">
-      <a href="/posts/" class="button btn-align-md accent-btn raised">Read Blog Posts</a>
+    
+    <div class="has-text-centered">
+      <a href="/posts/" class="button is-large" style="background: #FF9500; color: white; border: none; border-radius: 50px; padding: 1rem 2.5rem; font-weight: 500; font-size: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='#FF9F0A';" onmouseout="this.style.background='#FF9500';">Read Blog Posts</a>
     </div>
   </div>
 </section>
