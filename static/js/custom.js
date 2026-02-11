@@ -6,4 +6,11 @@ $(document).ready(function(){
         $('#cloned-menu-icon-wrapper').toggleClass('open');
         $('.sidebar').toggleClass('is-active');
     });
+    
+    // Handle hamburger menu toggle for mobile
+    $('.navbar-burger').on('click', function() {
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $('.navbar-burger').toggleClass('is-active');
+        $('.navbar-menu').toggleClass('is-active');
+    });
 });

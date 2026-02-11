@@ -3,9 +3,30 @@
   color: #1d1d1f !important;
 }
 
-/* Hide hamburger menu button */
+/* Show hamburger menu on mobile only */
 .navbar-burger {
-  display: none !important;
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-burger {
+    display: block !important;
+  }
+  
+  .navbar-menu {
+    display: none;
+  }
+  
+  .navbar-menu.is-active {
+    display: block !important;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+  }
+  
+  .navbar-menu .navbar-item {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f5f5f5;
+  }
 }
 
 /* Hide sidebar */
@@ -29,9 +50,19 @@ footer.footer .footer-column {
   border-bottom: 2px solid #FF9500 !important;
 }
 
-/* Hover effect for menu items */
-.navbar-item:hover:not(.is-active) {
+/* Hover effect for menu items only (not logo) */
+.navbar-end .navbar-item:hover:not(.is-active) {
   color: #E67E00 !important;
+}
+
+/* Remove any background effects from logo */
+.navbar-brand .navbar-item {
+  background: none !important;
+}
+
+.navbar-brand .navbar-item:hover {
+  background: none !important;
+  color: inherit !important;
 }
 
 /* Remove active styling from logo */
