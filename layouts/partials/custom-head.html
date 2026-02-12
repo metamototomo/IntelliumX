@@ -7,3 +7,34 @@
 <link rel="icon" href="{{ "images/favicon/favicon.png" | relURL }}" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ "images/favicon/favicon.png" | relURL }}">
 <link rel="shortcut icon" href="{{ "images/favicon/favicon.png" | relURL }}" type="image/png">
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', function(event) {
+    const navbarMenu = document.querySelector('.navbar-menu.is-active');
+    const navbarMenuClone = document.querySelector('#navbar-menu-clone.is-active');
+    const isClickOnBurger = event.target.closest('.navbar-burger');
+    const isClickOnMenu = event.target.closest('.navbar-menu');
+    
+    // Don't close if clicking on burger or menu items
+    if (isClickOnBurger || isClickOnMenu) {
+      return;
+    }
+    
+    // Close main navbar menu
+    if (navbarMenu) {
+      navbarMenu.classList.remove('is-active');
+      const mainBurger = document.querySelector('.navbar-burger');
+      if (mainBurger) mainBurger.classList.remove('is-active');
+    }
+    
+    // Close sticky navbar menu
+    if (navbarMenuClone) {
+      navbarMenuClone.classList.remove('is-active');
+      const cloneBurger = document.querySelector('#navbar-clone .navbar-burger');
+      if (cloneBurger) cloneBurger.classList.remove('is-active');
+    }
+  });
+});
+</script>

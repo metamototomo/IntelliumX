@@ -22,11 +22,13 @@ The Evolution Process Knowledge Acquisition: Through hands-on experience, profes
     
   
 
-<link rel="icon" href="/images/favicon/favicon.svg" type="image/svg+xml" sizes="any">
-<link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="32x32">
-<link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="16x16">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/favicon.png">
-<link rel="shortcut icon" href="/images/favicon/favicon.png" type="image/png">
+<link rel="icon" href="/images/favicon/favicon.svg?v=3" type="image/svg+xml" sizes="any">
+<link rel="icon" href="/images/favicon/favicon.png?v=3" type="image/png" sizes="32x32">
+<link rel="icon" href="/images/favicon/favicon.png?v=3" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/favicon.png?v=3">
+<link rel="shortcut icon" href="/images/favicon/favicon.png?v=3" type="image/png">
+
+<link rel="icon" href="/favicon.ico?v=3" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 <link rel="stylesheet" type="text/css" href="/css/icons.css">
@@ -39,6 +41,37 @@ The Evolution Process Knowledge Acquisition: Through hands-on experience, profes
 <link rel="icon" href="/images/favicon/favicon.png" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/favicon.png">
 <link rel="shortcut icon" href="/images/favicon/favicon.png" type="image/png">
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  document.addEventListener('click', function(event) {
+    const navbarMenu = document.querySelector('.navbar-menu.is-active');
+    const navbarMenuClone = document.querySelector('#navbar-menu-clone.is-active');
+    const isClickOnBurger = event.target.closest('.navbar-burger');
+    const isClickOnMenu = event.target.closest('.navbar-menu');
+    
+    
+    if (isClickOnBurger || isClickOnMenu) {
+      return;
+    }
+    
+    
+    if (navbarMenu) {
+      navbarMenu.classList.remove('is-active');
+      const mainBurger = document.querySelector('.navbar-burger');
+      if (mainBurger) mainBurger.classList.remove('is-active');
+    }
+    
+    
+    if (navbarMenuClone) {
+      navbarMenuClone.classList.remove('is-active');
+      const cloneBurger = document.querySelector('#navbar-clone .navbar-burger');
+      if (cloneBurger) cloneBurger.classList.remove('is-active');
+    }
+  });
+});
+</script>
 
   </head>
   <body>
@@ -91,9 +124,15 @@ The Evolution Process Knowledge Acquisition: Through hands-on experience, profes
       <a class="navbar-item" href="/" style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 1.5rem; color: #1d1d1f !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;">
         <img src="/images/logos/logo-black.svg" alt="IntelliumX Logo" style="height: 30px;">
       </a>
+      
+      <div class="navbar-burger burger" data-target="navbar-menu-clone">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
 
-    <div id="navbar-menu" class="navbar-menu is-static">
+    <div id="navbar-menu-clone" class="navbar-menu is-static">
       <div class="navbar-end">
         <a href="/" class="navbar-item is-secondary">
           Home
