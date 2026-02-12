@@ -1,2 +1,9 @@
 {{ $custom := resources.Get "custom.css" }}
 <link rel="stylesheet" href="{{ $custom.Permalink }}">
+
+<!-- Override any existing favicon declarations -->
+<link rel="icon" href="{{ "images/favicon/favicon.svg" | relURL }}" type="image/svg+xml" sizes="any">
+<link rel="icon" href="{{ "images/favicon/favicon.png" | relURL }}" type="image/png" sizes="32x32">
+<link rel="icon" href="{{ "images/favicon/favicon.png" | relURL }}" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "images/favicon/favicon.png" | relURL }}">
+<link rel="shortcut icon" href="{{ "images/favicon/favicon.png" | relURL }}" type="image/png">

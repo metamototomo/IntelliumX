@@ -45,14 +45,81 @@ footer.footer .footer-column {
 
 /* Highlight active menu item */
 .navbar-item.is-active {
-  color: #FF9500 !important;
+  color: #36454F !important;
   font-weight: 600 !important;
-  border-bottom: 2px solid #FF9500 !important;
+  border-bottom: 2px solid #36454F !important;
 }
 
 /* Hover effect for menu items only (not logo) */
 .navbar-end .navbar-item:hover:not(.is-active) {
-  color: #E67E00 !important;
+  color: #5A6B75 !important;
+}
+
+/* Override theme hover colors with higher specificity */
+.navbar.is-fresh .navbar-end .navbar-item:hover {
+  color: #5A6B75 !important;
+}
+
+/* Override fixed navbar hover colors */
+.navbar.is-fresh.is-fixed .navbar-end .navbar-item:hover {
+  color: #5A6B75 !important;
+}
+
+/* Override cloned navbar hover colors */
+#navbar-clone .navbar-end .navbar-item:hover {
+  color: #5A6B75 !important;
+}
+
+/* Social media icons - match footer link colors */
+.footer .level-item .icon {
+  color: #b5b5b5 !important;
+}
+
+.footer .level-item .icon:hover {
+  color: #ffffff !important;
+}
+
+/* Standardize all tag colors to charcoal */
+.tag, .tags .tag {
+  background-color: #36454F !important;
+  color: #ffffff !important;
+}
+
+.tag:hover, .tags .tag:hover {
+  background-color: #5A6B75 !important;
+  color: #ffffff !important;
+}
+
+/* Better project layout for tablets */
+@media screen and (min-width: 769px) and (max-width: 1215px) {
+  .projects-page .column.is-8 {
+    width: 90% !important;
+  }
+  
+  .projects-page .columns.is-gapless .column.is-7 {
+    width: 60% !important;
+  }
+  
+  .projects-page .columns.is-gapless .column.is-5 {
+    width: 40% !important;
+  }
+}
+
+/* Project cards - match Blog/About content width */
+.projects-page .card {
+  margin: 0 0 2.5rem 0 !important;
+}
+
+/* Switch to vertical layout on narrow screens */
+@media screen and (max-width: 768px) {
+  .projects-page .columns.is-gapless {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .projects-page .columns.is-gapless .column {
+    width: 100% !important;
+  }
 }
 
 /* Remove any background effects from logo */

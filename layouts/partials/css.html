@@ -11,7 +11,12 @@
 {{- $fontFace     := replace $fontName " " "+" }}
 {{- $fontSizes    := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) "," }}
 {{- $fontUrl      := printf "https://fonts.googleapis.com/css?family=%s:%s" $fontFace $fontSizes }}
-<link rel="icon" type="image/png" href="{{ "images/favicon.png" | relURL }}" />
+<!-- Custom favicon declarations -->
+<link rel="icon" href="{{ "images/favicon/favicon.svg" | relURL }}" type="image/svg+xml" sizes="any">
+<link rel="icon" href="{{ "images/favicon/favicon.png" | relURL }}" type="image/png" sizes="32x32">
+<link rel="icon" href="{{ "images/favicon/favicon.png" | relURL }}" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "images/favicon/favicon.png" | relURL }}">
+<link rel="shortcut icon" href="{{ "images/favicon/favicon.png" | relURL }}" type="image/png">
 <link href="{{ $fontUrl }}" rel="stylesheet">
 {{- if $inServerMode }}
 {{- $css := resources.Get $sass | toCSS $cssOpts }}
@@ -21,5 +26,4 @@
 <link rel="stylesheet" type="text/css" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- end }}
 <link rel="stylesheet" type="text/css" href="{{ "css/icons.css" | relURL }}">
-{{ $custom := resources.Get "custom.css" }}
-<link rel="stylesheet" href="{{ $custom.Permalink }}">
+{{ partial "custom-head.html" . }}

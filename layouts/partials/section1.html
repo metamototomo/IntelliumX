@@ -25,8 +25,8 @@
       <div class="column is-one-third">
         <div style="background: #f5f5f7; border-radius: 18px; padding: 2.5rem 2rem; height: 100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.background='#e8e8ed';" onmouseout="this.style.transform='translateY(0)'; this.style.background='#f5f5f7';">
           <div style="text-align: center;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 1.5rem; background: #FF9500; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-              <span style="font-size: 2.2rem;">{{ .icon }}</span>
+            <div style="width: 70px; height: 70px; margin: 0 auto 1.5rem; background: #232F3E; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+              <img src="/images/icons/{{ .icon }}" alt="{{ .title }}" style="width: 40px; height: 40px;">
             </div>
             <h3 style="font-size: 1.4rem; font-weight: 600; color: #1d1d1f; margin-bottom: 1rem;">{{ .title }}</h3>
             <p style="color: #6e6e73; line-height: 1.6; font-size: 0.95rem;">{{ .text }}</p>
@@ -37,7 +37,7 @@
     </div>
     
     <div class="has-text-centered">
-      <a href="{{ $buttonLink }}" class="button is-large" style="background: #FF9500; color: white; border: none; border-radius: 50px; padding: 1rem 2.5rem; font-weight: 500; font-size: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='#FF9F0A';" onmouseout="this.style.background='#FF9500';">{{ $buttonText }}</a>
+      <a href="{{ $buttonLink }}" class="button is-large" style="background: #232F3E; color: white; border: none; border-radius: 50px; padding: 1rem 2.5rem; font-weight: 500; font-size: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='#1a252f';" onmouseout="this.style.background='#232F3E';">{{ $buttonText }}</a>
     </div>
   </div>
 </section>

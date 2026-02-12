@@ -47,7 +47,7 @@ params:
       professionals solve real-world challenges more efficiently.
     buttontext: Explore My Work
     buttonlink: /projects/
-    image: hero-background.jpg # Add your hero background image here
+    image: hero/hero-image.jpg # Add your hero background image here
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
     - title: Home
@@ -65,15 +65,15 @@ params:
     buttonLink: /projects/
     tiles:
       - title: Cloud Architecture
-        icon: ☁️
+        icon: cloud.svg
         text: Scalable AWS infrastructure, serverless applications, and cloud-native
           solutions designed for modern businesses.
       - title: AI Integration
-        icon: 🤖
+        icon: robot.svg
         text: Intelligent automation and AI-powered applications that transform
           business processes and decision-making.
       - title: DevOps Solutions
-        icon: ⚙️
+        icon: gear.svg
         text: Streamlined deployment pipelines, infrastructure as code, and security
           implementations for reliable operations.
   section2:
@@ -86,17 +86,17 @@ params:
         text: Step-by-step guides covering AWS services, AI implementation, and DevOps
           practices. Real-world solutions with practical examples and
           configurations.
-        icon: 📚
+        icon: books.svg
       - title: Industry Insights
         text: Analysis of emerging technologies, best practices, and lessons learned
           from implementing complex technical solutions in production
           environments.
-        icon: 💡
+        icon: light.svg
       - title: Problem-Solving Resources
         text: Focused content designed to help developers and IT professionals
           overcome specific challenges and implement effective solutions
           efficiently.
-        icon: 🎯
+        icon: target.svg
   footer:
     # Logo (from static/images/logos/___)
     logo: IntelliumX-v25.png
@@ -111,7 +111,7 @@ params:
       - link: https://github.com/metamototomo
         icon: github
         target: _blank
-    bulmalogo: true
+    bulmalogo: false
     quicklinks:
       column1:
         title: Navigate
