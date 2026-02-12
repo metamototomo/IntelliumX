@@ -29,7 +29,7 @@ params:
   # preloader: false
   navbarlogo:
     # Logo (from static/images/logos/___)
-    image: logos/IntelliumX-v25.png  # Change this to your PNG filename
+    image: logos/stream.svg  # Change this to your PNG filename
     link: /
     # Default width/height. Uncomment if you need to change
     # width: 50
