@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-02-13T11:50:19+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-02-13T11:50:19+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-02-13T11:50:19+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-02-13T11:50:19+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/technology/</loc>
+    <lastmod>2026-02-13T11:50:19+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/troubleshooting/</loc>
+    <lastmod>2026-02-13T11:50:19+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/yed/</loc>
+    <lastmod>2026-02-13T11:50:19+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/yed-reset-toolbar/</loc>
+    <lastmod>2026-02-13T11:50:19+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/automation/</loc>
+    <lastmod>2026-02-13T11:49:53+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/espanso-setup/</loc>
+    <lastmod>2026-02-13T11:49:53+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mac/</loc>
+    <lastmod>2026-02-13T11:49:53+11:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
@@ -14,16 +47,10 @@
     <loc>http://localhost:1313/tags/aws/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/cloud-projects/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/dynamodb/</loc>
-    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/oauth-2.0/</loc>
@@ -38,19 +65,10 @@
     <loc>http://localhost:1313/tags/serverless/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-01-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-01-19T19:01:12+11:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2026-01-19T19:01:12+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/python-enable-virtual-environment/</loc>
-    <lastmod>2026-01-19T19:01:12+11:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/technology/</loc>
     <lastmod>2026-01-19T19:01:12+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/python-check-version/</loc>
@@ -151,9 +169,6 @@
   </url><url>
     <loc>http://localhost:1313/posts/aws-credentials-for-cli-profile/</loc>
     <lastmod>2025-12-23T23:19:52+11:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/mac/</loc>
-    <lastmod>2025-12-21T17:13:50+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/what-is-zone-identifier/</loc>
     <lastmod>2025-12-21T17:13:50+11:00</lastmod>
@@ -507,9 +522,6 @@
     <lastmod>2025-02-09T08:04:22+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/study-amplify/</loc>
-    <lastmod>2025-01-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/automation/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/projects/cafe-order-system/</loc>

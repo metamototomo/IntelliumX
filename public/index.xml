@@ -6,8 +6,22 @@
     <description>Recent content on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Feb 2026 11:50:19 +1100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>yEd - Reset Toolbar</title>
+      <link>http://localhost:1313/posts/yed-reset-toolbar/</link>
+      <pubDate>Fri, 13 Feb 2026 11:50:19 +1100</pubDate>
+      <guid>http://localhost:1313/posts/yed-reset-toolbar/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;2026-02-13-11-56-40.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Delete *.layout file&lt;/p&gt;&#xA;&lt;p&gt;Remove &lt;code&gt;C:\Users\{USER ACCOUNT}\AppData\Roaming\yWorks\yEd\yed-?_?.layout&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Espanso - Installation and Setup</title>
+      <link>http://localhost:1313/posts/espanso-setup/</link>
+      <pubDate>Fri, 13 Feb 2026 11:49:53 +1100</pubDate>
+      <guid>http://localhost:1313/posts/espanso-setup/</guid>
+      <description>&lt;h1 id=&#34;install-espanso-macos-using-homebrew&#34;&gt;Install Espanso (macOS) Using Homebrew&lt;/h1&gt;&#xA;&lt;p&gt;Open Terminal and install Espanso&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install espanso&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Start the espanso service&#xA;espanso service register&#xA;espanso service start&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Check the status&#xA;~ ❯ espanso service status &#xA;espanso is running&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Restart the service if required&#xA;~ ❯ espanso service restart&#xA;espanso started correctly!&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Unregister and Register the service if required&#xA;~ ❯ espanso service unregister&#xA;service unregistered correctly!&#xA;~ ❯ espanso service register&#xA;service registered correctly!&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;&#xA;&lt;h1 id=&#34;enable-accessibility-permission-is-enabled&#34;&gt;Enable Accessibility Permission Is Enabled&lt;/h1&gt;&#xA;&lt;p&gt;Go to: &lt;code&gt;System Settings → Privacy &amp;amp; Security → Accessibility&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>AI-Powered Document Enhancement System</title>
       <link>http://localhost:1313/projects/refyne-pro/</link>
