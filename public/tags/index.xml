@@ -2,668 +2,668 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on IntelliumX</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://www.intelliumx.com/tags/</link>
     <description>Recent content in Tags on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Feb 2026 11:50:19 +1100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.intelliumx.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Troubleshooting</title>
-      <link>http://localhost:1313/tags/troubleshooting/</link>
+      <link>https://www.intelliumx.com/tags/troubleshooting/</link>
       <pubDate>Fri, 13 Feb 2026 11:50:19 +1100</pubDate>
-      <guid>http://localhost:1313/tags/troubleshooting/</guid>
+      <guid>https://www.intelliumx.com/tags/troubleshooting/</guid>
       <description></description>
     </item>
     <item>
       <title>YEd</title>
-      <link>http://localhost:1313/tags/yed/</link>
+      <link>https://www.intelliumx.com/tags/yed/</link>
       <pubDate>Fri, 13 Feb 2026 11:50:19 +1100</pubDate>
-      <guid>http://localhost:1313/tags/yed/</guid>
+      <guid>https://www.intelliumx.com/tags/yed/</guid>
       <description></description>
     </item>
     <item>
       <title>Automation</title>
-      <link>http://localhost:1313/tags/automation/</link>
+      <link>https://www.intelliumx.com/tags/automation/</link>
       <pubDate>Fri, 13 Feb 2026 11:49:53 +1100</pubDate>
-      <guid>http://localhost:1313/tags/automation/</guid>
+      <guid>https://www.intelliumx.com/tags/automation/</guid>
       <description></description>
     </item>
     <item>
       <title>Mac</title>
-      <link>http://localhost:1313/tags/mac/</link>
+      <link>https://www.intelliumx.com/tags/mac/</link>
       <pubDate>Fri, 13 Feb 2026 11:49:53 +1100</pubDate>
-      <guid>http://localhost:1313/tags/mac/</guid>
+      <guid>https://www.intelliumx.com/tags/mac/</guid>
       <description></description>
     </item>
     <item>
       <title>AI</title>
-      <link>http://localhost:1313/tags/ai/</link>
+      <link>https://www.intelliumx.com/tags/ai/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ai/</guid>
+      <guid>https://www.intelliumx.com/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Amazon Bedrock</title>
-      <link>http://localhost:1313/tags/amazon-bedrock/</link>
+      <link>https://www.intelliumx.com/tags/amazon-bedrock/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/amazon-bedrock/</guid>
+      <guid>https://www.intelliumx.com/tags/amazon-bedrock/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS</title>
-      <link>http://localhost:1313/tags/aws/</link>
+      <link>https://www.intelliumx.com/tags/aws/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/aws/</guid>
+      <guid>https://www.intelliumx.com/tags/aws/</guid>
       <description></description>
     </item>
     <item>
       <title>DynamoDB</title>
-      <link>http://localhost:1313/tags/dynamodb/</link>
+      <link>https://www.intelliumx.com/tags/dynamodb/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/dynamodb/</guid>
+      <guid>https://www.intelliumx.com/tags/dynamodb/</guid>
       <description></description>
     </item>
     <item>
       <title>OAuth 2.0</title>
-      <link>http://localhost:1313/tags/oauth-2.0/</link>
+      <link>https://www.intelliumx.com/tags/oauth-2.0/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/oauth-2.0/</guid>
+      <guid>https://www.intelliumx.com/tags/oauth-2.0/</guid>
       <description></description>
     </item>
     <item>
       <title>React</title>
-      <link>http://localhost:1313/tags/react/</link>
+      <link>https://www.intelliumx.com/tags/react/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/react/</guid>
+      <guid>https://www.intelliumx.com/tags/react/</guid>
       <description></description>
     </item>
     <item>
       <title>Serverless</title>
-      <link>http://localhost:1313/tags/serverless/</link>
+      <link>https://www.intelliumx.com/tags/serverless/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/serverless/</guid>
+      <guid>https://www.intelliumx.com/tags/serverless/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
+      <link>https://www.intelliumx.com/tags/python/</link>
       <pubDate>Mon, 19 Jan 2026 19:01:12 +1100</pubDate>
-      <guid>http://localhost:1313/tags/python/</guid>
+      <guid>https://www.intelliumx.com/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>CloudFlare</title>
-      <link>http://localhost:1313/tags/cloudflare/</link>
+      <link>https://www.intelliumx.com/tags/cloudflare/</link>
       <pubDate>Sun, 18 Jan 2026 21:58:22 +1100</pubDate>
-      <guid>http://localhost:1313/tags/cloudflare/</guid>
+      <guid>https://www.intelliumx.com/tags/cloudflare/</guid>
       <description></description>
     </item>
     <item>
       <title>CloudFront</title>
-      <link>http://localhost:1313/tags/cloudfront/</link>
+      <link>https://www.intelliumx.com/tags/cloudfront/</link>
       <pubDate>Sun, 18 Jan 2026 21:58:22 +1100</pubDate>
-      <guid>http://localhost:1313/tags/cloudfront/</guid>
+      <guid>https://www.intelliumx.com/tags/cloudfront/</guid>
       <description></description>
     </item>
     <item>
       <title>Custom Domain</title>
-      <link>http://localhost:1313/tags/custom-domain/</link>
+      <link>https://www.intelliumx.com/tags/custom-domain/</link>
       <pubDate>Sun, 18 Jan 2026 21:58:22 +1100</pubDate>
-      <guid>http://localhost:1313/tags/custom-domain/</guid>
+      <guid>https://www.intelliumx.com/tags/custom-domain/</guid>
       <description></description>
     </item>
     <item>
       <title>SSL</title>
-      <link>http://localhost:1313/tags/ssl/</link>
+      <link>https://www.intelliumx.com/tags/ssl/</link>
       <pubDate>Sun, 18 Jan 2026 21:58:22 +1100</pubDate>
-      <guid>http://localhost:1313/tags/ssl/</guid>
+      <guid>https://www.intelliumx.com/tags/ssl/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>http://localhost:1313/tags/git/</link>
+      <link>https://www.intelliumx.com/tags/git/</link>
       <pubDate>Tue, 13 Jan 2026 23:28:39 +1100</pubDate>
-      <guid>http://localhost:1313/tags/git/</guid>
+      <guid>https://www.intelliumx.com/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>GitHub</title>
-      <link>http://localhost:1313/tags/github/</link>
+      <link>https://www.intelliumx.com/tags/github/</link>
       <pubDate>Tue, 13 Jan 2026 23:28:39 +1100</pubDate>
-      <guid>http://localhost:1313/tags/github/</guid>
+      <guid>https://www.intelliumx.com/tags/github/</guid>
       <description></description>
     </item>
     <item>
       <title>Client Certificate</title>
-      <link>http://localhost:1313/tags/client-certificate/</link>
+      <link>https://www.intelliumx.com/tags/client-certificate/</link>
       <pubDate>Sun, 11 Jan 2026 12:10:31 +1100</pubDate>
-      <guid>http://localhost:1313/tags/client-certificate/</guid>
+      <guid>https://www.intelliumx.com/tags/client-certificate/</guid>
       <description></description>
     </item>
     <item>
       <title>NGINX</title>
-      <link>http://localhost:1313/tags/nginx/</link>
+      <link>https://www.intelliumx.com/tags/nginx/</link>
       <pubDate>Sun, 11 Jan 2026 12:10:31 +1100</pubDate>
-      <guid>http://localhost:1313/tags/nginx/</guid>
+      <guid>https://www.intelliumx.com/tags/nginx/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
-      <link>http://localhost:1313/tags/security/</link>
+      <link>https://www.intelliumx.com/tags/security/</link>
       <pubDate>Sun, 11 Jan 2026 12:10:31 +1100</pubDate>
-      <guid>http://localhost:1313/tags/security/</guid>
+      <guid>https://www.intelliumx.com/tags/security/</guid>
       <description></description>
     </item>
     <item>
       <title>SSL Certificate</title>
-      <link>http://localhost:1313/tags/ssl-certificate/</link>
+      <link>https://www.intelliumx.com/tags/ssl-certificate/</link>
       <pubDate>Sun, 11 Jan 2026 12:10:31 +1100</pubDate>
-      <guid>http://localhost:1313/tags/ssl-certificate/</guid>
+      <guid>https://www.intelliumx.com/tags/ssl-certificate/</guid>
       <description></description>
     </item>
     <item>
       <title>Proxy</title>
-      <link>http://localhost:1313/tags/proxy/</link>
+      <link>https://www.intelliumx.com/tags/proxy/</link>
       <pubDate>Sun, 11 Jan 2026 11:48:35 +1100</pubDate>
-      <guid>http://localhost:1313/tags/proxy/</guid>
+      <guid>https://www.intelliumx.com/tags/proxy/</guid>
       <description></description>
     </item>
     <item>
       <title>WinHTTP</title>
-      <link>http://localhost:1313/tags/winhttp/</link>
+      <link>https://www.intelliumx.com/tags/winhttp/</link>
       <pubDate>Sun, 11 Jan 2026 11:48:35 +1100</pubDate>
-      <guid>http://localhost:1313/tags/winhttp/</guid>
+      <guid>https://www.intelliumx.com/tags/winhttp/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/tags/linux/</link>
+      <link>https://www.intelliumx.com/tags/linux/</link>
       <pubDate>Sun, 11 Jan 2026 10:42:59 +1100</pubDate>
-      <guid>http://localhost:1313/tags/linux/</guid>
+      <guid>https://www.intelliumx.com/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>SSH</title>
-      <link>http://localhost:1313/tags/ssh/</link>
+      <link>https://www.intelliumx.com/tags/ssh/</link>
       <pubDate>Sun, 11 Jan 2026 10:42:59 +1100</pubDate>
-      <guid>http://localhost:1313/tags/ssh/</guid>
+      <guid>https://www.intelliumx.com/tags/ssh/</guid>
       <description></description>
     </item>
     <item>
       <title>WSL</title>
-      <link>http://localhost:1313/tags/wsl/</link>
+      <link>https://www.intelliumx.com/tags/wsl/</link>
       <pubDate>Sat, 10 Jan 2026 23:31:42 +1100</pubDate>
-      <guid>http://localhost:1313/tags/wsl/</guid>
+      <guid>https://www.intelliumx.com/tags/wsl/</guid>
       <description></description>
     </item>
     <item>
       <title>Terminal</title>
-      <link>http://localhost:1313/tags/terminal/</link>
+      <link>https://www.intelliumx.com/tags/terminal/</link>
       <pubDate>Sun, 21 Dec 2025 16:49:48 +1100</pubDate>
-      <guid>http://localhost:1313/tags/terminal/</guid>
+      <guid>https://www.intelliumx.com/tags/terminal/</guid>
       <description></description>
     </item>
     <item>
       <title>Amazon Cognito User Pool</title>
-      <link>http://localhost:1313/tags/amazon-cognito-user-pool/</link>
+      <link>https://www.intelliumx.com/tags/amazon-cognito-user-pool/</link>
       <pubDate>Mon, 11 Aug 2025 08:26:23 +1000</pubDate>
-      <guid>http://localhost:1313/tags/amazon-cognito-user-pool/</guid>
+      <guid>https://www.intelliumx.com/tags/amazon-cognito-user-pool/</guid>
       <description></description>
     </item>
     <item>
       <title>Azure AD</title>
-      <link>http://localhost:1313/tags/azure-ad/</link>
+      <link>https://www.intelliumx.com/tags/azure-ad/</link>
       <pubDate>Mon, 11 Aug 2025 08:26:23 +1000</pubDate>
-      <guid>http://localhost:1313/tags/azure-ad/</guid>
+      <guid>https://www.intelliumx.com/tags/azure-ad/</guid>
       <description></description>
     </item>
     <item>
       <title>Federation Authentication</title>
-      <link>http://localhost:1313/tags/federation-authentication/</link>
+      <link>https://www.intelliumx.com/tags/federation-authentication/</link>
       <pubDate>Mon, 11 Aug 2025 08:26:23 +1000</pubDate>
-      <guid>http://localhost:1313/tags/federation-authentication/</guid>
+      <guid>https://www.intelliumx.com/tags/federation-authentication/</guid>
       <description></description>
     </item>
     <item>
       <title>Microsoft Entra ID</title>
-      <link>http://localhost:1313/tags/microsoft-entra-id/</link>
+      <link>https://www.intelliumx.com/tags/microsoft-entra-id/</link>
       <pubDate>Mon, 11 Aug 2025 08:26:23 +1000</pubDate>
-      <guid>http://localhost:1313/tags/microsoft-entra-id/</guid>
+      <guid>https://www.intelliumx.com/tags/microsoft-entra-id/</guid>
       <description></description>
     </item>
     <item>
       <title>OIDC</title>
-      <link>http://localhost:1313/tags/oidc/</link>
+      <link>https://www.intelliumx.com/tags/oidc/</link>
       <pubDate>Mon, 11 Aug 2025 08:26:23 +1000</pubDate>
-      <guid>http://localhost:1313/tags/oidc/</guid>
+      <guid>https://www.intelliumx.com/tags/oidc/</guid>
       <description></description>
     </item>
     <item>
       <title>SAML</title>
-      <link>http://localhost:1313/tags/saml/</link>
+      <link>https://www.intelliumx.com/tags/saml/</link>
       <pubDate>Sun, 10 Aug 2025 11:46:09 +1000</pubDate>
-      <guid>http://localhost:1313/tags/saml/</guid>
+      <guid>https://www.intelliumx.com/tags/saml/</guid>
       <description></description>
     </item>
     <item>
       <title>Tag</title>
-      <link>http://localhost:1313/tags/tag/</link>
+      <link>https://www.intelliumx.com/tags/tag/</link>
       <pubDate>Wed, 25 Jun 2025 20:40:01 +1000</pubDate>
-      <guid>http://localhost:1313/tags/tag/</guid>
+      <guid>https://www.intelliumx.com/tags/tag/</guid>
       <description></description>
     </item>
     <item>
       <title>API Gateway</title>
-      <link>http://localhost:1313/tags/api-gateway/</link>
+      <link>https://www.intelliumx.com/tags/api-gateway/</link>
       <pubDate>Sun, 15 Jun 2025 17:49:13 +1000</pubDate>
-      <guid>http://localhost:1313/tags/api-gateway/</guid>
+      <guid>https://www.intelliumx.com/tags/api-gateway/</guid>
       <description></description>
     </item>
     <item>
       <title>Lambda</title>
-      <link>http://localhost:1313/tags/lambda/</link>
+      <link>https://www.intelliumx.com/tags/lambda/</link>
       <pubDate>Sun, 15 Jun 2025 17:10:13 +1000</pubDate>
-      <guid>http://localhost:1313/tags/lambda/</guid>
+      <guid>https://www.intelliumx.com/tags/lambda/</guid>
       <description></description>
     </item>
     <item>
       <title>IAM</title>
-      <link>http://localhost:1313/tags/iam/</link>
+      <link>https://www.intelliumx.com/tags/iam/</link>
       <pubDate>Sun, 15 Jun 2025 17:00:19 +1000</pubDate>
-      <guid>http://localhost:1313/tags/iam/</guid>
+      <guid>https://www.intelliumx.com/tags/iam/</guid>
       <description></description>
     </item>
     <item>
       <title>VS Code</title>
-      <link>http://localhost:1313/tags/vs-code/</link>
+      <link>https://www.intelliumx.com/tags/vs-code/</link>
       <pubDate>Wed, 11 Jun 2025 11:02:17 +1000</pubDate>
-      <guid>http://localhost:1313/tags/vs-code/</guid>
+      <guid>https://www.intelliumx.com/tags/vs-code/</guid>
       <description></description>
     </item>
     <item>
       <title>Azure DevOps</title>
-      <link>http://localhost:1313/tags/azure-devops/</link>
+      <link>https://www.intelliumx.com/tags/azure-devops/</link>
       <pubDate>Tue, 20 May 2025 09:30:14 +1000</pubDate>
-      <guid>http://localhost:1313/tags/azure-devops/</guid>
+      <guid>https://www.intelliumx.com/tags/azure-devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Memory Dump</title>
-      <link>http://localhost:1313/tags/memory-dump/</link>
+      <link>https://www.intelliumx.com/tags/memory-dump/</link>
       <pubDate>Mon, 19 May 2025 18:37:55 +1000</pubDate>
-      <guid>http://localhost:1313/tags/memory-dump/</guid>
+      <guid>https://www.intelliumx.com/tags/memory-dump/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows</title>
-      <link>http://localhost:1313/tags/windows/</link>
+      <link>https://www.intelliumx.com/tags/windows/</link>
       <pubDate>Mon, 19 May 2025 18:37:55 +1000</pubDate>
-      <guid>http://localhost:1313/tags/windows/</guid>
+      <guid>https://www.intelliumx.com/tags/windows/</guid>
       <description></description>
     </item>
     <item>
       <title>GRPC</title>
-      <link>http://localhost:1313/tags/grpc/</link>
+      <link>https://www.intelliumx.com/tags/grpc/</link>
       <pubDate>Thu, 24 Apr 2025 23:01:47 +1000</pubDate>
-      <guid>http://localhost:1313/tags/grpc/</guid>
+      <guid>https://www.intelliumx.com/tags/grpc/</guid>
       <description></description>
     </item>
     <item>
       <title>Load Balancer</title>
-      <link>http://localhost:1313/tags/load-balancer/</link>
+      <link>https://www.intelliumx.com/tags/load-balancer/</link>
       <pubDate>Thu, 24 Apr 2025 23:01:47 +1000</pubDate>
-      <guid>http://localhost:1313/tags/load-balancer/</guid>
+      <guid>https://www.intelliumx.com/tags/load-balancer/</guid>
       <description></description>
     </item>
     <item>
       <title>WCF</title>
-      <link>http://localhost:1313/tags/wcf/</link>
+      <link>https://www.intelliumx.com/tags/wcf/</link>
       <pubDate>Thu, 24 Apr 2025 23:01:47 +1000</pubDate>
-      <guid>http://localhost:1313/tags/wcf/</guid>
+      <guid>https://www.intelliumx.com/tags/wcf/</guid>
       <description></description>
     </item>
     <item>
       <title>OpenSSL</title>
-      <link>http://localhost:1313/tags/openssl/</link>
+      <link>https://www.intelliumx.com/tags/openssl/</link>
       <pubDate>Thu, 24 Apr 2025 17:41:29 +1000</pubDate>
-      <guid>http://localhost:1313/tags/openssl/</guid>
+      <guid>https://www.intelliumx.com/tags/openssl/</guid>
       <description></description>
     </item>
     <item>
       <title>Container</title>
-      <link>http://localhost:1313/tags/container/</link>
+      <link>https://www.intelliumx.com/tags/container/</link>
       <pubDate>Sun, 13 Apr 2025 22:30:23 +1000</pubDate>
-      <guid>http://localhost:1313/tags/container/</guid>
+      <guid>https://www.intelliumx.com/tags/container/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/tags/docker/</link>
+      <link>https://www.intelliumx.com/tags/docker/</link>
       <pubDate>Sun, 13 Apr 2025 22:30:23 +1000</pubDate>
-      <guid>http://localhost:1313/tags/docker/</guid>
+      <guid>https://www.intelliumx.com/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>HAProxy</title>
-      <link>http://localhost:1313/tags/haproxy/</link>
+      <link>https://www.intelliumx.com/tags/haproxy/</link>
       <pubDate>Sun, 13 Apr 2025 22:30:23 +1000</pubDate>
-      <guid>http://localhost:1313/tags/haproxy/</guid>
+      <guid>https://www.intelliumx.com/tags/haproxy/</guid>
       <description></description>
     </item>
     <item>
       <title>BIG-IP</title>
-      <link>http://localhost:1313/tags/big-ip/</link>
+      <link>https://www.intelliumx.com/tags/big-ip/</link>
       <pubDate>Sun, 13 Apr 2025 20:07:14 +1000</pubDate>
-      <guid>http://localhost:1313/tags/big-ip/</guid>
+      <guid>https://www.intelliumx.com/tags/big-ip/</guid>
       <description></description>
     </item>
     <item>
       <title>F5</title>
-      <link>http://localhost:1313/tags/f5/</link>
+      <link>https://www.intelliumx.com/tags/f5/</link>
       <pubDate>Sun, 13 Apr 2025 20:07:14 +1000</pubDate>
-      <guid>http://localhost:1313/tags/f5/</guid>
+      <guid>https://www.intelliumx.com/tags/f5/</guid>
       <description></description>
     </item>
     <item>
       <title>Active Directory</title>
-      <link>http://localhost:1313/tags/active-directory/</link>
+      <link>https://www.intelliumx.com/tags/active-directory/</link>
       <pubDate>Sun, 13 Apr 2025 07:25:43 +1000</pubDate>
-      <guid>http://localhost:1313/tags/active-directory/</guid>
+      <guid>https://www.intelliumx.com/tags/active-directory/</guid>
       <description></description>
     </item>
     <item>
       <title>Hostname</title>
-      <link>http://localhost:1313/tags/hostname/</link>
+      <link>https://www.intelliumx.com/tags/hostname/</link>
       <pubDate>Sun, 13 Apr 2025 07:25:43 +1000</pubDate>
-      <guid>http://localhost:1313/tags/hostname/</guid>
+      <guid>https://www.intelliumx.com/tags/hostname/</guid>
       <description></description>
     </item>
     <item>
       <title>Backup</title>
-      <link>http://localhost:1313/tags/backup/</link>
+      <link>https://www.intelliumx.com/tags/backup/</link>
       <pubDate>Thu, 03 Apr 2025 16:43:34 +1100</pubDate>
-      <guid>http://localhost:1313/tags/backup/</guid>
+      <guid>https://www.intelliumx.com/tags/backup/</guid>
       <description></description>
     </item>
     <item>
       <title>SSM</title>
-      <link>http://localhost:1313/tags/ssm/</link>
+      <link>https://www.intelliumx.com/tags/ssm/</link>
       <pubDate>Thu, 03 Apr 2025 16:43:34 +1100</pubDate>
-      <guid>http://localhost:1313/tags/ssm/</guid>
+      <guid>https://www.intelliumx.com/tags/ssm/</guid>
       <description></description>
     </item>
     <item>
       <title>SQL Server</title>
-      <link>http://localhost:1313/tags/sql-server/</link>
+      <link>https://www.intelliumx.com/tags/sql-server/</link>
       <pubDate>Wed, 02 Apr 2025 19:41:08 +1100</pubDate>
-      <guid>http://localhost:1313/tags/sql-server/</guid>
+      <guid>https://www.intelliumx.com/tags/sql-server/</guid>
       <description></description>
     </item>
     <item>
       <title>SQLCMD</title>
-      <link>http://localhost:1313/tags/sqlcmd/</link>
+      <link>https://www.intelliumx.com/tags/sqlcmd/</link>
       <pubDate>Wed, 02 Apr 2025 19:41:08 +1100</pubDate>
-      <guid>http://localhost:1313/tags/sqlcmd/</guid>
+      <guid>https://www.intelliumx.com/tags/sqlcmd/</guid>
       <description></description>
     </item>
     <item>
       <title>S3</title>
-      <link>http://localhost:1313/tags/s3/</link>
+      <link>https://www.intelliumx.com/tags/s3/</link>
       <pubDate>Wed, 02 Apr 2025 19:20:15 +1100</pubDate>
-      <guid>http://localhost:1313/tags/s3/</guid>
+      <guid>https://www.intelliumx.com/tags/s3/</guid>
       <description></description>
     </item>
     <item>
       <title>Certificate</title>
-      <link>http://localhost:1313/tags/certificate/</link>
+      <link>https://www.intelliumx.com/tags/certificate/</link>
       <pubDate>Sun, 30 Mar 2025 21:40:32 +1100</pubDate>
-      <guid>http://localhost:1313/tags/certificate/</guid>
+      <guid>https://www.intelliumx.com/tags/certificate/</guid>
       <description></description>
     </item>
     <item>
       <title>RabbitMQ</title>
-      <link>http://localhost:1313/tags/rabbitmq/</link>
+      <link>https://www.intelliumx.com/tags/rabbitmq/</link>
       <pubDate>Sun, 30 Mar 2025 21:40:32 +1100</pubDate>
-      <guid>http://localhost:1313/tags/rabbitmq/</guid>
+      <guid>https://www.intelliumx.com/tags/rabbitmq/</guid>
       <description></description>
     </item>
     <item>
       <title>ECR</title>
-      <link>http://localhost:1313/tags/ecr/</link>
+      <link>https://www.intelliumx.com/tags/ecr/</link>
       <pubDate>Sat, 29 Mar 2025 00:10:31 +1100</pubDate>
-      <guid>http://localhost:1313/tags/ecr/</guid>
+      <guid>https://www.intelliumx.com/tags/ecr/</guid>
       <description></description>
     </item>
     <item>
       <title>Image Builder</title>
-      <link>http://localhost:1313/tags/image-builder/</link>
+      <link>https://www.intelliumx.com/tags/image-builder/</link>
       <pubDate>Thu, 27 Mar 2025 14:48:49 +1100</pubDate>
-      <guid>http://localhost:1313/tags/image-builder/</guid>
+      <guid>https://www.intelliumx.com/tags/image-builder/</guid>
       <description></description>
     </item>
     <item>
       <title>Machine Image</title>
-      <link>http://localhost:1313/tags/machine-image/</link>
+      <link>https://www.intelliumx.com/tags/machine-image/</link>
       <pubDate>Thu, 27 Mar 2025 09:34:06 +1000</pubDate>
-      <guid>http://localhost:1313/tags/machine-image/</guid>
+      <guid>https://www.intelliumx.com/tags/machine-image/</guid>
       <description></description>
     </item>
     <item>
       <title>Sysprep</title>
-      <link>http://localhost:1313/tags/sysprep/</link>
+      <link>https://www.intelliumx.com/tags/sysprep/</link>
       <pubDate>Thu, 27 Mar 2025 09:34:06 +1000</pubDate>
-      <guid>http://localhost:1313/tags/sysprep/</guid>
+      <guid>https://www.intelliumx.com/tags/sysprep/</guid>
       <description></description>
     </item>
     <item>
       <title>Domain</title>
-      <link>http://localhost:1313/tags/domain/</link>
+      <link>https://www.intelliumx.com/tags/domain/</link>
       <pubDate>Tue, 25 Feb 2025 23:16:13 +1100</pubDate>
-      <guid>http://localhost:1313/tags/domain/</guid>
+      <guid>https://www.intelliumx.com/tags/domain/</guid>
       <description></description>
     </item>
     <item>
       <title>Blog</title>
-      <link>http://localhost:1313/tags/blog/</link>
+      <link>https://www.intelliumx.com/tags/blog/</link>
       <pubDate>Tue, 25 Feb 2025 22:21:46 +1100</pubDate>
-      <guid>http://localhost:1313/tags/blog/</guid>
+      <guid>https://www.intelliumx.com/tags/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>http://localhost:1313/tags/hugo/</link>
+      <link>https://www.intelliumx.com/tags/hugo/</link>
       <pubDate>Tue, 25 Feb 2025 22:21:46 +1100</pubDate>
-      <guid>http://localhost:1313/tags/hugo/</guid>
+      <guid>https://www.intelliumx.com/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Symbolic Link</title>
-      <link>http://localhost:1313/tags/symbolic-link/</link>
+      <link>https://www.intelliumx.com/tags/symbolic-link/</link>
       <pubDate>Tue, 18 Feb 2025 22:31:44 +1100</pubDate>
-      <guid>http://localhost:1313/tags/symbolic-link/</guid>
+      <guid>https://www.intelliumx.com/tags/symbolic-link/</guid>
       <description></description>
     </item>
     <item>
       <title>Terraform</title>
-      <link>http://localhost:1313/tags/terraform/</link>
+      <link>https://www.intelliumx.com/tags/terraform/</link>
       <pubDate>Tue, 18 Feb 2025 22:31:44 +1100</pubDate>
-      <guid>http://localhost:1313/tags/terraform/</guid>
+      <guid>https://www.intelliumx.com/tags/terraform/</guid>
       <description></description>
     </item>
     <item>
       <title>Tfvars</title>
-      <link>http://localhost:1313/tags/tfvars/</link>
+      <link>https://www.intelliumx.com/tags/tfvars/</link>
       <pubDate>Tue, 18 Feb 2025 22:31:44 +1100</pubDate>
-      <guid>http://localhost:1313/tags/tfvars/</guid>
+      <guid>https://www.intelliumx.com/tags/tfvars/</guid>
       <description></description>
     </item>
     <item>
       <title>ICO</title>
-      <link>http://localhost:1313/tags/ico/</link>
+      <link>https://www.intelliumx.com/tags/ico/</link>
       <pubDate>Mon, 10 Feb 2025 22:58:18 +1100</pubDate>
-      <guid>http://localhost:1313/tags/ico/</guid>
+      <guid>https://www.intelliumx.com/tags/ico/</guid>
       <description></description>
     </item>
     <item>
       <title>Image</title>
-      <link>http://localhost:1313/tags/image/</link>
+      <link>https://www.intelliumx.com/tags/image/</link>
       <pubDate>Mon, 10 Feb 2025 22:58:18 +1100</pubDate>
-      <guid>http://localhost:1313/tags/image/</guid>
+      <guid>https://www.intelliumx.com/tags/image/</guid>
       <description></description>
     </item>
     <item>
       <title>SVG</title>
-      <link>http://localhost:1313/tags/svg/</link>
+      <link>https://www.intelliumx.com/tags/svg/</link>
       <pubDate>Mon, 10 Feb 2025 22:58:18 +1100</pubDate>
-      <guid>http://localhost:1313/tags/svg/</guid>
+      <guid>https://www.intelliumx.com/tags/svg/</guid>
       <description></description>
     </item>
     <item>
       <title>Freet Manager</title>
-      <link>http://localhost:1313/tags/freet-manager/</link>
+      <link>https://www.intelliumx.com/tags/freet-manager/</link>
       <pubDate>Sun, 09 Feb 2025 21:55:18 +1100</pubDate>
-      <guid>http://localhost:1313/tags/freet-manager/</guid>
+      <guid>https://www.intelliumx.com/tags/freet-manager/</guid>
       <description></description>
     </item>
     <item>
       <title>System Manager</title>
-      <link>http://localhost:1313/tags/system-manager/</link>
+      <link>https://www.intelliumx.com/tags/system-manager/</link>
       <pubDate>Sun, 09 Feb 2025 21:55:18 +1100</pubDate>
-      <guid>http://localhost:1313/tags/system-manager/</guid>
+      <guid>https://www.intelliumx.com/tags/system-manager/</guid>
       <description></description>
     </item>
     <item>
       <title>CloudShell</title>
-      <link>http://localhost:1313/tags/cloudshell/</link>
+      <link>https://www.intelliumx.com/tags/cloudshell/</link>
       <pubDate>Sun, 09 Feb 2025 15:49:44 +1100</pubDate>
-      <guid>http://localhost:1313/tags/cloudshell/</guid>
+      <guid>https://www.intelliumx.com/tags/cloudshell/</guid>
       <description></description>
     </item>
     <item>
       <title>Shell</title>
-      <link>http://localhost:1313/tags/shell/</link>
+      <link>https://www.intelliumx.com/tags/shell/</link>
       <pubDate>Sun, 09 Feb 2025 15:49:44 +1100</pubDate>
-      <guid>http://localhost:1313/tags/shell/</guid>
+      <guid>https://www.intelliumx.com/tags/shell/</guid>
       <description></description>
     </item>
     <item>
       <title>Database</title>
-      <link>http://localhost:1313/tags/database/</link>
+      <link>https://www.intelliumx.com/tags/database/</link>
       <pubDate>Sun, 09 Feb 2025 12:08:42 +1100</pubDate>
-      <guid>http://localhost:1313/tags/database/</guid>
+      <guid>https://www.intelliumx.com/tags/database/</guid>
       <description></description>
     </item>
     <item>
       <title>Maintenace</title>
-      <link>http://localhost:1313/tags/maintenace/</link>
+      <link>https://www.intelliumx.com/tags/maintenace/</link>
       <pubDate>Sun, 09 Feb 2025 12:08:42 +1100</pubDate>
-      <guid>http://localhost:1313/tags/maintenace/</guid>
+      <guid>https://www.intelliumx.com/tags/maintenace/</guid>
       <description></description>
     </item>
     <item>
       <title>SQL</title>
-      <link>http://localhost:1313/tags/sql/</link>
+      <link>https://www.intelliumx.com/tags/sql/</link>
       <pubDate>Sun, 09 Feb 2025 12:08:42 +1100</pubDate>
-      <guid>http://localhost:1313/tags/sql/</guid>
+      <guid>https://www.intelliumx.com/tags/sql/</guid>
       <description></description>
     </item>
     <item>
       <title>CI/CD</title>
-      <link>http://localhost:1313/tags/ci/cd/</link>
+      <link>https://www.intelliumx.com/tags/ci/cd/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ci/cd/</guid>
+      <guid>https://www.intelliumx.com/tags/ci/cd/</guid>
       <description></description>
     </item>
     <item>
       <title>Cognito</title>
-      <link>http://localhost:1313/tags/cognito/</link>
+      <link>https://www.intelliumx.com/tags/cognito/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cognito/</guid>
+      <guid>https://www.intelliumx.com/tags/cognito/</guid>
       <description></description>
     </item>
     <item>
       <title>Cost Optimization</title>
-      <link>http://localhost:1313/tags/cost-optimization/</link>
+      <link>https://www.intelliumx.com/tags/cost-optimization/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cost-optimization/</guid>
+      <guid>https://www.intelliumx.com/tags/cost-optimization/</guid>
       <description></description>
     </item>
     <item>
       <title>Dashboard</title>
-      <link>http://localhost:1313/tags/dashboard/</link>
+      <link>https://www.intelliumx.com/tags/dashboard/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/dashboard/</guid>
+      <guid>https://www.intelliumx.com/tags/dashboard/</guid>
       <description></description>
     </item>
     <item>
       <title>Decoupling</title>
-      <link>http://localhost:1313/tags/decoupling/</link>
+      <link>https://www.intelliumx.com/tags/decoupling/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/decoupling/</guid>
+      <guid>https://www.intelliumx.com/tags/decoupling/</guid>
       <description></description>
     </item>
     <item>
       <title>Health Tech</title>
-      <link>http://localhost:1313/tags/health-tech/</link>
+      <link>https://www.intelliumx.com/tags/health-tech/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/health-tech/</guid>
+      <guid>https://www.intelliumx.com/tags/health-tech/</guid>
       <description></description>
     </item>
     <item>
       <title>Learning</title>
-      <link>http://localhost:1313/tags/learning/</link>
+      <link>https://www.intelliumx.com/tags/learning/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/learning/</guid>
+      <guid>https://www.intelliumx.com/tags/learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Message Queues</title>
-      <link>http://localhost:1313/tags/message-queues/</link>
+      <link>https://www.intelliumx.com/tags/message-queues/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/message-queues/</guid>
+      <guid>https://www.intelliumx.com/tags/message-queues/</guid>
       <description></description>
     </item>
     <item>
       <title>Personal Health</title>
-      <link>http://localhost:1313/tags/personal-health/</link>
+      <link>https://www.intelliumx.com/tags/personal-health/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/personal-health/</guid>
+      <guid>https://www.intelliumx.com/tags/personal-health/</guid>
       <description></description>
     </item>
     <item>
       <title>RPA</title>
-      <link>http://localhost:1313/tags/rpa/</link>
+      <link>https://www.intelliumx.com/tags/rpa/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rpa/</guid>
+      <guid>https://www.intelliumx.com/tags/rpa/</guid>
       <description></description>
     </item>
     <item>
       <title>SQS</title>
-      <link>http://localhost:1313/tags/sqs/</link>
+      <link>https://www.intelliumx.com/tags/sqs/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/sqs/</guid>
+      <guid>https://www.intelliumx.com/tags/sqs/</guid>
       <description></description>
     </item>
     <item>
       <title>Static Sites</title>
-      <link>http://localhost:1313/tags/static-sites/</link>
+      <link>https://www.intelliumx.com/tags/static-sites/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/static-sites/</guid>
+      <guid>https://www.intelliumx.com/tags/static-sites/</guid>
       <description></description>
     </item>
     <item>
       <title>Testing</title>
-      <link>http://localhost:1313/tags/testing/</link>
+      <link>https://www.intelliumx.com/tags/testing/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/testing/</guid>
+      <guid>https://www.intelliumx.com/tags/testing/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Applications</title>
-      <link>http://localhost:1313/tags/web-applications/</link>
+      <link>https://www.intelliumx.com/tags/web-applications/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/web-applications/</guid>
+      <guid>https://www.intelliumx.com/tags/web-applications/</guid>
       <description></description>
     </item>
   </channel>

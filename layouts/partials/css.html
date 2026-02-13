@@ -11,14 +11,7 @@
 {{- $fontFace     := replace $fontName " " "+" }}
 {{- $fontSizes    := delimit (.Site.Params.font.sizes | default (slice 300 400 600 700)) "," }}
 {{- $fontUrl      := printf "https://fonts.googleapis.com/css?family=%s:%s" $fontFace $fontSizes }}
-<!-- Custom favicon declarations -->
-<link rel="icon" href="{{ "images/favicon.svg" | relURL }}?v=3" type="image/svg+xml" sizes="any">
-<link rel="icon" href="{{ "images/favicon.png" | relURL }}?v=3" type="image/png" sizes="32x32">
-<link rel="icon" href="{{ "images/favicon.png" | relURL }}?v=3" type="image/png" sizes="16x16">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ "images/favicon.png" | relURL }}?v=3">
-<link rel="shortcut icon" href="{{ "images/favicon.png" | relURL }}?v=3" type="image/png">
-<!-- Root fallback for aggressive caching -->
-<link rel="icon" href="/favicon.ico?v=3" type="image/x-icon">
+
 <link href="{{ $fontUrl }}" rel="stylesheet">
 {{- if $inServerMode }}
 {{- $css := resources.Get $sass | toCSS $cssOpts }}

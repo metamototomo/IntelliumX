@@ -2,595 +2,595 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://www.intelliumx.com/posts/</loc>
     <lastmod>2026-02-13T11:50:19+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://www.intelliumx.com/categories/</loc>
     <lastmod>2026-02-13T11:50:19+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://www.intelliumx.com/</loc>
     <lastmod>2026-02-13T11:50:19+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://www.intelliumx.com/tags/</loc>
     <lastmod>2026-02-13T11:50:19+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/technology/</loc>
+    <loc>https://www.intelliumx.com/categories/technology/</loc>
     <lastmod>2026-02-13T11:50:19+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/troubleshooting/</loc>
+    <loc>https://www.intelliumx.com/tags/troubleshooting/</loc>
     <lastmod>2026-02-13T11:50:19+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/yed/</loc>
+    <loc>https://www.intelliumx.com/tags/yed/</loc>
     <lastmod>2026-02-13T11:50:19+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/yed-reset-toolbar/</loc>
+    <loc>https://www.intelliumx.com/posts/yed-reset-toolbar/</loc>
     <lastmod>2026-02-13T11:50:19+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/automation/</loc>
+    <loc>https://www.intelliumx.com/tags/automation/</loc>
     <lastmod>2026-02-13T11:49:53+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/espanso-setup/</loc>
+    <loc>https://www.intelliumx.com/posts/espanso-setup/</loc>
     <lastmod>2026-02-13T11:49:53+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/mac/</loc>
+    <loc>https://www.intelliumx.com/tags/mac/</loc>
     <lastmod>2026-02-13T11:49:53+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
+    <loc>https://www.intelliumx.com/tags/ai/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/refyne-pro/</loc>
+    <loc>https://www.intelliumx.com/projects/refyne-pro/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/amazon-bedrock/</loc>
+    <loc>https://www.intelliumx.com/tags/amazon-bedrock/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/aws/</loc>
+    <loc>https://www.intelliumx.com/tags/aws/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/cloud-projects/</loc>
+    <loc>https://www.intelliumx.com/categories/cloud-projects/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dynamodb/</loc>
+    <loc>https://www.intelliumx.com/tags/dynamodb/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/oauth-2.0/</loc>
+    <loc>https://www.intelliumx.com/tags/oauth-2.0/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://www.intelliumx.com/projects/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/react/</loc>
+    <loc>https://www.intelliumx.com/tags/react/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/serverless/</loc>
+    <loc>https://www.intelliumx.com/tags/serverless/</loc>
     <lastmod>2026-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/python/</loc>
+    <loc>https://www.intelliumx.com/tags/python/</loc>
     <lastmod>2026-01-19T19:01:12+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/python-enable-virtual-environment/</loc>
+    <loc>https://www.intelliumx.com/posts/python-enable-virtual-environment/</loc>
     <lastmod>2026-01-19T19:01:12+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/python-check-version/</loc>
+    <loc>https://www.intelliumx.com/posts/python-check-version/</loc>
     <lastmod>2026-01-19T18:57:17+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cloudflare/</loc>
+    <loc>https://www.intelliumx.com/tags/cloudflare/</loc>
     <lastmod>2026-01-18T21:58:22+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cloudfront/</loc>
+    <loc>https://www.intelliumx.com/tags/cloudfront/</loc>
     <lastmod>2026-01-18T21:58:22+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/custom-domain/</loc>
+    <loc>https://www.intelliumx.com/tags/custom-domain/</loc>
     <lastmod>2026-01-18T21:58:22+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/custom-domain-cloudfront-cloudflare/</loc>
+    <loc>https://www.intelliumx.com/posts/custom-domain-cloudfront-cloudflare/</loc>
     <lastmod>2026-01-18T21:58:22+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ssl/</loc>
+    <loc>https://www.intelliumx.com/tags/ssl/</loc>
     <lastmod>2026-01-18T21:58:22+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/git/</loc>
+    <loc>https://www.intelliumx.com/tags/git/</loc>
     <lastmod>2026-01-13T23:28:39+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/github/</loc>
+    <loc>https://www.intelliumx.com/tags/github/</loc>
     <lastmod>2026-01-13T23:28:39+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/git-delete-tag/</loc>
+    <loc>https://www.intelliumx.com/posts/git-delete-tag/</loc>
     <lastmod>2026-01-13T23:28:39+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/git-create-tag/</loc>
+    <loc>https://www.intelliumx.com/posts/git-create-tag/</loc>
     <lastmod>2026-01-13T23:28:31+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/git-delete-branches/</loc>
+    <loc>https://www.intelliumx.com/posts/git-delete-branches/</loc>
     <lastmod>2026-01-13T23:28:19+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/git-clean-branches/</loc>
+    <loc>https://www.intelliumx.com/posts/git-clean-branches/</loc>
     <lastmod>2026-01-13T23:28:06+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/git-pull-request/</loc>
+    <loc>https://www.intelliumx.com/posts/git-pull-request/</loc>
     <lastmod>2026-01-13T23:27:52+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/git-pull-latest-change/</loc>
+    <loc>https://www.intelliumx.com/posts/git-pull-latest-change/</loc>
     <lastmod>2026-01-13T23:27:39+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/git-create-new-branch/</loc>
+    <loc>https://www.intelliumx.com/posts/git-create-new-branch/</loc>
     <lastmod>2026-01-13T23:27:15+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/git-create-new-repo/</loc>
+    <loc>https://www.intelliumx.com/posts/git-create-new-repo/</loc>
     <lastmod>2026-01-13T23:26:59+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/client-certificate/</loc>
+    <loc>https://www.intelliumx.com/tags/client-certificate/</loc>
     <lastmod>2026-01-11T12:10:31+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nginx/</loc>
+    <loc>https://www.intelliumx.com/tags/nginx/</loc>
     <lastmod>2026-01-11T12:10:31+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nginx-client-certificate/</loc>
+    <loc>https://www.intelliumx.com/posts/nginx-client-certificate/</loc>
     <lastmod>2026-01-11T12:10:31+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/security/</loc>
+    <loc>https://www.intelliumx.com/tags/security/</loc>
     <lastmod>2026-01-11T12:10:31+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ssl-certificate/</loc>
+    <loc>https://www.intelliumx.com/tags/ssl-certificate/</loc>
     <lastmod>2026-01-11T12:10:31+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/proxy/</loc>
+    <loc>https://www.intelliumx.com/tags/proxy/</loc>
     <lastmod>2026-01-11T11:48:35+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/winhttp/</loc>
+    <loc>https://www.intelliumx.com/posts/winhttp/</loc>
     <lastmod>2026-01-11T11:48:35+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/winhttp/</loc>
+    <loc>https://www.intelliumx.com/tags/winhttp/</loc>
     <lastmod>2026-01-11T11:48:35+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>https://www.intelliumx.com/tags/linux/</loc>
     <lastmod>2026-01-11T10:42:59+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ssh/</loc>
+    <loc>https://www.intelliumx.com/tags/ssh/</loc>
     <lastmod>2026-01-11T10:42:59+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ssh-connection-linux/</loc>
+    <loc>https://www.intelliumx.com/posts/ssh-connection-linux/</loc>
     <lastmod>2026-01-11T10:42:59+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/proxy-squid-install/</loc>
+    <loc>https://www.intelliumx.com/posts/proxy-squid-install/</loc>
     <lastmod>2026-01-11T10:24:49+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/github-ssh-settings/</loc>
+    <loc>https://www.intelliumx.com/posts/github-ssh-settings/</loc>
     <lastmod>2026-01-10T23:40:52+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wsl/</loc>
+    <loc>https://www.intelliumx.com/tags/wsl/</loc>
     <lastmod>2026-01-10T23:31:42+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/wsl-startup-distibution/</loc>
+    <loc>https://www.intelliumx.com/posts/wsl-startup-distibution/</loc>
     <lastmod>2026-01-10T23:31:42+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/wsl-install-distribution/</loc>
+    <loc>https://www.intelliumx.com/posts/wsl-install-distribution/</loc>
     <lastmod>2026-01-10T23:27:57+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/aws-credentials-for-cli-profile/</loc>
+    <loc>https://www.intelliumx.com/posts/aws-credentials-for-cli-profile/</loc>
     <lastmod>2025-12-23T23:19:52+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/what-is-zone-identifier/</loc>
+    <loc>https://www.intelliumx.com/posts/what-is-zone-identifier/</loc>
     <lastmod>2025-12-21T17:13:50+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/customise-terminal/</loc>
+    <loc>https://www.intelliumx.com/posts/customise-terminal/</loc>
     <lastmod>2025-12-21T16:49:48+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/terminal/</loc>
+    <loc>https://www.intelliumx.com/tags/terminal/</loc>
     <lastmod>2025-12-21T16:49:48+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/amazon-cognito-user-pool/</loc>
+    <loc>https://www.intelliumx.com/tags/amazon-cognito-user-pool/</loc>
     <lastmod>2025-08-11T08:26:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/azure-ad/</loc>
+    <loc>https://www.intelliumx.com/tags/azure-ad/</loc>
     <lastmod>2025-08-11T08:26:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/entraid-cognito-oidc/</loc>
+    <loc>https://www.intelliumx.com/posts/entraid-cognito-oidc/</loc>
     <lastmod>2025-08-11T08:26:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/federation-authentication/</loc>
+    <loc>https://www.intelliumx.com/tags/federation-authentication/</loc>
     <lastmod>2025-08-11T08:26:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/microsoft-entra-id/</loc>
+    <loc>https://www.intelliumx.com/tags/microsoft-entra-id/</loc>
     <lastmod>2025-08-11T08:26:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/oidc/</loc>
+    <loc>https://www.intelliumx.com/tags/oidc/</loc>
     <lastmod>2025-08-11T08:26:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/entraid-cognito-itegration-step5/</loc>
+    <loc>https://www.intelliumx.com/posts/entraid-cognito-itegration-step5/</loc>
     <lastmod>2025-08-10T11:46:09+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/saml/</loc>
+    <loc>https://www.intelliumx.com/tags/saml/</loc>
     <lastmod>2025-08-10T11:46:09+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/entraid-cognito-itegration-step4/</loc>
+    <loc>https://www.intelliumx.com/posts/entraid-cognito-itegration-step4/</loc>
     <lastmod>2025-08-10T11:45:59+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/entraid-cognito-itegration-step3/</loc>
+    <loc>https://www.intelliumx.com/posts/entraid-cognito-itegration-step3/</loc>
     <lastmod>2025-08-10T11:45:55+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/entraid-cognito-itegration-step2/</loc>
+    <loc>https://www.intelliumx.com/posts/entraid-cognito-itegration-step2/</loc>
     <lastmod>2025-08-10T11:45:51+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/entraid-cognito-itegration-overview/</loc>
+    <loc>https://www.intelliumx.com/posts/entraid-cognito-itegration-overview/</loc>
     <lastmod>2025-08-10T11:25:30+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/entraid-cognito-itegration-step1/</loc>
+    <loc>https://www.intelliumx.com/posts/entraid-cognito-itegration-step1/</loc>
     <lastmod>2025-08-10T10:45:47+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/git-hub-reset-and-start-again/</loc>
+    <loc>https://www.intelliumx.com/posts/git-hub-reset-and-start-again/</loc>
     <lastmod>2025-06-25T20:40:01+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tag/</loc>
+    <loc>https://www.intelliumx.com/tags/tag/</loc>
     <lastmod>2025-06-25T20:40:01+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/git-hub-best-practive-tagging/</loc>
+    <loc>https://www.intelliumx.com/posts/git-hub-best-practive-tagging/</loc>
     <lastmod>2025-06-25T20:39:37+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/api-gateway/</loc>
+    <loc>https://www.intelliumx.com/tags/api-gateway/</loc>
     <lastmod>2025-06-15T17:49:13+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/api-gateway-configuration/</loc>
+    <loc>https://www.intelliumx.com/posts/api-gateway-configuration/</loc>
     <lastmod>2025-06-15T17:49:13+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/api-gateway-api-key/</loc>
+    <loc>https://www.intelliumx.com/posts/api-gateway-api-key/</loc>
     <lastmod>2025-06-15T17:46:22+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/api-gateway-usage-plan/</loc>
+    <loc>https://www.intelliumx.com/posts/api-gateway-usage-plan/</loc>
     <lastmod>2025-06-15T17:46:05+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/dynamodb-create-a-table/</loc>
+    <loc>https://www.intelliumx.com/posts/dynamodb-create-a-table/</loc>
     <lastmod>2025-06-15T17:15:54+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/aws-sts-temporary-access-tokens/</loc>
+    <loc>https://www.intelliumx.com/posts/aws-sts-temporary-access-tokens/</loc>
     <lastmod>2025-06-15T17:12:59+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/lambda-create-a-function/</loc>
+    <loc>https://www.intelliumx.com/posts/lambda-create-a-function/</loc>
     <lastmod>2025-06-15T17:10:13+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/lambda/</loc>
+    <loc>https://www.intelliumx.com/tags/lambda/</loc>
     <lastmod>2025-06-15T17:10:13+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/aws-credentials-for-cli/</loc>
+    <loc>https://www.intelliumx.com/posts/aws-credentials-for-cli/</loc>
     <lastmod>2025-06-15T17:07:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/lambda-set-access-to-dynamodb/</loc>
+    <loc>https://www.intelliumx.com/posts/lambda-set-access-to-dynamodb/</loc>
     <lastmod>2025-06-15T17:00:19+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/iam/</loc>
+    <loc>https://www.intelliumx.com/tags/iam/</loc>
     <lastmod>2025-06-15T17:00:19+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/dynamodb-import-data-from-csv/</loc>
+    <loc>https://www.intelliumx.com/posts/dynamodb-import-data-from-csv/</loc>
     <lastmod>2025-06-15T16:20:16+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/setup-python-environment/</loc>
+    <loc>https://www.intelliumx.com/posts/setup-python-environment/</loc>
     <lastmod>2025-06-11T11:02:17+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vs-code/</loc>
+    <loc>https://www.intelliumx.com/tags/vs-code/</loc>
     <lastmod>2025-06-11T11:02:17+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/azure-devops/</loc>
+    <loc>https://www.intelliumx.com/tags/azure-devops/</loc>
     <lastmod>2025-05-20T09:30:14+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/git-move-branch/</loc>
+    <loc>https://www.intelliumx.com/posts/git-move-branch/</loc>
     <lastmod>2025-05-20T09:30:14+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/git-useful-commands/</loc>
+    <loc>https://www.intelliumx.com/posts/git-useful-commands/</loc>
     <lastmod>2025-05-20T09:11:00+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/azure-devops-complete/</loc>
+    <loc>https://www.intelliumx.com/posts/azure-devops-complete/</loc>
     <lastmod>2025-05-20T09:10:42+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/azure-devops-approve/</loc>
+    <loc>https://www.intelliumx.com/posts/azure-devops-approve/</loc>
     <lastmod>2025-05-20T08:49:12+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/azure-devops-pull-request/</loc>
+    <loc>https://www.intelliumx.com/posts/azure-devops-pull-request/</loc>
     <lastmod>2025-05-20T08:27:35+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/memory-dump/</loc>
+    <loc>https://www.intelliumx.com/tags/memory-dump/</loc>
     <lastmod>2025-05-19T18:37:55+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/memory-dump-anaylsis/</loc>
+    <loc>https://www.intelliumx.com/posts/memory-dump-anaylsis/</loc>
     <lastmod>2025-05-19T18:37:55+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/windows/</loc>
+    <loc>https://www.intelliumx.com/tags/windows/</loc>
     <lastmod>2025-05-19T18:37:55+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/grpc/</loc>
+    <loc>https://www.intelliumx.com/tags/grpc/</loc>
     <lastmod>2025-04-24T23:01:47+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/load-balancer/</loc>
+    <loc>https://www.intelliumx.com/tags/load-balancer/</loc>
     <lastmod>2025-04-24T23:01:47+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nginx-loadbalancer-wcf-grpc-ssl/</loc>
+    <loc>https://www.intelliumx.com/posts/nginx-loadbalancer-wcf-grpc-ssl/</loc>
     <lastmod>2025-04-24T23:01:47+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/wcf/</loc>
+    <loc>https://www.intelliumx.com/tags/wcf/</loc>
     <lastmod>2025-04-24T23:01:47+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/openssl/</loc>
+    <loc>https://www.intelliumx.com/tags/openssl/</loc>
     <lastmod>2025-04-24T17:41:29+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/openssl-verify-certificate/</loc>
+    <loc>https://www.intelliumx.com/posts/openssl-verify-certificate/</loc>
     <lastmod>2025-04-24T17:41:29+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/openssl-revoke-certificate/</loc>
+    <loc>https://www.intelliumx.com/posts/openssl-revoke-certificate/</loc>
     <lastmod>2025-04-24T17:19:22+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/openssl-client-certificate/</loc>
+    <loc>https://www.intelliumx.com/posts/openssl-client-certificate/</loc>
     <lastmod>2025-04-24T16:52:01+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nginx-loadbalancer-wcf-grpc/</loc>
+    <loc>https://www.intelliumx.com/posts/nginx-loadbalancer-wcf-grpc/</loc>
     <lastmod>2025-04-23T16:42:27+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nginx-loadbalance-wcf-application/</loc>
+    <loc>https://www.intelliumx.com/posts/nginx-loadbalance-wcf-application/</loc>
     <lastmod>2025-04-21T20:23:55+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/container/</loc>
+    <loc>https://www.intelliumx.com/tags/container/</loc>
     <lastmod>2025-04-13T22:30:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
+    <loc>https://www.intelliumx.com/tags/docker/</loc>
     <lastmod>2025-04-13T22:30:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/haproxy/</loc>
+    <loc>https://www.intelliumx.com/tags/haproxy/</loc>
     <lastmod>2025-04-13T22:30:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/haproxy-container-loadbalancer/</loc>
+    <loc>https://www.intelliumx.com/posts/haproxy-container-loadbalancer/</loc>
     <lastmod>2025-04-13T22:30:23+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nginx-container-loadbalancer/</loc>
+    <loc>https://www.intelliumx.com/posts/nginx-container-loadbalancer/</loc>
     <lastmod>2025-04-13T21:22:22+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/big-ip/</loc>
+    <loc>https://www.intelliumx.com/tags/big-ip/</loc>
     <lastmod>2025-04-13T20:07:14+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/f5/</loc>
+    <loc>https://www.intelliumx.com/tags/f5/</loc>
     <lastmod>2025-04-13T20:07:14+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/f5-big-ip-sample-configuration/</loc>
+    <loc>https://www.intelliumx.com/posts/f5-big-ip-sample-configuration/</loc>
     <lastmod>2025-04-13T20:07:14+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nginx-loadbalancer/</loc>
+    <loc>https://www.intelliumx.com/posts/nginx-loadbalancer/</loc>
     <lastmod>2025-04-13T13:54:12+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/active-directory/</loc>
+    <loc>https://www.intelliumx.com/tags/active-directory/</loc>
     <lastmod>2025-04-13T07:25:43+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/change-hostname-linux/</loc>
+    <loc>https://www.intelliumx.com/posts/change-hostname-linux/</loc>
     <lastmod>2025-04-13T07:25:43+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hostname/</loc>
+    <loc>https://www.intelliumx.com/tags/hostname/</loc>
     <lastmod>2025-04-13T07:25:43+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nginx-container-test-web-page/</loc>
+    <loc>https://www.intelliumx.com/posts/nginx-container-test-web-page/</loc>
     <lastmod>2025-04-10T23:21:17+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/create-a-mssql-container/</loc>
+    <loc>https://www.intelliumx.com/posts/create-a-mssql-container/</loc>
     <lastmod>2025-04-04T20:40:37+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/backup/</loc>
+    <loc>https://www.intelliumx.com/tags/backup/</loc>
     <lastmod>2025-04-03T16:43:34+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/backup-restore-database-by-sqlcmd/</loc>
+    <loc>https://www.intelliumx.com/posts/backup-restore-database-by-sqlcmd/</loc>
     <lastmod>2025-04-03T16:43:34+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ssm/</loc>
+    <loc>https://www.intelliumx.com/tags/ssm/</loc>
     <lastmod>2025-04-03T16:43:34+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sql-server/</loc>
+    <loc>https://www.intelliumx.com/tags/sql-server/</loc>
     <lastmod>2025-04-02T19:41:08+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sql-server-container-with-tools/</loc>
+    <loc>https://www.intelliumx.com/posts/sql-server-container-with-tools/</loc>
     <lastmod>2025-04-02T19:41:08+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sqlcmd/</loc>
+    <loc>https://www.intelliumx.com/tags/sqlcmd/</loc>
     <lastmod>2025-04-02T19:41:08+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/copy-files-from-a-docker-container/</loc>
+    <loc>https://www.intelliumx.com/posts/copy-files-from-a-docker-container/</loc>
     <lastmod>2025-04-02T19:20:15+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/s3/</loc>
+    <loc>https://www.intelliumx.com/tags/s3/</loc>
     <lastmod>2025-04-02T19:20:15+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/certificate/</loc>
+    <loc>https://www.intelliumx.com/tags/certificate/</loc>
     <lastmod>2025-03-30T21:40:32+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/rabbitmq/</loc>
+    <loc>https://www.intelliumx.com/tags/rabbitmq/</loc>
     <lastmod>2025-03-30T21:40:32+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/rabbitmq-container-ssl/</loc>
+    <loc>https://www.intelliumx.com/posts/rabbitmq-container-ssl/</loc>
     <lastmod>2025-03-30T21:40:32+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ecr/</loc>
+    <loc>https://www.intelliumx.com/tags/ecr/</loc>
     <lastmod>2025-03-29T00:10:31+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/upload-docker-image-to-ecr/</loc>
+    <loc>https://www.intelliumx.com/posts/upload-docker-image-to-ecr/</loc>
     <lastmod>2025-03-29T00:10:31+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/rabbitmq-container-http/</loc>
+    <loc>https://www.intelliumx.com/posts/rabbitmq-container-http/</loc>
     <lastmod>2025-03-28T22:46:51+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/image-builder-in-aws/</loc>
+    <loc>https://www.intelliumx.com/posts/image-builder-in-aws/</loc>
     <lastmod>2025-03-27T14:48:49+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/image-builder/</loc>
+    <loc>https://www.intelliumx.com/tags/image-builder/</loc>
     <lastmod>2025-03-27T14:48:49+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sql-server-check-secure-connnection/</loc>
+    <loc>https://www.intelliumx.com/posts/sql-server-check-secure-connnection/</loc>
     <lastmod>2025-03-27T14:01:38+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/machine-image/</loc>
+    <loc>https://www.intelliumx.com/tags/machine-image/</loc>
     <lastmod>2025-03-27T09:34:06+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sysprep/</loc>
+    <loc>https://www.intelliumx.com/tags/sysprep/</loc>
     <lastmod>2025-03-27T09:34:06+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/sysprep-in-aws/</loc>
+    <loc>https://www.intelliumx.com/posts/sysprep-in-aws/</loc>
     <lastmod>2025-03-27T09:34:06+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/openssl-intial-setup/</loc>
+    <loc>https://www.intelliumx.com/posts/openssl-intial-setup/</loc>
     <lastmod>2025-03-10T21:36:31+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/managing-aws-accounts-in-the-terminal/</loc>
+    <loc>https://www.intelliumx.com/posts/managing-aws-accounts-in-the-terminal/</loc>
     <lastmod>2025-02-27T22:11:39+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/deploy-a-amazon-linux-2023/</loc>
+    <loc>https://www.intelliumx.com/posts/deploy-a-amazon-linux-2023/</loc>
     <lastmod>2025-02-25T23:16:13+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/domain/</loc>
+    <loc>https://www.intelliumx.com/tags/domain/</loc>
     <lastmod>2025-02-25T23:16:13+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ignore-settings-in-github/</loc>
+    <loc>https://www.intelliumx.com/posts/ignore-settings-in-github/</loc>
     <lastmod>2025-02-25T22:48:12+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
+    <loc>https://www.intelliumx.com/tags/blog/</loc>
     <lastmod>2025-02-25T22:21:46+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/create-a-new-blog-post/</loc>
+    <loc>https://www.intelliumx.com/posts/create-a-new-blog-post/</loc>
     <lastmod>2025-02-25T22:21:46+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://www.intelliumx.com/tags/hugo/</loc>
     <lastmod>2025-02-25T22:21:46+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/symbolic-link/</loc>
+    <loc>https://www.intelliumx.com/tags/symbolic-link/</loc>
     <lastmod>2025-02-18T22:31:44+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/terraform/</loc>
+    <loc>https://www.intelliumx.com/tags/terraform/</loc>
     <lastmod>2025-02-18T22:31:44+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/terraform-link-to-tfvars-file/</loc>
+    <loc>https://www.intelliumx.com/posts/terraform-link-to-tfvars-file/</loc>
     <lastmod>2025-02-18T22:31:44+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tfvars/</loc>
+    <loc>https://www.intelliumx.com/tags/tfvars/</loc>
     <lastmod>2025-02-18T22:31:44+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/how-to-disable-sounds-in-vs-code/</loc>
+    <loc>https://www.intelliumx.com/posts/how-to-disable-sounds-in-vs-code/</loc>
     <lastmod>2025-02-18T21:40:50+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/create-ico-file-from-svg-file/</loc>
+    <loc>https://www.intelliumx.com/posts/create-ico-file-from-svg-file/</loc>
     <lastmod>2025-02-10T22:58:18+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ico/</loc>
+    <loc>https://www.intelliumx.com/tags/ico/</loc>
     <lastmod>2025-02-10T22:58:18+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/image/</loc>
+    <loc>https://www.intelliumx.com/tags/image/</loc>
     <lastmod>2025-02-10T22:58:18+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/svg/</loc>
+    <loc>https://www.intelliumx.com/tags/svg/</loc>
     <lastmod>2025-02-10T22:58:18+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/freet-manager/</loc>
+    <loc>https://www.intelliumx.com/tags/freet-manager/</loc>
     <lastmod>2025-02-09T21:55:18+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/setup-fleet-manager/</loc>
+    <loc>https://www.intelliumx.com/posts/setup-fleet-manager/</loc>
     <lastmod>2025-02-09T21:55:18+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/system-manager/</loc>
+    <loc>https://www.intelliumx.com/tags/system-manager/</loc>
     <lastmod>2025-02-09T21:55:18+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cloudshell/</loc>
+    <loc>https://www.intelliumx.com/tags/cloudshell/</loc>
     <lastmod>2025-02-09T15:49:44+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/download-from-cloudshell/</loc>
+    <loc>https://www.intelliumx.com/posts/download-from-cloudshell/</loc>
     <lastmod>2025-02-09T15:49:44+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/shell/</loc>
+    <loc>https://www.intelliumx.com/tags/shell/</loc>
     <lastmod>2025-02-09T15:49:44+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/openssl-server-certificate/</loc>
+    <loc>https://www.intelliumx.com/posts/openssl-server-certificate/</loc>
     <lastmod>2025-02-09T14:43:00+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/openssl-intermediate-ca/</loc>
+    <loc>https://www.intelliumx.com/posts/openssl-intermediate-ca/</loc>
     <lastmod>2025-02-09T14:42:31+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/openssl-ca/</loc>
+    <loc>https://www.intelliumx.com/posts/openssl-ca/</loc>
     <lastmod>2025-02-09T14:32:13+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/database/</loc>
+    <loc>https://www.intelliumx.com/tags/database/</loc>
     <lastmod>2025-02-09T12:08:42+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/deadlock-issue-in-sql-serever/</loc>
+    <loc>https://www.intelliumx.com/posts/deadlock-issue-in-sql-serever/</loc>
     <lastmod>2025-02-09T12:08:42+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/maintenace/</loc>
+    <loc>https://www.intelliumx.com/tags/maintenace/</loc>
     <lastmod>2025-02-09T12:08:42+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sql/</loc>
+    <loc>https://www.intelliumx.com/tags/sql/</loc>
     <lastmod>2025-02-09T12:08:42+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/how-to-setup-pasteimage/</loc>
+    <loc>https://www.intelliumx.com/posts/how-to-setup-pasteimage/</loc>
     <lastmod>2025-02-09T08:04:22+11:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/study-amplify/</loc>
+    <loc>https://www.intelliumx.com/projects/study-amplify/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/cafe-order-system/</loc>
+    <loc>https://www.intelliumx.com/projects/cafe-order-system/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ci/cd/</loc>
+    <loc>https://www.intelliumx.com/tags/ci/cd/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cognito/</loc>
+    <loc>https://www.intelliumx.com/tags/cognito/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cost-optimization/</loc>
+    <loc>https://www.intelliumx.com/tags/cost-optimization/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/dashboard/</loc>
+    <loc>https://www.intelliumx.com/tags/dashboard/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/decoupling/</loc>
+    <loc>https://www.intelliumx.com/tags/decoupling/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/health-projects/</loc>
+    <loc>https://www.intelliumx.com/categories/health-projects/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/health-tech/</loc>
+    <loc>https://www.intelliumx.com/tags/health-tech/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/learning/</loc>
+    <loc>https://www.intelliumx.com/tags/learning/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/learning-projects/</loc>
+    <loc>https://www.intelliumx.com/categories/learning-projects/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/message-queues/</loc>
+    <loc>https://www.intelliumx.com/tags/message-queues/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/personal-health/</loc>
+    <loc>https://www.intelliumx.com/tags/personal-health/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/heartbeat-central/</loc>
+    <loc>https://www.intelliumx.com/projects/heartbeat-central/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/rpa/</loc>
+    <loc>https://www.intelliumx.com/tags/rpa/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/cloudlens/</loc>
+    <loc>https://www.intelliumx.com/projects/cloudlens/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/sqs/</loc>
+    <loc>https://www.intelliumx.com/tags/sqs/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/static-sites/</loc>
+    <loc>https://www.intelliumx.com/tags/static-sites/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/testing/</loc>
+    <loc>https://www.intelliumx.com/tags/testing/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/testing-projects/</loc>
+    <loc>https://www.intelliumx.com/categories/testing-projects/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/web-applications/</loc>
+    <loc>https://www.intelliumx.com/tags/web-applications/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/digital-playground/</loc>
+    <loc>https://www.intelliumx.com/projects/digital-playground/</loc>
     <lastmod>2025-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://www.intelliumx.com/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://www.intelliumx.com/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://www.intelliumx.com/archives/</loc>
   </url>
 </urlset>

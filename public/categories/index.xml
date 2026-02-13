@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on IntelliumX</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://www.intelliumx.com/categories/</link>
     <description>Recent content in Categories on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Feb 2026 11:50:19 +1100</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.intelliumx.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Technology</title>
-      <link>http://localhost:1313/categories/technology/</link>
+      <link>https://www.intelliumx.com/categories/technology/</link>
       <pubDate>Fri, 13 Feb 2026 11:50:19 +1100</pubDate>
-      <guid>http://localhost:1313/categories/technology/</guid>
+      <guid>https://www.intelliumx.com/categories/technology/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud Projects</title>
-      <link>http://localhost:1313/categories/cloud-projects/</link>
+      <link>https://www.intelliumx.com/categories/cloud-projects/</link>
       <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/cloud-projects/</guid>
+      <guid>https://www.intelliumx.com/categories/cloud-projects/</guid>
       <description></description>
     </item>
     <item>
       <title>Health Projects</title>
-      <link>http://localhost:1313/categories/health-projects/</link>
+      <link>https://www.intelliumx.com/categories/health-projects/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/health-projects/</guid>
+      <guid>https://www.intelliumx.com/categories/health-projects/</guid>
       <description></description>
     </item>
     <item>
       <title>Learning Projects</title>
-      <link>http://localhost:1313/categories/learning-projects/</link>
+      <link>https://www.intelliumx.com/categories/learning-projects/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/learning-projects/</guid>
+      <guid>https://www.intelliumx.com/categories/learning-projects/</guid>
       <description></description>
     </item>
     <item>
       <title>Testing Projects</title>
-      <link>http://localhost:1313/categories/testing-projects/</link>
+      <link>https://www.intelliumx.com/categories/testing-projects/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/testing-projects/</guid>
+      <guid>https://www.intelliumx.com/categories/testing-projects/</guid>
       <description></description>
     </item>
   </channel>
