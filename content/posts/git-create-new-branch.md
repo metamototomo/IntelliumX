@@ -1,7 +1,7 @@
 ---
 date: '2026-01-13T23:27:15+11:00'
 draft: false
-title: 'GitHuh - Create a New Branch'
+title: 'GitHub - Create a New Branch'
 tags: ["GitHub", "Git"]
 categories: ["Technology"]
 ---
