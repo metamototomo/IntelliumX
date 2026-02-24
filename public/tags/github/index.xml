@@ -6,8 +6,15 @@
     <description>Recent content in GitHub on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Jan 2026 23:28:39 +1100</lastBuildDate>
+    <lastBuildDate>Tue, 24 Feb 2026 20:53:00 +1100</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Static Website (VS Code, GitHub, Netlify)</title>
+      <link>http://localhost:1313/posts/static-website/</link>
+      <pubDate>Tue, 24 Feb 2026 20:53:00 +1100</pubDate>
+      <guid>http://localhost:1313/posts/static-website/</guid>
+      <description>&lt;h3 id=&#34;install-vs-code-and-plugins&#34;&gt;Install VS Code and Plugins&lt;/h3&gt;&#xA;&lt;p&gt;Download and install VS Code from &lt;a href=&#34;https://code.visualstudio.com/download&#34;&gt;https://code.visualstudio.com/download&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;install-plugins&#34;&gt;Install Plugins&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Live Preview or Live Server (for previewing your website locally)&lt;/li&gt;&#xA;&lt;li&gt;Co-Pilot or Amazon Q (for AI-powered coding assistance)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-02-24-20-55-10.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;&#xA;&lt;p&gt;Before creating your website, set up GitHub authentication and create a repository:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/posts/github-ssh-settings/&#34;&gt;GitHub - SSH Settings (ed25519)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/posts/git-create-new-repo/&#34;&gt;GitHub - Create a New Repository&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;create-a-website-using-ai&#34;&gt;Create a Website Using AI&lt;/h2&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a sample prompt you can use with AI assistants like Amazon Q or GitHub Copilot:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>GitHub - Delete a Tag</title>
       <link>http://localhost:1313/posts/git-delete-tag/</link>
@@ -51,7 +58,7 @@
       <description>&lt;h3 id=&#34;-option-1-stash-your-changes-temporarily-save&#34;&gt;✅ &lt;strong&gt;Option 1: Stash your changes (temporarily save)&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re not ready to commit, but want to pull the latest code:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git pull&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git stash pop&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;git stash&lt;/code&gt; temporarily saves your changes&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;git pull&lt;/code&gt; fetches and merges the latest version&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;git stash pop&lt;/code&gt; restores your changes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;-option-2-discard-your-changes&#34;&gt;❌ &lt;strong&gt;Option 2: Discard your changes&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;⚠️ Only do this if you&amp;rsquo;re okay with &lt;strong&gt;losing your local changes&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git reset --hard origin/develop&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git pull&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;see-also&#34;&gt;See also:&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/posts/git-create-new-repo/&#34;&gt;GitHub - Create a New Repo&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>GitHuh - Create a New Branch</title>
+      <title>GitHub - Create a New Branch</title>
       <link>http://localhost:1313/posts/git-create-new-branch/</link>
       <pubDate>Tue, 13 Jan 2026 23:27:15 +1100</pubDate>
       <guid>http://localhost:1313/posts/git-create-new-branch/</guid>

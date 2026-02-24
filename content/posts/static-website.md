@@ -1,10 +1,15 @@
 ---
 date: '2026-02-24T20:53:00+11:00'
 draft: false
-title: 'Static Website (VS Code, GitHub, Netlify)'
+title: 'Static Website (VS Code, GitHub, netlify)'
 tags: ["Static Website", "CICD", "GitHub", "VS Code"]
 categories: ["Technology"]
 ---
+
+## Summary
+This guide walks you through creating and deploying a static website using VS Code, GitHub, and netlify. You'll learn how to build a simple website with AI assistance, set up version control, and establish an automated CI/CD pipeline that deploys your changes automatically whenever you push to GitHub.
+
+![](2026-02-24-22-11-40.png)
 
 ### Install VS Code and Plugins
 Download and install VS Code from https://code.visualstudio.com/download
@@ -27,7 +32,7 @@ Before creating your website, set up GitHub authentication and create a reposito
 Here's a sample prompt you can use with AI assistants like Amazon Q or GitHub Copilot:
 
 ```
-Create a minimal static website project that can be hosted on Netlify.
+Create a minimal static website project that can be hosted on netlify.
 
 Requirements:
 
@@ -95,7 +100,7 @@ git push origin main
 ```
 
 
-## Create a Project in Netlify
+## Create a Project in netlify
 
 1. Navigate to https://app.netlify.com
 
@@ -133,7 +138,7 @@ git push origin main
 
 ### Verify the Deployment
 
-Access the generated Netlify URL to check the deployment status. Initially, you may see a "Page Not Found" error if the repository hasn't been pushed yet.
+Access the generated netlify URL to check the deployment status. Initially, you may see a "Page Not Found" error if the repository hasn't been pushed yet.
 
 ![](2026-02-24-21-13-04.png)
 
@@ -142,11 +147,11 @@ Push your code to the `main` branch:
 
 ![](2026-02-24-21-13-24.png)
 
-Netlify will automatically detect the changes and redeploy your site.
+netlify will automatically detect the changes and redeploy your site.
 
 ![](2026-02-24-21-13-45.png)
 
 ## Congratulations!
 
-You've successfully set up a complete CI/CD pipeline integrating Visual Studio Code, GitHub, and Netlify. Any future changes pushed to your GitHub repository will automatically trigger a new deployment on Netlify!
+You've successfully set up a complete CI/CD pipeline integrating Visual Studio Code, GitHub, and netlify. Any future changes pushed to your GitHub repository will automatically trigger a new deployment on netlify!
 
