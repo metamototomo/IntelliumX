@@ -6,8 +6,43 @@
     <description>Recent content on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 Feb 2026 20:53:00 +1100</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2026 22:58:46 +1100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure AI Model Behaviour</title>
+      <link>http://localhost:1313/help/refynepro/configure-ai-model-behaviour/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/configure-ai-model-behaviour/</guid>
+      <description>&lt;h2 id=&#34;accessing-ai-settings&#34;&gt;Accessing AI Settings&lt;/h2&gt;&#xA;&lt;p&gt;Navigate to &lt;strong&gt;Settings → AI Model&lt;/strong&gt; from the main menu.&lt;/p&gt;&#xA;&lt;h2 id=&#34;available-options&#34;&gt;Available Options&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Model&lt;/strong&gt;: Select the AI model that best suits your use case.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Temperature&lt;/strong&gt;: Controls response creativity. Lower values produce more predictable output.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Max Tokens&lt;/strong&gt;: Sets the maximum length of AI responses.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;saving-changes&#34;&gt;Saving Changes&lt;/h2&gt;&#xA;&lt;p&gt;Click &lt;strong&gt;Save&lt;/strong&gt; after adjusting settings. Changes take effect immediately.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fix Connection Error</title>
+      <link>http://localhost:1313/help/refynepro/fix-connection-error/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/fix-connection-error/</guid>
+      <description>&lt;h2 id=&#34;symptoms&#34;&gt;Symptoms&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;ldquo;Unable to connect&amp;rdquo; error on startup&lt;/li&gt;&#xA;&lt;li&gt;Requests time out after a few seconds&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;steps-to-resolve&#34;&gt;Steps to Resolve&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Check your internet connection.&lt;/li&gt;&#xA;&lt;li&gt;Verify that your firewall is not blocking Refyne Pro.&lt;/li&gt;&#xA;&lt;li&gt;Navigate to &lt;strong&gt;Settings → Network&lt;/strong&gt; and confirm the server URL is correct.&lt;/li&gt;&#xA;&lt;li&gt;Click &lt;strong&gt;Test Connection&lt;/strong&gt; to validate the settings.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;still-not-working&#34;&gt;Still Not Working?&lt;/h2&gt;&#xA;&lt;p&gt;Contact support at &lt;a href=&#34;mailto:support@refynepro.com&#34;&gt;support@refynepro.com&lt;/a&gt; with your connection log attached.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting Started with Refyne Pro</title>
+      <link>http://localhost:1313/help/refynepro/getting-started/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/getting-started/</guid>
+      <description>&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;&#xA;&lt;p&gt;Download the latest version of Refyne Pro from the official website and run the installer.&lt;/p&gt;&#xA;&lt;h2 id=&#34;first-launch&#34;&gt;First Launch&lt;/h2&gt;&#xA;&lt;p&gt;On first launch, you will be prompted to sign in with your account. Enter your credentials and click &lt;strong&gt;Sign In&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;&#xA;&lt;p&gt;Once signed in, explore the dashboard to familiarise yourself with the main features.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Shortcut Key List</title>
+      <link>http://localhost:1313/help/refynepro/shortcut-key-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/shortcut-key-list/</guid>
+      <description>&lt;h2 id=&#34;global-shortcuts&#34;&gt;Global Shortcuts&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Shortcut&lt;/th&gt;&#xA;          &lt;th&gt;Action&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd + K&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Open command palette&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd + ,&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Open settings&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd + /&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Toggle sidebar&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;editor-shortcuts&#34;&gt;Editor Shortcuts&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Shortcut&lt;/th&gt;&#xA;          &lt;th&gt;Action&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd + Enter&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Submit prompt&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd + Z&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Undo last action&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd + Shift + C&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Copy response&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+    </item>
+    <item>
+      <title>Create a new file</title>
+      <link>http://localhost:1313/help/refynepro/create-a-new-file/</link>
+      <pubDate>Sun, 29 Mar 2026 22:58:46 +1100</pubDate>
+      <guid>http://localhost:1313/help/refynepro/create-a-new-file/</guid>
+      <description>&lt;h2 id=&#34;how-to-create-a-new-file&#34;&gt;How to Create a New File&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Navigate to the desired folder and click the &lt;strong&gt;New Document&lt;/strong&gt; button.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-03-29-23-19-43.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;Enter a name for your file and press &lt;strong&gt;Enter&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-03-29-23-09-38.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;Once created, the file will open automatically for editing.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-03-29-23-20-44.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Static Website (VS Code, GitHub, netlify)</title>
       <link>http://localhost:1313/posts/static-website/</link>

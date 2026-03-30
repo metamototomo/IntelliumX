@@ -1,0 +1,68 @@
+{{ define "main" }}
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+
+{{ $categories := slice "Getting Started" "Setup" "Examples" "Troubleshooting" }}
+
+<div class="container">
+  <div class="help-center">
+
+    <h1>Refyne Pro Help Center</h1>
+    <p>Find guides, references, and troubleshooting help for Refyne Pro.</p>
+
+    {{ range $categories }}
+      {{ $cat := . }}
+
+      {{/* Robust category matching (supports string OR array) */}}
+      {{ $articles := where $.Pages "Params.category" "intersect" (slice $cat) }}
+
+      {{/* Only render section if articles exist */}}
+      {{ if gt (len $articles) 0 }}
+
+        {{/* Sort articles by weight */}}
+        {{ $sorted := $articles.ByParam "weight" }}
+
+        {{/* Safely get first article */}}
+        {{ $first := index $sorted 0 }}
+
+        <section class="help-section">
+          <h2>{{ $cat }}</h2>
+
+          <ul class="help-list">
+            {{ range $sorted }}
+              <li class="help-item">
+
+                <a href="{{ .RelPermalink }}">
+                  
+                  {{/* Start Here badge */}}
+                  {{ if and (eq $cat "Getting Started") (eq .Permalink $first.Permalink) }}
+                    <strong>🚀 Start Here:</strong>
+                  {{ end }}
+
+                  {{ .Title }}
+                </a>
+
+                {{ if .Params.description }}
+                  <p class="help-desc">{{ .Params.description }}</p>
+                {{ end }}
+
+                {{ if .Lastmod }}
+                  <small>Last updated: {{ .Lastmod.Format "02 Jan 2006" }}</small>
+                {{ end }}
+                
+              </li>
+            {{ end }}
+          </ul>
+        </section>
+
+      {{ end }}
+    {{ end }}
+
+  </div>
+</div>
+
+{{ partial "footer.html" . }}
+{{ if .Site.Params.sidebar }}
+{{ partial "sidebar.html" . }}
+{{ end }}
+{{ end }}

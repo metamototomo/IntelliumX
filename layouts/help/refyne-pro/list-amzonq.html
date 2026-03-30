@@ -1,0 +1,60 @@
+{{ define "main" }}
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+
+{{ $categories := slice "Getting Started" "Setup" "Examples" "Troubleshooting" }}
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h1 class="title is-2">Refyne Pro Help Center</h1>
+        <p class="subtitle is-5" style="margin-bottom: 2.5rem;">Find guides, references, and troubleshooting help for Refyne Pro.</p>
+
+        {{ range $categories }}
+          {{ $cat := . }}
+          <!-- {{ $articles := where $.Pages ".Params.category" $cat }} -->
+          {{ $articles := where $.Pages "Params.category" "intersect" (slice $cat) }}
+          {{ if $articles }}
+          <div style="margin-bottom: 2.5rem;">
+            <h2 class="title is-4" style="border-bottom: 2px solid #3273dc; padding-bottom: 0.5rem; margin-bottom: 1rem; color: #363636;">
+              {{ $cat }}
+            </h2>
+            {{ range $articles.ByParam "weight" }}
+            <a href="{{ .Permalink }}" style="text-decoration: none; color: inherit;">
+              <article style="padding: 1rem 1.25rem; border: 1px solid #e8e8e8; border-radius: 6px; margin-bottom: 0.75rem; transition: all 0.2s;"
+                onmouseover="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'; this.style.borderColor='#3273dc';"
+                onmouseout="this.style.boxShadow='none'; this.style.borderColor='#e8e8e8';">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <div>
+                    <span class="has-text-weight-semibold" style="color: #3273dc;">
+                      {{ if eq (.Weight) (($articles.ByParam "weight" | first 1).First.Weight) }}
+                        {{ if eq $cat "Getting Started" }}
+                        <span class="tag is-info is-light" style="margin-right: 0.5rem; font-size: 0.7rem;">Start Here</span>
+                        {{ end }}
+                      {{ end }}
+                      {{ .Title }}
+                    </span>
+                    {{ if .Params.description }}
+                    <p style="color: #7a7a7a; font-size: 0.9rem; margin: 0.25rem 0 0;">{{ .Params.description }}</p>
+                    {{ end }}
+                  </div>
+                  <span style="color: #b5b5b5; font-size: 1.2rem;">›</span>
+                </div>
+              </article>
+            </a>
+            {{ end }}
+          </div>
+          {{ end }}
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+{{ if .Site.Params.sidebar }}
+{{ partial "sidebar.html" . }}
+{{ end }}
+{{ end }}
