@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IAM on IntelliumX</title>
-    <link>http://localhost:1313/tags/iam/</link>
+    <link>https://www.intelliumx.com/tags/iam/</link>
     <description>Recent content in IAM on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Jun 2025 17:00:19 +1000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/iam/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.intelliumx.com/tags/iam/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS Lambda - Grant Access</title>
-      <link>http://localhost:1313/posts/lambda-set-access-to-dynamodb/</link>
+      <link>https://www.intelliumx.com/posts/lambda-set-access-to-dynamodb/</link>
       <pubDate>Sun, 15 Jun 2025 17:00:19 +1000</pubDate>
-      <guid>http://localhost:1313/posts/lambda-set-access-to-dynamodb/</guid>
+      <guid>https://www.intelliumx.com/posts/lambda-set-access-to-dynamodb/</guid>
       <description>&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Go to AWS IAM Console&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Find your Lambda&amp;rsquo;s role&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Click on the role name&lt;/li&gt;&#xA;&lt;li&gt;Click &amp;ldquo;Add permissions&amp;rdquo; → &amp;ldquo;Create inline policy&amp;rdquo;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;In the JSON editor, paste this policy:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Version&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2012-10-17&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Statement&amp;#34;&lt;/span&gt;: [&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Effect&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Allow&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Action&amp;#34;&lt;/span&gt;: [&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dynamodb:Scan&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dynamodb:GetItem&amp;#34;&lt;/span&gt;,&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dynamodb:Query&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            ],&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;Resource&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;arn:aws:dynamodb:ap-southeast-2:6850********:table/user_list&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Click &amp;ldquo;Review policy&amp;rdquo;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Name it something like &amp;ldquo;DynamoDBScanPolicy&amp;rdquo;&lt;/li&gt;&#xA;&lt;li&gt;Click &amp;ldquo;Create policy&amp;rdquo;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;After adding this policy, wait a few seconds and try your Lambda function again. The error should be resolved.&lt;/p&gt;</description>
     </item>
     <item>
       <title>sysprep in AWS</title>
-      <link>http://localhost:1313/posts/sysprep-in-aws/</link>
+      <link>https://www.intelliumx.com/posts/sysprep-in-aws/</link>
       <pubDate>Thu, 27 Mar 2025 09:34:06 +1000</pubDate>
-      <guid>http://localhost:1313/posts/sysprep-in-aws/</guid>
+      <guid>https://www.intelliumx.com/posts/sysprep-in-aws/</guid>
       <description>&lt;ol&gt;&#xA;&lt;li&gt;Delete all the items controlled by Group Policy (e.g., Certificates, Firewall Settings)&lt;/li&gt;&#xA;&lt;li&gt;Open “Amazon EC2Launch Settings” and click ”Shutdown with Sysprep”&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-03-27-10-45-50.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>

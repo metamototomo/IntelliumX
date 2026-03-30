@@ -1,0 +1,87 @@
+{{ define "main" }}
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+
+{{ $categories := slice "Getting Started" "Setup" "Examples" "Troubleshooting" }}
+
+{{ $icons := dict
+  "Getting Started"  "/images/icons/help/getting-started.svg"
+  "Setup"            "/images/icons/help/setup.svg"
+  "Examples"         "/images/icons/help/examples.svg"
+  "Troubleshooting"  "/images/icons/help/troubleshooting.svg"
+}}
+
+{{ $descriptions := dict
+  "Getting Started"  "New to Refyne Pro? Start here to learn the basics."
+  "Setup"            "Learn how to use and configure the AI writing tools."
+  "Examples"         "Quick-reference guides and shortcut keys."
+  "Troubleshooting"  "Solutions to common issues and error messages."
+}}
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+
+        <div style="margin-bottom: 2.5rem;">
+          <h1 class="title is-2">Refyne Pro Help Center</h1>
+        </div>
+
+        {{ range $categories }}
+          {{ $cat := . }}
+          {{ $articles := where $.Pages "Params.category" $cat }}
+
+          {{ if gt (len $articles) 0 }}
+            {{ $sorted := $articles.ByParam "weight" }}
+            {{ $first := index $sorted 0 }}
+            {{ $icon := index $icons $cat }}
+            {{ $desc := index $descriptions $cat }}
+
+            <div class="help-section-card" style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.75rem 2rem; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
+
+              <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;">
+                <img src="{{ $icon }}" alt="" width="22" height="22" style="opacity: 0.7; flex-shrink: 0;">
+                <h2 class="title is-4" style="margin: 0;">{{ $cat }}</h2>
+              </div>
+
+              {{ if $desc }}
+                <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1.25rem;">{{ $desc }}</p>
+              {{ end }}
+
+              <p style="color: #9ca3af; font-size: 0.8rem; margin-bottom: 1rem;">{{ len $sorted }} {{ if eq (len $sorted) 1 }}article{{ else }}articles{{ end }}</p>
+
+              <ul style="list-style: none; margin: 0; padding: 0;">
+                {{ range $sorted }}
+                  <li style="border-top: 1px solid #f3f4f6;">
+                    <a href="{{ .RelPermalink }}" style="display: flex; justify-content: space-between; align-items: center; color: #1d4ed8; text-decoration: none; font-size: 0.95rem; padding: 0.65rem 0.5rem; border-radius: 6px; transition: background 0.15s;"
+                      onmouseover="this.style.background='#f8faff'; this.style.color='#1e40af';"
+                      onmouseout="this.style.background=''; this.style.color='#1d4ed8';">
+                      <span>
+                        {{ if and (eq $cat "Getting Started") (eq .Permalink $first.Permalink) }}
+                          <span style="background: #dcfce7; color: #166534; font-size: 0.75rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 4px; margin-right: 0.5rem;">Start Here</span>
+                        {{ end }}
+                        {{ .Title }}
+                        {{ if .Params.description }}
+                          <span style="display: block; color: #6b7280; font-size: 0.85rem; font-weight: 400; margin-top: 0.15rem;">{{ .Params.description }}</span>
+                        {{ end }}
+                      </span>
+                      <span style="color: #9ca3af; font-size: 0.85rem; flex-shrink: 0; margin-left: 1rem;">→</span>
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+
+            </div>
+          {{ end }}
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+{{ if .Site.Params.sidebar }}
+{{ partial "sidebar.html" . }}
+{{ end }}
+{{ end }}

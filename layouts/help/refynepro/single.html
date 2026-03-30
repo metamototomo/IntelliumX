@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+
+        <p style="margin-bottom: 1.75rem; font-size: 0.9rem;">
+          <a href="{{ "/help/refynepro/" | relURL }}" style="color: #1d4ed8;">← Refyne Pro Help Center</a>
+          {{ if .Params.category }}
+            <span style="color: #9ca3af;"> / {{ .Params.category }}</span>
+          {{ end }}
+        </p>
+
+        <h1 class="title is-2">{{ .Title }}</h1>
+
+        {{ if .Params.description }}
+          <p class="subtitle is-5" style="color: #6b7280;">{{ .Params.description }}</p>
+        {{ end }}
+
+        {{ if .Lastmod }}
+          <p style="color: #9ca3af; font-size: 0.85rem; margin-bottom: 2rem;">Last updated: {{ .Lastmod.Format "02 Jan 2006" }}</p>
+        {{ end }}
+
+        <div class="content">
+          {{ .Content }}
+        </div>
+
+        <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e7eb;">
+          <a href="{{ "/help/refynepro/" | relURL }}" style="color: #1d4ed8; font-size: 0.9rem;">← Back to Help Center</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+{{ if .Site.Params.sidebar }}
+{{ partial "sidebar.html" . }}
+{{ end }}
+{{ end }}

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OIDC on IntelliumX</title>
-    <link>http://localhost:1313/tags/oidc/</link>
+    <link>https://www.intelliumx.com/tags/oidc/</link>
     <description>Recent content in OIDC on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 11 Aug 2025 08:26:23 +1000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/oidc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.intelliumx.com/tags/oidc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Entra ID and Cognito - OIDC</title>
-      <link>http://localhost:1313/posts/entraid-cognito-oidc/</link>
+      <link>https://www.intelliumx.com/posts/entraid-cognito-oidc/</link>
       <pubDate>Mon, 11 Aug 2025 08:26:23 +1000</pubDate>
-      <guid>http://localhost:1313/posts/entraid-cognito-oidc/</guid>
+      <guid>https://www.intelliumx.com/posts/entraid-cognito-oidc/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;This guide walks through setting up Microsoft Entra ID (formerly Azure AD) as an OpenID Connect (OIDC) identity provider for AWS Cognito User Pools. This integration allows users to sign in to your applications using their Microsoft credentials.&lt;/p&gt;&#xA;&lt;h2 id=&#34;steps&#34;&gt;&lt;strong&gt;Steps&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-sign-in-to-azure-portal&#34;&gt;&lt;strong&gt;1. Sign in to Azure Portal&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Navigate to &lt;a href=&#34;https://portal.azure.com&#34;&gt;https://portal.azure.com&lt;/a&gt; and access &lt;strong&gt;Microsoft Entra ID&lt;/strong&gt; (formerly &amp;ldquo;Azure AD&amp;rdquo;) from the main services menu.&lt;/p&gt;&#xA;&lt;h3 id=&#34;2-register-a-new-application&#34;&gt;&lt;strong&gt;2. Register a New Application&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;In &lt;strong&gt;Microsoft Entra ID&lt;/strong&gt;, select &lt;strong&gt;App registrations&lt;/strong&gt; → &lt;strong&gt;New registration&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2025-08-11-08-30-37.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
