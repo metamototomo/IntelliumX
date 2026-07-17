@@ -6,42 +6,84 @@
     <description>Recent content on IntelliumX</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Mar 2026 23:17:55 +1100</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Configure AI Model Behaviour</title>
-      <link>http://localhost:1313/help/refynepro/configure-ai-model-behaviour/</link>
+      <title>Basic UI Operations</title>
+      <link>http://localhost:1313/help/refynepro/ui-panels/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/help/refynepro/configure-ai-model-behaviour/</guid>
-      <description>&lt;h2 id=&#34;accessing-ai-settings&#34;&gt;Accessing AI Settings&lt;/h2&gt;&#xA;&lt;p&gt;Navigate to &lt;strong&gt;Settings → AI Model&lt;/strong&gt; from the main menu.&lt;/p&gt;&#xA;&lt;h2 id=&#34;available-options&#34;&gt;Available Options&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Model&lt;/strong&gt;: Select the AI model that best suits your use case.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Temperature&lt;/strong&gt;: Controls response creativity. Lower values produce more predictable output.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Max Tokens&lt;/strong&gt;: Sets the maximum length of AI responses.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;saving-changes&#34;&gt;Saving Changes&lt;/h2&gt;&#xA;&lt;p&gt;Click &lt;strong&gt;Save&lt;/strong&gt; after adjusting settings. Changes take effect immediately.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/help/refynepro/ui-panels/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;2026-06-28-14-16-02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;file-manager&#34;&gt;File Manager:&lt;/h3&gt;&#xA;&lt;p&gt;You can manage your documents using folder structure. There are additional functions to help you easily manage your documents as you work.&lt;/p&gt;&#xA;&lt;h3 id=&#34;main-area&#34;&gt;Main Area:&lt;/h3&gt;&#xA;&lt;p&gt;This is the text area where you primarily work and create valuable information.&lt;/p&gt;&#xA;&lt;h3 id=&#34;settings-panel&#34;&gt;Settings Panel:&lt;/h3&gt;&#xA;&lt;p&gt;Select an AI model and configure AI behaviours.&lt;/p&gt;&#xA;&lt;h3 id=&#34;account-panel&#34;&gt;Account Panel:&lt;/h3&gt;&#xA;&lt;p&gt;Manage your user account. You can open and close these panels by clicking the corresponding buttons.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Fix Connection Error</title>
-      <link>http://localhost:1313/help/refynepro/fix-connection-error/</link>
+      <title>MFA Setup</title>
+      <link>http://localhost:1313/help/refynepro/mfa-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/help/refynepro/fix-connection-error/</guid>
-      <description>&lt;h2 id=&#34;symptoms&#34;&gt;Symptoms&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&amp;ldquo;Unable to connect&amp;rdquo; error on startup&lt;/li&gt;&#xA;&lt;li&gt;Requests time out after a few seconds&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;steps-to-resolve&#34;&gt;Steps to Resolve&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Check your internet connection.&lt;/li&gt;&#xA;&lt;li&gt;Verify that your firewall is not blocking Refyne Pro.&lt;/li&gt;&#xA;&lt;li&gt;Navigate to &lt;strong&gt;Settings → Network&lt;/strong&gt; and confirm the server URL is correct.&lt;/li&gt;&#xA;&lt;li&gt;Click &lt;strong&gt;Test Connection&lt;/strong&gt; to validate the settings.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;still-not-working&#34;&gt;Still Not Working?&lt;/h2&gt;&#xA;&lt;p&gt;Contact support at &lt;a href=&#34;mailto:support@refynepro.com&#34;&gt;support@refynepro.com&lt;/a&gt; with your connection log attached.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/help/refynepro/mfa-setup/</guid>
+      <description>&lt;h2 id=&#34;enable-mfa&#34;&gt;Enable MFA&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Open the &lt;strong&gt;Account&lt;/strong&gt; panel from the top-right menu.&lt;/li&gt;&#xA;&lt;li&gt;Go to &lt;strong&gt;Security → Multi-Factor Authentication&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Click &lt;strong&gt;Enable MFA&lt;/strong&gt; and scan the QR code with your authenticator app.&lt;/li&gt;&#xA;&lt;li&gt;Enter the 6-digit code to confirm setup.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;MFA is required at every sign-in once enabled.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Getting Started with Refyne Pro</title>
-      <link>http://localhost:1313/help/refynepro/getting-started/</link>
+      <title>Search and Filter</title>
+      <link>http://localhost:1313/help/refynepro/folder-view/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/help/refynepro/getting-started/</guid>
-      <description>&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;&#xA;&lt;p&gt;Download the latest version of Refyne Pro from the official website and run the installer.&lt;/p&gt;&#xA;&lt;h2 id=&#34;first-launch&#34;&gt;First Launch&lt;/h2&gt;&#xA;&lt;p&gt;On first launch, you will be prompted to sign in with your account. Enter your credentials and click &lt;strong&gt;Sign In&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;next-steps&#34;&gt;Next Steps&lt;/h2&gt;&#xA;&lt;p&gt;Once signed in, explore the dashboard to familiarise yourself with the main features.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/help/refynepro/folder-view/</guid>
+      <description>&lt;h2 id=&#34;using-folder-view&#34;&gt;Using Folder View&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;strong&gt;Folder View&lt;/strong&gt; shows all your documents in a hierarchical folder structure. Click any folder to expand it and see its contents.&lt;/p&gt;&#xA;&lt;h2 id=&#34;search&#34;&gt;Search&lt;/h2&gt;&#xA;&lt;p&gt;Use the search bar at the top of the File Manager to filter documents by name in real time.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Shortcut Key List</title>
-      <link>http://localhost:1313/help/refynepro/shortcut-key-list/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/help/refynepro/shortcut-key-list/</guid>
-      <description>&lt;h2 id=&#34;global-shortcuts&#34;&gt;Global Shortcuts&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Shortcut&lt;/th&gt;&#xA;          &lt;th&gt;Action&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd + K&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Open command palette&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd + ,&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Open settings&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd + /&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Toggle sidebar&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;editor-shortcuts&#34;&gt;Editor Shortcuts&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Shortcut&lt;/th&gt;&#xA;          &lt;th&gt;Action&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd + Enter&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Submit prompt&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd + Z&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Undo last action&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd + Shift + C&lt;/code&gt;&lt;/td&gt;&#xA;          &lt;td&gt;Copy response&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+      <title>Available AI Models in RefynePro</title>
+      <link>http://localhost:1313/help/refynepro/available-ai-models/</link>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/available-ai-models/</guid>
+      <description>&lt;p&gt;RefynePro offers a variety of AI models from leading providers. Each model has different strengths. This page helps you choose the right model for your task.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;quick-comparison&#34;&gt;Quick Comparison&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Model&lt;/th&gt;&#xA;          &lt;th&gt;Tier&lt;/th&gt;&#xA;          &lt;th&gt;Best For&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Amazon — Nova 2 Lite&lt;/td&gt;&#xA;          &lt;td&gt;⚖️ Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Versatile writing across all styles&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Anthropic — Claude Haiku 4.5&lt;/td&gt;&#xA;          &lt;td&gt;🏆 Premium&lt;/td&gt;&#xA;          &lt;td&gt;High-quality everyday writing tasks&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Anthropic — Claude Sonnet 4.6&lt;/td&gt;&#xA;          &lt;td&gt;🏆 Premium&lt;/td&gt;&#xA;          &lt;td&gt;Professional and complex writing&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;DeepSeek — DeepSeek V3.2&lt;/td&gt;&#xA;          &lt;td&gt;⚖️ Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Technical and structured writing&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Google — Gemma 3 12B IT&lt;/td&gt;&#xA;          &lt;td&gt;⚡ Lightweight&lt;/td&gt;&#xA;          &lt;td&gt;Short and simple edits&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Meta — Llama 3.3 70B Instruct&lt;/td&gt;&#xA;          &lt;td&gt;⚖️ Balanced&lt;/td&gt;&#xA;          &lt;td&gt;General and casual writing&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;MiniMax — MiniMax M2.5&lt;/td&gt;&#xA;          &lt;td&gt;🧠 Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Thoughtful writing with reasoning&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Mistral — Mistral Large 3&lt;/td&gt;&#xA;          &lt;td&gt;⚖️ Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Concise and multilingual writing&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Moonshot — Kimi K2 Thinking&lt;/td&gt;&#xA;          &lt;td&gt;🧠 Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Complex writing with deep reasoning&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;NVIDIA — Nemotron Super 120B&lt;/td&gt;&#xA;          &lt;td&gt;⚡ Lightweight&lt;/td&gt;&#xA;          &lt;td&gt;Long documents and rich responses&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;OpenAI — GPT OSS 120B&lt;/td&gt;&#xA;          &lt;td&gt;🧠 Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Reasoned and technical writing&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Qwen — Qwen3 32B&lt;/td&gt;&#xA;          &lt;td&gt;⚡ Lightweight&lt;/td&gt;&#xA;          &lt;td&gt;Multilingual and fast edits&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
     </item>
     <item>
-      <title>Create a New File</title>
-      <link>http://localhost:1313/help/refynepro/create-a-new-file/</link>
-      <pubDate>Sun, 29 Mar 2026 22:58:46 +1100</pubDate>
-      <guid>http://localhost:1313/help/refynepro/create-a-new-file/</guid>
-      <description>&lt;h2 id=&#34;how-to-create-a-new-file&#34;&gt;How to Create a New File&lt;/h2&gt;&#xA;&lt;h5 id=&#34;1-navigate-to-the-desired-folder-and-click-the-new-document-button&#34;&gt;1. Navigate to the desired folder and click the &lt;strong&gt;New Document&lt;/strong&gt; button.&lt;/h5&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-03-29-23-19-43.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h5 id=&#34;2-enter-a-name-for-your-file-and-press-enter&#34;&gt;2. Enter a name for your file and press &lt;strong&gt;Enter&lt;/strong&gt;.&lt;/h5&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-03-29-23-09-38.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h5 id=&#34;3-once-created-the-file-will-open-automatically-for-editing&#34;&gt;3. Once created, the file will open automatically for editing.&lt;/h5&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-03-29-23-20-44.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+      <title>Context Menu</title>
+      <link>http://localhost:1313/help/refynepro/context-menu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/context-menu/</guid>
+      <description>&lt;h2 id=&#34;opening-the-context-menu&#34;&gt;Opening the Context Menu&lt;/h2&gt;&#xA;&lt;p&gt;Right-click on any document or folder, or press &lt;strong&gt;Cmd+K&lt;/strong&gt; anywhere in the editor, to open the context menu.&lt;/p&gt;&#xA;&lt;h2 id=&#34;available-actions&#34;&gt;Available Actions&lt;/h2&gt;&#xA;&lt;p&gt;The context menu adapts based on what you have selected:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Document selected&lt;/strong&gt; — Rename, Move, Duplicate, Delete&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Folder selected&lt;/strong&gt; — Rename, Move, Delete&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Text selected in editor&lt;/strong&gt; — Run AI Action, Copy, Cut&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;keyboard-shortcut&#34;&gt;Keyboard Shortcut&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Action&lt;/th&gt;&#xA;          &lt;th&gt;Shortcut&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Open context menu&lt;/td&gt;&#xA;          &lt;td&gt;&lt;code&gt;Cmd+K&lt;/code&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Close context menu&lt;/td&gt;&#xA;          &lt;td&gt;&lt;code&gt;Esc&lt;/code&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+    </item>
+    <item>
+      <title>Credit Usage</title>
+      <link>http://localhost:1313/help/refynepro/credit-usage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/credit-usage/</guid>
+      <description>&lt;h2 id=&#34;viewing-your-usage&#34;&gt;Viewing Your Usage&lt;/h2&gt;&#xA;&lt;p&gt;Open the &lt;strong&gt;Settings&lt;/strong&gt; panel and select the &lt;strong&gt;Usage&lt;/strong&gt; tab. You will see:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Tokens used this month&lt;/li&gt;&#xA;&lt;li&gt;Remaining balance&lt;/li&gt;&#xA;&lt;li&gt;Per-action breakdown&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;monthly-reset&#34;&gt;Monthly Reset&lt;/h2&gt;&#xA;&lt;p&gt;Credits reset automatically at the start of each billing cycle.&lt;/p&gt;&#xA;&lt;h2 id=&#34;setting-a-usage-limit&#34;&gt;Setting a Usage Limit&lt;/h2&gt;&#xA;&lt;p&gt;In the &lt;strong&gt;Usage&lt;/strong&gt; tab, enter a monthly token limit to prevent unexpected overages. Refyne Pro will alert you when you are approaching the limit.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Favourite View</title>
+      <link>http://localhost:1313/help/refynepro/favourite-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/favourite-view/</guid>
+      <description>&lt;h2 id=&#34;pinning-a-document&#34;&gt;Pinning a Document&lt;/h2&gt;&#xA;&lt;p&gt;Right-click any document and choose &lt;strong&gt;Add to Favourites&lt;/strong&gt;, or press &lt;strong&gt;Cmd+K&lt;/strong&gt; and select &lt;strong&gt;Pin&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;accessing-favourites&#34;&gt;Accessing Favourites&lt;/h2&gt;&#xA;&lt;p&gt;Click the &lt;strong&gt;Favourites&lt;/strong&gt; tab in the File Manager panel to see all pinned documents in one place.&lt;/p&gt;&#xA;&lt;h2 id=&#34;removing-a-favourite&#34;&gt;Removing a Favourite&lt;/h2&gt;&#xA;&lt;p&gt;Right-click the document in Favourites view and choose &lt;strong&gt;Remove from Favourites&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Switch AI model</title>
+      <link>http://localhost:1313/help/refynepro/change-ai-model/</link>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/change-ai-model/</guid>
+      <description>&lt;p&gt;You can switch models anytime in the &lt;strong&gt;Settings panel&lt;/strong&gt; on the right side of the editor.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-06-27-22-21-41.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Create a Folder and Document</title>
+      <link>http://localhost:1313/help/refynepro/create-folder-and-document/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/create-folder-and-document/</guid>
+      <description>&lt;h2 id=&#34;create-a-folder&#34;&gt;Create a Folder&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;In the &lt;strong&gt;File Manager&lt;/strong&gt; panel, click the &lt;strong&gt;New Folder&lt;/strong&gt; button.&lt;/li&gt;&#xA;&lt;li&gt;Enter a name and press &lt;strong&gt;Enter&lt;/strong&gt; to confirm.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;create-a-document&#34;&gt;Create a Document&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Select the folder where you want the document.&lt;/li&gt;&#xA;&lt;li&gt;Click the &lt;strong&gt;New Document&lt;/strong&gt; button, or press &lt;strong&gt;Cmd+K&lt;/strong&gt; and choose &lt;strong&gt;New Document&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Enter a title and press &lt;strong&gt;Enter&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;The document opens automatically in the editor ready for input.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Recent View</title>
+      <link>http://localhost:1313/help/refynepro/recent-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/recent-view/</guid>
+      <description>&lt;h2 id=&#34;using-recent-view&#34;&gt;Using Recent View&lt;/h2&gt;&#xA;&lt;p&gt;Click the &lt;strong&gt;Recent&lt;/strong&gt; tab in the File Manager to see your last-opened documents sorted by date.&lt;/p&gt;&#xA;&lt;h2 id=&#34;pinning-a-recent-document&#34;&gt;Pinning a Recent Document&lt;/h2&gt;&#xA;&lt;p&gt;Click the pin icon next to any document to keep it at the top of the Recent list.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Subscription</title>
+      <link>http://localhost:1313/help/refynepro/subscription/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/subscription/</guid>
+      <description>&lt;h2 id=&#34;view-your-plan&#34;&gt;View Your Plan&lt;/h2&gt;&#xA;&lt;p&gt;Open the &lt;strong&gt;Account&lt;/strong&gt; panel and select &lt;strong&gt;Subscription&lt;/strong&gt; to see your current plan, renewal date, and included credits.&lt;/p&gt;&#xA;&lt;h2 id=&#34;upgrade-or-change-plan&#34;&gt;Upgrade or Change Plan&lt;/h2&gt;&#xA;&lt;p&gt;Click &lt;strong&gt;Change Plan&lt;/strong&gt; to view available options and select a new tier. Changes take effect at the next billing cycle.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cancel-subscription&#34;&gt;Cancel Subscription&lt;/h2&gt;&#xA;&lt;p&gt;To cancel, click &lt;strong&gt;Cancel Subscription&lt;/strong&gt; at the bottom of the Subscription page. Your access continues until the end of the current billing period.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Create a New Folder</title>
@@ -51,11 +93,53 @@
       <description>&lt;h2 id=&#34;how-to-create-a-new-folder&#34;&gt;How to Create a New Folder&lt;/h2&gt;&#xA;&lt;h5 id=&#34;1-navigate-to-the-desired-folder-and-click-the-new-folder-button&#34;&gt;1. Navigate to the desired folder and click the &lt;strong&gt;New Folder&lt;/strong&gt; button.&lt;/h5&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-03-30-23-34-08.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h5 id=&#34;2-enter-a-name-for-your-file-and-press-enter&#34;&gt;2. Enter a name for your file and press &lt;strong&gt;Enter&lt;/strong&gt;.&lt;/h5&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-03-30-23-33-23.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h5 id=&#34;3-once-created-the-folder-will-appear-in-both-the-file-manager-and-the-folder-view-as-shown-below&#34;&gt;3. Once created, the folder will appear in both the File Manager and the Folder View, as shown below.&lt;/h5&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-03-30-23-39-38.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>AI Models in RefynePro</title>
-      <link>http://localhost:1313/help/refynepro/available-ai-models/</link>
-      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/help/refynepro/available-ai-models/</guid>
-      <description>&lt;p&gt;RefynePro offers a variety of AI models from leading providers. Each model has different strengths. This page helps you choose the right model for your task.&lt;/p&gt;&#xA;&lt;p&gt;You can switch models anytime in the &lt;strong&gt;Settings panel&lt;/strong&gt; on the right side of the editor.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;quick-comparison&#34;&gt;Quick Comparison&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Model&lt;/th&gt;&#xA;          &lt;th&gt;Tier&lt;/th&gt;&#xA;          &lt;th&gt;Best For&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Amazon — Nova 2 Lite&lt;/td&gt;&#xA;          &lt;td&gt;⚖️ Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Versatile writing across all styles&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Anthropic — Claude Haiku 4.5&lt;/td&gt;&#xA;          &lt;td&gt;🏆 Premium&lt;/td&gt;&#xA;          &lt;td&gt;High-quality everyday writing tasks&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Anthropic — Claude Sonnet 4.6&lt;/td&gt;&#xA;          &lt;td&gt;🏆 Premium&lt;/td&gt;&#xA;          &lt;td&gt;Professional and complex writing&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;DeepSeek — DeepSeek V3.2&lt;/td&gt;&#xA;          &lt;td&gt;⚖️ Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Technical and structured writing&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Google — Gemma 3 12B IT&lt;/td&gt;&#xA;          &lt;td&gt;⚡ Lightweight&lt;/td&gt;&#xA;          &lt;td&gt;Short and simple edits&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Meta — Llama 3.3 70B Instruct&lt;/td&gt;&#xA;          &lt;td&gt;⚖️ Balanced&lt;/td&gt;&#xA;          &lt;td&gt;General and casual writing&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;MiniMax — MiniMax M2.5&lt;/td&gt;&#xA;          &lt;td&gt;🧠 Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Thoughtful writing with reasoning&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Mistral — Mistral Large 3&lt;/td&gt;&#xA;          &lt;td&gt;⚖️ Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Concise and multilingual writing&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Moonshot — Kimi K2 Thinking&lt;/td&gt;&#xA;          &lt;td&gt;🧠 Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Complex writing with deep reasoning&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;NVIDIA — Nemotron Super 120B&lt;/td&gt;&#xA;          &lt;td&gt;⚖️ Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Long documents and rich responses&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;OpenAI — GPT OSS 120B&lt;/td&gt;&#xA;          &lt;td&gt;🧠 Balanced&lt;/td&gt;&#xA;          &lt;td&gt;Reasoned and technical writing&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Qwen — Qwen3 32B&lt;/td&gt;&#xA;          &lt;td&gt;⚡ Lightweight&lt;/td&gt;&#xA;          &lt;td&gt;Multilingual and fast edits&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;model-tiers&#34;&gt;Model Tiers&lt;/h2&gt;&#xA;&lt;p&gt;We group models into four tiers to help you choose:&lt;/p&gt;</description>
+      <title>Create a New File</title>
+      <link>http://localhost:1313/help/refynepro/create-a-new-file/</link>
+      <pubDate>Sun, 29 Mar 2026 22:58:46 +1100</pubDate>
+      <guid>http://localhost:1313/help/refynepro/create-a-new-file/</guid>
+      <description>&lt;h2 id=&#34;how-to-create-a-new-file&#34;&gt;How to Create a New File&lt;/h2&gt;&#xA;&lt;h5 id=&#34;1-navigate-to-the-desired-folder-and-click-the-new-document-button&#34;&gt;1. Navigate to the desired folder and click the &lt;strong&gt;New Document&lt;/strong&gt; button.&lt;/h5&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-03-29-23-19-43.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h5 id=&#34;2-enter-a-name-for-your-file-and-press-enter&#34;&gt;2. Enter a name for your file and press &lt;strong&gt;Enter&lt;/strong&gt;.&lt;/h5&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-03-29-23-09-38.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h5 id=&#34;3-once-created-the-file-will-open-automatically-for-editing&#34;&gt;3. Once created, the file will open automatically for editing.&lt;/h5&gt;&#xA;&lt;p&gt;&lt;img src=&#34;2026-03-29-23-20-44.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Move Folders and Documents</title>
+      <link>http://localhost:1313/help/refynepro/move-folders-and-documents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/move-folders-and-documents/</guid>
+      <description>&lt;h2 id=&#34;move-a-document-or-folder&#34;&gt;Move a Document or Folder&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Right-click the item you want to move, or select it and press &lt;strong&gt;Cmd+K&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Choose &lt;strong&gt;Move&lt;/strong&gt; from the context menu.&lt;/li&gt;&#xA;&lt;li&gt;Select the destination folder and confirm.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;drag-and-drop&#34;&gt;Drag and Drop&lt;/h2&gt;&#xA;&lt;p&gt;You can also drag any document or folder directly onto a target folder in the File Manager panel.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tag View</title>
+      <link>http://localhost:1313/help/refynepro/tag-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/tag-view/</guid>
+      <description>&lt;h2 id=&#34;adding-a-tag&#34;&gt;Adding a Tag&lt;/h2&gt;&#xA;&lt;p&gt;Right-click any document and choose &lt;strong&gt;Add Tag&lt;/strong&gt;, then type a tag name and press &lt;strong&gt;Enter&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;tag-view&#34;&gt;Tag View&lt;/h2&gt;&#xA;&lt;p&gt;Click the &lt;strong&gt;Tags&lt;/strong&gt; tab in the File Manager to browse all documents grouped by tag. Click any tag to filter the list.&lt;/p&gt;&#xA;&lt;h2 id=&#34;pinning-a-tag&#34;&gt;Pinning a Tag&lt;/h2&gt;&#xA;&lt;p&gt;Click the pin icon next to a tag name to keep it in your quick-access bar.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact Support</title>
+      <link>http://localhost:1313/help/refynepro/contact-support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/contact-support/</guid>
+      <description>&lt;h2 id=&#34;enable-mfa&#34;&gt;Enable MFA&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Open the &lt;strong&gt;Account&lt;/strong&gt; panel from the top-right menu.&lt;/li&gt;&#xA;&lt;li&gt;Go to &lt;strong&gt;Security → Multi-Factor Authentication&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Click &lt;strong&gt;Enable MFA&lt;/strong&gt; and scan the QR code with your authenticator app.&lt;/li&gt;&#xA;&lt;li&gt;Enter the 6-digit code to confirm setup.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;MFA is required at every sign-in once enabled.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Recycle Bin</title>
+      <link>http://localhost:1313/help/refynepro/recycle-bin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/recycle-bin/</guid>
+      <description>&lt;h2 id=&#34;deleting-a-document&#34;&gt;Deleting a Document&lt;/h2&gt;&#xA;&lt;p&gt;Right-click any document and choose &lt;strong&gt;Delete&lt;/strong&gt;. The document moves to the Recycle Bin — it is not permanently removed yet.&lt;/p&gt;&#xA;&lt;h2 id=&#34;restoring-a-document&#34;&gt;Restoring a Document&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Click the &lt;strong&gt;Recycle Bin&lt;/strong&gt; tab in the File Manager.&lt;/li&gt;&#xA;&lt;li&gt;Right-click the document and choose &lt;strong&gt;Restore&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;permanently-deleting&#34;&gt;Permanently Deleting&lt;/h2&gt;&#xA;&lt;p&gt;In the Recycle Bin, right-click a document and choose &lt;strong&gt;Delete Permanently&lt;/strong&gt;. This action cannot be undone.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Run AI Actions</title>
+      <link>http://localhost:1313/help/refynepro/run-ai-actions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/run-ai-actions/</guid>
+      <description>&lt;h2 id=&#34;running-an-ai-action&#34;&gt;Running an AI Action&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Select the text you want to improve in the editor.&lt;/li&gt;&#xA;&lt;li&gt;Open the context menu with &lt;strong&gt;Cmd+K&lt;/strong&gt; or right-click.&lt;/li&gt;&#xA;&lt;li&gt;Choose an action — &lt;strong&gt;Improve&lt;/strong&gt;, &lt;strong&gt;Summarise&lt;/strong&gt;, &lt;strong&gt;Simplify&lt;/strong&gt;, &lt;strong&gt;Professional&lt;/strong&gt;, or &lt;strong&gt;Casual&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;The result appears in the &lt;strong&gt;Result panel&lt;/strong&gt; on the right.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;applying-the-result&#34;&gt;Applying the Result&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Click &lt;strong&gt;Apply&lt;/strong&gt; to replace your selected text with the AI output.&lt;/li&gt;&#xA;&lt;li&gt;Click &lt;strong&gt;Discard&lt;/strong&gt; to dismiss the result and keep your original text.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;custom-prompts&#34;&gt;Custom Prompts&lt;/h2&gt;&#xA;&lt;p&gt;For full control, choose &lt;strong&gt;Custom Prompt&lt;/strong&gt; and type your own instruction.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure AI Model Behaviour</title>
+      <link>http://localhost:1313/help/refynepro/configure-ai-model-behaviour/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/help/refynepro/configure-ai-model-behaviour/</guid>
+      <description>&lt;h2 id=&#34;accessing-ai-settings&#34;&gt;Accessing AI Settings&lt;/h2&gt;&#xA;&lt;p&gt;Navigate to &lt;strong&gt;Settings → AI Model&lt;/strong&gt; from the main menu.&lt;/p&gt;&#xA;&lt;h2 id=&#34;available-options&#34;&gt;Available Options&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Model&lt;/strong&gt;: Select the AI model that best suits your use case.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Temperature&lt;/strong&gt;: Controls response creativity. Lower values produce more predictable output.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Max Tokens&lt;/strong&gt;: Sets the maximum length of AI responses.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;saving-changes&#34;&gt;Saving Changes&lt;/h2&gt;&#xA;&lt;p&gt;Click &lt;strong&gt;Save&lt;/strong&gt; after adjusting settings. Changes take effect immediately.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Static Website (VS Code, GitHub, netlify)</title>

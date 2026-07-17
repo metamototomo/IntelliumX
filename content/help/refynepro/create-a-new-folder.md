@@ -3,7 +3,7 @@ date: '2026-03-30T23:17:55+11:00'
 draft: false
 title: 'Create a New Folder'
 category: "Getting Started"
-weight: 12
+weight: 31
 ---
 
 ## How to Create a New Folder

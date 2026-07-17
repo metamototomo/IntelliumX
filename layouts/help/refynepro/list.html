@@ -2,20 +2,18 @@
 {{ partial "navbar.html" . }}
 {{ partial "navbar-clone.html" . }}
 
-{{ $categories := slice "Getting Started" "Setup" "Examples" "Troubleshooting" }}
+{{ $categories := slice "Getting Started" "Daily Operations" "Account & Billing" }}
 
 {{ $icons := dict
-  "Getting Started"  "/images/icons/help/getting-started.svg"
-  "Setup"            "/images/icons/help/setup.svg"
-  "Examples"         "/images/icons/help/examples.svg"
-  "Troubleshooting"  "/images/icons/help/troubleshooting.svg"
+  "Getting Started"    "/images/icons/help/getting-started.svg"
+  "Daily Operations"   "/images/icons/help/daily-operations.svg"
+  "Account & Billing"  "/images/icons/help/account-billing.svg"
 }}
 
 {{ $descriptions := dict
-  "Getting Started"  "New to Refyne Pro? Start here to learn the basics."
-  "Setup"            "Learn how to use and configure the AI writing tools."
-  "Examples"         "Quick-reference guides and shortcut keys."
-  "Troubleshooting"  "Solutions to common issues and error messages."
+  "Getting Started"    "New to Refyne Pro? Start here to learn the core interface and essential operations."
+  "Daily Operations"   "Organise and navigate your documents efficiently every day."
+  "Account & Billing"  "Manage your account security, credits, and subscription."
 }}
 
 <section class="section is-small">

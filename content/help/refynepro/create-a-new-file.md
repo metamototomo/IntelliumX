@@ -3,7 +3,7 @@ date: '2026-03-29T22:58:46+11:00'
 draft: false
 title: 'Create a New File'
 category: "Getting Started"
-weight: 11
+weight: 32
 ---
 
 ## How to Create a New File

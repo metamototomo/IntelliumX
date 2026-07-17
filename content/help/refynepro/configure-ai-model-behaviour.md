@@ -1,8 +1,8 @@
 ---
 title: "Configure AI Model Behaviour"
 description: "How to customise the AI model settings to match your workflow."
-category: "Setup"
-weight: 10
+category: "Getting Started"
+weight: 90
 ---
 
 ## Accessing AI Settings
