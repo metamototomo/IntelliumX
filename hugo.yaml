@@ -19,130 +19,135 @@ markup:
       unsafe: true # Allows you to write raw html in your md files
 
 params:
-  # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
   openGraph: true
-  # Used as meta data; describe your site to make Google Bots happy
-  description: AI consultant and cloud solutions architect sharing practical
-    insights on AWS, generative AI, and modern DevOps practices. Building the
-    future of AI-powered applications.
-  # Preloader ensures images are loaded before displaying to the user. If you don't want it uncomment to set it to false
-  # preloader: false
-  navbarlogo:
-    # Logo (from static/images/logos/___)
-    image: logos/stream.svg  # Change this to your PNG filename
-    link: /
-    # Default width/height. Uncomment if you need to change
-    # width: 50
-    # height: 50
+  description: IntelliumX builds practical cloud and AI solutions that simplify
+    everyday work and life through secure, easy-to-use, and cost-effective software.
+  preloader: false
   font:
     name: Open Sans
     sizes:
       - 400
       - 600
-  hero:
-    title: IntelliumX
-    subtitle: Welcome to my tech knowledge hub! I share practical solutions, tips,
-      and insights I've discovered while working with AI, AWS, and modern
-      development practices. My goal is to help fellow developers and IT
-      professionals solve real-world challenges more efficiently.
-    buttontext: Explore My Work
-    buttonlink: /projects/
-    image: hero/hero-image.jpg # Add your hero background image here
-  # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
     - title: Home
       url: /
-    - title: Help Center
-      url: /help/refynepro/
-    - title: Projects
-      url: /projects/
+    - title: Products
+      url: /#products
+    - title: Knowledge
+      url: /#knowledge
+    - title: About
+      url: /#about
     - title: Blog
       url: /posts/
-    - title: About
-      url: /about/
-  section1:
-    title: Projects & Solutions
-    subtitle: Innovative technology solutions and practical implementations
-    buttonText: View All Projects
-    buttonLink: /projects/
-    tiles:
-      - title: Cloud Architecture
-        icon: cloud.svg
-        text: Scalable AWS infrastructure, serverless applications, and cloud-native
-          solutions designed for modern businesses.
-      - title: AI Integration
-        icon: robot.svg
-        text: Intelligent automation and AI-powered applications that transform
-          business processes and decision-making.
-      - title: DevOps Solutions
-        icon: gear.svg
-        text: Streamlined deployment pipelines, infrastructure as code, and security
-          implementations for reliable operations.
-  section2:
-    title: Knowledge Hub & Blog
-    subtitle: Practical insights and technical expertise shared with the community
-    buttonText: Read Blog Posts
-    buttonLink: /posts/
-    features:
-      - title: Technical Tutorials
-        text: Step-by-step guides covering AWS services, AI implementation, and DevOps
-          practices. Real-world solutions with practical examples and
-          configurations.
-        icon: books.svg
-      - title: Industry Insights
-        text: Analysis of emerging technologies, best practices, and lessons learned
-          from implementing complex technical solutions in production
-          environments.
-        icon: light.svg
-      - title: Problem-Solving Resources
-        text: Focused content designed to help developers and IT professionals
-          overcome specific challenges and implement effective solutions
-          efficiently.
-        icon: target.svg
+    - title: Launch RefynePro
+      url: https://refynepro.intelliumx.com/editor
+      button: true
+      target: _blank
+  hero:
+    tagline: Simple Technology. Real Solutions.
+    vision: To make modern technology effortless, so people can focus on what matters most.
+    primaryButton:
+      text: Explore Products
+      link: /#products
+    secondaryButton:
+      text: Knowledge Hub
+      link: /#knowledge
+  products:
+    eyebrow: Products
+    title: Our product
+    subtitle: RefynePro is IntelliumX's AI-first knowledge workspace—built for real daily use.
+    items:
+      - name: RefynePro
+        status: Available now
+        icon: images/projects/refynepro/Logo.svg
+        wordmark: images/projects/refynepro/logo-light-mode.svg
+        brandTagline: Your personal AI knowledge base.
+        description: Organise, improve, and reuse the knowledge you create with AI. Keep
+          your ideas searchable, structured, and always within reach.
+        url: https://refynepro.intelliumx.com/editor
+        external: true
+        launchText: Launch RefynePro
+        helpUrl: /help/refynepro/
+        helpText: Help & Tutorials
+        image: images/projects/refynepro/refynepro-screenshot.jpg
+  knowledgeHub:
+    eyebrow: Knowledge Hub
+    title: Learn. Build. Grow.
+    subtitle: Practical guides, technical insights, and real-world solutions to help
+      you get more from AI, cloud, and modern technology.
+    recentCount: 5
+    channels:
+      - label: Articles
+        title: Technical Blog
+        text: Step-by-step guides on AWS, AI, DevOps, and software development—written
+          from hands-on experience.
+        url: /posts/
+      - label: Video
+        title: RefynePro on YouTube
+        text: Product tutorials, walkthroughs, and tips for getting the most out of RefynePro.
+        url: https://www.youtube.com/@RefynePro
+        external: true
+      - label: Insights
+        title: Project Deep Dives
+        text: Architecture notes, lessons learned, and behind-the-scenes looks at how
+          our products are built.
+        url: /projects/
+  companyAbout:
+    eyebrow: About IntelliumX
+    titleLine1: Built by an engineer.
+    titleLine2: Designed for real people.
+    intro: |
+      Modern technology offers incredible possibilities—but too often it's difficult to understand or more complicated than it needs to be.
+
+      IntelliumX builds practical cloud and AI solutions that make powerful technology easier to use through simplicity, security, and thoughtful design.
+    question: "Every product begins with one question: How can we make this easier for people?"
+    pillars:
+      - title: Practical Solutions
+        text: Technology should solve real problems—not create new ones.
+      - title: Simple by Design
+        text: We remove unnecessary complexity so anyone can use our products with confidence.
+      - title: Built on Trust
+        text: Security, reliability, and continuous improvement are built into everything we create.
+    closing: |
+      Our products are inspired by decades of hands-on engineering experience across enterprise software, cloud infrastructure, automation, and AI.
+
+      We combine proven engineering practices with modern technologies to build solutions that are practical today and ready for tomorrow.
+    founder:
+      title: Meet the Founder
+      bio: IntelliumX was founded by Nobuhiro Tokushige, a software engineer with over 20 years of experience designing, supporting, and delivering enterprise software solutions. Drawing on expertise in cloud computing, AI, and automation, he founded IntelliumX to build practical technology that helps people solve real-world problems through simple, reliable, and secure software.
+      links:
+        - text: LinkedIn
+          url: https://www.linkedin.com/in/nobuhiro-tokushige/
+          external: true
   footer:
-    # Logo (from static/images/logos/___)
     logo: IntelliumX-v25.png
-    # Social Media Title
-    socialmediatitle: Follow Us
-    # Social media links (GitHub, Twitter, etc.). All are optional.
-    socialmedia:
-      - link: https://www.linkedin.com/in/nobuhiro-tokushige/
-        # Icons are from Font Awesome
-        icon: linkedin
-        target: _blank
-      - link: https://github.com/metamototomo
-        icon: github
-        target: _blank
     bulmalogo: false
     quicklinks:
       column1:
-        title: Navigate
+        title: Company
         links:
           - text: Home
             link: /
-          - text: Projects
-            link: /projects/
+          - text: Products
+            link: /#products
+          - text: About
+            link: /#about
           - text: Blog
             link: /posts/
-          - text: About
-            link: /about/
       column2:
         title: Resources
         links:
-          - text: All Posts
+          - text: Knowledge Hub
             link: /posts/
-          - text: Categories
-            link: /categories/
-          - text: Tags
-            link: /tags/
-          - text: Archives
+          - text: RefynePro Help
+            link: /help/refynepro/
+          - text: Projects
+            link: /projects/
+          - text: Blog Archives
             link: /archives/
       column3:
-        title: Connect
+        title: Product
         links:
-          - text: LinkedIn
-            link: https://www.linkedin.com/in/nobuhiro-tokushige/
-            target: _blank
-          - text: GitHub
-            link: https://github.com/metamototomo
+          - text: Launch RefynePro
+            link: https://refynepro.intelliumx.com/editor
             target: _blank

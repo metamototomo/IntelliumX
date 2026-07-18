@@ -30,13 +30,14 @@
           </div>
         </div>
       {{- end }}
+      {{- with $socialMedia }}
       <div class="column">
         <div class="footer-column">
           <div class="footer-header">
             <h3>{{ $socialMediaTitle }}</h3>
             <nav class="level is-mobile">
               <div class="level-left">
-                {{- range $socialMedia }}
+                {{- range . }}
                 <a class="level-item" href="{{ .link }}"{{ if .target }} target="{{ .target }}"{{ end }}>
                   <span class="icon"><i class="fa fa-{{ .icon }}"></i></span>
                 </a>
@@ -52,6 +53,7 @@
           </div>
         </div>
       </div>
+      {{- end }}
     </div>
   </div>
 </footer>

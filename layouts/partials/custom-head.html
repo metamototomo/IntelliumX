@@ -1,5 +1,9 @@
 {{ $custom := resources.Get "custom.css" }}
-<link rel="stylesheet" href="{{ $custom.Permalink }}">
+<link rel="stylesheet" href="{{ $custom.RelPermalink }}">
+{{ if .IsHome }}
+{{ $home := resources.Get "home.css" }}
+<link rel="stylesheet" href="{{ $home.RelPermalink }}">
+{{ end }}
 
 <!-- Favicon -->
 <link rel="icon" href="{{ "favicon.ico" | relURL }}?v=4" type="image/x-icon">

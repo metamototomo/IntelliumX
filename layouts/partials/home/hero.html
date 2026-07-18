@@ -1,0 +1,14 @@
+{{- $hero := .Site.Params.hero }}
+<section class="home-hero" id="top">
+  <div class="home-hero__inner">
+    <img src="{{ "images/logos/logo-black.svg" | relURL }}" alt="IntelliumX" class="home-hero__logo">
+    <h1 class="home-hero__tagline">{{ $hero.tagline }}</h1>
+    {{ with $hero.vision }}
+    <p class="home-hero__vision">{{ . }}</p>
+    {{ end }}
+    <div class="home-hero__actions">
+      <a href="{{ $hero.primaryButton.link }}" class="home-btn home-btn--primary">{{ $hero.primaryButton.text }}</a>
+      <a href="{{ $hero.secondaryButton.link }}" class="home-btn home-btn--secondary">{{ $hero.secondaryButton.text }}</a>
+    </div>
+  </div>
+</section>

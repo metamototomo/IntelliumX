@@ -1,0 +1,48 @@
+{{- $products := .Site.Params.products }}
+<section class="home-section" id="products">
+  <div class="container">
+    <div class="home-section__header">
+      <span class="home-section__eyebrow">{{ $products.eyebrow }}</span>
+      <h2 class="home-section__title">{{ $products.title }}</h2>
+      <p class="home-section__subtitle">{{ $products.subtitle }}</p>
+    </div>
+
+    {{- range $products.items }}
+    {{- $product := . }}
+    <article class="home-product-card">
+      <div>
+        <span class="home-product-card__badge">{{ .status }}</span>
+
+        <div class="home-product-card__brand">
+          {{ with .icon }}
+          <img src="{{ . | relURL }}" alt="" class="home-product-card__icon">
+          {{ end }}
+          {{ with .wordmark }}
+          <img src="{{ . | relURL }}" alt="{{ $product.name }}" class="home-product-card__wordmark">
+          {{ end }}
+        </div>
+
+        {{ with .brandTagline }}
+        <h3 class="home-product-card__brand-tagline">{{ . }}</h3>
+        {{ end }}
+
+        {{ with .description }}
+        <p class="home-product-card__description">{{ . }}</p>
+        {{ end }}
+
+        <div class="home-product-card__links">
+          <a href="{{ .url }}" class="home-btn home-btn--primary"{{ if .external }} target="_blank" rel="noopener"{{ end }}>{{ .launchText }}</a>
+          {{ with .helpUrl }}
+          <a href="{{ . | relURL }}" class="home-btn home-btn--secondary">{{ $product.helpText | default "Help & Tutorials" }}</a>
+          {{ end }}
+        </div>
+      </div>
+      {{ with $product.image }}
+      <div class="home-product-card__image-wrap">
+        <img src="{{ . | relURL }}" alt="{{ $product.name }} screenshot" class="home-product-card__image">
+      </div>
+      {{ end }}
+    </article>
+    {{- end }}
+  </div>
+</section>
