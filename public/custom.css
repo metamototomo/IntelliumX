@@ -50,6 +50,38 @@ footer.footer .footer-column {
   margin-bottom: 1rem !important;
 }
 
+.footer-tagline {
+  color: #9aa3ad;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0.75rem 0 0;
+  max-width: 14rem;
+}
+
+.footer-legal {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+}
+
+.footer-legal__copyright {
+  color: #e8e8e8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0 0 0.65rem;
+}
+
+.footer-legal__details {
+  color: #9aa3ad;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Highlight active menu item */
 .navbar-item.is-active {
   color: #36454F !important;
@@ -259,4 +291,40 @@ h4 + pre,
 h5 + pre,
 h6 + pre {
   margin-top: 0.5rem !important;
+}
+
+/* Smooth scroll for in-page anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Navbar CTA — Launch RefynePro */
+.navbar-end .navbar-item .button.signup-button {
+  width: auto;
+  height: auto;
+  min-height: 0;
+  padding: 0.5rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.navbar-end .navbar-item:has(.signup-button) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-menu .navbar-item .button.signup-button {
+    width: auto;
+    display: inline-flex;
+    margin: 0.5rem auto;
+  }
 }

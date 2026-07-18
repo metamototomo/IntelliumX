@@ -1,0 +1,49 @@
+{{- $knowledge := .Site.Params.knowledgeHub }}
+{{- $recentPosts := first ($knowledge.recentCount | default 5) (where .Site.RegularPages "Section" "posts") }}
+<section class="home-section home-section--knowledge" id="knowledge">
+  <div class="container">
+    <div class="home-section__header">
+      <span class="home-section__eyebrow">{{ $knowledge.eyebrow }}</span>
+      <h2 class="home-section__title">{{ $knowledge.title }}</h2>
+      <p class="home-section__subtitle">{{ $knowledge.subtitle }}</p>
+    </div>
+
+    <div class="home-knowledge-grid">
+      {{- range $knowledge.channels }}
+      {{ if .url }}
+      <a href="{{ .url }}" class="home-knowledge-card"{{ if .external }} target="_blank" rel="noopener"{{ end }}>
+        <div class="home-knowledge-card__label">{{ .label }}</div>
+        <h3 class="home-knowledge-card__title">{{ .title }}</h3>
+        <p class="home-knowledge-card__text">{{ .text }}</p>
+      </a>
+      {{ else }}
+      <div class="home-knowledge-card home-knowledge-card--muted">
+        <div class="home-knowledge-card__label">{{ .label }}</div>
+        <h3 class="home-knowledge-card__title">{{ .title }}</h3>
+        <p class="home-knowledge-card__text">{{ .text }}</p>
+        <p class="home-knowledge-card__status">Coming soon</p>
+      </div>
+      {{ end }}
+      {{- end }}
+    </div>
+
+    {{ if gt (len $recentPosts) 0 }}
+    <div class="home-recent-posts">
+      <h3 class="home-recent-posts__title">Recent articles</h3>
+      <ul class="home-post-list">
+        {{- range $recentPosts }}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            <span>{{ .Title }}</span>
+            <span class="home-post-list__date">{{ .Date.Format "Jan 2, 2006" }}</span>
+          </a>
+        </li>
+        {{- end }}
+      </ul>
+      <p style="text-align: center; margin-top: 1.5rem;">
+        <a href="{{ "/posts/" | relURL }}" class="home-btn home-btn--secondary">View all articles</a>
+      </p>
+    </div>
+    {{ end }}
+  </div>
+</section>

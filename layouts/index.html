@@ -1,19 +1,14 @@
+{{ define "title" }}{{ .Site.Title }} | {{ .Site.Params.hero.tagline }}{{ end }}
 {{ define "main" }}
+<div class="home-page">
+  {{ partial "navbar.html" . }}
+  {{ partial "navbar-clone.html" . }}
 
-    {{ if .Site.Params.hero }}
-    {{ partial "hero.html" . }}
-    {{ end }}
+  {{ partial "home/hero.html" . }}
+  {{ partial "home/products.html" . }}
+  {{ partial "home/knowledge.html" . }}
+  {{ partial "home/about.html" . }}
 
-    {{ if .Site.Params.section1 }}
-    {{ partial "section1.html" . }}
-    {{ end }}
-
-    {{ if .Site.Params.section2 }}
-    {{ partial "section2.html" . }}
-    {{ end }}
-
-    {{ if .Site.Params.footer }}
-    {{ partial "footer.html" . }}
-    {{ end }}
-    
+  {{ partial "footer.html" . }}
+</div>
 {{ end }}

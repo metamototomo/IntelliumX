@@ -30,13 +30,13 @@
           </div>
         </div>
         {{- else if .button }}
-        <a href="{{ .url }}" class="navbar-item">
+        <a href="{{ .url }}" class="navbar-item"{{ if .target }} target="{{ .target }}"{{ end }}{{ if eq .target "_blank" }} rel="noopener"{{ end }}>
           <span class="button signup-button rounded secondary-btn raised">
             {{ .title }}
           </span>
         </a>
         {{- else }}
-        <a href="{{ .url }}" class="navbar-item is-secondary">
+        <a href="{{ .url }}" class="navbar-item is-secondary"{{ if .target }} target="{{ .target }}"{{ end }}{{ if eq .target "_blank" }} rel="noopener"{{ end }}>
           {{ .title }}
         </a>
         {{- end }}

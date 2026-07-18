@@ -793,13 +793,6 @@
       <description>&lt;h1 id=&#34;this-file-has-been-merged-with-aboutmd&#34;&gt;This file has been merged with about.md&lt;/h1&gt;&#xA;&lt;h1 id=&#34;please-delete-this-file-manually-if-needed&#34;&gt;Please delete this file manually if needed&lt;/h1&gt;</description>
     </item>
     <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;Welcome to IntelliumX - where theoretical knowledge transforms into practical, working applications.&lt;/p&gt;&#xA;&lt;h2 id=&#34;from-learning-to-building&#34;&gt;From Learning to Building&lt;/h2&gt;&#xA;&lt;p&gt;My journey in technology follows a clear progression: &lt;strong&gt;Learn → Document → Apply → Build&lt;/strong&gt;. What started as documenting solutions in my blog has evolved into developing real-world applications that solve actual problems.&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-evolution-process&#34;&gt;The Evolution Process&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Knowledge Acquisition&lt;/strong&gt;: Through hands-on experience, professional work, experimentation, and certification preparation, I continuously learn new technologies and methodologies.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Archives</title>
       <link>http://localhost:1313/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

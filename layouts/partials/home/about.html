@@ -1,0 +1,55 @@
+{{- $about := .Site.Params.companyAbout }}
+<section class="home-section home-section--alt" id="about">
+  <div class="container">
+    <div class="home-section__header">
+      <span class="home-section__eyebrow">{{ $about.eyebrow }}</span>
+      <h2 class="home-section__title home-about__title">
+        <span class="home-about__title-line">{{ $about.titleLine1 }}</span>
+        <span class="home-about__title-line">{{ $about.titleLine2 }}</span>
+      </h2>
+    </div>
+
+    <div class="home-about__body">
+      <div class="home-about__prose">
+        {{ with $about.intro }}
+        <div class="home-about__intro">
+          {{ . | markdownify }}
+        </div>
+        {{ end }}
+
+        {{ with $about.question }}
+        <p class="home-about__question">{{ . }}</p>
+        {{ end }}
+      </div>
+
+      <div class="home-about__pillars">
+        {{- range $about.pillars }}
+        <article class="home-about__pillar">
+          <h3 class="home-about__pillar-title">{{ .title }}</h3>
+          <p class="home-about__pillar-text">{{ .text }}</p>
+        </article>
+        {{- end }}
+      </div>
+
+      {{ with $about.closing }}
+      <div class="home-about__prose home-about__closing">
+        {{ . | markdownify }}
+      </div>
+      {{ end }}
+
+      {{ with $about.founder }}
+      <div class="home-about__founder">
+        <h3 class="home-about__founder-title">{{ .title }}</h3>
+        <p class="home-about__founder-bio">{{ .bio }}</p>
+        {{ with .links }}
+        <div class="home-about__founder-links">
+          {{- range . }}
+          <a href="{{ .url }}"{{ if .external }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>
+          {{- end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
