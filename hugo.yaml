@@ -94,7 +94,7 @@ params:
         url: /projects/
   companyAbout:
     eyebrow: About IntelliumX
-    titleLine1: Built by an engineer.
+    titleLine1: Built from real-world engineering experience.
     titleLine2: Designed for real people.
     intro: |
       Modern technology offers incredible possibilities—but too often it's difficult to understand or more complicated than it needs to be.
@@ -139,7 +139,7 @@ params:
         links:
           - text: Knowledge Hub
             link: /posts/
-          - text: RefynePro Help
+          - text: RefynePro Help Center
             link: /help/refynepro/
           - text: Projects
             link: /projects/
@@ -151,3 +151,9 @@ params:
           - text: Launch RefynePro
             link: https://refynepro.intelliumx.com/editor
             target: _blank
+    legal:
+      copyright: "© 2026 IntelliumX. All rights reserved."
+      lines:
+        - "INTELLIUMX is a registered business name in Australia."
+        - "Registered with the Australian Securities and Investments Commission (ASIC)."
+        - "ABN: 82 248 235 795"

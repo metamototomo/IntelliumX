@@ -394,6 +394,10 @@
 }
 
 /* About */
+#about .home-section__header {
+  max-width: 960px;
+}
+
 .home-about__title {
   line-height: 1.2;
 }

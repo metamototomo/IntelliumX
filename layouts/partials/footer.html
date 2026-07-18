@@ -4,12 +4,16 @@
 {{- $socialMedia := index $footer "socialmedia" }}
 {{- $bulmaLogo   := index $footer "bulmalogo" }}
 {{- $socialMediaTitle    := index $footer "socialmediatitle" }}
+{{- $legal       := index $footer "legal" }}
 <footer class="footer footer-dark">
   <div class="container">
     <div class="columns">
       <div class="column">
         <div class="footer-logo">
           <img src="{{ "images/logos/logo-white.svg" | relURL }}" alt="IntelliumX Logo" style="height: 30px;">
+          {{- with .Site.Params.hero.tagline }}
+          <p class="footer-tagline">{{ . }}</p>
+          {{- end }}
         </div>
       </div>
       {{- range $quickLinks }}
@@ -55,5 +59,20 @@
       </div>
       {{- end }}
     </div>
+
+    {{- with $legal }}
+    <div class="footer-legal">
+      {{ with .copyright }}
+      <p class="footer-legal__copyright">{{ . }}</p>
+      {{ end }}
+      {{ with .lines }}
+      <p class="footer-legal__details">
+        {{- range $index, $line := . }}
+        {{- if $index }}<br>{{ end }}{{ $line }}
+        {{- end }}
+      </p>
+      {{ end }}
+    </div>
+    {{- end }}
   </div>
 </footer>

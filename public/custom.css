@@ -50,6 +50,38 @@ footer.footer .footer-column {
   margin-bottom: 1rem !important;
 }
 
+.footer-tagline {
+  color: #9aa3ad;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0.75rem 0 0;
+  max-width: 14rem;
+}
+
+.footer-legal {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+}
+
+.footer-legal__copyright {
+  color: #e8e8e8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0 0 0.65rem;
+}
+
+.footer-legal__details {
+  color: #9aa3ad;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Highlight active menu item */
 .navbar-item.is-active {
   color: #36454F !important;
