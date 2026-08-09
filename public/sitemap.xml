@@ -2,56 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/help/refynepro/ui-panels/</loc>
+    <loc>http://localhost:1313/help/refynepro/create-a-folder/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/mfa-setup/</loc>
+    <loc>http://localhost:1313/help/refynepro/get-to-know-the-refynepro-editor/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/folder-view/</loc>
+    <loc>http://localhost:1313/help/refynepro/set-up-two-factor-authentication/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/available-ai-models/</loc>
-    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/help/refynepro/create-a-document/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/context-menu/</loc>
+    <loc>http://localhost:1313/help/refynepro/create-your-first-document/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/credit-usage/</loc>
+    <loc>http://localhost:1313/help/refynepro/credits-and-token-usage/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/favourite-view/</loc>
+    <loc>http://localhost:1313/help/refynepro/add-content-to-a-document/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/change-ai-model/</loc>
-    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/help/refynepro/create-folder-and-document/</loc>
-  </url><url>
-    <loc>http://localhost:1313/help/refynepro/recent-view/</loc>
+    <loc>http://localhost:1313/help/refynepro/move-documents/</loc>
   </url><url>
     <loc>http://localhost:1313/help/refynepro/subscription/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/create-a-new-folder/</loc>
-    <lastmod>2026-03-30T23:17:55+11:00</lastmod>
+    <loc>http://localhost:1313/help/refynepro/delete-your-account/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/create-a-new-file/</loc>
-    <lastmod>2026-03-29T22:58:46+11:00</lastmod>
+    <loc>http://localhost:1313/help/refynepro/format-text/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/move-folders-and-documents/</loc>
+    <loc>http://localhost:1313/help/refynepro/move-folders/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/tag-view/</loc>
+    <loc>http://localhost:1313/help/refynepro/rename-and-delete-items/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/contact-support/</loc>
+    <loc>http://localhost:1313/help/refynepro/save-your-work/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/recycle-bin/</loc>
+    <loc>http://localhost:1313/help/refynepro/restore-items-from-trash/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/run-ai-actions/</loc>
+    <loc>http://localhost:1313/help/refynepro/use-a-built-in-ai-action/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/configure-ai-model-behaviour/</loc>
+    <loc>http://localhost:1313/help/refynepro/find-your-documents/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/</loc>
-    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/help/refynepro/organise-with-tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/help/refynepro/favourite-a-document/</loc>
   </url><url>
-    <loc>http://localhost:1313/help/refynepro/</loc>
-    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/help/refynepro/pin-a-folder-to-the-document-panel/</loc>
+  </url><url>
+    <loc>http://localhost:1313/help/refynepro/insert-tables-code-and-quotes/</loc>
+  </url><url>
+    <loc>http://localhost:1313/help/refynepro/add-images/</loc>
+  </url><url>
+    <loc>http://localhost:1313/help/refynepro/lock-and-unlock-a-document/</loc>
+  </url><url>
+    <loc>http://localhost:1313/help/refynepro/write-a-custom-ai-prompt/</loc>
+  </url><url>
+    <loc>http://localhost:1313/help/refynepro/choose-an-ai-model/</loc>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-02-24T20:53:00+11:00</lastmod>
@@ -63,6 +62,9 @@
     <lastmod>2026-02-24T20:53:00+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/github/</loc>
+    <lastmod>2026-02-24T20:53:00+11:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-02-24T20:53:00+11:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/static-website/</loc>
@@ -646,6 +648,12 @@
   </url><url>
     <loc>http://localhost:1313/contact/</loc>
   </url><url>
+    <loc>http://localhost:1313/help/refynepro/readme/</loc>
+  </url><url>
     <loc>http://localhost:1313/archives/</loc>
+  </url><url>
+    <loc>http://localhost:1313/help/</loc>
+  </url><url>
+    <loc>http://localhost:1313/help/refynepro/</loc>
   </url>
 </urlset>
