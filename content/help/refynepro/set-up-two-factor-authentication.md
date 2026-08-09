@@ -15,7 +15,7 @@ available on the Standard and Premium plans.
 3. Scan the QR code with an authenticator app such as Google Authenticator or Authy, then click
    **Continue**.
 
-   ![The QR code shown during two-factor authentication setup](images/set-up-two-factor-authentication-01.png)
+   ![The QR code shown during two-factor authentication setup](2026-08-09-23-11-54.png)
 
 4. Type the six-digit code from your app and click **Verify & Enable**.
 
