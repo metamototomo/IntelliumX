@@ -2,7 +2,7 @@
 title: "Format text"
 description: "Make text bold, add headings, colours and links using the toolbar that appears when you select text."
 category: "Getting Started"
-weight: 40
+weight: 70
 ---
 
 RefynePro has no permanent toolbar across the top. Instead, a small toolbar appears next to

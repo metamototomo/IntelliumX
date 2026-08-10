@@ -12,7 +12,7 @@ within it.
 
 1. Right-click the folder in the Document Tree and choose **Move**.
 
-   ![Right click on the folder and choose Move action](2026-08-10-22-03-53.png)
+   ![The Move option in a folder's right-click menu](2026-08-10-22-03-53.png)
 
 2. Every valid destination now shows **← Click to move here**. Click the folder you want.
 
@@ -25,7 +25,7 @@ A message confirms the move and offers **Undo**.
 
 **Other ways to do this:** drag the folder onto another folder in the Document Tree and drop it.
 
-![Drag and drop a Folder to the other location](2026-08-09-18-28-43.png)
+![A folder being dragged onto a destination folder in the Document Tree](2026-08-09-18-28-43.png)
 
 > **Tip:** A folder cannot be moved into itself or into one of its own subfolders, so those
 > destinations will not offer **← Click to move here**.

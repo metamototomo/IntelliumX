@@ -14,7 +14,7 @@ everything still in draft.
 2. Type a tag and press **Enter** or type a comma. Repeat for as many tags as you need.
 
    ![The tag box below a document title, with two tags added](2026-08-09-21-24-39.png)
-   
+
 3. To remove a tag, click the **×** on it, or press **Backspace** when the box is empty.
 
 As you type, RefynePro suggests tags you have used before. Picking a suggestion keeps your tags

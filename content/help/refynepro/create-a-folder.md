@@ -23,7 +23,7 @@ Your folder appears in the Document Tree and a **Folder created** message confir
 **Other ways to do this:** open a folder in the Workspace and click **New Folder** in the
 toolbar above the list.
 
-![Alternative way to create a new folder](2026-08-09-14-32-32.png)
+![The New Folder button above the folder contents in the Workspace](2026-08-09-14-32-32.png)
 
 > **Tip:** Press **Esc** while typing to cancel. Leaving the name empty cancels too.
 

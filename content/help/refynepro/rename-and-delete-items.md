@@ -19,10 +19,9 @@ trash first, not straight out of existence.
 3. If you chose **Delete**, confirm the message. Deleting a folder deletes everything inside it,
    and the message tells you how many items that is. After deleting, a message appears for a few seconds with a **Restore** button. That is the quickest way to undo a mistake.
 
-   ![Delete operation and confirmation message](2026-08-09-18-48-13.png)
+   ![The delete confirmation and the Restore option shown after deletion](2026-08-09-18-48-13.png)
 
-**Rename** You can also rename the folder you are viewing using the pencil
-icon next to its name.
+**Other ways to rename:** use the pencil icon beside the name of the folder you are viewing.
 
 > **Tip:** A locked document cannot be deleted. Unlock it first.
 

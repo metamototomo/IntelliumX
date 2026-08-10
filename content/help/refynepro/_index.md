@@ -1,4 +1,4 @@
 ---
 title: "Refyne Pro Help Center"
-description: "Documentation and guides for Refyne Pro"
+description: "Documentation and guides for RefynePro"
 ---

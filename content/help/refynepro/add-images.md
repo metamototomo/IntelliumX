@@ -1,8 +1,8 @@
 ---
 title: "Add images"
 description: "Paste images into a document, resize them, and view them full screen."
-category: "Daily Operations"
-weight: 120
+category: "Getting Started"
+weight: 80
 ---
 
 Images go into a document by pasting. Once pasted, they are uploaded and stored with your

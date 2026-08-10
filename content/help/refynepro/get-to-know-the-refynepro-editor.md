@@ -32,7 +32,6 @@ controls. Selecting a document shows two areas:
 
 ## Side Panel
 
-The Side Panel opens on the right and changes according to the Header icon you select:
 The Side Panel opens on the right when you select the **AI Settings Panel** or **Account Panel** icon in the Header:
 
 - **AI Settings Panel** — choose the **AI Model**, apply **Presets**, adjust **Parameters** and

@@ -13,13 +13,13 @@ takes about a minute.
 1. Right-click an empty area of the Document Tree and choose **New Document**.
 2. Type a name for it and press **Enter**. Your document opens straight away.
 
-   ![A new document open in the editor with the cursor on the first line](2026-08-09-11-06-52.png)
+   ![A new document open in the Editor with the cursor on the first line](2026-08-09-11-06-52.png)
 
 3. Click anywhere in the Editor and start typing.
 4. Stop typing and watch the top of the page. After a few seconds the status changes to
    **✓ Saved**.
 
-![Stop typing. After a few seconds, the document will be auto saved](2026-08-09-11-20-49.png)
+![The Saved status in the Document Header after RefynePro finishes autosaving](2026-08-09-11-20-49.png)
 
 That is the whole cycle. There is no save button in RefynePro, and you never need one.
 

@@ -1,8 +1,8 @@
 ---
 title: "Write a custom AI prompt"
 description: "Tell the AI exactly what to do with your selected text when none of the built-in actions fit."
-category: "Daily Operations"
-weight: 140
+category: "Getting Started"
+weight: 50
 ---
 
 The five built-in actions cover common jobs. When you need something specific — translate this,

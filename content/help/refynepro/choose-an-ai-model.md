@@ -1,12 +1,12 @@
 ---
 title: "Choose an AI model"
 description: "Switch between AI models and adjust how creative or precise their answers are."
-category: "Daily Operations"
-weight: 150
+category: "Getting Started"
+weight: 60
 ---
 
 RefynePro offers twelve AI models. They differ in quality, speed and how many credits they use,
-so it is worth changing model to suit the job.
+so it is worth choosing the model that suits the job.
 
 ## Steps
 

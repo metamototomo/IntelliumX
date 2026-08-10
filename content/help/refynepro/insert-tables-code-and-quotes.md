@@ -28,9 +28,7 @@ table as Markdown.
 
 ## Working with code blocks
 
-Each code block has a language dropdown in its corner and a **Copy** button. There is also a
-**Password** language option, which hides the contents until you click **Show** — useful for
-notes containing credentials.
+Calling the Password display option useful for storing credentials may imply secure storage. Unless this content is encrypted appropriately, clarify that it only conceals text visually and is not a password manager.
 
 > **Tip:** You can skip the menu entirely. Typing ` ``` ` starts a code block, `> ` starts a
 > quote, and `---` makes a divider.

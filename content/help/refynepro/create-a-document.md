@@ -17,12 +17,12 @@ A new document opens as soon as you name it, ready to type in.
 
 3. Type a name and press **Enter**.
 
-The document opens in the editor and a **Document created** message confirms it.
+The document opens in the Editor and a **Document created** message confirms it.
 
 **Other ways to do this:** open a folder in the Workspace and click **New Document** in the
 toolbar above the list. The document is created inside that folder.
 
-![Alternative way to create a document](2026-08-09-17-50-42.png)
+![The New Document button above the folder contents in the Workspace](2026-08-09-17-50-42.png)
 
 > **Tip:** If you see **Document limit reached**, you are on the Free plan and have hit its
 > 50-document limit. Permanently delete documents from the trash to free up room, or upgrade.

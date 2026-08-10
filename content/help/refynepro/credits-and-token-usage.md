@@ -22,7 +22,7 @@ the start of each billing period.
 ## What one action costs
 
 Every AI result window shows its own cost at the bottom: which model ran, the tokens it used
-(input, output and total), and the credits that came to.
+(input, output and total), and the resulting credit cost.
 
 Tokens are how AI models measure text — very roughly, one token is three or four characters. The
 credits you are charged depend on how much text went in and came back, and on which model you

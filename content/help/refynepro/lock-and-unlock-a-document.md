@@ -2,7 +2,7 @@
 title: "Lock and unlock a document"
 description: "Make a finished document read-only so you cannot change or delete it by accident."
 category: "Daily Operations"
-weight: 130
+weight: 120
 ---
 
 Locking is for documents you have finished with. A locked document can still be read and copied,
@@ -13,7 +13,7 @@ but not edited or deleted.
 1. Open the document.
 2. Click the **Unlocked** button next to the title.
 
-   ![The Unlocked button in the document header](2026-08-09-22-07-11.png)
+   ![The Unlocked button in the Document Header](2026-08-09-22-07-11.png)
 
 3. Confirm by choosing **Lock Document** in the message that appears.
 
@@ -24,7 +24,7 @@ To edit it again, click **Locked** and choose **Unlock Document**.
 
 ## What locking prevents
 
-- Typing or formatting in the page.
+- Typing or formatting in the Editor.
 - Changing the title or the tags.
 - Deleting the document — you will be told to unlock it first.
 - Running AI actions, since those change the text.

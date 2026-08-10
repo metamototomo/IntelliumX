@@ -3,8 +3,8 @@
 Source files for the customer help pages published at
 `https://www.intelliumx.com/help/refynepro/`.
 
-Authored here, copied into the intelliumx repository by hand. Nothing in this folder is
-rendered by the RefynePro app itself.
+These source files are maintained directly in the IntelliumX repository and published to the
+RefynePro Help Center. Nothing in this folder is rendered by the RefynePro app itself.
 
 ---
 
@@ -58,7 +58,7 @@ One or two sentences saying what this does and when you would want it.
 1. First action.
 2. Second action.
 
-   ![Alt text describing what the reader should look at](images/create-a-folder-01.png)
+   ![Alt text describing what the reader should look at](2026-08-09-14-26-08.png)
 
 3. Third action.
 
@@ -80,7 +80,8 @@ One or two sentences saying what this does and when you would want it.
   (**Favourite**, **Summarise**) and existing casing (**Insert Below**, not "insert below").
 - **150–250 words per page.** The AI and billing pages run slightly longer; that is the ceiling,
   not the target.
-- **One screenshot, two at most**, placed at the step where people actually get stuck.
+- **Use screenshots where they help.** Prefer one or two focused images, but include more when each
+  one explains a distinct action or prevents confusion.
 - **Pick one path for the numbered steps.** Most tasks can be done from the Document Tree and from the
   folder view. Do not branch the steps — choose the primary path and put the other in the
   single-sentence "Other ways to do this" line. This is what keeps pages at three to five steps.
@@ -97,10 +98,11 @@ uses short labelled sections instead of numbered steps. Every other page follows
 
 ## Screenshots
 
-- Live in `images/`, named `<slug>-<nn>.png` — for example `create-a-folder-01.png`.
-- Capture at a browser width of 1440 px, then crop to just the relevant region. Do not paste
-  full-screen captures — the reader loses the detail.
-- Maximum 1200 px wide after cropping.
+- Live in a directory with the same slug as the page — for example, screenshots referenced by
+  `create-a-folder.md` live in `create-a-folder/`.
+- Reference each screenshot by its filename, such as `2026-08-09-14-26-08.png`.
+- Crop to the relevant region when possible. Keep enough surrounding context for the reader to
+  recognise where the control appears.
 - Light mode only for the first pass. Dark mode duplicates double the maintenance for little
   gain; revisit only if support questions justify it.
 - Realistic but neutral sample content. No personal data, no real customer names.
@@ -181,7 +183,7 @@ Checked against the code. These are easy to get wrong and must not drift.
 - Drag and drop works in the **Document Tree only**, not in the folder contents shown in the Workspace.
 - Moving has **no dialog**. Choosing **Move** puts the Document Tree into a mode where valid
   destinations show "← Click to move here".
-- **Lock** and **Favourite** live in the editor toolbar, not in any right-click menu.
+- **Lock** and **Favourite** live in the Document Header, not in any right-click menu.
 - The folder contents shown in the Workspace have a right-click menu with only **Rename** and **Delete**.
 - There is **no duplicate** command.
 - Search matches **titles and tags**, not document content.
@@ -200,13 +202,11 @@ that surprises people: pinned folders, Document Tree sort order, and AI model an
 
 ---
 
-## Before copying to intelliumx
+## Before deployment
 
-- [ ] Confirm the site accepts `title`, `description`, `category`, `weight` and nothing else is
-      required.
-- [ ] Confirm slugs derive from filenames, so internal links of the form
-      `/help/refynepro/create-a-folder/` resolve.
-- [ ] Rewrite `images/` paths to wherever intelliumx serves help images.
-- [ ] Confirm the product name spelling. These pages use **RefynePro**, matching the app UI and
-      site metadata. If the help site uses "Refyne Pro", it is a single find-and-replace.
-- [ ] Check every screenshot against the shipped app version.
+- [ ] Finalise each page's category and weight, then synchronize the catalogue above.
+- [ ] Confirm slugs derive from filenames and every internal `/help/refynepro/` link resolves.
+- [ ] Confirm every referenced screenshot exists, has useful alt text and matches the shipped UI.
+- [ ] Confirm **RefynePro** is used consistently in page content and site metadata.
+- [ ] Recheck volatile product and billing facts against the release being documented.
+- [ ] Preview the built Help Center and check navigation, tables, lists and screenshots.

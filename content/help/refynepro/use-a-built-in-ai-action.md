@@ -2,7 +2,7 @@
 title: "Use a built-in AI action"
 description: "Improve, summarise, simplify or change the tone of any text, and choose whether to keep the result."
 category: "Getting Started"
-weight: 60
+weight: 40
 ---
 
 RefynePro can rewrite any text you select. There are five built-in actions: **Improve**,

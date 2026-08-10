@@ -12,7 +12,7 @@ only in the Document Tree.
 
 1. Right-click the document in the Document Tree and choose **Move**.
 
-   ![Right click and choose "Move"](2026-08-09-18-00-57.png)
+   ![The Move option in a document's right-click menu](2026-08-09-18-00-57.png)
 
 2. Every folder you can move it into now shows **← Click to move here**. Click your destination.
 
@@ -25,7 +25,7 @@ A message confirms the move and offers **Undo** if you picked the wrong folder.
 
 **Other ways to do this:** drag the document onto a folder in the Document Tree and drop it.
 
-![Drag and drop document(s) to move](2026-08-09-17-57-23.png)
+![A document being dragged onto a destination folder in the Document Tree](2026-08-09-17-57-23.png)
 
 ## Moving several at once
 

@@ -5,7 +5,7 @@ category: "Getting Started"
 weight: 30
 ---
 
-Click anywhere in the page and type. Beyond plain typing, there are three quick ways to get
+Click anywhere in the Editor and type. Beyond plain typing, there are three quick ways to get
 content in.
 
 ## Steps
@@ -25,9 +25,9 @@ content in.
 2. **Paste text.** Anything copied from another app keeps its formatting. If you paste text
    written in Markdown, RefynePro converts it into real headings, lists and tables for you.
 
-![](2026-08-09-12-58-53.png)
+![Formatted text copied from another app and pasted into the RefynePro Editor](2026-08-09-12-58-53.png)
 
-3. **Paste an image.** Copy an image anywhere on your computer and paste it into the page. It
+3. **Paste an image.** Copy an image anywhere on your computer and paste it into the Editor. It
    uploads automatically.
 
 ![A pasted image sitting in the middle of a document](2026-08-09-11-44-36.png)
@@ -35,7 +35,7 @@ content in.
 **Other ways to do this:** on an empty line, press **Cmd+K** (Mac) or **Ctrl+K** (Windows) to
 insert a table, code block, quote, list or divider from a menu.
 
-![](2026-08-09-11-59-39.png)
+![The insert menu on an empty line, showing tables, code blocks, quotes, lists and dividers](2026-08-09-11-59-39.png)
 
 > **Tip:** Nothing here needs saving. RefynePro saves a few seconds after you stop typing.
 

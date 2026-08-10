@@ -1,6 +1,6 @@
 ---
 title: "Delete your account"
-description: "Close your RefynePro account permanently, and how to change your mind within 30 days."
+description: "Learn how to close your RefynePro account permanently or restore it within 30 days."
 category: "Account & Billing"
 weight: 40
 ---
