@@ -11,9 +11,12 @@ within it.
 ## Steps
 
 1. Right-click the folder in the Document Tree and choose **Move**.
+
+   ![Right click on the folder and choose Move action](2026-08-10-22-03-53.png)
+
 2. Every valid destination now shows **← Click to move here**. Click the folder you want.
 
-   ![A folder being moved, with valid destinations marked in the Document Tree](images/move-folders-01.png)
+   ![A folder being moved, with valid destinations marked in the Document Tree](2026-08-10-22-04-28.png)
 
 3. To move it out to the top level instead, click the **Move folder to Root** banner at the top
    of the Document Panel.

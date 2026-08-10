@@ -27,8 +27,6 @@ plan name, its status, and for paid plans the date it next renews.
 2. Click **Upgrade Now** on the plan you want.
 3. Complete payment on the secure checkout page.
 
-   ![The pricing page showing the Free, Standard and Premium plans](images/subscription-01.png)
-
 Your new allowance is available as soon as payment goes through.
 
 ## Changing or cancelling
