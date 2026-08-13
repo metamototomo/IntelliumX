@@ -39,6 +39,8 @@ params:
       url: /#about
     - title: Blog
       url: /posts/
+    - title: Help
+      url: /help/refynepro/
     - title: Launch RefynePro
       url: https://refynepro.intelliumx.com/editor
       button: true
@@ -68,8 +70,8 @@ params:
         external: true
         launchText: Launch RefynePro
         helpUrl: /help/refynepro/
-        helpText: Help & Tutorials
-        image: images/projects/refynepro/refynepro-screenshot.jpg
+        helpText: Help Center
+        image: images/projects/refynepro/refynepro-product-showcase.webp
   knowledgeHub:
     eyebrow: Knowledge Hub
     title: Learn. Build. Grow.
@@ -141,6 +143,8 @@ params:
             link: /posts/
           - text: RefynePro Help Center
             link: /help/refynepro/
+          - text: Support
+            link: https://support.intelliumx.com/
           - text: Projects
             link: /projects/
           - text: Blog Archives
