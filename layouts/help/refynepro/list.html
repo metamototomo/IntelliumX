@@ -16,6 +16,30 @@
   "Account & Billing"  "Manage your account security, credits, and subscription."
 }}
 
+{{ $gettingStartedVideos := slice
+  (dict
+    "part" "Part 1"
+    "title" "Create Your First Document"
+    "description" "Learn the RefynePro interface, create your first document, and understand how your work is saved."
+    "url" "https://www.youtube.com/watch?v=8FGiUUHsp1s"
+    "thumbnail" "https://i.ytimg.com/vi/8FGiUUHsp1s/maxresdefault.jpg"
+  )
+  (dict
+    "part" "Part 2"
+    "title" "Format Content & Add Images"
+    "description" "Create clearer, more engaging documents using text formatting, links, and images."
+    "url" "https://www.youtube.com/watch?v=it_tF2E8aiQ"
+    "thumbnail" "https://i.ytimg.com/vi/it_tF2E8aiQ/maxresdefault.jpg"
+  )
+  (dict
+    "part" "Part 3"
+    "title" "Use AI in RefynePro"
+    "description" "Explore built-in AI actions, write custom prompts, and choose the right AI model."
+    "url" "https://www.youtube.com/watch?v=9bwtXUNTCpU"
+    "thumbnail" "https://i.ytimg.com/vi/9bwtXUNTCpU/maxresdefault.jpg"
+  )
+}}
+
 <section class="section is-small">
   <div class="container">
     <div class="columns is-centered">
@@ -49,6 +73,39 @@
 
               {{ if $desc }}
                 <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1.25rem;">{{ $desc }}</p>
+              {{ end }}
+
+              {{ if eq $cat "Getting Started" }}
+                <div class="help-video-section" aria-labelledby="quick-start-videos">
+                  <div class="help-video-section__heading">
+                    <div>
+                      <h3 id="quick-start-videos">Quick Start Videos</h3>
+                      <p>Prefer watching? Learn the RefynePro essentials with this three-part video series.</p>
+                    </div>
+                    <span class="help-video-section__count">3 videos</span>
+                  </div>
+
+                  <div class="help-video-grid">
+                    {{ range $gettingStartedVideos }}
+                      <a class="help-video-card" href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="Watch {{ .part }}: {{ .title }} on YouTube (opens in a new tab)">
+                        <span class="help-video-card__thumbnail">
+                          <img src="{{ .thumbnail }}" alt="" loading="lazy" width="1280" height="720">
+                          <span class="help-video-card__play" aria-hidden="true">
+                            <span></span>
+                          </span>
+                          <span class="help-video-card__part">{{ .part }}</span>
+                        </span>
+                        <span class="help-video-card__content">
+                          <strong>{{ .title }}</strong>
+                          <span>{{ .description }}</span>
+                          <span class="help-video-card__action">Watch on YouTube <span aria-hidden="true">↗</span></span>
+                        </span>
+                      </a>
+                    {{ end }}
+                  </div>
+
+                  <p class="help-video-section__reading"><strong>Prefer written instructions or need more detail?</strong> Browse the step-by-step guides below.</p>
+                </div>
               {{ end }}
 
               <p style="color: #9ca3af; font-size: 0.8rem; margin-bottom: 1rem;">{{ len $sorted }} {{ if eq (len $sorted) 1 }}article{{ else }}articles{{ end }}</p>
