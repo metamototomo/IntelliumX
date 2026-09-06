@@ -21,8 +21,8 @@
     "part" "Part 1"
     "title" "Create Your First Document"
     "description" "Learn the RefynePro interface, create your first document, and understand how your work is saved."
-    "url" "https://www.youtube.com/watch?v=8FGiUUHsp1s"
-    "thumbnail" "https://i.ytimg.com/vi/8FGiUUHsp1s/maxresdefault.jpg"
+    "url" "https://www.youtube.com/watch?v=MN8UZL1cFco"
+    "thumbnail" "https://i.ytimg.com/vi/MN8UZL1cFco/maxresdefault.jpg"
   )
   (dict
     "part" "Part 2"
@@ -37,6 +37,40 @@
     "description" "Explore built-in AI actions, write custom prompts, and choose the right AI model."
     "url" "https://www.youtube.com/watch?v=9bwtXUNTCpU"
     "thumbnail" "https://i.ytimg.com/vi/9bwtXUNTCpU/maxresdefault.jpg"
+  )
+}}
+
+{{ $dailyOperationsVideos := slice
+  (dict
+    "part" "003-1"
+    "title" "Manage documents & folders"
+    "description" ""
+    "url" "https://www.youtube.com/watch?v=bCAYWWbtCTg"
+    "thumbnail" "https://i.ytimg.com/vi/bCAYWWbtCTg/maxresdefault.jpg"
+  )
+  (dict
+    "part" "003-2"
+    "title" "Find & organise"
+    "description" ""
+    "url" "https://www.youtube.com/watch?v=aGC8JtyzfhE"
+    "thumbnail" "https://i.ytimg.com/vi/aGC8JtyzfhE/maxresdefault.jpg"
+  )
+  (dict
+    "part" "003-3"
+    "title" "Advanced document operations"
+    "description" ""
+    "url" "https://www.youtube.com/watch?v=K4M4r_HxFbo"
+    "thumbnail" "https://i.ytimg.com/vi/K4M4r_HxFbo/maxresdefault.jpg"
+  )
+}}
+
+{{ $accountBillingVideos := slice
+  (dict
+    "part" ""
+    "title" "Account & Billing"
+    "description" ""
+    "url" "https://www.youtube.com/watch?v=iAEbiGzBewY"
+    "thumbnail" "https://i.ytimg.com/vi/iAEbiGzBewY/maxresdefault.jpg"
   )
 }}
 
@@ -94,6 +128,72 @@
                             <span></span>
                           </span>
                           <span class="help-video-card__part">{{ .part }}</span>
+                        </span>
+                        <span class="help-video-card__content">
+                          <strong>{{ .title }}</strong>
+                          <span>{{ .description }}</span>
+                          <span class="help-video-card__action">Watch on YouTube <span aria-hidden="true">↗</span></span>
+                        </span>
+                      </a>
+                    {{ end }}
+                  </div>
+
+                  <p class="help-video-section__reading"><strong>Prefer written instructions or need more detail?</strong> Browse the step-by-step guides below.</p>
+                </div>
+              {{ end }}
+
+              {{ if eq $cat "Daily Operations" }}
+                <div class="help-video-section" aria-labelledby="daily-ops-videos">
+                  <div class="help-video-section__heading">
+                    <div>
+                      <h3 id="daily-ops-videos">Quick Start Videos</h3>
+                      <p>Prefer watching? Learn daily operations with this three-part video series.</p>
+                    </div>
+                    <span class="help-video-section__count">3 videos</span>
+                  </div>
+
+                  <div class="help-video-grid">
+                    {{ range $dailyOperationsVideos }}
+                      <a class="help-video-card" href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="Watch {{ .part }}: {{ .title }} on YouTube (opens in a new tab)">
+                        <span class="help-video-card__thumbnail">
+                          <img src="{{ .thumbnail }}" alt="" loading="lazy" width="1280" height="720">
+                          <span class="help-video-card__play" aria-hidden="true">
+                            <span></span>
+                          </span>
+                          <span class="help-video-card__part">{{ .part }}</span>
+                        </span>
+                        <span class="help-video-card__content">
+                          <strong>{{ .title }}</strong>
+                          <span>{{ .description }}</span>
+                          <span class="help-video-card__action">Watch on YouTube <span aria-hidden="true">↗</span></span>
+                        </span>
+                      </a>
+                    {{ end }}
+                  </div>
+
+                  <p class="help-video-section__reading"><strong>Prefer written instructions or need more detail?</strong> Browse the step-by-step guides below.</p>
+                </div>
+              {{ end }}
+
+              {{ if eq $cat "Account & Billing" }}
+                <div class="help-video-section" aria-labelledby="account-billing-videos">
+                  <div class="help-video-section__heading">
+                    <div>
+                      <h3 id="account-billing-videos">Quick Start Videos</h3>
+                      <p>Prefer watching? Learn account and billing management with this video.</p>
+                    </div>
+                    <span class="help-video-section__count">1 video</span>
+                  </div>
+
+                  <div class="help-video-grid">
+                    {{ range $accountBillingVideos }}
+                      <a class="help-video-card" href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="Watch {{ .title }} on YouTube (opens in a new tab)">
+                        <span class="help-video-card__thumbnail">
+                          <img src="{{ .thumbnail }}" alt="" loading="lazy" width="1280" height="720">
+                          <span class="help-video-card__play" aria-hidden="true">
+                            <span></span>
+                          </span>
+                          {{ if .part }}<span class="help-video-card__part">{{ .part }}</span>{{ end }}
                         </span>
                         <span class="help-video-card__content">
                           <strong>{{ .title }}</strong>
